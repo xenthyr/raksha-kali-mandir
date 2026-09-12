@@ -1,0 +1,56 @@
+name = "maarakshakali-api"
+account_id = "ecd5b9270b02d1588dcdf435d0489f08"
+main = ".open-next/worker.js"
+workers_dev = true
+compatibility_date = "2026-09-11"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+run_worker_first = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "raksha-kali-mandir-db"
+database_id = "52d28a75-4fde-42f1-b064-0cb23d5b6669"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "acd94f46982f429f9ad6585a4ca08478"
+
+[[kv_namespaces]]
+binding = "SESSION_STORE"
+id = "780d4d9dc3164e59a8a2afd6215c86ff"
+
+[env.production]
+name = "maarakshakali-api"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "raksha-kali-mandir-db"
+database_id = "52d28a75-4fde-42f1-b064-0cb23d5b6669"
+
+[[env.production.kv_namespaces]]
+binding = "CACHE"
+id = "acd94f46982f429f9ad6585a4ca08478"
+
+[[env.production.kv_namespaces]]
+binding = "SESSION_STORE"
+id = "780d4d9dc3164e59a8a2afd6215c86ff"
+
+[env.preview]
+name = "maarakshakali-api-preview"
+
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "raksha-kali-mandir-db-preview"
+database_id = "9e106a0c-7c72-4af7-aee1-da0b8ada91b1"
+
+[[env.preview.kv_namespaces]]
+binding = "CACHE"
+id = "df8b1527e97440f7ac85255563a2ef81"
+
+[[env.preview.kv_namespaces]]
+binding = "SESSION_STORE"
+id = "3af1f48311ab4b24adf68802d44b4be9"
