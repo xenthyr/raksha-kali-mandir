@@ -4,151 +4,97 @@
 
 This repository is a controlled V1.1.3 clean-slate reconstruction of the digital platform for **শ্রী শ্রী মা রক্ষা কালী মন্দির**.
 
-Contributions must preserve:
+Contributions must preserve the project's:
 
-- canonical source-of-truth rules;
-- canonical IDs;
-- complete current committee roster;
-- current committee role assignments;
-- explicit vacant-position status;
+- canonical source-of-truth model;
+- repository architecture;
+- contract boundaries;
+- security model;
+- public/private separation;
+- Bengali-first public experience;
 - Panjika integrity;
-- public/private boundaries;
-- Bengali-first public UX;
-- server-side security;
+- committee-role integrity;
 - runtime/environment separation;
-- reproducible builds;
-- exact batch ownership;
-- governed publication and audit.
+- reproducible build;
+- controlled batch ownership.
 
 This is not an unrestricted greenfield repository.
 
 ---
 
-## 2. Before You Change Anything
+## 2. Read Before Changing Anything
 
-Before changing the repository:
+Before modifying the repository, understand:
 
-1. inspect Git state;
-2. confirm local and remote branch state;
-3. read the owning batch;
-4. inspect the current canonical source material;
-5. identify relevant canonical IDs;
-6. identify contract families;
-7. identify security/privacy classification;
-8. identify dependencies;
-9. identify required validation;
-10. identify any later-batch seam.
+1. the current Git status;
+2. the current branch and remote state;
+3. the relevant batch prompt;
+4. the current source precedence;
+5. the relevant canonical IDs;
+6. the owning contracts;
+7. the dependency order;
+8. the security/privacy classification;
+9. the required validation checks.
 
-Do not begin by copying the previous application.
+Do not start by copying code from a previous deployment or legacy branch.
 
 ---
 
 ## 3. Source Precedence
 
-Use:
+For factual project information, use:
 
 ```text
 V1.1.3 Unified Canonical Blueprint
         ↓
-V2.1 Canonical Source-Data Overlay
+V2.1.1 Canonical Source-Data Master
         ↓
 1433 Panjika Canonical Data
         ↓
-Implementation inference only where required
+Implementation inference only where necessary
 ```
 
-The current V2.1 roster is explicitly current and user-confirmed.
+Do not use an older blueprint as a replacement for the current production-update source.
 
-Do not revert to older conflicting seed values.
+When the source does not establish a fact, preserve an explicit state rather than inventing one.
 
-When the source does not establish a fact, preserve the appropriate state such as `UNKNOWN`, `TO_VERIFY`, `NOT_PROVIDED`, or `HISTORICAL`.
+Frozen artifact locks for this reconstruction:
+
+```text
+Blueprint = 33a700891da9fe58cee906f04d2d2260f9e0fcb812da430501ba3542a135386a
+Source    = 57c90c1b849cfb1f9591ff1cc63e4bbb29e05ced9740c70b1518892ceb3ce5c0
+Panjika   = 6dc5cf755cb2f54a9884aa50c1d2cd486052d679054e3a9f31350e34e87be246
+Prompt    = 0b615377b33f902823670cfe16d3a7606e31b3e13b4ac1b50ecd1e76b1e8c20e
+```
 
 ---
 
-## 4. Canonical Identity Locks
+## 4. Canonical Locks
+
+The following are canonical:
 
 ```text
 TEMPLE-0001 = শ্রী শ্রী মা রক্ষা কালী মন্দির
 DEITY-0001 = মা রক্ষা কালী
 LOCATION-0001 = সাহাপুর বটতলা মোড়
-Coordinates = 25.661726, 88.103574
-Timezone = Asia/Kolkata
-COMMITTEE-0001 = শ্রী শ্রী মা রক্ষা কালী পূজা কমিটি ও সকল গ্রামবাসী
-TERM-0001 = current operating committee term
+LOCATION-0001 = 25.661726, 88.103574
+TIMEZONE = Asia/Kolkata
 ```
 
-Do not derive identity from:
-
-- display names;
-- filenames;
-- array order;
-- UI order;
-- old raw-name fields.
-
----
-
-## 5. Complete Current Committee Lock
-
-All nine of these are current `TERM-0001` people/role assignments:
-
-| Person ID | Person | Current role |
-|---|---|---|
-| `PERSON-000001` | মিঠুন সরকার / Mithun Sarkar | `ROLE-PRESIDENT` |
-| `PERSON-000002` | সঞ্জয় শীল / Sanjay Shil | `ROLE-SECRETARY` |
-| `PERSON-000003` | বাপি ভৌমিক / Bapi Bhowmick | `ROLE-CASHIER` |
-| `PERSON-000004` | তন্ময় দত্ত / Tanmay Dutta | `ROLE-ASSISTANT-CASHIER` |
-| `PERSON-000005` | চিন্ময় দত্ত / Chinmoy Dutta | `ROLE-MEDIA` |
-| `PERSON-000006` | বিপ্লব সরকার / Biplab Sarkar | `ROLE-EXECUTIVE-MEMBER` |
-| `PERSON-000007` | মিন্টু শীল / Mintu Shil | `ROLE-ORGANIZING-SECRETARY` |
-| `PERSON-000008` | জয়ন্ত দে সরকার / Jayanta Dey Sarkar | `ROLE-ASSISTANT-SECRETARY` |
-| `PERSON-000009` | চয়ন সরকার / Chayan Sarkar | `ROLE-FOUNDING-PARTICIPANT` |
-
-These are current positions, not merely historical candidates.
-
----
-
-## 6. Vacant Positions Lock
-
-The following four positions are currently vacant:
+Committee:
 
 ```text
-Vice President
-Joint Secretary
-Office Secretary
-Volunteer Coordinator
+PERSON-000006 = Biplab Sarkar
+                 ROLE-EXECUTIVE-MEMBER
+
+PERSON-000007 = Mintu Shil
+                 ROLE-ORGANIZING-SECRETARY
+
+PERSON-000008 = Jayanta Dey Sarkar
+                 ROLE-ASSISTANT-SECRETARY
 ```
 
-These are vacant positions, not vacant people.
-
-Do not infer or fabricate a person for any vacancy.
-
-Do not mark Organizing Secretary as vacant.
-
-```text
-PERSON-000007
-মিন্টু শীল / Mintu Shil
-ROLE-ORGANIZING-SECRETARY
-CURRENT
-```
-
-The supplied role registry contains explicit role IDs for the nine current assignments. Do not invent new canonical role IDs for the four vacancies unless a future canonical source explicitly defines them.
-
----
-
-## 7. Priest Boundary
-
-The priest is a separate canonical personnel record:
-
-```text
-PRIEST-000001
-অসিত মুখার্জী / Asit Mukherjee
-```
-
-Do not merge priest/ritual-personnel data into the committee roster.
-
----
-
-## 8. Panjika Lock
+Panjika:
 
 ```text
 PANJIKA-Y1433
@@ -156,21 +102,9 @@ Bisuddha Siddhanta
 CALC-BS1433-RAIGANJ-V1
 2026-09-11..2027-04-14
 216 daily records
-CANONICAL_REGIONAL_CALCULATION
-Asia/Kolkata
 ```
 
-Temple coordinates identify the temple location only.
-
-Never silently switch the Panjika calculation basis to the temple GPS.
-
-Never silently recompute the 216 supplied astronomical records.
-
-Never introduce Surya Siddhanta values into the current 1433 canonical dataset.
-
----
-
-## 9. Temple Operating Lock
+Operations:
 
 ```text
 DAILY_MORNING_TO_NIGHT
@@ -178,66 +112,181 @@ dailyFixedPuja = NONE
 devoteeInitiatedPuja = ALLOWED/ACTUAL
 amavasyaPuja = RECURRING_REQUIRED
 specialPujaTiming = EVENT_RUNTIME
-specialPujaDecisionWindow = generally 1–2 days before event
 ```
 
-Do not fabricate fixed daily ritual times.
-
-Special-puja time is runtime/admin data.
-
----
-
-## 10. Amavasya Lock
-
-`AMAVASYA` is first-class.
-
-The relationship is:
+Donation:
 
 ```text
-Tithi
-  ↓
-Amavasya
-  ↓
-Temple Observance
-  ↓
-Puja
-  ↓
-Approved downstream publications
+DONATION-CONFIG-0001
+VPA = 7583992377@okbizaxis
+Payee = Sri Sri Raksha Kali Mandir
+Minimum = ₹11
+Suggestions = ₹51 / ₹101 / ₹501 / ₹1001
+UTR != payment verification
 ```
 
-Recurring rule:
+Support:
 
 ```text
-প্রতি অমাবস্যায় পূজা হয়।
+MRK-YYYY-NNNNNN
+4-digit tracking PIN
+FINANCE / PUJA / GRIEVANCE / GENERAL
+OPEN / IN_PROGRESS / WAITING_USER / RESOLVED / REJECTED / CLOSED
 ```
 
-Special timing is runtime-managed.
+Storage:
 
-Do not convert a generic festival listing into a temple-official observance without an approved observance record.
+```text
+Backblaze B2
+raksha-kali-mandir-storage
+eu-central-003
+private
+server-side only
+```
 
----
-
-## 11. Data Governance
-
-Preserve:
-
-- canonical IDs;
-- source references;
-- provenance;
-- verification;
-- revision;
-- publication;
-- audit.
-
-Do not create duplicate canonical records because a UI requires a different representation.
-
-Do not use a component constant as a substitute for mutable runtime data.
-
-One fact should have one canonical record.
+Do not silently alter these values in application code.
 
 ---
 
-## 12. Public / Private Data
+## 5. Clean Working Tree
+
+Before starting a batch:
+
+```bash
+cd ~/raksha-kali-mandir
+
+git status --short
+git fetch origin
+git log -1 --oneline --decorate
+git log -1 --oneline --decorate origin/main
+git rev-list --left-right --count main...origin/main
+```
+
+The expected controlled state is:
+
+- local and remote `main` agree;
+- no unrelated working-tree changes;
+- no unexplained untracked files.
+
+If an unexpected legacy application file or unexplained untracked file appears, stop and investigate.
+
+Do not absorb it silently.
+
+---
+
+## 6. Controlled Batch Ownership
+
+Every batch has an exact file allowlist.
+
+The batch must:
+
+- create every allowlisted file;
+- avoid unlisted implementation files;
+- respect dependencies;
+- use the specified source artifacts;
+- run the required validation;
+- commit only the batch when green.
+
+The clean-slate repository has:
+
+```text
+Baseline controlled files: 392
+Supplemental controlled files: 146
+Total controlled files: 538
+```
+
+Every controlled file has exactly one owning batch.
+
+---
+
+## 7. Batch 004 Ownership
+
+Batch 004 owns exactly:
+
+```text
+README.md
+SECURITY.md
+CONTRIBUTING.md
+CHANGELOG.md
+```
+
+No other new implementation file belongs to Batch 004.
+
+Batch 004 is documentation and repository-policy work. It must not broaden scope merely to make later domains appear implemented.
+
+Later domain-specific documentation belongs to its owning documentation batches.
+
+---
+
+## 8. Repository Architecture
+
+The architecture is:
+
+```text
+Source
+  ↓
+Canonical Data
+  ↓
+Normalization
+  ↓
+Validation
+  ↓
+Query / Read Model
+  ↓
+Deterministic Engines
+  ↓
+View Models
+  ↓
+UI
+```
+
+Administrative writes follow:
+
+```text
+Validation
+  ↓
+Workflow / Approval
+  ↓
+Canonical persistence
+  ↓
+Revision / Audit
+  ↓
+Publication / Revalidation
+```
+
+AI sits above the same governed read layer.
+
+Do not introduce:
+
+- a parallel framework;
+- a parallel data model;
+- a duplicate source of truth;
+- direct UI-to-D1 SQL;
+- a second canonical identity system.
+
+---
+
+## 9. Canonical Data Rules
+
+Use canonical IDs.
+
+Do not derive identity from:
+
+- array order;
+- filenames;
+- display names;
+- role labels;
+- historical prose.
+
+Do not duplicate mutable facts in components merely to make the UI render.
+
+Runtime/admin-managed values remain runtime/admin-managed.
+
+Where provenance, verification, revision, publication, or audit are required, preserve them.
+
+---
+
+## 10. Public / Private Boundaries
 
 Before exposing any value, classify it.
 
@@ -246,9 +295,10 @@ Before exposing any value, classify it.
 Examples:
 
 - approved temple facts;
-- approved public committee details;
+- approved deity information;
+- approved committee public information;
 - approved notices;
-- approved calendar data;
+- approved calendar records;
 - approved media;
 - approved documents.
 
@@ -256,110 +306,106 @@ Examples:
 
 Examples:
 
-- non-public phone/email;
-- authentication data;
+- passwords;
 - sessions;
-- password material;
-- reset tokens;
-- private support information;
-- private attachments;
+- private contact information;
+- private ticket data;
+- private notes;
+- risk flags;
 - donor-sensitive information;
-- internal audit data;
-- secrets.
+- private attachments;
+- audit data;
+- credentials.
 
-Public serializers must be explicit allow-lists.
+Public serializers should be allow-lists.
 
-Never return a private record and remove a few fields afterward.
-
----
-
-## 13. Authentication
-
-Administrative authentication is based on the approved canonical identity model.
-
-```text
-username OR registered phone
-+
-password
-```
-
-First login:
-
-```text
-temporary credential
-→ required setup
-→ phone binding/confirmation
-→ private password
-→ server-managed session
-```
-
-No public administrative signup.
-
-No uncontrolled social-login replacement.
-
-Passwords are never stored plaintext.
+Do not return a private object and remove a few fields after the fact.
 
 ---
 
-## 14. Authorization
+## 11. Runtime Configuration
 
-Server-side authorization is authoritative.
+Runtime/admin-managed values must not be turned into component constants merely because a component is easier to build that way.
 
-Conceptual flow:
+Examples include:
 
-```text
-Actor
- ↓
-Authentication
- ↓
-Active role(s)
- ↓
-Permission(s)
- ↓
-Resource/scope check
- ↓
-Policy check
- ↓
-Audit
-```
+- special puja timing;
+- publication state;
+- notification state;
+- support state;
+- admin-managed configuration;
+- sender configuration;
+- feature flags.
 
-Do not treat:
-
-- hidden UI controls;
-- disabled buttons;
-- route visibility;
-- client state
-
-as authorization.
-
-Finance-sensitive actions remain separated from ordinary publication operations.
+Canonical immutable facts must come from the canonical data layer.
 
 ---
 
-## 15. Publication
+## 12. Panjika Rules
 
-Governed editorial states include:
+The Panjika uses:
 
 ```text
-DRAFT
-IN_REVIEW
-APPROVED
-PUBLISHED
-ARCHIVED
+PANJIKA-Y1433
+Bisuddha Siddhanta
+CALC-BS1433-RAIGANJ-V1
 ```
 
-Creation does not mean publication.
+Current operational range:
 
-Approval does not automatically mean public visibility without the required publication state.
+```text
+2026-09-11 through 2027-04-14
+216 records
+```
 
-Historical information must remain clearly historical.
+The temple coordinates:
+
+```text
+25.661726 / 88.103574
+```
+
+identify the physical temple location.
+
+They do not replace the Raiganj calculation basis.
+
+Never:
+
+- switch to temple GPS for Panjika calculations;
+- merge Surya Siddhanta values;
+- silently recalculate supplied astronomical rows;
+- fabricate a daily puja schedule.
+
+The production-update correction sets daily calculation status to:
+
+```text
+CANONICAL_REGIONAL_CALCULATION
+```
+
+while preserving supplied astronomical values.
 
 ---
 
-## 16. Donation Rules
+## 13. Committee Rules
+
+Do not change:
 
 ```text
-DONATION-CONFIG-0001
+PERSON-000006 → ROLE-EXECUTIVE-MEMBER
+PERSON-000007 → ROLE-ORGANIZING-SECRETARY
+PERSON-000008 → ROLE-ASSISTANT-SECRETARY
+```
+
+Do not revive deprecated/obsolete alternate raw-name records as replacements.
+
+If a committee change is required, use the canonical governance workflow.
+
+---
+
+## 14. Donation Rules
+
+The canonical donation configuration is:
+
+```text
 VPA = 7583992377@okbizaxis
 Payee = Sri Sri Raksha Kali Mandir
 Minimum = ₹11
@@ -367,20 +413,27 @@ Suggestions = ₹51 / ₹101 / ₹501 / ₹1001
 Transaction note = শ্রী শ্রী রক্ষা কালী মন্দির প্রণামী
 ```
 
-A submitted UTR is not payment verification.
+A UTR submission is not payment verification.
 
-Do not write client logic that interprets a UTR as a verified financial fact.
+Do not write UI logic that treats the UTR as a verified financial fact.
 
 ---
 
-## 17. Support Rules
+## 15. Support Rules
+
+Ticket reference:
 
 ```text
 MRK-YYYY-NNNNNN
+```
+
+Public tracking:
+
+```text
 reference + 4-digit PIN
 ```
 
-Categories:
+Internal categories:
 
 ```text
 FINANCE
@@ -389,7 +442,7 @@ GRIEVANCE
 GENERAL
 ```
 
-States:
+Internal states:
 
 ```text
 OPEN
@@ -402,17 +455,17 @@ CLOSED
 
 The PIN must never be stored plaintext.
 
-Ticket references alone are not authentication.
+The reference alone is never authorization.
 
-Public tracking must be rate-limited.
-
-Private notes, assignments, risk flags, private attachments, identity hashes, and internal data must remain private.
+Private ticket information must remain out of public serializers.
 
 ---
 
-## 18. Upload Limits
+## 16. Attachment Rules
 
-### Grievance
+Server is authoritative.
+
+Grievance:
 
 ```text
 3 files max
@@ -422,7 +475,7 @@ JPEG/PNG/WebP/PDF
 video disabled
 ```
 
-### Committee photos
+Committee photos:
 
 ```text
 10 files max
@@ -430,7 +483,7 @@ video disabled
 50 MB aggregate
 ```
 
-### Committee videos
+Committee videos:
 
 ```text
 2 files max
@@ -438,198 +491,259 @@ video disabled
 100 MB aggregate
 ```
 
-### Committee audio
+Committee audio:
 
 ```text
 2 files max
 25 MB/file
 ```
 
-### Committee documents
+Committee documents:
 
 ```text
 5 files max
 15 MB/file
 ```
 
-Server enforcement is authoritative.
+Limits must be enforced through the complete security path:
+
+```text
+UI → API → authorization → upload issuance → finalization → worker/reconciliation
+```
 
 ---
 
-## 19. Storage
+## 17. Backblaze B2 Rules
 
-Production storage:
+Production object storage is:
 
 ```text
-Backblaze B2
+Provider: Backblaze B2
 Bucket: raksha-kali-mandir-storage
 Bucket ID: 48a58aafc4e2931aaf030011
 Region: eu-central-003
 Endpoint: https://s3.eu-central-003.backblazeb2.com
-Private
-Server-side credentials
+Access: private
 ```
 
-Do not reintroduce executable R2 production paths.
+Credentials remain server-side.
 
-Private object URLs must be controlled and temporary where used.
+Do not introduce R2 as an executable production storage path.
+
+Private object access must be authorization-aware and temporary where temporary URLs are used.
 
 ---
 
-## 20. Email
+## 18. Email Rules
 
-Resend is the email adapter.
+Resend is the application email adapter.
 
-Current configured support address:
+Current operations address configuration:
 
 ```text
 maarakshakalisahapur@gmail.com
 ```
 
-Primary and backup configuration currently use the same address. Do not create duplicate delivery solely because both configuration slots match.
+The configured primary and backup values are identical, so do not send duplicate copies based only on the two slots.
 
-Production sending requires a verified sender domain.
+Production sender domain must be provider-verified.
 
-Webhook authenticity must be verified before state mutation.
+Development and preview must not accidentally send production mail.
 
-Provider events must be idempotent and tolerant of duplicate/out-of-order delivery where applicable.
+Webhook verification precedes event mutation.
 
----
-
-## 21. Search and AI
-
-Search/AI must use the governed public read model.
-
-AI must respect:
-
-- publication;
-- verification;
-- provenance;
-- historical labeling;
-- public/private boundaries;
-- authorization.
-
-AI is not the source of truth.
-
-AI must not mutate canonical data through ordinary public conversation.
-
-Public functionality must remain useful without AI.
+Duplicate provider events must be safe to replay.
 
 ---
 
-## 22. PWA / Caching
+## 19. Security Rules
 
-Do not cache:
+Never:
 
-- admin pages;
-- authenticated API responses;
-- private ticket information;
-- private attachments;
-- sessions;
-- secrets.
+- commit credentials;
+- expose secrets to browser code;
+- trust hidden UI controls as authorization;
+- return private records from public APIs;
+- store reset tokens plaintext;
+- store ticket PINs plaintext;
+- expose private object URLs without authorization;
+- log passwords or secrets;
+- trust external webhook payloads before verification.
 
-Caching must never bypass authorization.
-
----
-
-## 23. B2 Upload Security
-
-Use the complete control path:
-
-```text
-UI
-→ API authorization
-→ validation
-→ upload issuance
-→ object upload
-→ server finalization
-→ worker/reconciliation
-```
-
-Client-only file count/size/type validation is not sufficient.
+Security failures should fail closed.
 
 ---
 
-## 24. Development Environment
+## 20. TypeScript and Validation
 
-Git operations can run in Android/Termux.
+Use strict TypeScript.
 
-Linux-dependent Node.js/build/Cloudflare runtime tooling may require Ubuntu through `proot-distro`.
-
-Do not change the repository architecture merely because an Android-native binary cannot execute.
-
----
-
-## 25. Code Style
+Validate untrusted inputs at runtime boundaries.
 
 Prefer:
 
-- strict TypeScript;
 - small pure functions;
 - explicit domain types;
 - discriminated states;
 - typed errors;
-- runtime validation for untrusted inputs;
-- server-side security boundaries.
+- deterministic transformations.
 
-Do not rely only on compile-time types for:
-
-- request bodies;
-- query parameters;
-- webhooks;
-- file metadata;
-- persisted records.
+Do not rely on compile-time types alone for user input, webhooks, query parameters, or persisted records.
 
 ---
 
-## 26. Testing
+## 21. Errors and Failure States
+
+Do not silently swallow failures.
+
+Every important mutation should define:
+
+- success state;
+- failure state;
+- retry behavior;
+- idempotency behavior;
+- authorization behavior;
+- observability.
+
+A failed email must not erase a ticket.
+
+A failed retry must not create duplicate state.
+
+A failed webhook verification must not mutate data.
+
+A missing calendar row must not be silently fabricated.
+
+---
+
+## 22. Timezone
+
+Use:
+
+```text
+Asia/Kolkata
+```
+
+for business-time logic.
+
+Use UTC for persisted instants where appropriate.
+
+Convert explicitly.
+
+Scheduled workers touching canonical data must be idempotent.
+
+---
+
+## 23. Development Tooling
+
+The controlled repository uses the package graph established by the foundation batches.
+
+Typical checks:
+
+```bash
+npm run format:check
+npm run typecheck
+npm run lint
+npm test
+npm run test:e2e
+npm run build
+```
+
+Run the narrowest relevant check first, then broader checks.
+
+Do not claim checks passed without actually running them.
+
+---
+
+## 24. Android / Termux
+
+Git can be used directly from Termux.
+
+Linux-dependent application/build tooling may require Ubuntu through `proot-distro`.
+
+Do not change the project architecture to compensate for an unsupported Android-native binary.
+
+Use the repository's intended Linux-compatible tooling environment for builds and Cloudflare runtime checks.
+
+---
+
+## 25. Dependency Policy
+
+Dependency changes should be justified.
+
+Evaluate:
+
+- compatibility;
+- security;
+- runtime behavior;
+- OpenNext compatibility;
+- Cloudflare compatibility;
+- Node.js compatibility;
+- bundle/runtime size;
+- maintenance;
+- reproducibility.
+
+Do not force upgrades solely to suppress warnings.
+
+Do not silently migrate to a new deployment architecture.
+
+---
+
+## 26. Formatting
+
+Use the repository's Prettier configuration.
+
+Use LF line endings.
+
+Do not reformat unrelated files inside a controlled batch unless the formatting change is directly required and explicitly allowed.
+
+Run:
+
+```bash
+npm run format:check
+```
+
+before committing documentation-only changes.
+
+---
+
+## 27. Testing
 
 Tests must be deterministic.
 
-They must not require:
+Tests must not require:
 
 - production credentials;
-- production secrets;
-- uncontrolled live services.
+- live production services;
+- private external accounts.
 
-Do not weaken tests to make them green.
+Where a later batch owns a live integration, use fixtures/mocks or approved integration environments appropriate to the test layer.
 
-Run the narrowest relevant test first, then broader checks.
-
-Only claim tests that actually ran.
+Do not weaken tests merely to obtain a green result.
 
 ---
 
-## 27. Batch 004
+## 28. Documentation Changes
 
-Batch 004 owns exactly:
+Documentation must describe actual repository policy.
 
-```text
-README.md
-SECURITY.md
-CONTRIBUTING.md
-CHANGELOG.md
-```
+Do not:
 
-No other implementation file belongs to this batch.
+- claim future implementation as completed;
+- invent source facts;
+- expose secrets;
+- describe legacy code as current;
+- create conflicting architecture rules;
+- introduce a second source of truth.
 
-The complete controlled repository manifest contains 538 files.
+Use a later documentation batch for detailed domain documents owned by that batch.
+
+Root policy documents should remain high-level enough to remain stable while still defining the governing constraints.
 
 ---
 
-## 28. Git Workflow
+## 29. Git Diff Review
 
-Before a batch:
-
-```bash
-git status --short
-git fetch origin
-git log -1 --oneline --decorate
-git log -1 --oneline --decorate origin/main
-git rev-list --left-right --count main...origin/main
-```
-
-Before commit:
+Before committing:
 
 ```bash
 git status --short
@@ -639,63 +753,106 @@ git diff --cached --stat
 git diff --cached --name-only
 ```
 
-Stop for:
+Inspect the staged content.
 
-- unexplained untracked files;
-- legacy source reappearance;
-- secret leakage;
-- canonical-ID drift;
-- committee-role drift;
-- Panjika drift;
-- private-data leakage;
-- failed required checks.
+Confirm:
+
+- exact allowlist;
+- no secret leakage;
+- no accidental R2 implementation;
+- no Panjika drift;
+- no committee-role drift;
+- no unrelated source changes.
 
 ---
 
-## 29. Commit
+## 30. Commit Procedure
 
 For Batch 004:
 
-```text
-batch-004: foundation-config
+```bash
+git add README.md SECURITY.md CONTRIBUTING.md CHANGELOG.md
+git diff --cached --check
+git diff --cached --name-only
+git commit -m "batch-004: foundation-config"
+git push origin main
 ```
 
-Only the controlled batch should be committed, apart from explicitly permitted formatting/import changes that are directly required by the batch.
+Do not commit if the batch is not green.
 
 ---
 
-## 30. Validation Checklist
+## 31. Batch Handoff
 
-Before declaring the batch green, confirm:
+After the batch, report:
 
-- all four exact files exist;
-- all four are complete Markdown files;
-- no secrets are present;
-- no client-side server-only imports are introduced by documentation;
-- no R2 production implementation is introduced;
-- all nine current committee assignments are represented consistently;
-- the four vacant positions are represented separately;
-- Organizing Secretary is represented as filled;
-- priest data remains separate from committee membership;
-- Panjika basis remains `CALC-BS1433-RAIGANJ-V1`;
-- Panjika range remains `2026-09-11..2027-04-14`;
-- Panjika count remains `216`;
-- donation rules are accurate;
-- support-ticket authentication is accurate;
-- B2 storage target is accurate;
-- email policy is accurate;
-- production readiness is not falsely claimed.
+1. exact files created/modified;
+2. prerequisites consumed;
+3. source sections/IDs checked;
+4. tests/static checks actually run;
+5. intentional later-batch seams;
+6. blockers.
+
+Do not hide a failure behind a general statement such as "looks good."
 
 ---
 
-## 31. Documentation Principle
+## 32. Stop Conditions
 
-Root documentation should be comprehensive enough to preserve architectural and governance intent without becoming a second source of canonical runtime data.
+Stop and fix the batch if:
 
-When implementation details belong to a later owned document, reference the governing concept rather than fabricating future implementation.
+- an allowlisted file is missing;
+- an unapproved file changed;
+- an unexpected legacy file appears;
+- a secret is exposed;
+- a public serializer exposes private fields;
+- an authentication/authorization boundary is weakened;
+- a canonical ID drifts;
+- a committee role drifts;
+- the Panjika calculation basis drifts;
+- a private object becomes public;
+- a test exposes an unresolved state-machine violation;
+- a local import points to a missing dependency;
+- a required validation check fails because of the batch.
 
 ---
 
-## 32. Final Contribution Principle
+## 33. Production Release Rules
 
-> Preserve canonical truth, security boundaries, provenance, and controlled architecture even when a local shortcut would be easier.
+Do not call the repository production-ready until the full production preflight is green or a formal exception exists.
+
+Final release validation covers, where applicable:
+
+- tree completeness;
+- canonical hashes;
+- unique canonical IDs;
+- D1 migration;
+- query/repository integration;
+- auth/session/RBAC;
+- donation state machine;
+- support lifecycle;
+- attachment security;
+- private B2 isolation;
+- email sender verification;
+- webhook integrity;
+- Panjika 216-row integrity;
+- public routes;
+- admin authorization;
+- search/AI publication filtering;
+- PWA safety;
+- SEO;
+- accessibility;
+- responsive mobile journeys;
+- unit/integration/E2E/security tests;
+- backup/restore;
+- release/rollback.
+
+---
+
+## 34. Contribution Principle
+
+The most important contribution rule is:
+
+> Preserve the project's canonical truth, security boundaries, and controlled architecture even when a local shortcut would be easier.
+
+A contribution is successful when it is correct, source-grounded, testable, secure, reviewable, and compatible with the controlled build sequence.
