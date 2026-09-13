@@ -1,8 +1,8 @@
 # Changelog
 
-All notable repository changes for the controlled V1.1.3 reconstruction are recorded here.
+All notable repository and engineering changes for the controlled V1.1.3 reconstruction are recorded here.
 
-This changelog describes repository and engineering changes. It is not a second source of canonical temple data.
+This file records repository history and controlled baseline changes. It is **not** a second source of canonical temple data.
 
 ---
 
@@ -10,67 +10,81 @@ This changelog describes repository and engineering changes. It is not a second 
 
 ### Batch 004 — Foundation / Config
 
-Added the root repository policy/documentation set:
+Prepared the complete root documentation set:
 
 - `README.md`
 - `SECURITY.md`
 - `CONTRIBUTING.md`
 - `CHANGELOG.md`
 
-The Batch 004 documentation establishes:
+The corrected Batch 004 documentation establishes and preserves:
 
-- source-of-truth precedence;
-- clean-slate repository rules;
-- canonical identity locks;
-- Panjika integrity rules;
-- temple operating baseline;
-- committee-role lock;
+- current source precedence;
+- clean-slate repository policy;
+- canonical temple identity;
+- **all nine current committee/person-role assignments**;
+- the four separately vacant positions;
+- the explicit rule that Organizing Secretary is filled by Mintu Shil;
+- priest/committee boundary;
+- Panjika identity and Raiganj calculation basis;
+- temple operating model;
+- Amavasya observance model;
 - donation baseline;
-- support-ticket security rules;
-- upload quotas;
-- Backblaze B2 production storage policy;
+- support-ticket security;
+- upload limits;
+- Backblaze B2 production storage;
 - Resend email policy;
-- authentication and authorization principles;
-- public/private data separation;
+- authentication and authorization;
+- public/private boundaries;
+- search/AI boundaries;
 - PWA/cache restrictions;
-- Bengali-first editorial policy;
-- accessibility expectations;
-- batch ownership and contribution rules;
+- accessibility;
+- batch ownership;
+- validation;
 - production acceptance boundaries.
 
-### Batch 003 — Foundation / Config
+This documentation deliberately does not claim final production readiness.
+
+---
+
+## Batch 003 — Foundation / Config
 
 Added the controlled developer/test toolchain configuration:
 
-- `eslint.config.mjs`
-- `prettier.config.mjs`
-- `vitest.config.ts`
-- `playwright.config.ts`
+```text
+eslint.config.mjs
+prettier.config.mjs
+vitest.config.ts
+playwright.config.ts
+```
 
-The batch establishes:
+The batch established:
 
 - ESLint flat configuration;
-- Prettier formatting policy;
-- deterministic Vitest test configuration;
-- explicit Playwright local test-server configuration;
-- source/test path coverage appropriate to the clean-slate build.
+- Prettier policy;
+- deterministic Vitest configuration;
+- explicit Playwright local test-server configuration.
 
-The batch was committed as:
+Recorded repository commit:
 
 ```text
 98756b6 batch-003: foundation-config
 ```
 
-### Batch 002 — Foundation / Config
+---
 
-Added the application/runtime foundation configuration:
+## Batch 002 — Foundation / Config
 
-- `tsconfig.json`
-- `next.config.ts`
-- `open-next.config.ts`
-- `wrangler.toml`
+Added:
 
-The batch establishes:
+```text
+tsconfig.json
+next.config.ts
+open-next.config.ts
+wrangler.toml
+```
+
+The batch established:
 
 - strict TypeScript configuration;
 - Next.js configuration;
@@ -78,58 +92,58 @@ The batch establishes:
 - Cloudflare Worker configuration;
 - D1 bindings;
 - production/preview KV bindings;
-- production/preview environment separation.
-
-The repository is configured for the selected Cloudflare Worker/OpenNext architecture.
-
-### Batch 001 — Foundation / Config
-
-Added the package/environment foundation:
-
-- `.env.example`
-- `.gitignore`
-- `package.json`
-- `package-lock.json`
-
-The batch establishes:
-
-- Node.js/npm engine policy;
-- application scripts;
-- dependency graph;
-- safe environment-variable template;
-- Git ignore policy.
-
-The committed dependency graph is represented by `package-lock.json`.
+- environment separation.
 
 ---
 
-## Canonical Baseline — V1.1.3 Production-Update Sources
+## Batch 001 — Foundation / Config
 
-The repository follows the currently supplied production-update artifacts:
+Added:
 
-### Unified blueprint
+```text
+.env.example
+.gitignore
+package.json
+package-lock.json
+```
+
+The batch established:
+
+- Node.js/npm engine policy;
+- repository scripts;
+- dependency graph;
+- safe environment template;
+- Git ignore rules.
+
+---
+
+## Canonical Source Baseline
+
+The controlled reconstruction uses the currently supplied production-update artifacts:
+
+### V1.1.3 Unified Canonical Blueprint
 
 ```text
 1e02b41c91a0e2fcfc072af2f01836fd59780d73bef0f28ee502d00331a86e8d
 ```
 
-### V2.1 canonical source data
+### V2.1 Canonical Source Data
 
 ```text
 fc0f3f0c6ba27075035d77238f01793842cc405c82ca240c50fbfff2237e13dc
 ```
 
-### 1433 Panjika
+### 1433 Panjika Production-Update Data
 
 ```text
 6dc5cf755cb2f54a9884aa50c1d2cd486052d679054e3a9f31350e34e87be246
 ```
 
+These identifiers describe the source artifact versions used for the controlled reconstruction.
+
 ---
 
-## Canonical Identity Baseline
-
-The current project identity is:
+## Canonical Temple Baseline
 
 ```text
 TEMPLE-0001
@@ -142,25 +156,48 @@ LOCATION-0001
 সাহাপুর বটতলা মোড়
 25.661726, 88.103574
 Asia/Kolkata
+
+COMMITTEE-0001
+শ্রী শ্রী মা রক্ষা কালী পূজা কমিটি ও সকল গ্রামবাসী
+
+TERM-0001
+বর্তমান কমিটি / current operating term
 ```
 
 ---
 
-## Committee Baseline
+## Committee Baseline — Corrected
 
-The current canonical committee mapping is:
+The current canonical roster contains **nine current people/role assignments**:
+
+| Person ID | Current role |
+|---|---|
+| `PERSON-000001` | `ROLE-PRESIDENT` — মিঠুন সরকার |
+| `PERSON-000002` | `ROLE-SECRETARY` — সঞ্জয় শীল |
+| `PERSON-000003` | `ROLE-CASHIER` — বাপি ভৌমিক |
+| `PERSON-000004` | `ROLE-ASSISTANT-CASHIER` — তন্ময় দত্ত |
+| `PERSON-000005` | `ROLE-MEDIA` — চিন্ময় দত্ত |
+| `PERSON-000006` | `ROLE-EXECUTIVE-MEMBER` — বিপ্লব সরকার |
+| `PERSON-000007` | `ROLE-ORGANIZING-SECRETARY` — মিন্টু শীল |
+| `PERSON-000008` | `ROLE-ASSISTANT-SECRETARY` — জয়ন্ত দে সরকার |
+| `PERSON-000009` | `ROLE-FOUNDING-PARTICIPANT` — চয়ন সরকার |
+
+The current vacant positions are separate:
 
 ```text
-PERSON-000006 → ROLE-EXECUTIVE-MEMBER
-PERSON-000007 → ROLE-ORGANIZING-SECRETARY
-PERSON-000008 → ROLE-ASSISTANT-SECRETARY
+Vice President
+Joint Secretary
+Office Secretary
+Volunteer Coordinator
 ```
+
+Organizing Secretary is **filled** by `PERSON-000007` and is **not vacant**.
+
+This distinction is part of the corrected Batch 004 documentation baseline.
 
 ---
 
 ## Panjika Baseline
-
-The current calendar baseline is:
 
 ```text
 PANJIKA-Y1433
@@ -169,9 +206,10 @@ CALC-BS1433-RAIGANJ-V1
 2026-09-11..2027-04-14
 216 daily records
 CANONICAL_REGIONAL_CALCULATION
+Asia/Kolkata
 ```
 
-The temple physical location and the Raiganj regional Panjika calculation basis remain separate concepts.
+The temple coordinates remain the physical location of the temple and do not replace the approved Raiganj Panjika calculation basis.
 
 ---
 
@@ -185,7 +223,20 @@ amavasyaPuja = RECURRING_REQUIRED
 specialPujaTiming = EVENT_RUNTIME
 ```
 
-No fixed daily puja schedule is to be fabricated.
+No permanent daily puja timetable is implied by this baseline.
+
+---
+
+## Amavasya Baseline
+
+```text
+AMAVASYA = first-class canonical domain
+Recurring rule = প্রতি অমাবস্যায় পূজা হয়।
+Special timing = EVENT_RUNTIME
+Decision window = generally 1–2 days before event
+```
+
+Temple-specific observance must remain distinguishable from generic festival data.
 
 ---
 
@@ -196,9 +247,9 @@ DONATION-CONFIG-0001
 VPA = 7583992377@okbizaxis
 Payee = Sri Sri Raksha Kali Mandir
 Minimum = ₹11
-Suggested = ₹51 / ₹101 / ₹501 / ₹1001
+Suggestions = ₹51 / ₹101 / ₹501 / ₹1001
 Transaction note = শ্রী শ্রী রক্ষা কালী মন্দির প্রণামী
-UTR is not payment verification
+UTR != payment verification
 ```
 
 ---
@@ -208,46 +259,57 @@ UTR is not payment verification
 ```text
 Reference = MRK-YYYY-NNNNNN
 Tracking = reference + 4-digit PIN
-Categories = FINANCE / PUJA / GRIEVANCE / GENERAL
-States = OPEN / IN_PROGRESS / WAITING_USER / RESOLVED / REJECTED / CLOSED
+
+Categories:
+FINANCE
+PUJA
+GRIEVANCE
+GENERAL
+
+States:
+OPEN
+IN_PROGRESS
+WAITING_USER
+RESOLVED
+REJECTED
+CLOSED
 ```
 
-The tracking PIN is never stored plaintext.
-
-Ticket reference alone is never authorization.
+The PIN is never stored plaintext.
 
 ---
 
 ## Storage Baseline
 
-The V1.1.3 production object-storage target is Backblaze B2:
+Production object storage:
 
 ```text
+Backblaze B2
 Bucket = raksha-kali-mandir-storage
 Bucket ID = 48a58aafc4e2931aaf030011
 Region = eu-central-003
 Endpoint = https://s3.eu-central-003.backblazeb2.com
-Access = private
-Credentials = server-side only
+Private
+Server-side credentials
 ```
 
-Older R2 implementation references are superseded for the V1.1.3 production target and must not return to executable production code.
+The current production target does not use Cloudflare R2.
 
 ---
 
 ## Upload Baseline
 
-Public grievance:
+### Grievance
 
 ```text
-3 attachments max
+3 files max
 5 MB/file
 10 MB aggregate
-JPEG/PNG/WebP/PDF only
-video disabled
+JPEG/PNG/WebP/PDF
+Video disabled
 ```
 
-Committee media:
+### Committee media
 
 ```text
 Photos: 10/upload, 5 MB/file, 50 MB aggregate
@@ -262,21 +324,19 @@ Server-side enforcement is authoritative.
 
 ## Email Baseline
 
-The email integration uses Resend.
+Resend is the application email adapter.
 
-The currently supplied operations mailbox configuration is:
+Current operations mailbox configuration:
 
 ```text
 maarakshakalisahapur@gmail.com
 ```
 
-The primary and backup configuration values are the same and therefore must not generate duplicate copies solely because they occupy two configuration slots.
+The current primary and backup configuration values are identical.
 
-Production sending requires a provider-verified sender domain.
+Production sender-domain verification is required.
 
-Webhook authenticity must be verified before event mutation.
-
-Email failure must not delete or roll back durable support-ticket state.
+Webhook authenticity and idempotent event handling are required.
 
 ---
 
@@ -288,106 +348,109 @@ The controlled security model includes:
 - secure cookies;
 - server-side authorization;
 - password hashing;
-- temporary first-login credential rotation;
-- single-use, short-lived reset tokens;
+- temporary-credential rotation;
+- short-lived single-use password-reset tokens;
 - rate limiting;
 - account disable/revocation;
-- audit controls;
-- explicit public/private serializers;
-- private object-storage isolation;
-- server-only secrets.
+- public/private serializers;
+- private B2 storage;
+- webhook authenticity;
+- auditability.
 
 ---
 
 ## UI / Accessibility Baseline
 
-The public application is:
+The public experience is:
 
 - Bengali-first;
 - warm;
 - respectful;
 - devotional;
 - responsive;
-- accessible.
+- accessible;
+- restrained.
 
-The project avoids:
+Target accessibility standard:
 
-- blanket gradients;
-- glassmorphism;
-- excessive shadows;
-- decorative clutter.
-
-Motion respects `prefers-reduced-motion`.
-
-The assistant/AI experience remains supplementary to the public site.
+```text
+WCAG 2.2 AA
+```
 
 ---
 
 ## Clean-Slate Policy
 
-The current repository is a clean-slate reconstruction.
+The current application repository is a clean-slate reconstruction.
 
-The following are not to be restored as active implementation:
+Legacy application behavior must not be restored from:
 
-- old pages;
-- old components;
-- old APIs;
-- old authentication;
-- old storage code;
-- old deployment configuration;
-- old source-of-truth copies.
+- history;
+- old branches;
+- old deployments;
+- old local trees.
 
-Repository history may be used for audit/reference purposes but is not a permission to revive legacy application behavior.
+Legacy material can be consulted for audit/reference only where specifically required.
 
 ---
 
-## Documentation Policy
+## Controlled Repository Scope
 
-Documentation reflects governed repository behavior.
+The complete V1.1.3 manifest contains:
 
-Documentation must not:
+```text
+BASELINE FILES = 392
+SUPPLEMENTAL FILES = 146
+CONTROLLED TOTAL = 538
+```
 
-- invent canonical facts;
-- expose secrets;
-- describe unimplemented functionality as completed;
-- create a conflicting source of truth;
-- bypass batch ownership.
+Batch 004 owns:
 
-Detailed domain documentation is added by its owning later batch.
+```text
+README.md
+SECURITY.md
+CONTRIBUTING.md
+CHANGELOG.md
+```
 
 ---
 
-## Release Policy
+## Production Readiness
 
-Production-ready status is reserved for the complete final release gate.
+The repository is not production-ready merely because a documentation batch is complete.
 
-The final release requires, where applicable:
+Final production acceptance requires the complete system-level gate, including applicable:
 
-- 538-file tree completeness;
-- source/hash validation;
-- canonical-ID integrity;
+- tree completeness;
+- canonical hashes;
+- canonical-ID validation;
 - D1 migration/integration;
-- auth/session/RBAC;
-- support/donation state machines;
+- authentication/session/RBAC;
+- donation/support state machines;
+- attachment enforcement;
 - B2 isolation;
-- email sender/webhook checks;
+- email verification/webhook integrity;
 - Panjika 216-row integrity;
 - public/admin route validation;
-- search/AI publication security;
-- PWA safety;
+- search/AI publication controls;
+- PWA;
 - SEO;
 - accessibility;
-- responsive mobile journeys;
-- unit/integration/E2E/security tests;
+- testing;
 - backup/restore;
-- release/rollback checks.
-
-A failed gate must be fixed or captured in a formal exception record with owner, date, scope, risk, and reason.
+- deployment;
+- rollback.
 
 ---
 
-## Versioning Note
+## Change-Control Rule
 
-This file uses an `[Unreleased]` section because the V1.1.3 repository reconstruction is still in progress.
+A future changelog entry must:
 
-Future releases should add dated/versioned sections without rewriting historical entries.
+- identify the affected batch/release;
+- describe actual repository changes;
+- avoid inventing source facts;
+- avoid claiming unimplemented work is complete;
+- avoid becoming a second canonical data source.
+
+Historical changelog entries should not be rewritten merely to make the current state appear cleaner.

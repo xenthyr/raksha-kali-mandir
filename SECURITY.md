@@ -4,44 +4,41 @@
 
 This document defines the repository-level security policy for the V1.1.3 clean-slate reconstruction of **শ্রী শ্রী মা রক্ষা কালী মন্দির**.
 
-It governs security expectations for:
+It governs:
 
-- source and canonical data;
+- canonical-data integrity;
 - public/private serialization;
 - authentication;
 - authorization;
-- sessions;
-- administrative access;
+- session security;
+- committee identity and role security;
 - support-ticket tracking;
-- attachments and object storage;
+- attachments;
+- Backblaze B2 storage;
 - donation/finance workflows;
-- transactional email and webhooks;
+- email and webhooks;
 - search and AI;
 - PWA/client caching;
-- logging and audit;
+- logging/audit;
 - environment separation;
 - incident response;
 - dependency and development security.
-
-This policy complements the detailed security contracts and later domain-specific documentation.
 
 ---
 
 ## 2. Security Objectives
 
-The security architecture must preserve five primary properties:
+The security architecture protects:
 
 1. **Confidentiality** — private information remains private.
 2. **Integrity** — canonical data and security-sensitive state cannot be silently or unauthorizedly changed.
-3. **Availability** — public functionality remains useful even when optional integrations fail.
-4. **Authenticity** — authentication, webhooks, sources, and workflow transitions are verified.
-5. **Auditability** — security-sensitive actions can be investigated with appropriate access control.
+3. **Availability** — public functionality remains useful despite optional integration failures.
+4. **Authenticity** — identities, webhooks, workflow transitions, and source states are verified.
+5. **Auditability** — material security-sensitive actions remain investigable.
 
 ---
 
 ## 3. Security Architecture
-
-The system follows:
 
 ```text
 Source
@@ -61,7 +58,7 @@ View Models
 UI
 ```
 
-Administrative mutations follow:
+Administrative mutation:
 
 ```text
 Actor
@@ -81,575 +78,514 @@ Revision / Audit
 Publication / Revalidation
 ```
 
-Security enforcement belongs close to the protected operation.
+Security enforcement belongs at the protected operation boundary.
 
 Client-side behavior is never an authorization boundary.
 
 ---
 
-## 4. Canonical Data Integrity
+## 4. Canonical Committee Security Lock
 
-Canonical identities include, among others:
+The current canonical roster contains nine current `TERM-0001` people:
+
+| Person ID | Current position | Role ID |
+|---|---|---|
+| `PERSON-000001` | সভাপতি / President | `ROLE-PRESIDENT` |
+| `PERSON-000002` | সম্পাদক / Secretary | `ROLE-SECRETARY` |
+| `PERSON-000003` | কোষাধ্যক্ষ / Cashier | `ROLE-CASHIER` |
+| `PERSON-000004` | সহ-কোষাধ্যক্ষ / Assistant Cashier | `ROLE-ASSISTANT-CASHIER` |
+| `PERSON-000005` | মিডিয়া দায়িত্বপ্রাপ্ত / Media | `ROLE-MEDIA` |
+| `PERSON-000006` | কার্যকরী সদস্য / Executive Member | `ROLE-EXECUTIVE-MEMBER` |
+| `PERSON-000007` | সাংগঠনিক সম্পাদক / Organizing Secretary | `ROLE-ORGANIZING-SECRETARY` |
+| `PERSON-000008` | সহকারী সম্পাদক / Assistant Secretary | `ROLE-ASSISTANT-SECRETARY` |
+| `PERSON-000009` | প্রতিষ্ঠাকালীন অংশগ্রহণকারী / Founding Participant | `ROLE-FOUNDING-PARTICIPANT` |
+
+The following four positions are separately recorded as vacant:
+
+```text
+Vice President
+Joint Secretary
+Office Secretary
+Volunteer Coordinator
+```
+
+Security-sensitive authorization code must not collapse these states into one generic committee flag.
+
+`PERSON-000007` / Mintu Shil is the current Organizing Secretary. That role is filled and must not be treated as vacant.
+
+---
+
+## 5. Canonical Identity Integrity
+
+Protected identities include:
 
 ```text
 TEMPLE-0001
 DEITY-0001
 LOCATION-0001
+COMMITTEE-0001
+TERM-0001
 PANJIKA-Y1433
+PERSON-000001 ... PERSON-000009
 ```
 
-Current committee mappings include:
-
-```text
-PERSON-000006 → ROLE-EXECUTIVE-MEMBER
-PERSON-000007 → ROLE-ORGANIZING-SECRETARY
-PERSON-000008 → ROLE-ASSISTANT-SECRETARY
-```
-
-Security-sensitive code must not infer identity from:
+Do not infer identity from:
 
 - display name;
 - filename;
-- array order;
-- position in a list;
-- role name alone;
+- array position;
+- UI ordering;
+- role string;
 - historical prose.
 
-Canonical records must preserve the provenance, verification, revision, publication, and audit information required by their domain.
-
-Input validation must reject malformed and contradictory records rather than allowing ambiguous data to reach a trusted state.
+Canonical role assignments must use stable IDs.
 
 ---
 
-## 5. Secret Management
+## 6. Public / Private Boundary
 
-The following are server-side secrets and must never be committed to Git or exposed to browser code:
+Public data is explicitly approved for publication.
+
+Private data may include:
+
+- private contact values;
+- authentication records;
+- session identifiers;
+- password material;
+- reset secrets;
+- private committee details;
+- internal ticket fields;
+- private attachments;
+- donor-sensitive information;
+- risk flags;
+- audit-only information;
+- infrastructure credentials;
+- provider credentials.
+
+Use explicit public serializers.
+
+Do not expose a complete private object and attempt to subtract sensitive fields after serialization.
+
+---
+
+## 7. Secret Management
+
+Never commit:
 
 - B2 application keys;
 - `AUTH_SECRET`;
 - Turnstile secret;
 - VAPID private key;
 - AI provider API key;
-- error-reporting DSN where confidential;
 - Resend API key;
 - Jaba/OTP provider configuration;
 - identity salts;
-- rate-limit secrets/configuration where confidential;
-- private media signing secrets;
-- database credentials where applicable.
+- private signing secrets;
+- production database credentials;
+- other server-only credentials.
 
-`.env.example` may document variable names and safe non-secret defaults.
+`.env.example` may contain variable names and safe examples but never production secrets.
 
-It must not contain real production credentials.
+Never print secrets to:
 
-Do not print secrets in:
-
-- CI logs;
-- application logs;
+- logs;
+- browser consoles;
 - error pages;
 - support tickets;
-- browser console;
-- analytics payloads;
-- exception messages.
+- CI output;
+- analytics payloads.
 
 ---
 
-## 6. Client / Server Separation
+## 8. Client / Server Isolation
 
 Server-only modules must remain server-side.
 
-Do not import server-only secrets, database clients, storage credentials, or privileged services into client components.
+Do not import into client code:
 
-Client bundles must not contain:
-
-- database credentials;
-- object-storage credentials;
-- email provider keys;
+- database clients;
+- private storage credentials;
+- email-provider secrets;
 - authentication secrets;
-- password reset secrets;
-- private signing material;
-- privileged AI provider credentials.
+- signing secrets;
+- privileged AI credentials;
+- server-only configuration.
 
-Public serializers must be explicit allow-lists.
-
-The safe pattern is:
-
-```text
-Private record
-  ↓
-Explicit public serializer
-  ↓
-Approved public fields only
-```
-
-Never:
-
-```text
-Private record
-  ↓
-Return everything
-  ↓
-Remove a few fields later
-```
+Client bundles must contain only intentionally public configuration.
 
 ---
 
-## 7. Authentication
+## 9. Authentication
 
-Administrative authentication is limited to canonical committee identities and the approved account lifecycle.
-
-The target authentication model is:
+Administrative authentication uses:
 
 ```text
 username OR registered phone
-        +
++
 password
 ```
 
-First login:
+First-login lifecycle:
 
 ```text
-Temporary credential
-  ↓
-Required setup
-  ↓
-Phone binding/confirmation
-  ↓
-Private password establishment
-  ↓
-Normal session lifecycle
+temporary credential
+→ required setup
+→ phone binding/confirmation
+→ private password
+→ server-managed session
 ```
 
-The system does not use public signup, social login, or Google OAuth as an administrative identity mechanism.
+Do not use public signup for administrative accounts.
 
-Only one implemented and versioned password-KDF policy should be used.
+Do not replace the controlled administrative identity model with an uncontrolled social-login mechanism.
 
-Passwords are never stored in plaintext.
+Passwords are never stored plaintext.
 
 ---
 
-## 8. Session Security
+## 10. Session Security
 
 Sessions are server-managed.
 
-Session cookies must use appropriate security properties, including where applicable:
+Security properties should include, as applicable:
 
 - `Secure`;
 - `HttpOnly`;
 - `SameSite`;
-- appropriate expiration;
-- server-side revocation/disable controls.
+- suitable expiry;
+- revocation;
+- account disable handling.
 
-Session identifiers must be opaque.
+Session identifiers are opaque.
 
-Do not expose session secrets through URLs, logs, client data, or public APIs.
+Do not expose sessions in URLs or logs.
 
-Session expiration and revocation must be honored server-side.
-
-High-risk actions may require reauthentication according to policy.
-
----
-
-## 9. Password Reset
-
-Password-reset controls must use:
-
-- short-lived tokens;
-- single-use tokens;
-- opaque externally visible values;
-- hashed token storage where persisted;
-- rate limiting;
-- safe expiration;
-- account-state checks.
-
-Reset tokens must never be logged in plaintext.
-
-The user-facing response must not reveal whether a sensitive account identifier exists where doing so could enable account enumeration.
+High-risk operations may require reauthentication.
 
 ---
 
-## 10. Authorization
+## 11. Password Reset
 
-Authorization is resolved as:
+Password-reset tokens must be:
+
+- short-lived;
+- single-use;
+- opaque;
+- hashed when persisted;
+- rate-limited;
+- safely expired.
+
+Do not log reset tokens.
+
+User-facing responses should avoid unnecessary account-existence enumeration.
+
+---
+
+## 12. Authorization
+
+Authorization follows:
 
 ```text
-USER
+Authenticated actor
   ↓
-ACTIVE ROLES
+Active role assignments
   ↓
-PERMISSIONS
+Permission set
   ↓
-RESOURCE / SCOPE CHECK
+Resource/scope
   ↓
-POLICY CHECK
+Policy
   ↓
-AUDIT
+Audit
 ```
 
-Every administrative mutation must verify the authenticated actor and permission on the server.
+Server-side permission checks are authoritative.
 
-Role membership does not automatically grant every operation.
+UI restrictions do not authorize actions.
 
-A super-admin style role does not bypass:
+Role possession is not the same as unrestricted access.
 
-- cryptographic secrets;
-- source validation;
-- integrity constraints;
-- required approvals;
-- audit;
-- explicit confirmations.
-
-Separation-of-duty exceptions must be explicit and auditable.
+Sensitive actions may require explicit approval or reauthentication.
 
 ---
 
-## 11. Public / Private Data Security
+## 13. Finance Separation
 
-Public and private data models must remain separate.
+Finance is segregated from ordinary publication permissions.
 
-Examples of private fields include:
-
-- private phone/email;
-- private notes;
-- internal risk flags;
-- authentication data;
-- admin identifiers;
-- unpublished term information;
-- internal approval commentary;
-- donor-sensitive information;
-- identity hashes;
-- private prayer purpose;
-- private attachments.
-
-Public serializers may expose only approved fields.
-
-Search and AI must apply the same publication and privacy rules.
-
----
-
-## 12. Support Ticket Security
-
-Public ticket tracking uses:
+The financial lifecycle separates:
 
 ```text
-ticket reference + 4-digit PIN
+Intent
+→ submitted payment reference
+→ verification
+→ approval
+→ posting
 ```
 
-The ticket reference alone is not authorization.
+A UTR is not payment verification.
 
-Ticket references use:
+Never treat a client-submitted UTR as proof of verified payment.
+
+Canonical donation baseline:
+
+```text
+VPA = 7583992377@okbizaxis
+Payee = Sri Sri Raksha Kali Mandir
+Minimum = ₹11
+Suggestions = ₹51 / ₹101 / ₹501 / ₹1001
+```
+
+Financial mutations should be auditable.
+
+---
+
+## 14. Support Ticket Security
+
+Ticket reference:
 
 ```text
 MRK-YYYY-NNNNNN
 ```
 
-Ticket creation must be collision-safe through the D1 data layer.
+Private tracking requires:
 
-Tracking requests must be rate-limited and protected against brute-force discovery.
+```text
+reference + 4-digit PIN
+```
 
-The PIN must never be stored plaintext.
+The reference alone is not authorization.
 
-Public tracking must not expose:
+PIN requirements:
+
+- never store plaintext;
+- use secure verification;
+- rate-limit attempts;
+- avoid revealing private ticket state on failure.
+
+Private fields include, as applicable:
 
 - internal notes;
 - assignments;
-- internal risk flags;
+- risk flags;
 - private attachments;
 - identity hashes;
-- private contact information;
-- other non-public fields.
+- private contact information.
 
-Public tracking should use explicit public view models rather than querying and serializing the full ticket object.
+Public tracking must use an explicit public view model.
 
 ---
 
-## 13. Upload Security
-
-Server-side validation is authoritative.
-
-The system must enforce both per-file and aggregate limits.
+## 15. Upload Security
 
 ### Grievance
 
-- maximum 3 attachments;
-- maximum 5 MB each;
-- maximum 10 MB aggregate;
-- JPEG/PNG/WebP/PDF;
-- video disabled.
+```text
+3 files max
+5 MB/file
+10 MB aggregate
+JPEG/PNG/WebP/PDF
+video disabled
+```
 
 ### Committee photos
 
-- maximum 10;
-- maximum 5 MB each;
-- maximum 50 MB aggregate.
+```text
+10 files max
+5 MB/file
+50 MB aggregate
+```
 
-### Committee videos
+### Videos
 
-- maximum 2;
-- maximum 50 MB each;
-- maximum 100 MB aggregate.
+```text
+2 files max
+50 MB/file
+100 MB aggregate
+```
 
-### Committee audio
+### Audio
 
-- maximum 2;
-- maximum 25 MB each.
+```text
+2 files max
+25 MB/file
+```
 
-### Committee documents
+### Documents
 
-- maximum 5;
-- maximum 15 MB each.
+```text
+5 files max
+15 MB/file
+```
 
-The validation chain is:
+Security enforcement follows:
 
 ```text
 Request
-  ↓
-Authentication/authorization where required
-  ↓
+ ↓
+Authentication / authorization where required
+ ↓
 Metadata validation
-  ↓
-File count/size validation
-  ↓
+ ↓
+File-count/size validation
+ ↓
 Type validation
-  ↓
+ ↓
 Upload issuance
-  ↓
+ ↓
 Object upload
-  ↓
+ ↓
 Server finalization
-  ↓
+ ↓
 Reconciliation/scanning where required
 ```
 
-Browser validation alone is insufficient.
+Browser validation alone is not sufficient.
 
 ---
 
-## 14. Object Storage Security
+## 16. Backblaze B2 Security
 
-The production object-storage target is Backblaze B2:
+Production object storage:
 
 ```text
-Bucket: raksha-kali-mandir-storage
-Bucket ID: 48a58aafc4e2931aaf030011
-Region: eu-central-003
-Endpoint: https://s3.eu-central-003.backblazeb2.com
-Access: private
+Provider = Backblaze B2
+Bucket = raksha-kali-mandir-storage
+Bucket ID = 48a58aafc4e2931aaf030011
+Region = eu-central-003
+Endpoint = https://s3.eu-central-003.backblazeb2.com
+Access = private
 ```
 
-Credentials are server-side only.
+Credentials remain server-side.
 
-Private objects must not become public through uncontrolled URLs.
+Private objects must not be unintentionally public.
 
-Temporary URLs are bearer credentials and must therefore be:
+Temporary access should be:
 
 - short-lived;
 - scoped;
-- permission-checked;
-- generated only when appropriate.
+- permission-checked.
 
-Do not place permanent storage credentials in the browser.
-
-Do not reintroduce executable R2 paths into V1.1.3 production code.
+The current V1.1.3 production target does not use Cloudflare R2.
 
 ---
 
-## 15. Donation / Finance Security
+## 17. Email Security
 
-Donation workflows must distinguish:
+The email adapter is Resend.
 
-```text
-Donation intent
-  ↓
-Submitted payment reference
-  ↓
-Verification
-  ↓
-Approval
-  ↓
-Posting
-```
-
-A UTR is not payment verification.
-
-The canonical donation configuration includes:
-
-```text
-VPA: 7583992377@okbizaxis
-Payee: Sri Sri Raksha Kali Mandir
-Minimum: ₹11
-Suggestions: ₹51 / ₹101 / ₹501 / ₹1001
-```
-
-Finance mutation permissions remain separated from ordinary content-publishing permissions.
-
-Financial actions should be auditable.
-
-Client-submitted values are never treated as verified merely because they are well-formed.
-
----
-
-## 16. Email Security
-
-The email layer uses Resend.
-
-Production sending must use a provider-verified sender domain.
-
-Development and preview environments must not accidentally send production mail.
-
-Webhook processing must:
-
-1. verify authenticity before mutation;
-2. validate event structure;
-3. tolerate duplicate events;
-4. tolerate out-of-order delivery where applicable;
-5. avoid replaying side effects;
-6. persist or reconcile provider state safely.
-
-A provider failure must not erase a durable ticket or canonical record.
-
-The currently supplied primary and backup operations addresses are identical:
+Current operations address configuration:
 
 ```text
 maarakshakalisahapur@gmail.com
 ```
 
-The application must not treat the duplicate configuration as two unique destinations.
+The supplied primary and backup values are the same; do not produce duplicate mail merely because two slots contain the same destination.
+
+Production sending requires a verified sender domain.
+
+Development/preview must not accidentally send production mail.
 
 ---
 
-## 17. Webhook Security
+## 18. Webhook Security
 
-A webhook is an untrusted external request until authenticated.
+Treat external webhook requests as untrusted until authenticated.
 
-The processing order is:
+Processing order:
 
 ```text
 Request
-  ↓
-Signature/authenticity verification
-  ↓
+ ↓
+Authenticity verification
+ ↓
 Schema validation
-  ↓
-Replay/duplicate protection
-  ↓
-State transition validation
-  ↓
+ ↓
+Duplicate/replay protection
+ ↓
+State-transition validation
+ ↓
 Durable mutation
-  ↓
+ ↓
 Audit/observability
 ```
 
-Do not mutate state before authenticity verification.
+Never mutate durable state before authenticity verification.
 
-Do not trust provider event IDs solely because they are syntactically valid.
+Duplicate and out-of-order events must be safe to process.
 
 ---
 
-## 18. Rate Limiting
+## 19. Rate Limiting
 
-Sensitive public endpoints should be rate-limited, including where applicable:
+Rate-limit sensitive endpoints such as:
 
 - login;
-- password reset requests;
+- password reset;
 - ticket tracking;
-- sensitive contact/grievance operations;
-- verification endpoints;
-- webhook abuse surfaces;
-- other enumeration-prone endpoints.
+- verification operations;
+- sensitive public submissions;
+- enumeration-prone endpoints.
 
-Rate limits must be enforced server-side.
+Rate limiting must be enforced server-side.
 
-When a public rate-limited endpoint fails due to abuse controls, the response should avoid exposing internal counters or sensitive account existence information.
+Do not reveal internal counters or private account-existence information.
 
 ---
 
-## 19. Search and AI Security
+## 20. Search and AI Security
 
-Search indexes only approved public content.
+Search must include only content allowed for public indexing.
 
-AI grounding may use only data allowed by:
+AI context must obey:
 
 - publication state;
-- verification state;
+- verification;
+- provenance;
+- historical status;
 - public/private classification;
-- source/provenance rules;
-- authorization requirements.
+- authorization.
 
-AI must not:
+AI must never:
 
 - reveal private records;
-- bypass admin authorization;
-- use hidden fields as public context;
+- bypass authorization;
 - invent canonical facts;
-- become a canonical database;
+- create an alternate canonical source;
 - mutate canonical data through ordinary public chat.
 
-The application must remain operational when AI is unavailable.
+Public functionality must remain usable without AI.
 
 ---
 
-## 20. PWA / Browser Storage Security
+## 21. PWA and Browser Storage
 
-Do not cache or persist private information in public service-worker caches.
+Do not place private information into public caches.
 
 Do not cache:
 
+- authenticated API results;
 - admin pages;
-- authenticated API responses;
-- ticket details;
+- private ticket responses;
 - private attachments;
 - sessions;
 - secrets.
 
-Review browser storage use carefully for:
+Review all browser storage surfaces:
 
+- service-worker Cache Storage;
 - localStorage;
 - sessionStorage;
-- IndexedDB;
-- service-worker Cache Storage.
+- IndexedDB.
 
-Private authentication state should remain under the approved secure session model.
-
----
-
-## 21. Logging and Observability
-
-Logs should support investigation without becoming a secondary source of sensitive data.
-
-Never log:
-
-- passwords;
-- reset tokens;
-- session secrets;
-- API keys;
-- B2 secrets;
-- Resend keys;
-- authentication cookies;
-- private attachment contents.
-
-Security-relevant events that may need audit/observability include:
-
-- successful/failed administrative login;
-- password-reset issuance/use;
-- account disable/revoke;
-- permission changes;
-- support-ticket state changes;
-- private-object access;
-- publication changes;
-- webhook verification failures;
-- suspicious rate-limit events;
-- security-sensitive configuration changes.
-
-Audit records must themselves be access-controlled.
+Caching must never bypass server authorization.
 
 ---
 
-## 22. Canonical and Panjika Security
+## 22. Panjika Integrity
 
-Calendar data is integrity-sensitive.
-
-The current Panjika contract is:
+The current Panjika security/integrity lock is:
 
 ```text
 PANJIKA-Y1433
@@ -657,213 +593,244 @@ Bisuddha Siddhanta
 CALC-BS1433-RAIGANJ-V1
 2026-09-11..2027-04-14
 216 records
-```
-
-The physical temple coordinates:
-
-```text
-25.661726, 88.103574
-```
-
-must not replace the Raiganj calculation basis.
-
-Do not silently recompute the supplied 216 astronomical rows.
-
-The production-update correction changes the daily calculation-status metadata to:
-
-```text
 CANONICAL_REGIONAL_CALCULATION
 ```
 
-while preserving the supplied astronomical values.
+The temple physical coordinates are:
+
+```text
+25.661726
+88.103574
+```
+
+They do not replace the Raiganj Panjika calculation basis.
+
+Do not silently recompute supplied astronomical values.
 
 ---
 
-## 23. Security and Business Time
+## 23. Business Time and Expiry
 
-Business-time logic must use:
+Business-time interpretation uses:
 
 ```text
 Asia/Kolkata
 ```
 
-Persisted instants may be UTC where appropriate.
+Persisted instants may use UTC where appropriate.
 
-Conversions must be explicit.
+Security-sensitive expiry logic must not depend on client-provided time.
 
-Scheduled jobs must be idempotent.
-
-Security-sensitive expiry logic must use a consistent server-side clock and avoid client-provided time as an authority.
+Scheduled operations must be idempotent.
 
 ---
 
-## 24. Error Handling
+## 24. Logging and Audit
 
-Security failures must fail closed.
+Never log:
+
+- passwords;
+- reset tokens;
+- session secrets;
+- API keys;
+- B2 credentials;
+- Resend keys;
+- private attachment contents.
+
+Security-relevant audit events may include:
+
+- administrative login success/failure;
+- password-reset issuance/use;
+- account disable/revoke;
+- permission changes;
+- support state changes;
+- publication changes;
+- private-object access;
+- webhook verification failures;
+- suspicious rate-limit activity;
+- security-sensitive configuration changes.
+
+Audit data itself must be access-controlled.
+
+---
+
+## 25. Error Handling
+
+Security-sensitive failures must fail closed.
 
 Examples:
 
-- unauthenticated admin request → deny;
-- insufficient permission → deny;
-- malformed canonical record → reject;
-- invalid ticket PIN → deny without revealing private state;
-- invalid webhook signature → reject before mutation;
-- invalid upload type/size → reject;
-- unavailable authorization state → deny rather than guess.
+```text
+No authentication → deny
+No permission → deny
+Invalid PIN → deny
+Invalid webhook signature → reject before mutation
+Invalid upload → reject
+Malformed canonical record → reject
+Unavailable authorization state → deny rather than guess
+```
 
-Do not silently continue after security-sensitive errors.
+Do not silently continue after a security-sensitive failure.
 
 ---
 
-## 25. Dependency Security
+## 26. Dependency Security
 
-The dependency graph is controlled through the committed lockfile.
+The committed lockfile defines the reproducible dependency graph.
 
-Dependency work must consider:
+Dependency changes must consider:
 
-- known vulnerabilities;
+- security advisories;
+- transitive dependencies;
 - framework compatibility;
-- runtime compatibility;
-- Cloudflare/OpenNext compatibility;
-- package provenance;
-- transitive dependencies.
+- Node.js compatibility;
+- OpenNext compatibility;
+- Cloudflare compatibility.
 
-Do not use forced upgrades without compatibility review.
+Do not disable security checks to obtain a green build.
 
-Do not bypass security warnings by disabling checks.
+Do not force upgrades without compatibility review.
 
 ---
 
-## 26. Development Security Rules
+## 27. Environment Security
+
+Production and preview are separate.
+
+Production secrets must never appear in:
+
+- Git;
+- client bundles;
+- public artifacts;
+- public logs.
+
+Preview must not silently obtain production mutation authority.
+
+The production storage target is B2, not R2.
+
+---
+
+## 28. Development Security
 
 Developers must:
 
-- keep secrets out of Git;
-- use safe local environment templates;
-- avoid production credentials in tests;
+- use safe local templates;
+- avoid production secrets in development;
 - use deterministic fixtures;
-- avoid live production services in unit tests;
+- avoid uncontrolled live production services in unit tests;
 - inspect diffs for secret leakage;
-- inspect client bundles for server-only imports;
-- preserve public/private boundaries;
+- inspect client/server boundaries;
 - preserve canonical identifiers;
-- preserve Panjika basis;
-- preserve committee roles;
-- preserve B2 storage target.
+- preserve current committee roles;
+- preserve vacant-position status;
+- preserve Panjika calculation basis.
 
 ---
 
-## 27. Incident Response
+## 29. Incident Response
 
 When a security incident is suspected:
 
-1. stop the unsafe operation where possible;
-2. identify affected environments;
+1. stop or isolate the unsafe operation where possible;
+2. identify affected environment(s);
 3. preserve relevant audit information;
-4. revoke or rotate compromised credentials;
+4. revoke/rotate compromised credentials;
 5. invalidate affected sessions/tokens;
 6. restrict compromised object access;
 7. determine affected data;
-8. repair the underlying control;
-9. validate the repair;
-10. document impact and corrective action.
+8. correct the underlying control;
+9. validate the fix;
+10. record corrective action.
 
-Do not destroy relevant evidence before investigation.
+Do not destroy useful investigation evidence before preserving it appropriately.
 
 ---
 
-## 28. Credential Compromise
+## 30. Credential Compromise
 
-If a secret or credential is exposed:
+If any secret is exposed:
 
 - treat it as compromised immediately;
 - revoke/rotate it;
-- remove it from exposed channels;
-- inspect logs for use;
-- invalidate affected sessions/tokens where applicable;
-- verify the replacement configuration;
-- record the incident and corrective action.
+- inspect use logs;
+- invalidate dependent sessions/tokens where applicable;
+- replace and verify configuration;
+- record the incident.
 
-Do not rely on deleting the Git commit alone as remediation.
+Deleting a Git commit alone is not adequate remediation.
 
 ---
 
-## 29. Vulnerability Reporting
+## 31. Vulnerability Reporting
 
-Security vulnerabilities should not be disclosed publicly when the disclosure itself could enable exploitation.
+Security vulnerabilities should be reported privately when public disclosure could enable exploitation.
 
-A useful report should contain:
+Useful reports include:
 
 - affected component;
-- reproduction steps;
+- reproduction;
 - expected vs actual behavior;
 - security impact;
-- environment/version information;
-- mitigation suggestions when available.
+- version/environment;
+- mitigation where known.
 
-Do not include:
+Never include:
 
 - passwords;
 - API keys;
-- private user data;
-- private tickets;
+- session secrets;
+- private ticket contents;
 - private attachments;
 - production credentials.
 
 ---
 
-## 30. Security Review Per Batch
+## 32. Security Review Per Batch
 
-Every controlled batch must include a security review appropriate to its scope.
+For each controlled batch, verify as applicable:
 
-At minimum, the review should ask:
-
-- Did any secret enter the repository?
-- Did any server-only dependency enter client code?
-- Did any public serializer gain private fields?
-- Did any authentication or authorization boundary weaken?
-- Did any object become unintentionally public?
-- Did any canonical fact drift?
-- Did any Panjika value or calculation basis drift?
-- Did any committee role drift?
-- Did any new retryable mutation become non-idempotent?
-- Did any error become silently swallowed?
-- Did any preview path gain production access?
+- no secret leakage;
+- no server-only module enters client code;
+- no private field enters public serializers;
+- no unauthorized route mutation;
+- no public object leak;
+- no canonical-ID drift;
+- no committee-role drift;
+- no Panjika calculation-basis drift;
+- no vacancy-state drift;
+- no new non-idempotent retry path;
+- no silently swallowed security failure.
 
 ---
 
-## 31. Production Security Gate
+## 33. Production Security Gate
 
-Production release must not proceed until the applicable security gates pass, including where applicable:
+Before production release, the applicable gates must pass:
 
-- clean tree;
-- no secret leakage;
+- secret scan;
 - dependency/security checks;
 - D1 migration integrity;
-- server-side authorization;
-- session security;
-- password-reset security;
+- auth/session security;
+- server-side RBAC;
 - support tracking security;
-- upload limits;
-- private-object isolation;
-- email webhook authenticity;
-- environment separation;
-- search/AI publication filtering;
+- upload enforcement;
+- private B2 isolation;
+- email sender verification;
+- webhook authenticity;
+- Panjika 216-row integrity;
+- publication filtering;
+- AI/public boundary;
 - PWA/private-cache checks;
 - accessibility/security tests;
-- backup/restore validation;
-- release/rollback validation.
+- backup/restore;
+- release/rollback.
 
-A failed gate requires a fix or an explicit, recorded exception with owner, date, scope, risk, and reason.
+A failed gate requires correction or a formal exception record.
 
 ---
 
-## 32. Core Security Principle
-
-The repository follows this rule:
+## 34. Core Security Principle
 
 > **Never trust presentation state where a server-side security decision is required.**
 
-Security belongs at the data and mutation boundaries.
-
-Canonical truth, private data, authenticated identity, authorization, object access, workflow state, and external webhooks must all be independently protected.
+Protect canonical truth, identity, authorization, private data, object access, workflow state, and external integrations independently.
