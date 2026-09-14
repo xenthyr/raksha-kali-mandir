@@ -1,6 +1,428 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
-<title id="title">দর্শন ও আগমন — Visit</title>
-<desc id="desc">Calm editorial visit illustration using a symbolic temple form; not a documentary depiction of the physical temple.</desc>
-<rect x="8" y="8" width="112" height="112" rx="24" fill="#FBF4E6" stroke="#B08A3E" stroke-width="2"/><path d="M24 92H104" stroke="#24201D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 88V58L64 35L96 58V88" fill="#FFFFFF" stroke="#24201D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 88V68H78V88" fill="#8F241C" stroke="#24201D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 21V35M64 21L77 27L64 31" stroke="#B08A3E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 101C31 96 39 96 46 102C53 108 60 108 67 102C74 96 81 96 88 102C95 108 102 108 106 104" stroke="#47614D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="31" r="3" fill="#C86A12"/><circle cx="104" cy="31" r="3" fill="#C86A12"/><path d="M39 92C45 88 51 86 58 86M70 86C77 86 83 88 89 92" stroke="#C86A12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="64" cy="48" r="4" fill="#B08A3E"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 480 360"
+  width="480"
+  height="360"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>মন্দির পরিক্রমা ও পুণ্যদর্শন নির্দেশিকা — চিত্রলিপি</title>
+  <desc>Sacred pilgrim visit guidelines, entrance protocol, footwear deposit counter, purification ablution jaladhara, and darshan path for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTES, PATTERNS & MULTI-STOP GRADIENTS       -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background: Luminous Sacred Ivory Parchment Gradient -->
+    <radialGradient id="vCanvasBg" cx="50%" cy="40%" r="78%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#FDFBF5"/>
+      <stop offset="78%" stop-color="#FBF4E6"/>
+      <stop offset="100%" stop-color="#EFE0C7"/>
+    </radialGradient>
+
+    <!-- Subtle Traditional Bengali Alpana Lace Texture Overlay -->
+    <pattern id="vAlpanaTile" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 30 15 L 15 30 L 0 15 Z" fill="none" stroke="#B08A3E" stroke-width="0.45" stroke-opacity="0.12"/>
+      <circle cx="15" cy="15" r="4.5" fill="none" stroke="#8F241C" stroke-width="0.4" stroke-opacity="0.08"/>
+      <circle cx="15" cy="15" r="1.2" fill="#B08A3E" fill-opacity="0.18"/>
+    </pattern>
+
+    <!-- Golden Pilgrim Reception Aura -->
+    <radialGradient id="vReceptionAura" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFDE8A" stop-opacity="0.5"/>
+      <stop offset="35%" stop-color="#C86A12" stop-opacity="0.3"/>
+      <stop offset="75%" stop-color="#8F241C" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Burnished Temple Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="vGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9EEC8"/>
+      <stop offset="25%" stop-color="#D9B15B"/>
+      <stop offset="65%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Shading Gradient -->
+    <linearGradient id="vCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </linearGradient>
+
+    <!-- Terracotta Brick / Pavement Shading -->
+    <linearGradient id="vTerracottaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A33A2D"/>
+      <stop offset="100%" stop-color="#751F16"/>
+    </linearGradient>
+
+    <!-- Sacred Flame Multi-Stage Gradient -->
+    <linearGradient id="vFlameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="25%" stop-color="#8F241C"/>
+      <stop offset="70%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#F5C042"/>
+    </linearGradient>
+
+    <!-- Holy Water Lustre Gradient -->
+    <linearGradient id="vWaterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6EAF8"/>
+      <stop offset="50%" stop-color="#85C1E9"/>
+      <stop offset="100%" stop-color="#3498DB"/>
+    </linearGradient>
+
+    <!-- Ornate Temple Corner Filigree Macro -->
+    <g id="vCornerFiligree">
+      <path d="M 0,0 L 28,0 C 28,14 14,28 0,28 Z" fill="url(#vGoldGrad)" opacity="0.9"/>
+      <path d="M 3,3 L 21,3 C 21,12 12,21 3,21 Z" fill="#FBF4E6"/>
+      <circle cx="8" cy="8" r="2.2" fill="#8F241C"/>
+      <path d="M 0,28 L 28,0" stroke="#8F241C" stroke-width="1.2" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BASE CANVAS & NOTARIAL SECURITY BORDERS                   -->
+  <!-- ============================================================ -->
+  <!-- Ivory Canvas -->
+  <rect width="480" height="360" rx="16" fill="url(#vCanvasBg)"/>
+  <rect width="480" height="360" rx="16" fill="url(#vAlpanaTile)"/>
+
+  <!-- Outer Deep Crimson Enclosure Frame -->
+  <rect x="12" y="12" width="456" height="336" rx="14" fill="none" stroke="#8F241C" stroke-width="2.6"/>
+
+  <!-- Inner Burnished Brass Guard Rail -->
+  <rect x="18" y="18" width="444" height="324" rx="10" fill="none" stroke="url(#vGoldGrad)" stroke-width="1.4"/>
+
+  <!-- Guilloché Beaded Tracking Line -->
+  <rect x="23" y="23" width="434" height="314" rx="7" fill="none" stroke="#8F241C" stroke-width="0.8" stroke-dasharray="2.5 2.5" opacity="0.6"/>
+
+  <!-- Four Ornamental Corner Brackets -->
+  <use xlink:href="#vCornerFiligree" x="23" y="23"/>
+  <use xlink:href="#vCornerFiligree" x="457" y="23" transform="rotate(90 457 23)"/>
+  <use xlink:href="#vCornerFiligree" x="457" y="337" transform="rotate(180 457 337)"/>
+  <use xlink:href="#vCornerFiligree" x="23" y="337" transform="rotate(270 23 337)"/>
+
+  <!-- Top Identification Badge -->
+  <g transform="translate(240, 38)">
+    <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="1.2"/>
+    <text x="0" y="1" text-anchor="middle" dominant-baseline="central" font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif" font-size="11" font-weight="700" fill="#FFFDF7" letter-spacing="0.6" text-rendering="geometricPrecision">
+      ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
+    </text>
+  </g>
+
+  <!-- Golden Pilgrim Reception Aura Glow -->
+  <circle cx="240" cy="165" r="148" fill="url(#vReceptionAura)"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. CENTRAL GATEWAY: MANDIR SHIKHARA & TORANA ARCHWAY         -->
+  <!-- ============================================================ -->
+  <!-- Distant Upper Shikhara Spire -->
+  <g id="distantSpire" transform="translate(240, 48)">
+    <path d="M -16,40 L 0,16 L 16,40 Z" fill="url(#vCrimsonGrad)" stroke="url(#vGoldGrad)" stroke-width="0.9"/>
+    <!-- Kalasa & Crimson Dhvaja -->
+    <circle cx="0" cy="14" r="2.8" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.5"/>
+    <line x1="0" y1="14" x2="0" y2="2" stroke="url(#vGoldGrad)" stroke-width="1.2"/>
+    <path d="M 0,2 L 10,6 L 0,10 Z" fill="#8F241C"/>
+    <!-- Spire Ribs -->
+    <line x1="-8" y1="28" x2="8" y2="28" stroke="url(#vGoldGrad)" stroke-width="0.8"/>
+  </g>
+
+  <!-- Grand Cusped Entrance Torana (অলঙ্কৃত প্রবেশ তোরণ) -->
+  <g id="grandEntranceTorana" transform="translate(240, 138)">
+    <!-- Outer Fluted Brick Pillars -->
+    <!-- Left Column -->
+    <rect x="-98" y="-18" width="16" height="96" fill="#24201D" stroke="url(#vGoldGrad)" stroke-width="1.2"/>
+    <line x1="-93" y1="-16" x2="-93" y2="76" stroke="url(#vGoldGrad)" stroke-width="0.8"/>
+    <line x1="-87" y1="-16" x2="-87" y2="76" stroke="url(#vGoldGrad)" stroke-width="0.8"/>
+    <!-- Left Pillar Capital -->
+    <path d="M -102,-18 L -78,-18 L -82,-26 L -98,-26 Z" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Right Column -->
+    <rect x="82" y="-18" width="16" height="96" fill="#24201D" stroke="url(#vGoldGrad)" stroke-width="1.2"/>
+    <line x1="87" y1="-16" x2="87" y2="76" stroke="url(#vGoldGrad)" stroke-width="0.8"/>
+    <line x1="93" y1="-16" x2="93" y2="76" stroke="url(#vGoldGrad)" stroke-width="0.8"/>
+    <!-- Right Pillar Capital -->
+    <path d="M 78,-18 L 102,-18 L 98,-26 L 82,-26 Z" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+
+    <!-- Cusped Bengal Terracotta Archway -->
+    <path
+      d="
+        M -90,-18
+        C -90,-62 90,-62 90,-18
+      "
+      fill="none"
+      stroke="url(#vGoldGrad)"
+      stroke-width="4.5"
+      stroke-linecap="round"
+    />
+    <path
+      d="
+        M -82,-18
+        C -82,-52 82,-52 82,-18
+      "
+      fill="none"
+      stroke="#8F241C"
+      stroke-width="2"
+    />
+
+    <!-- Inner Cusped Petal Profiles -->
+    <path
+      d="
+        M -78,-18
+        C -78,-38 -30,-38 -30,-22
+        C -30,-48 30,-48 30,-22
+        C 30,-38 78,-38 78,-18
+      "
+      fill="none"
+      stroke="url(#vGoldGrad)"
+      stroke-width="1.2"
+    />
+
+    <!-- Apex Torana Finial Medallion -->
+    <circle cx="0" cy="-56" r="4.5" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <circle cx="0" cy="-56" r="2" fill="#8F241C"/>
+
+    <!-- Sanctum Inner Chamber Depth -->
+    <path d="M -82,-18 H 82 V 78 H -82 Z" fill="#1C1815" opacity="0.94"/>
+
+    <!-- Suspended Sacred Mangal Ghanta in Portal Archway -->
+    <line x1="0" y1="-48" x2="0" y2="-18" stroke="url(#vGoldGrad)" stroke-width="1.8"/>
+    <path d="M -10,-8 C -10,-18 10,-18 10,-8 L 12,-3 L -12,-3 Z" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="1"/>
+    <circle cx="0" cy="-1" r="2.2" fill="#8F241C"/>
+
+    <!-- Consecrated Inner Sanctum Jyoti (মা রক্ষা কালীর পুণ্যজ্যোতি) -->
+    <circle cx="0" cy="30" r="32" fill="#F5A623" opacity="0.25"/>
+    <path
+      d="
+        M 0,10
+        C 7,18 12,24 12,33
+        C 12,41 7,46 0,47
+        C -7,46 -12,41 -12,33
+        C -12,24 -7,18 0,10
+        Z
+      "
+      fill="url(#vFlameGrad)"
+    />
+    <circle cx="0" cy="31" r="2.2" fill="#FFFFFF"/>
+    <!-- Vermilion Bindu -->
+    <circle cx="0" cy="27" r="1.2" fill="#8F241C"/>
+
+    <!-- Auspicious Mango Leaf & Marigold Toran Across Gateway -->
+    <path d="M -80,-14 Q 0,-4 80,-14" stroke="#F5A623" stroke-width="2.5" stroke-dasharray="3 3" fill="none"/>
+    <path d="M -80,-14 Q 0,-4 80,-14" stroke="#2F5E38" stroke-width="1.2" stroke-dasharray="1 5" fill="none"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 3. LEFT STATION: PADUKA KENDRA / FOOTWEAR SAFE DEPOSIT       -->
+  <!-- Center: X = 104, Y = 210                                     -->
+  <!-- ============================================================ -->
+  <g id="padukaKendra" transform="translate(104, 206)">
+    <!-- Base Shadow -->
+    <ellipse cx="0" cy="38" rx="38" ry="8" fill="#24201D" opacity="0.32"/>
+
+    <!-- Traditional Tiered Footwear Depository Counter (পাদুকা সংরক্ষণাগার) -->
+    <rect x="-34" y="6" width="68" height="30" rx="3" fill="#24201D" stroke="url(#vGoldGrad)" stroke-width="1.4"/>
+    <rect x="-30" y="9" width="60" height="7" rx="1" fill="url(#vCrimsonGrad)"/>
+    <rect x="-30" y="19" width="60" height="7" rx="1" fill="#1C1815" stroke="url(#vGoldGrad)" stroke-width="0.6"/>
+    <rect x="-30" y="28" width="60" height="6" rx="1" fill="#1C1815" stroke="url(#vGoldGrad)" stroke-width="0.6"/>
+
+    <!-- Segmented Storage Pigeonholes (খোপ) -->
+    <line x1="-10" y1="19" x2="-10" y2="34" stroke="url(#vGoldGrad)" stroke-width="0.6"/>
+    <line x1="10" y1="19" x2="10" y2="34" stroke="url(#vGoldGrad)" stroke-width="0.6"/>
+
+    <!-- Brass Service Counter Top Lip -->
+    <path d="M -36,6 L 36,6 L 34,2 L -34,2 Z" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+
+    <!-- Metal Token Dispenser Box with Tokens (টোকেন বাক্স) -->
+    <rect x="-24" y="-8" width="18" height="13" rx="2" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.9"/>
+    <circle cx="-15" cy="-1.5" r="2.6" fill="#8F241C" stroke="#FFFDF7" stroke-width="0.5"/>
+    <circle cx="-9" cy="-1.5" r="2.6" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.5"/>
+
+    <!-- Stylized Clean Barefoot / Paduka Indicator Sign (পাদুকা প্রতীক) -->
+    <g transform="translate(14, -2)">
+      <ellipse cx="-4" cy="2" rx="4" ry="7" fill="#FFFDF7" stroke="#765217" stroke-width="0.8" transform="rotate(-6 -4 2)"/>
+      <ellipse cx="6" cy="2" rx="4" ry="7" fill="#FFFDF7" stroke="#765217" stroke-width="0.8" transform="rotate(6 6 2)"/>
+      <!-- Sandal Straps -->
+      <line x1="-6" y1="0" x2="-2" y2="3" stroke="#8F241C" stroke-width="1"/>
+      <line x1="4" y1="3" x2="8" y2="0" stroke="#8F241C" stroke-width="1"/>
+    </g>
+
+    <!-- Station Identity Cartouche Badge -->
+    <rect x="-38" y="40" width="76" height="17" rx="4" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="0.9"/>
+    <text x="0" y="49" text-anchor="middle" dominant-baseline="central" font-family="'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-size="8.5" font-weight="700" fill="#FFFDF7" letter-spacing="0.3">
+      ১. পাদুকা সংরক্ষণ
+    </text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 4. RIGHT STATION: PURIFICATION ABLUTION JALADHARA (পদধৌত)   -->
+  <!-- Center: X = 376, Y = 206                                     -->
+  <!-- ============================================================ -->
+  <g id="ablutionJaladhara" transform="translate(376, 206)">
+    <!-- Base Shadow -->
+    <ellipse cx="0" cy="38" rx="38" ry="8" fill="#24201D" opacity="0.32"/>
+
+    <!-- Stone Ablution Basin Platform (পবিত্র ক্ষালন বেদি) -->
+    <rect x="-32" y="10" width="64" height="26" rx="3" fill="#24201D" stroke="url(#vGoldGrad)" stroke-width="1.4"/>
+    <rect x="-28" y="13" width="56" height="6" rx="1" fill="url(#vCrimsonGrad)"/>
+
+    <!-- Lower Drainage Grille (জল নিষ্কাশন ঝিল্লি) -->
+    <rect x="-26" y="24" width="52" height="9" rx="1.5" fill="#1C1815" stroke="url(#vGoldGrad)" stroke-width="0.6"/>
+    <g stroke="url(#vGoldGrad)" stroke-width="0.8" opacity="0.75">
+      <line x1="-20" y1="25" x2="-20" y2="32"/>
+      <line x1="-12" y1="25" x2="-12" y2="32"/>
+      <line x1="-4" y1="25" x2="-4" y2="32"/>
+      <line x1="4" y1="25" x2="4" y2="32"/>
+      <line x1="12" y1="25" x2="12" y2="32"/>
+      <line x1="20" y1="25" x2="20" y2="32"/>
+    </g>
+
+    <!-- Traditional Sacred Kamandalu / Water Kalasa (কমণ্ডলু ও জলধারা) -->
+    <path
+      d="
+        M -15,10
+        C -20,-6 20,-6 15,10
+        Z
+      "
+      fill="url(#vGoldGrad)"
+      stroke="#765217"
+      stroke-width="1.2"
+    />
+    <ellipse cx="0" cy="-6" rx="11" ry="4" fill="#F9EEC8" stroke="#765217" stroke-width="0.9"/>
+    <!-- Incised Girdle Ribbon -->
+    <path d="M -12,3 C -6,6 6,6 12,3" stroke="#8F241C" stroke-width="1.2" fill="none"/>
+
+    <!-- Curved Brass Pouring Spout (নল) -->
+    <path d="M 13,0 Q 24,1 23,8" stroke="url(#vGoldGrad)" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+
+    <!-- Crystal Clear Sacred Water Stream (পবিত্র জলধারা) -->
+    <path d="M 23,8 Q 24,16 22,23" stroke="url(#vWaterGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="21" cy="26" r="1.4" fill="#85C1E9"/>
+    <circle cx="23" cy="30" r="1.2" fill="#3498DB"/>
+
+    <!-- Fresh Green Bilva / Mango Leaf in Kalasa (কলসে আম্রপল্লব) -->
+    <path d="M 0,-6 L -4,-15 L 0,-10 L 4,-15 Z" fill="#2F5E38" stroke="#1B3E23" stroke-width="0.5"/>
+
+    <!-- Station Identity Cartouche Badge -->
+    <rect x="-38" y="40" width="76" height="17" rx="4" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="0.9"/>
+    <text x="0" y="49" text-anchor="middle" dominant-baseline="central" font-family="'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-size="8.5" font-weight="700" fill="#FFFDF7" letter-spacing="0.3">
+      ২. পদধৌত ও শুদ্ধি
+    </text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. CENTER FOREGROUND: DARSHAN QUEUE PATH & ALPANA MARG      -->
+  <!-- Center: X = 240, Y = 252                                     -->
+  <!-- ============================================================ -->
+  <g id="darshanPathwayMarg" transform="translate(240, 250)">
+    <!-- Terracotta Brick Pathway Grounding (পরিক্রমা মার্গ) -->
+    <path
+      d="
+        M -64,38
+        L -32,-30
+        L 32,-30
+        L 64,38
+        Z
+      "
+      fill="url(#vTerracottaGrad)"
+      stroke="url(#vGoldGrad)"
+      stroke-width="1.4"
+    />
+
+    <!-- Pavement Course Lines (বাঁধানো পথের খাঁজ) -->
+    <g stroke="url(#vGoldGrad)" stroke-width="0.7" opacity="0.6">
+      <line x1="-38" y1="-16" x2="38" y2="-16"/>
+      <line x1="-46" y1="2" x2="46" y2="2"/>
+      <line x1="-54" y1="20" x2="54" y2="20"/>
+    </g>
+
+    <!-- Sacred Rice-Paste Alpana Trail on Threshold (দর্শনার্থী পদ্ম আলপনা) -->
+    <g stroke="#FFFDF7" stroke-width="1" fill="none">
+      <!-- Outer Alpana Ring -->
+      <ellipse cx="0" cy="4" rx="14" ry="7" stroke-dasharray="2.5 2"/>
+      <!-- Inner Lotus Flower -->
+      <path d="M 0,0 C -5,-4 -7,8 0,11 C 7,8 5,-4 0,0 Z" fill="#FFFDF7" opacity="0.5"/>
+      <circle cx="0" cy="4" r="2.5" fill="#FFFDF7"/>
+      <circle cx="0" cy="4" r="1.1" fill="#8F241C"/>
+    </g>
+
+    <!-- Forward Devotional Queue Direction Arrows (দর্শন অভিমুখী নির্দেশনা) -->
+    <g stroke="url(#vGoldGrad)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Arrow 1 -->
+      <path d="M -6,26 L 0,20 L 6,26"/>
+      <!-- Arrow 2 -->
+      <path d="M -6,-10 L 0,-16 L 6,-10"/>
+    </g>
+
+    <!-- Queue Control Stanchion Posts & Crimson Velour Ropes (শৃঙ্খলা রজ্জু) -->
+    <!-- Left Stanchion Rope -->
+    <path d="M -68,36 Q -56,2 0,-4 Q -35,-26 -35,-28" stroke="#65120D" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M -68,36 Q -56,2 -35,-28" stroke="#A8261C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Right Stanchion Rope -->
+    <path d="M 68,36 Q 56,2 0,-4 Q 35,-26 35,-28" stroke="#65120D" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 68,36 Q 56,2 35,-28" stroke="#A8261C" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Brass Stanchion Balusters with Spherical Finials -->
+    <!-- Left Bottom Post -->
+    <line x1="-68" y1="38" x2="-68" y2="18" stroke="url(#vGoldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="-68" cy="17" r="3.2" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Left Top Post -->
+    <line x1="-35" y1="-10" x2="-35" y2="-28" stroke="url(#vGoldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="-35" cy="-29" r="3.2" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Right Bottom Post -->
+    <line x1="68" y1="38" x2="68" y2="18" stroke="url(#vGoldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="68" cy="17" r="3.2" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Right Top Post -->
+    <line x1="35" y1="-10" x2="35" y2="-28" stroke="url(#vGoldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="35" cy="-29" r="3.2" fill="url(#vGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+
+    <!-- Station Identity Cartouche Badge for Pathway -->
+    <rect x="-42" y="39" width="84" height="17" rx="4" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="0.9"/>
+    <text x="0" y="48" text-anchor="middle" dominant-baseline="central" font-family="'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-size="8.5" font-weight="700" fill="#FFFDF7" letter-spacing="0.3">
+      ৩. সুশৃঙ্খল দর্শন সারি
+    </text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 6. BOTTOM DIVIDER & CANONICAL BENGALI TYPOGRAPHY            -->
+  <!-- ============================================================ -->
+  <!-- Architectural Gold Baseline Divider -->
+  <line x1="45" y1="312" x2="435" y2="312" stroke="url(#vGoldGrad)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="45" cy="312" r="3" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="1"/>
+  <circle cx="435" cy="312" r="3" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="1"/>
+  <circle cx="240" cy="312" r="2.5" fill="#8F241C" stroke="url(#vGoldGrad)" stroke-width="0.8"/>
+
+  <!-- Primary Bengali Visit Title -->
+  <text
+    x="240"
+    y="329"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="16"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    মন্দির পরিক্রমা ও পুণ্যদর্শন নির্দেশিকা
+  </text>
+
+  <!-- Sub-caption Line: Step-by-Step Discipline Protocol -->
+  <text
+    x="240"
+    y="344"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="11"
+    font-weight="600"
+    fill="#C86A12"
+    letter-spacing="0.3"
+    text-rendering="geometricPrecision"
+  >
+    সাহাপুর বটতলা মোড় • জুতো সংরক্ষণ, পদধৌত ও সুশৃঙ্খল দর্শন নিয়মাবলী
+  </text>
 </svg>
