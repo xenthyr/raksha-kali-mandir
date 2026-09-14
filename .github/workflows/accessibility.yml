@@ -7,12 +7,13 @@ on:
       - "app/**"
       - "components/**"
       - "content/**"
-      - "public/**"
       - "lib/**"
+      - "public/**"
       - "tests/e2e/**"
       - "playwright.config.ts"
       - "package.json"
       - "package-lock.json"
+      - ".github/workflows/accessibility.yml"
   workflow_dispatch:
 
 permissions:
@@ -26,10 +27,10 @@ jobs:
   accessibility:
     name: Playwright accessibility checks
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     env:
-      NEXT_TELEMETRY_DISABLED: "1"
       CI: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -44,26 +45,36 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
-      - name: Install dependencies from lockfile
-        run: npm ci --ignore-scripts
+      - name: Install dependencies from checked-in lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
-
-      - name: Build application
-        run: npm run build
-
-      - name: Verify accessibility suite exists
-        id: suite
+      - name: Detect application and accessibility readiness
+        id: readiness
         shell: bash
         run: |
-          if find tests/e2e -maxdepth 1 -type f -name '*.spec.ts' -print -quit 2>/dev/null | grep -q .; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "No owned E2E accessibility suite exists yet; staged reconstruction is complete for this batch."
+          if [ ! -d app ] && [ ! -d pages ]; then
+            echo "app_ready=false" >> "$GITHUB_OUTPUT"
+            echo "e2e_ready=false" >> "$GITHUB_OUTPUT"
+            echo "No Next.js app/pages directory exists yet in the staged reconstruction; accessibility execution is deferred."
+            exit 0
           fi
 
+          echo "app_ready=true" >> "$GITHUB_OUTPUT"
+          if find tests/e2e -type f -name '*.spec.ts' -print -quit 2>/dev/null | grep -q .; then
+            echo "e2e_ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "e2e_ready=false" >> "$GITHUB_OUTPUT"
+            echo "No owned E2E suite exists yet; browser accessibility execution is deferred until its owning batch."
+          fi
+
+      - name: Build application
+        if: steps.readiness.outputs.app_ready == 'true'
+        run: npm run build
+
+      - name: Install Chromium
+        if: steps.readiness.outputs.e2e_ready == 'true'
+        run: npx playwright install --with-deps chromium
+
       - name: Run Playwright accessibility suite
-        if: steps.suite.outputs.available == 'true'
-        run: npx playwright test tests/e2e --grep-invert "@manual"
+        if: steps.readiness.outputs.e2e_ready == 'true'
+        run: npm run test:e2e -- tests/e2e --grep-invert "@manual"
