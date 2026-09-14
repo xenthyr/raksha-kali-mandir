@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">ফুল — Flower</title>
+<desc id="desc">Flat floral offering icon.</desc>
+<g fill="#FBF4E6" stroke="#8F241C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M64 64C48 57 43 45 48 36C53 27 64 31 64 45C64 31 75 27 80 36C85 45 80 57 64 64Z"/><path d="M64 64C57 48 46 42 37 47C28 52 32 63 46 63C32 63 28 74 37 79C46 84 57 80 64 64Z"/><path d="M64 64C80 57 91 61 96 70C101 79 90 85 82 77C90 85 83 96 74 91C65 86 61 75 64 64Z"/></g><circle cx="64" cy="64" r="9" fill="#B08A3E" stroke="#24201D" stroke-width="3"/>
+</svg>

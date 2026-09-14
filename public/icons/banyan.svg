@@ -1,1 +1,6 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">বটগাছ — Banyan</title>
+<desc id="desc">Flat vector banyan tree icon; symbolic community/location motif, not a surveyed landmark.</desc>
+<path d="M64 103V58M64 71C49 67 35 55 24 38M64 71C79 67 93 55 104 38M64 58C64 44 61 31 54 22M64 58C64 44 67 31 74 22M44 78C42 91 40 101 38 110M84 78C86 91 88 101 90 110" stroke="#24201D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31C25 14 48 9 64 21C80 9 103 14 110 31C98 25 86 26 78 34C70 25 58 25 50 34C42 26 30 25 18 31Z" fill="#47614D" stroke="#B08A3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 37C34 33 43 35 50 41M78 41C85 35 94 33 103 37" stroke="#FBF4E6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+</svg>
