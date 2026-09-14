@@ -1,6 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
-<title id="title">দীপ — Diya</title>
-<desc id="desc">Flat vector diya lamp and flame icon.</desc>
-<path d="M28 78C40 87 88 87 100 78C92 96 36 96 28 78Z" fill="#B08A3E" stroke="#24201D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 77C53 69 50 58 54 49C58 40 64 34 64 23C73 36 78 45 74 56C72 63 68 70 64 77Z" fill="#C86A12" stroke="#8F241C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 66C60 60 60 53 64 47C68 53 68 60 64 66Z" fill="#FBF4E6"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  width="48"
+  height="48"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>পবিত্র প্রদীপ প্রতীক (Sacred Diya Icon)</title>
+  <desc>Realistic temple brass Panchapradeep-style Diya icon with flared oil cup, incised rim relief, cotton wick (polita), multi-tiered teardrop flame with halo glow, and consecrated raktachandan waist for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Multi-Stage Burnished Brass / Gold Lustre (পিতলের ধাতব দ্যুতি) -->
+    <radialGradient id="dyaBrassBowl" cx="36%" cy="28%" r="72%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="18%" stop-color="#F9EEC8"/>
+      <stop offset="48%" stop-color="#D9B15B"/>
+      <stop offset="78%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </radialGradient>
+
+    <!-- Linear Accent for Stems & Turned Rings -->
+    <linearGradient id="dyaGoldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="30%" stop-color="#E5C16C"/>
+      <stop offset="70%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </linearGradient>
+
+    <!-- Consecrated Mustard Oil / Ghee Liquid Surface (ঘৃত ও তৈলাধার) -->
+    <radialGradient id="dyaOilGlow" cx="48%" cy="40%" r="58%">
+      <stop offset="0%" stop-color="#F5C042"/>
+      <stop offset="35%" stop-color="#C86A12"/>
+      <stop offset="75%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#4A0C08"/>
+    </radialGradient>
+
+    <!-- Holy Outer Flame Radiance (শিখার অগ্নিকুণ্ডলী) -->
+    <linearGradient id="dyaFlameOuter" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="20%" stop-color="#8F241C"/>
+      <stop offset="55%" stop-color="#C86A12"/>
+      <stop offset="85%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#FDE38C"/>
+    </linearGradient>
+
+    <!-- Inner Core Jyoti Light (জ্যোতির্গর্ভ শিখা) -->
+    <linearGradient id="dyaFlameCore" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12"/>
+      <stop offset="35%" stop-color="#F5C042"/>
+      <stop offset="75%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Warm Atmospheric Halo Glow Behind Flame -->
+    <radialGradient id="dyaFlameHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5A623" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#C86A12" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Floor Drop Shadow Under Base -->
+    <radialGradient id="dyaFloorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#24201D" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#24201D" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. FLOOR SHADOW & PEDESTAL STAND (পিতলের খোদাই করা বেদি)       -->
+  <!-- ============================================================ -->
+  <!-- Soft Cast Floor Shadow -->
+  <ellipse cx="24" cy="42.8" rx="16.5" ry="3" fill="url(#dyaFloorShadow)"/>
+
+  <!-- Flanged Bottom Footing Ring (প্রদীপের অধোবলয়) -->
+  <ellipse cx="24" cy="42" rx="13.2" ry="2.8" fill="url(#dyaGoldLinear)" stroke="#694611" stroke-width="0.75"/>
+  <ellipse cx="24" cy="41.5" rx="11.4" ry="2" fill="#24201D" opacity="0.35"/>
+
+  <!-- Tiered Molded Pedestal (ধাপযুক্ত ঘণ্টা আকৃতির পাদান) -->
+  <path
+    d="
+      M 16,41.2
+      C 17,38.5 20.5,36 21.5,34.5
+      L 26.5,34.5
+      C 27.5,36 31,38.5 32,41.2
+      Z
+    "
+    fill="url(#dyaBrassBowl)"
+    stroke="#694611"
+    stroke-width="0.8"
+    stroke-linejoin="round"
+  />
+
+  <!-- Turnery Ring / Kalasa Bead on Stem (দণ্ডের গোলক খাঁজ) -->
+  <ellipse cx="24" cy="34.2" rx="4.2" ry="1.4" fill="url(#dyaGoldLinear)" stroke="#694611" stroke-width="0.5"/>
+  <ellipse cx="24" cy="33.2" rx="3" ry="1" fill="#8F241C"/>
+  <circle cx="24" cy="33.2" r="0.7" fill="#FAF0CE"/>
+
+  <!-- Upper Stem Neck -->
+  <rect x="22.2" y="30.2" width="3.6" height="3.2" fill="url(#dyaGoldLinear)" stroke="#694611" stroke-width="0.5"/>
+
+  <!-- Under-Cup Shadow -->
+  <ellipse cx="24" cy="30" rx="9" ry="2.5" fill="#24201D" opacity="0.35"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. TRADITIONAL BRASS BOWL & BEAK (প্রদীপের তেল বাটি ও চঞ্চু)   -->
+  <!-- ============================================================ -->
+  <!-- Flared Brass Reservoir Belly (প্রদীপের স্ফীত নিম্নদেশ) -->
+  <path
+    d="
+      M 6,24.5
+      C 7.5,30.5 14,33 24,33
+      C 34,33 40.5,30.5 42,24.5
+      C 37,27 31,27.8 24,27.8
+      C 17,27.8 11,27 6,24.5
+      Z
+    "
+    fill="url(#dyaBrassBowl)"
+    stroke="#694611"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+  />
+
+  <!-- Specular Metallic Highlight Rim on Left Underside -->
+  <path
+    d="M 9.5,26.5 C 13.5,30.5 19,31.8 24,31.8"
+    stroke="#FFFFFF"
+    stroke-width="0.9"
+    stroke-linecap="round"
+    opacity="0.6"
+    fill="none"
+  />
+
+  <!-- Heavy Cast Brass Lip Perimeter (প্রদীপের ঢালাই মুখের কানা) -->
+  <ellipse cx="24" cy="24.5" rx="18.2" ry="4.2" fill="url(#dyaBrassBowl)" stroke="#694611" stroke-width="1.1"/>
+
+  <!-- Incised Sacred Wave/Lotus Motif on Front Rim Lip -->
+  <path
+    d="
+      M 9,25.2
+      Q 16.5,28.2 24,28.2
+      Q 31.5,28.2 39,25.2
+    "
+    stroke="#8F241C"
+    stroke-width="0.9"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Granule/Pearl Beads along Rim (প্রদীপের মুক্তাদানা খাঁজ) -->
+  <g fill="#FAF0CE" opacity="0.85">
+    <circle cx="12" cy="25.8" r="0.65"/>
+    <circle cx="16" cy="26.8" r="0.7"/>
+    <circle cx="20" cy="27.4" r="0.75"/>
+    <circle cx="24" cy="27.6" r="0.8"/>
+    <circle cx="28" cy="27.4" r="0.75"/>
+    <circle cx="32" cy="26.8" r="0.7"/>
+    <circle cx="36" cy="25.8" r="0.65"/>
+  </g>
+
+  <!-- Deep Sacred Liquid Ghee Reservoir (ঘৃতপূর্ণ অভ্যন্তর) -->
+  <ellipse cx="24" cy="24.4" rx="15" ry="3.2" fill="url(#dyaOilGlow)" stroke="#65120D" stroke-width="0.5"/>
+
+  <!-- Surface Light Glint on Oil Pool -->
+  <ellipse cx="20" cy="23.8" rx="8" ry="1.2" fill="#F5C042" opacity="0.45"/>
+
+  <!-- ============================================================ -->
+  <!-- 3. SACRED COTTON WICK & EMBER (পবিত্র তুলার সলতে ও অঙ্গার)     -->
+  <!-- ============================================================ -->
+  <!-- White Twisted Cotton Wick (সাদা পাকানো তুলোর পলিতা) -->
+  <path
+    d="
+      M 20.5,25.5
+      C 22,25 23.5,23.5 24,20
+    "
+    stroke="#FFFDF7"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <path
+    d="
+      M 21.2,25.4
+      C 22.4,24.8 23.4,23.6 23.8,20.8
+    "
+    stroke="#B08A3E"
+    stroke-width="0.6"
+    stroke-dasharray="1 1"
+    fill="none"
+  />
+
+  <!-- Charred Black/Crimson Ember Tip of Wick (প্রদীপ্ত পলিতার মুখ) -->
+  <ellipse cx="24" cy="19.8" rx="1.1" ry="1.6" fill="#24201D"/>
+  <circle cx="24" cy="19.2" r="0.8" fill="#8F241C"/>
+  <circle cx="24" cy="18.8" r="0.45" fill="#F5C042"/>
+
+  <!-- ============================================================ -->
+  <!-- 4. SACRED AARTI FLAME & LUMINOUS AURA (পবিত্র প্রজ্বলিত শিখা)   -->
+  <!-- Total Height: Y=2 to Y=21 | Centered on X=24                 -->
+  <!-- ============================================================ -->
+  <!-- Luminous Amber Ambient Glow Behind Flame -->
+  <circle cx="24" cy="11.5" r="11" fill="url(#dyaFlameHalo)"/>
+
+  <!-- Outer Traditional Teardrop Jyoti Flame (বহিঃশিখা) -->
+  <path
+    d="
+      M 24,2
+      C 29.5,8.5 32.5,14 30,18
+      C 28,21.2 25.5,22.2 24,22.2
+      C 22.5,22.2 20,21.2 18,18
+      C 15.5,14 18.5,8.5 24,2
+      Z
+    "
+    fill="url(#dyaFlameOuter)"
+    stroke="#731610"
+    stroke-width="0.5"
+  />
+
+  <!-- Saffron Mid-Flame Radiance Tongue (মধ্যপ্রভা শিখা) -->
+  <path
+    d="
+      M 24,4.8
+      C 27.8,10 29.8,14.5 28,17.6
+      C 26.5,20 24.8,20.6 24,20.6
+      C 23.2,20.6 21.5,20 20,17.6
+      C 18.2,14.5 20.2,10 24,4.8
+      Z
+    "
+    fill="#F5A623"
+  />
+
+  <!-- Inner High-Temperature Sanctum Core Flame (অন্তঃজ্যোতি) -->
+  <path
+    d="
+      M 24,7.8
+      C 26.4,11.8 27.2,15 26,17.2
+      C 25,18.8 24.3,19.2 24,19.2
+      C 23.7,19.2 23,18.8 22,17.2
+      C 20.8,15 21.6,11.8 24,7.8
+      Z
+    "
+    fill="url(#dyaFlameCore)"
+  />
+
+  <!-- Incandescent Pure White Fire Tear (পরম জ্যোতিবিন্দু) -->
+  <path
+    d="
+      M 24,11.2
+      C 25.2,13.8 25.5,16 24.8,17.4
+      C 24.3,18.2 24.1,18.4 24,18.4
+      C 23.9,18.4 23.7,18.2 23.2,17.4
+      C 22.5,16 22.8,13.8 24,11.2
+      Z
+    "
+    fill="#FFFFFF"
+  />
+
+  <!-- Pure White Micro Core Sparkle -->
+  <circle cx="24" cy="15.8" r="1.1" fill="#FFFFFF"/>
 </svg>
