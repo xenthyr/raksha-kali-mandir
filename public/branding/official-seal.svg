@@ -1,19 +1,349 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420" fill="none">
-<title>শ্রী শ্রী মা রক্ষা কালী — controlled brand mark</title>
-<desc>Controlled branding asset for the temple. Not a historical seal, not a legal seal, and not a government seal. Design state: DESIGN_RUNTIME.</desc>
-<circle cx="210" cy="210" r="196" fill="#FBF4E6" stroke="#8F241C" stroke-width="4"/>
-<circle cx="210" cy="210" r="181" fill="none" stroke="#B08A3E" stroke-width="2"/>
-<circle cx="210" cy="210" r="150" fill="none" stroke="#C86A12" stroke-width="1.2"/>
-<text x="210" y="50" text-anchor="middle" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="16" font-weight="700" fill="#8F241C">শ্রী শ্রী মা রক্ষা কালী</text>
-<g transform="translate(150 144)"><g aria-hidden="true">
-  <path d="M60 11 C51 22 42 31 42 43 C42 56 50 66 60 73 C70 66 78 56 78 43 C78 31 69 22 60 11 Z" fill="#8F241C"/>
-  <path d="M60 23 C55 31 51 36 51 44 C51 51 55 57 60 61 C65 57 69 51 69 44 C69 36 65 31 60 23 Z" fill="#FBF4E6"/>
-  <path d="M60 33 C58 37 56 40 56 44 C56 48 58 51 60 53 C62 51 64 48 64 44 C64 40 62 37 60 33 Z" fill="#8F241C"/>
-  <path d="M25 79 C34 70 44 69 60 79 C76 69 86 70 95 79 C85 78 74 83 60 88 C46 83 35 78 25 79 Z" fill="#B08A3E"/>
-  <path d="M31 81 C39 80 47 83 60 90 C73 83 81 80 89 81 C80 88 71 93 60 97 C49 93 40 88 31 81 Z" fill="none" stroke="#8F241C" stroke-width="2" stroke-linecap="round"/>
-</g></g>
-<rect x="92" y="306" width="236" height="64" rx="13" fill="#24201D"/>
-<text x="210" y="331" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#FBF4E6" letter-spacing="1">CONTROLLED BRAND MARK</text>
-<text x="210" y="351" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#FBF4E6">NOT A LEGAL / GOVERNMENT SEAL</text>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 420 420"
+  width="420"
+  height="420"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>শ্রী শ্রী মা রক্ষা কালী মন্দির — প্রাতিষ্ঠানিক সীলমোহর</title>
+  <desc>
+    Official institutional seal for Sri Sri Maa Raksha Kali Mandir.
+    Official Committee Title: শ্রী শ্রী মা রক্ষা কালী পূজা কমিটি ও সকল গ্রামবাসী.
+    Official Temple Address: সাহাপুর বটতলা মোড় • রায়গঞ্জ • উত্তর দিনাজপুর.
+    Design state: DESIGN_RUNTIME.
+  </desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS & PRECISION CALIBRATION                          -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background Translucent Parchment Radiance (Stamping & Watermark Ready) -->
+    <radialGradient id="sealBgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" stop-opacity="0.98"/>
+      <stop offset="68%" stop-color="#FBF4E6" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#F2E5D0" stop-opacity="0.90"/>
+    </radialGradient>
+
+    <!-- Central Inner Sanctum Translucent Radiance -->
+    <radialGradient id="sealInnerSanctumBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="72%" stop-color="#FBF4E6" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#EFE2CA" stop-opacity="0.80"/>
+    </radialGradient>
+
+    <!-- Sacred Raksha Kali Flame Gradient (Deep Crimson to Radiant Saffron) -->
+    <linearGradient id="sealFlameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8F241C"/>
+      <stop offset="55%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#B08A3E"/>
+    </linearGradient>
+
+    <!-- Inner Jyoti Radiant Core -->
+    <linearGradient id="sealInnerJyoti" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12"/>
+      <stop offset="50%" stop-color="#E5A642"/>
+      <stop offset="100%" stop-color="#FBF4E6"/>
+    </linearGradient>
+
+    <!-- Temple Burnished Brass / Gold Gradient -->
+    <linearGradient id="sealGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EED89B"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#7A591E"/>
+    </linearGradient>
+
+    <!-- Linear Accent for Divider Rosettes -->
+    <radialGradient id="rosetteCenterGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="60%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#8F241C"/>
+    </radialGradient>
+
+    <!-- ========================================================== -->
+    <!-- MATHEMATICALLY BALANCED CIRCULAR TEXTPATHS                 -->
+    <!-- Center: (210, 210) | Band Midpoint: R = 161.25             -->
+    <!-- ========================================================== -->
+    <!--
+      UPPER ARC: Clockwise (R = 155).
+      With an ascender height of ~12px, glyphs occupy R=155 to R=167,
+      placing their optical midline at exactly R = 161.
+    -->
+    <path id="sealUpperArc" d="M 55 210 A 155 155 0 0 1 365 210"/>
+
+    <!--
+      LOWER ARC: Left-to-Right Counter-Clockwise (R = 167.5).
+      Glyphs hang inward by ~10px to R=157.5,
+      placing their optical midline at exactly R = 162.5.
+      Ensures text remains completely upright along the bottom.
+    -->
+    <path id="sealLowerArc" d="M 42.5 210 A 167.5 167.5 0 0 0 377.5 210"/>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. SEAL BASE PLATES & NOTARY SECURITY RINGS                  -->
+  <!-- ============================================================ -->
+
+  <!-- Outer Solid Edge Rim -->
+  <circle cx="210" cy="210" r="201" fill="url(#sealBgGrad)" stroke="#8F241C" stroke-width="4.5"/>
+
+  <!-- Guilloché Security Fluting / Starburst Beading (48 Prongs) -->
+  <g stroke="url(#sealGoldGrad)" stroke-width="0.8" opacity="0.65" aria-hidden="true">
+    <line x1="210" y1="189" x2="210" y2="192"/><line x1="210" y1="228" x2="210" y2="231"/>
+    <line x1="189" y1="210" x2="192" y2="210"/><line x1="228" y1="210" x2="231" y2="210"/>
+    <line x1="223.5" y1="190.5" x2="224.5" y2="193.3"/><line x1="196.5" y1="229.5" x2="195.5" y2="226.7"/>
+    <line x1="236.4" y1="194.8" x2="237.9" y2="197.4"/><line x1="183.6" y1="225.2" x2="182.1" y2="222.6"/>
+    <line x1="248.1" y1="201.9" x2="250.0" y2="204.1"/><line x1="171.9" y1="218.1" x2="170.0" y2="215.9"/>
+    <line x1="258.1" y1="211.3" x2="260.4" y2="213.1"/><line x1="161.9" y1="208.7" x2="159.6" y2="206.9"/>
+    <line x1="266.1" y1="222.9" x2="268.6" y2="224.2"/><line x1="153.9" y1="197.1" x2="151.4" y2="195.8"/>
+    <line x1="271.7" y1="236.2" x2="274.3" y2="237.0"/><line x1="148.3" y1="183.8" x2="145.7" y2="183.0"/>
+    <line x1="274.6" y1="250.6" x2="277.2" y2="250.8"/><line x1="145.4" y1="169.4" x2="142.8" y2="169.2"/>
+    <line x1="274.7" y1="265.4" x2="277.2" y2="265.0"/><line x1="145.3" y1="154.6" x2="142.8" y2="155.0"/>
+    <line x1="271.9" y1="279.7" x2="274.3" y2="278.8"/><line x1="148.1" y1="140.3" x2="145.7" y2="141.2"/>
+    <line x1="266.4" y1="293.1" x2="268.6" y2="291.6"/><line x1="153.6" y1="126.9" x2="151.4" y2="128.4"/>
+  </g>
+
+  <!-- Outer Security Guard Rings -->
+  <circle cx="210" cy="210" r="193" fill="none" stroke="url(#sealGoldGrad)" stroke-width="1.8"/>
+  <circle cx="210" cy="210" r="187.5" fill="none" stroke="#8F241C" stroke-width="1.2" stroke-dasharray="2.5 3.5"/>
+
+  <!-- Inner Band Demarcation Circles -->
+  <circle cx="210" cy="210" r="136" fill="none" stroke="url(#sealGoldGrad)" stroke-width="2"/>
+  <circle cx="210" cy="210" r="131" fill="none" stroke="#8F241C" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- Central Field Plate (Translucent Watermark Field) -->
+  <circle cx="210" cy="210" r="126" fill="url(#sealInnerSanctumBg)" stroke="#B08A3E" stroke-width="0.8"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. OFFICIAL CIRCULAR TYPOGRAPHY (UPPER & LOWER ARCHES)       -->
+  <!-- ============================================================ -->
+
+  <!-- TOP CURVE: Official Committee Title -->
+  <text
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="15.8"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.6"
+    text-rendering="geometricPrecision"
+  >
+    <textPath
+      xlink:href="#sealUpperArc"
+      href="#sealUpperArc"
+      startOffset="50%"
+      text-anchor="middle"
+    >
+      শ্রী শ্রী মা রক্ষা কালী পূজা কমিটি ও সকল গ্রামবাসী
+    </textPath>
+  </text>
+
+  <!-- BOTTOM CURVE: Official Temple Address -->
+  <text
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="12.8"
+    font-weight="600"
+    fill="#24201D"
+    letter-spacing="1.1"
+    text-rendering="geometricPrecision"
+  >
+    <textPath
+      xlink:href="#sealLowerArc"
+      href="#sealLowerArc"
+      startOffset="50%"
+      text-anchor="middle"
+    >
+      সাহাপুর বটতলা মোড় • রায়গঞ্জ • উত্তর দিনাজপুর
+    </textPath>
+  </text>
+
+  <!-- ============================================================ -->
+  <!-- 3. LATERAL FLANK ROSETTES / NOTARY DIVIDERS                 -->
+  <!-- ============================================================ -->
+
+  <!-- Left Rosette (X = 49, Y = 210) -->
+  <g transform="translate(49 210)" aria-hidden="true">
+    <circle cx="0" cy="0" r="7.5" fill="none" stroke="#B08A3E" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+    <circle cx="0" cy="0" r="5" fill="#8F241C"/>
+    <!-- 8-Pointed Security Star -->
+    <path d="M0 -3.5 L1 -1 L3.5 0 L1 1 L0 3.5 L-1 1 L-3.5 0 L-1 -1 Z" fill="url(#sealGoldGrad)"/>
+    <circle cx="0" cy="0" r="1" fill="url(#rosetteCenterGrad)"/>
+  </g>
+
+  <!-- Right Rosette (X = 371, Y = 210) -->
+  <g transform="translate(371 210)" aria-hidden="true">
+    <circle cx="0" cy="0" r="7.5" fill="none" stroke="#B08A3E" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+    <circle cx="0" cy="0" r="5" fill="#8F241C"/>
+    <!-- 8-Pointed Security Star -->
+    <path d="M0 -3.5 L1 -1 L3.5 0 L1 1 L0 3.5 L-1 1 L-3.5 0 L-1 -1 Z" fill="url(#sealGoldGrad)"/>
+    <circle cx="0" cy="0" r="1" fill="url(#rosetteCenterGrad)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 4. CENTRAL SACRED EMBLEM & LOTUS PEDESTAL                   -->
+  <!-- ============================================================ -->
+  <g
+    id="central-emblem"
+    aria-hidden="true"
+    transform="translate(210 180) scale(1.30)"
+  >
+    <!-- Outer Sacred Flame / Trishula Jyoti -->
+    <path
+      d="
+        M0 -41
+        C9 -30 19 -18 19 -4
+        C19 9 11 17 0 20
+        C-11 17 -19 9 -19 -4
+        C-19 -18 -9 -30 0 -41
+        Z
+      "
+      fill="url(#sealFlameGrad)"
+    />
+
+    <!-- Mid Radiance Layer -->
+    <path
+      d="
+        M0 -30
+        C6 -22 12 -13 12 -4
+        C12 5 6 12 0 14
+        C-6 12 -12 5 -12 -4
+        C-12 -13 -6 -22 0 -30
+        Z
+      "
+      fill="url(#sealInnerJyoti)"
+    />
+
+    <!-- Core Sanctum Light -->
+    <path
+      d="
+        M0 -19
+        C4 -13 7 -8 7 -2
+        C7 4 4 8 0 9
+        C-4 8 -7 4 -7 -2
+        C-7 -8 -4 -13 0 -19
+        Z
+      "
+      fill="#FBF4E6"
+    />
+
+    <!-- Sacred Vermilion Trinetra / Bindu -->
+    <circle cx="0" cy="-7" r="2.2" fill="#8F241C"/>
+    <circle cx="0" cy="-7" r="0.8" fill="#FBF4E6"/>
+
+    <!-- Diya Cup — Flame-to-Pedestal Bridge -->
+    <path
+      d="
+        M-17 15
+        C-10 18 10 18 17 15
+        C14 21 7 23 0 23
+        C-7 23 -14 21 -17 15
+        Z
+      "
+      fill="url(#sealGoldGrad)"
+    />
+    <line x1="-10" y1="21" x2="10" y2="21" stroke="#8F241C" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- Lotus Pedestal Base (Alpana Wings) -->
+    <path
+      d="
+        M-34 24
+        C-24 15 -14 14 0 24
+        C14 14 24 15 34 24
+        C24 23 14 29 0 34
+        C-14 29 -24 23 -34 24
+        Z
+      "
+      fill="url(#sealGoldGrad)"
+      stroke="#8F241C"
+      stroke-width="0.8"
+    />
+
+    <!-- Altar Foot Foundation -->
+    <path
+      d="
+        M-27 29
+        C-19 27 -10 31 0 36
+        C10 31 19 27 27 29
+        C20 36 11 41 0 41
+        C-11 41 -20 36 -27 29
+        Z
+      "
+      fill="#8F241C"
+    />
+
+    <!-- Altar Gold Accent Filigree -->
+    <path
+      d="
+        M-23 31
+        C-16 30 -8 33 0 37
+        C8 33 16 30 23 31
+      "
+      stroke="url(#sealGoldGrad)"
+      stroke-width="1.2"
+      stroke-linecap="round"
+      fill="none"
+    />
+
+    <!-- Grounding Foundation Highlight -->
+    <circle cx="0" cy="38" r="1.2" fill="#FBF4E6"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. INNER SEAL INSCRIPTIONS & ESTABLISHMENT CARTOUCHE        -->
+  <!-- ============================================================ -->
+
+  <!-- Sacred Ritual Motto -->
+  <text
+    x="210"
+    y="265"
+    text-anchor="middle"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="12.5"
+    font-weight="700"
+    fill="#C86A12"
+    letter-spacing="0.8"
+    text-rendering="geometricPrecision"
+  >
+    অভয় • শান্তি • সেবা
+  </text>
+
+  <!-- Consecrated Era Cartouche Box -->
+  <rect
+    x="144"
+    y="276"
+    width="132"
+    height="21"
+    rx="4.5"
+    fill="#8F241C"
+    stroke="url(#sealGoldGrad)"
+    stroke-width="0.8"
+  />
+
+  <!-- Establishment Text -->
+  <text
+    x="210"
+    y="291"
+    text-anchor="middle"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="10.5"
+    font-weight="700"
+    fill="#FFFDF7"
+    letter-spacing="0.6"
+    text-rendering="geometricPrecision"
+  >
+    ★ স্থাপিত ১৪৩৩ বঙ্গাব্দ ★
+  </text>
+
+  <!-- Bottom Accent Filigree -->
+  <line
+    x1="165"
+    y1="303"
+    x2="255"
+    y2="303"
+    stroke="url(#sealGoldGrad)"
+    stroke-width="1.2"
+    stroke-linecap="round"
+  />
+  <circle cx="210" cy="303" r="2.2" fill="#8F241C" stroke="url(#sealGoldGrad)" stroke-width="0.6"/>
 </svg>
