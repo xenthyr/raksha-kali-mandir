@@ -1,24 +1,435 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
-  <title id="title">অন্নদান সেবা — অলঙ্করণচিত্র</title>
-  <desc id="desc">Conceptual illustration of offering food and community service; not a factual depiction of a specific kitchen or event.</desc>
-  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
-  <path d="M84 418H636" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-  <ellipse cx="344" cy="390" rx="202" ry="25" fill="#E8DDCD"/>
-  <g transform="translate(118 112)">
-    <circle cx="116" cy="74" r="34" fill="#E8D6C0" stroke="#24201D" stroke-width="3"/>
-    <path d="M76 130Q116 105 156 130v108H76Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
-    <path d="M78 142 42 188m114-46 36 46" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M96 238 84 308m56-70 12 70" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M42 260Q116 232 190 260l-12 58q-62 18-124 0Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
-    <path d="M60 268q56-22 112 0" fill="none" stroke="#756B61" stroke-width="2"/>
-    <circle cx="82" cy="275" r="7" fill="#B08A3E"/><circle cx="116" cy="270" r="6" fill="#8F241C"/><circle cx="148" cy="276" r="7" fill="#B08A3E"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 480 360"
+  width="480"
+  height="360"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>ভক্তিমূলক প্রসাদ ও অন্নদান সেবা — চিত্রলিপি</title>
+  <desc>Sacred Annadanam, Mahaprasad offering, and devotee hospitality illustration for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTES, PATTERNS & GRADIENTS                  -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background: Luminous Sacred Ivory Gradient -->
+    <radialGradient id="annaCanvasBg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FDFBF5"/>
+      <stop offset="80%" stop-color="#FBF4E6"/>
+      <stop offset="100%" stop-color="#EFE1C9"/>
+    </radialGradient>
+
+    <!-- Subtle Traditional Bengali Alpana Lace Texture -->
+    <pattern id="annaAlpanaTile" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 30 15 L 15 30 L 0 15 Z" fill="none" stroke="#B08A3E" stroke-width="0.45" stroke-opacity="0.12"/>
+      <circle cx="15" cy="15" r="4.5" fill="none" stroke="#8F241C" stroke-width="0.4" stroke-opacity="0.08"/>
+      <circle cx="15" cy="15" r="1.2" fill="#B08A3E" fill-opacity="0.18"/>
+    </pattern>
+
+    <!-- Devotional Food Radiance Halo -->
+    <radialGradient id="annaAuraHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C86A12" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#B08A3E" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Burnished Temple Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="annaGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9EEC8"/>
+      <stop offset="25%" stop-color="#D9B15B"/>
+      <stop offset="65%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Shading Gradient -->
+    <linearGradient id="annaCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </linearGradient>
+
+    <!-- Fragrant Saffron Khichuri / Bhog Prasad Gradient -->
+    <radialGradient id="annaBhogGrad" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="35%" stop-color="#F5A623"/>
+      <stop offset="75%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#9E4E05"/>
+    </radialGradient>
+
+    <!-- Sacred Banana Leaf Natural Green Gradients -->
+    <linearGradient id="bananaLeafBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4C8556"/>
+      <stop offset="50%" stop-color="#2F5E38"/>
+      <stop offset="100%" stop-color="#1B3E23"/>
+    </linearGradient>
+
+    <!-- Sacred Flame Multi-Stage Gradient -->
+    <linearGradient id="annaFlameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="25%" stop-color="#8F241C"/>
+      <stop offset="70%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#F5C042"/>
+    </linearGradient>
+
+    <!-- Aromatic Steam Vapor Shimmer -->
+    <linearGradient id="steamVaporGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#B08A3E" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#FFFDF7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFDF7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Traditional Ornate Corner Filigree Macro -->
+    <g id="annaCornerFiligree">
+      <path d="M 0,0 L 28,0 C 28,14 14,28 0,28 Z" fill="url(#annaGoldGrad)" opacity="0.9"/>
+      <path d="M 3,3 L 21,3 C 21,12 12,21 3,21 Z" fill="#FBF4E6"/>
+      <circle cx="8" cy="8" r="2.2" fill="#8F241C"/>
+      <path d="M 0,28 L 28,0" stroke="#8F241C" stroke-width="1.2" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BASE CANVAS & NOTARIAL SECURITY BORDERS                   -->
+  <!-- ============================================================ -->
+  <!-- Ivory Canvas -->
+  <rect width="480" height="360" rx="16" fill="url(#annaCanvasBg)"/>
+  <rect width="480" height="360" rx="16" fill="url(#annaAlpanaTile)"/>
+
+  <!-- Outer Deep Crimson Enclosure Frame -->
+  <rect x="12" y="12" width="456" height="336" rx="14" fill="none" stroke="#8F241C" stroke-width="2.6"/>
+
+  <!-- Inner Burnished Brass Guard Rail -->
+  <rect x="18" y="18" width="444" height="324" rx="10" fill="none" stroke="url(#annaGoldGrad)" stroke-width="1.4"/>
+
+  <!-- Guilloché Beaded Tracking Line -->
+  <rect x="23" y="23" width="434" height="314" rx="7" fill="none" stroke="#8F241C" stroke-width="0.8" stroke-dasharray="2.5 2.5" opacity="0.6"/>
+
+  <!-- Four Ornamental Corner Brackets -->
+  <use xlink:href="#annaCornerFiligree" x="23" y="23"/>
+  <use xlink:href="#annaCornerFiligree" x="457" y="23" transform="rotate(90 457 23)"/>
+  <use xlink:href="#annaCornerFiligree" x="457" y="337" transform="rotate(180 457 337)"/>
+  <use xlink:href="#annaCornerFiligree" x="23" y="337" transform="rotate(270 23 337)"/>
+
+  <!-- Top Identification Badge -->
+  <g transform="translate(240, 38)">
+    <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#8F241C" stroke="url(#annaGoldGrad)" stroke-width="1.2"/>
+    <text
+      x="0"
+      y="1"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="11"
+      font-weight="700"
+      fill="#FFFDF7"
+      letter-spacing="0.6"
+      text-rendering="geometricPrecision"
+    >
+      ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
+    </text>
   </g>
-  <g transform="translate(444 124)">
-    <path d="M34 206q32-44 76-42 44 2 70 42-14 23-56 24H88q-38-1-54-24Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
-    <path d="M48 196q28-22 58-22t58 22" fill="none" stroke="#FBF4E6" stroke-width="3"/>
-    <path d="M98 160q-5-22 9-38m0 38q16-20 38-22" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M146 218q18-30 42-42 24-12 42 2-9 20-30 30-26 12-54 10Z" fill="#E8D6C0" stroke="#24201D" stroke-width="3"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. CENTRAL TABLEAU: SACRED BANANA LEAF BASE (কলাপাতা)         -->
+  <!-- ============================================================ -->
+  <!-- Divine Food Aura Glow -->
+  <circle cx="240" cy="182" r="135" fill="url(#annaAuraHalo)"/>
+
+  <!-- Large Fresh Tender Banana Leaf Underlay -->
+  <g transform="translate(240, 248)">
+    <!-- Leaf Body with Realistic Curving Periphery -->
+    <path
+      d="
+        M -185,-6
+        C -110,-28 110,-28 185,-6
+        C 192,20 150,42 0,44
+        C -150,42 -192,20 -185,-6
+        Z
+      "
+      fill="url(#bananaLeafBody)"
+      stroke="#1B3E23"
+      stroke-width="1.8"
+    />
+
+    <!-- Leaf Midrib / Rachis (প্রধান মধ্যশিরা) -->
+    <path d="M -180,-6 C -90,-16 90,-16 180,-6" stroke="#77A881" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M -180,-6 C -90,-16 90,-16 180,-6" stroke="#B8DEBE" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+
+    <!-- Delicate Lateral Veins (পার্শ্বীয় শিরাবিন্যাস) -->
+    <g stroke="#3D7347" stroke-width="0.9" opacity="0.75" fill="none">
+      <line x1="-150" y1="-10" x2="-138" y2="18"/>
+      <line x1="-115" y1="-14" x2="-102" y2="28"/>
+      <line x1="-80" y1="-16" x2="-68" y2="34"/>
+      <line x1="-45" y1="-17" x2="-35" y2="36"/>
+      <line x1="-10" y1="-17" x2="-4" y2="37"/>
+      <line x1="25" y1="-17" x2="31" y2="36"/>
+      <line x1="60" y1="-16" x2="68" y2="34"/>
+      <line x1="95" y1="-14" x2="104" y2="28"/>
+      <line x1="130" y1="-11" x2="138" y2="20"/>
+      <line x1="160" y1="-7" x2="166" y2="12"/>
+    </g>
   </g>
-  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">ভক্তি • সেবা • অন্নদান</text>
+
+  <!-- ============================================================ -->
+  <!-- 3. CENTERPIECE: SACRED BRASS BHOG DEGCHI (পিতলের ভোগ হাঁড়ি) -->
+  <!-- Center: X = 240 | Height: Y = 125 to Y = 252                 -->
+  <!-- ============================================================ -->
+  <g id="sacredBhogDegchi">
+    <!-- Cast Shadow under Pot Base -->
+    <ellipse cx="240" cy="250" rx="64" ry="11" fill="#24201D" opacity="0.32"/>
+
+    <!-- Decorative Handi Foot Pedestal -->
+    <path d="M 188,245 L 292,245 L 284,252 L 196,252 Z" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="1.2"/>
+
+    <!-- Main Round Belly of the Handi / Degchi -->
+    <path
+      d="
+        M 166,172
+        C 152,212 178,247 240,247
+        C 302,247 328,212 314,172
+        Z
+      "
+      fill="url(#annaGoldGrad)"
+      stroke="#765217"
+      stroke-width="1.8"
+    />
+
+    <!-- Traditional Engraved Crimson Lotus Waistline Band (খোদাই করা নকশা) -->
+    <path
+      d="
+        M 172,192
+        C 188,218 292,218 308,192
+        L 310,204
+        C 292,230 188,230 170,204
+        Z
+      "
+      fill="url(#annaCrimsonGrad)"
+      stroke="#765217"
+      stroke-width="0.8"
+    />
+
+    <!-- Lotus Petal Engravings on the Waistband -->
+    <g fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="0.5">
+      <path d="M 194,204 C 197,196 205,196 208,204 C 205,212 197,212 194,204 Z"/>
+      <path d="M 218,209 C 221,201 229,201 232,209 C 229,217 221,217 218,209 Z"/>
+      <path d="M 248,209 C 251,201 259,201 262,209 C 259,217 251,217 248,209 Z"/>
+      <path d="M 272,204 C 275,196 283,196 286,204 C 283,212 275,212 272,204 Z"/>
+    </g>
+
+    <!-- Side Handles with Hanging Temple Ring Details -->
+    <!-- Left Handle -->
+    <path d="M 168,176 C 146,176 146,200 168,204" fill="none" stroke="url(#annaGoldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="150" cy="190" r="7.5" fill="none" stroke="url(#annaGoldGrad)" stroke-width="2"/>
+    <circle cx="150" cy="190" r="2.5" fill="#8F241C"/>
+    <!-- Right Handle -->
+    <path d="M 312,176 C 334,176 334,200 312,204" fill="none" stroke="url(#annaGoldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="330" cy="190" r="7.5" fill="none" stroke="url(#annaGoldGrad)" stroke-width="2"/>
+    <circle cx="330" cy="190" r="2.5" fill="#8F241C"/>
+
+    <!-- Handi Flared Throat & Polished Rim -->
+    <ellipse cx="240" cy="172" rx="74" ry="17" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="1.4"/>
+    <ellipse cx="240" cy="170" rx="70" ry="14" fill="#F9EEC8" stroke="#B08A3E" stroke-width="1"/>
+
+    <!-- Beaded Rim Pearls (মটরদানা কানা) -->
+    <g fill="#765217" opacity="0.6">
+      <circle cx="178" cy="171" r="1.6"/><circle cx="190" cy="175" r="1.6"/><circle cx="204" cy="178" r="1.6"/>
+      <circle cx="220" cy="180" r="1.6"/><circle cx="240" cy="181" r="1.6"/><circle cx="260" cy="180" r="1.6"/>
+      <circle cx="276" cy="178" r="1.6"/><circle cx="290" cy="175" r="1.6"/><circle cx="302" cy="171" r="1.6"/>
+    </g>
+
+    <!-- Fragrant Golden Saffron Khichuri Mound (মহাপ্রসাদ খিচুড়ি ভোগ) -->
+    <path
+      d="
+        M 178,168
+        C 188,128 292,128 302,168
+        C 278,178 202,178 178,168
+        Z
+      "
+      fill="url(#annaBhogGrad)"
+      stroke="#B08A3E"
+      stroke-width="0.8"
+    />
+
+    <!-- Garnish: Cashews, Raisins, Green Peas (কাজু, কিশমিশ ও কড়াইশুঁটি) -->
+    <!-- Cashew 1 -->
+    <path d="M 210,154 C 205,148 214,142 220,147 C 224,151 216,158 210,154 Z" fill="#FFFDF7" stroke="#B08A3E" stroke-width="0.5"/>
+    <!-- Cashew 2 -->
+    <path d="M 264,152 C 259,146 268,140 274,145 C 278,149 270,156 264,152 Z" fill="#FFFDF7" stroke="#B08A3E" stroke-width="0.5"/>
+    <!-- Raisins -->
+    <ellipse cx="232" cy="158" rx="3.5" ry="2.2" fill="#581A05" transform="rotate(-15 232 158)"/>
+    <ellipse cx="254" cy="155" rx="3.5" ry="2.2" fill="#581A05" transform="rotate(20 254 155)"/>
+    <!-- Fresh Green Peas -->
+    <circle cx="224" cy="148" r="2.8" fill="#4C8556" stroke="#1B3E23" stroke-width="0.4"/>
+    <circle cx="245" cy="162" r="2.8" fill="#4C8556" stroke="#1B3E23" stroke-width="0.4"/>
+    <circle cx="242" cy="146" r="2.8" fill="#4C8556" stroke="#1B3E23" stroke-width="0.4"/>
+
+    <!-- Sacred Bilva Patra / Belpatra with Chandan & Sindoor (ত্রিদল বেলপাতা) -->
+    <g transform="translate(240, 134)">
+      <!-- Left Leaf -->
+      <path d="M 0,0 C -12,-6 -14,-18 0,-14 C -2,-8 -1,-3 0,0 Z" fill="#2F5E38" stroke="#1B3E23" stroke-width="0.5"/>
+      <!-- Right Leaf -->
+      <path d="M 0,0 C 12,-6 14,-18 0,-14 C 2,-8 1,-3 0,0 Z" fill="#2F5E38" stroke="#1B3E23" stroke-width="0.5"/>
+      <!-- Top Center Pinnacle Leaf -->
+      <path d="M 0,0 C -8,-14 0,-24 0,-24 C 0,-24 8,-14 0,0 Z" fill="#3D7347" stroke="#1B3E23" stroke-width="0.6"/>
+      <!-- Consecrated White Sandalwood & Red Vermilion Bindu -->
+      <circle cx="0" cy="-12" r="2.2" fill="#FFFDF7"/>
+      <circle cx="0" cy="-12" r="1.1" fill="#8F241C"/>
+    </g>
+
+    <!-- Swirling Sacred Vapors of Warm Bhog -->
+    <path d="M 218,126 C 212,106 226,94 220,72" stroke="url(#steamVaporGrad)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <path d="M 240,118 C 234,96 248,84 242,62" stroke="url(#steamVaporGrad)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <path d="M 262,126 C 256,106 270,94 264,72" stroke="url(#steamVaporGrad)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 4. LEFT ACCOMPANIMENT: KATORI OF PAYESH & SWEETS (ক্ষীর বাটি) -->
+  <!-- Center: X = 118, Y = 236                                     -->
+  <!-- ============================================================ -->
+  <g transform="translate(118, 236)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="16" rx="28" ry="6" fill="#24201D" opacity="0.28"/>
+
+    <!-- Bell-Metal Katori Body (কাঁসার বাটি) -->
+    <path d="M -24,0 C -22,14 -12,18 0,18 C 12,18 22,14 24,0 Z" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="1.2"/>
+    <ellipse cx="0" cy="0" rx="24" ry="7" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="1"/>
+    <ellipse cx="0" cy="-0.5" rx="22" ry="5.5" fill="#FFFDF7"/>
+
+    <!-- Condensed Milk Payesh / Kheer with Saffron Strands -->
+    <ellipse cx="0" cy="0" rx="20" ry="4.5" fill="#FDF7EA"/>
+    <!-- Saffron Threads (কেশর) -->
+    <path d="M -8,0 Q -4,-2 0,-0.5" stroke="#C86A12" stroke-width="0.8" fill="none"/>
+    <path d="M 2,0.5 Q 6,-1 10,0" stroke="#C86A12" stroke-width="0.8" fill="none"/>
+    <circle cx="-2" cy="-0.8" r="1.5" fill="#4C8556"/>
+    <circle cx="5" cy="0.8" r="1.5" fill="#B08A3E"/>
+
+    <!-- Consecrated Sweets Beside Katori: Narkel Nadu & Sandesh -->
+    <g transform="translate(-24, 8)">
+      <circle cx="0" cy="0" r="6" fill="#EAD9B8" stroke="#B08A3E" stroke-width="0.6"/>
+      <circle cx="0" cy="0" r="1.5" fill="#8F241C" opacity="0.5"/>
+    </g>
+    <g transform="translate(-14, 13)">
+      <circle cx="0" cy="0" r="6.5" fill="#F7E9CE" stroke="#B08A3E" stroke-width="0.6"/>
+      <circle cx="0" cy="0" r="1.5" fill="#C86A12" opacity="0.5"/>
+    </g>
+
+    <!-- Aromatic Fragrant Incense Sticks (ধূপকাঠি ও ধূপদানি) -->
+    <g transform="translate(-36, -8)">
+      <path d="M -5,8 L 5,8 L 3,0 L -3,0 Z" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="0.6"/>
+      <!-- Sticks -->
+      <line x1="0" y1="0" x2="-8" y2="-32" stroke="#422517" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="2" y2="-36" stroke="#422517" stroke-width="1.2"/>
+      <!-- Glowing Embers -->
+      <circle cx="-8" cy="-32" r="1" fill="#FF5722"/>
+      <circle cx="2" cy="-36" r="1" fill="#FF5722"/>
+      <!-- Holy Fragrant Smoke Curves -->
+      <path d="M -8,-34 C -18,-48 -2,-58 -10,-72" stroke="url(#steamVaporGrad)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <path d="M 2,-38 C 12,-52 -4,-62 4,-76" stroke="url(#steamVaporGrad)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. RIGHT ACCOMPANIMENT: DIYA & SACRED HIBISCUS (জবা ফুল)    -->
+  <!-- Center: X = 360, Y = 236                                     -->
+  <!-- ============================================================ -->
+  <g transform="translate(360, 236)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="18" rx="26" ry="6" fill="#24201D" opacity="0.28"/>
+
+    <!-- Traditional Tiered Brass Diya Pradeep (পিতলের পঞ্চমুখী প্রদীপ) -->
+    <path d="M -14,18 L 14,18 L 10,12 L -10,12 Z" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <path d="M -4,12 L 4,12 L 3,2 L -3,2 Z" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Diya Oil Cup -->
+    <path d="M -18,2 C -12,10 12,10 18,2 Z" fill="url(#annaGoldGrad)" stroke="#765217" stroke-width="1.2"/>
+    <ellipse cx="0" cy="2" rx="18" ry="4" fill="#D9B15B"/>
+    <ellipse cx="0" cy="2" rx="14" ry="2.5" fill="#8F241C" opacity="0.85"/>
+
+    <!-- Sacred Radiating Flame -->
+    <path
+      d="
+        M 0,2
+        C -6,-4 -8,-14 0,-26
+        C 8,-14 6,-4 0,2
+        Z
+      "
+      fill="url(#annaFlameGrad)"
+    />
+    <!-- Inner Radiant Core -->
+    <path
+      d="
+        M 0,0
+        C -3,-4 -4,-9 0,-17
+        C 4,-9 3,-4 0,0
+        Z
+      "
+      fill="#FFFDF7"
+    />
+    <circle cx="0" cy="-6" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Fresh Consecrated Red Hibiscus Flower Offering (রক্তজবা) -->
+    <g transform="translate(-32, 10) scale(0.95)">
+      <!-- Petal 1 (Top) -->
+      <path d="M 0,0 C -10,-12 -6,-24 0,-26 C 6,-24 10,-12 0,0 Z" fill="#8F241C"/>
+      <!-- Petal 2 (Top Left) -->
+      <path d="M 0,0 C -18,-10 -24,-2 -20,6 C -14,8 -6,4 0,0 Z" fill="#A8261C"/>
+      <!-- Petal 3 (Top Right) -->
+      <path d="M 0,0 C 18,-10 24,-2 20,6 C 14,8 6,4 0,0 Z" fill="#A8261C"/>
+      <!-- Petal 4 (Bottom Left) -->
+      <path d="M 0,0 C -16,6 -14,18 -4,18 C 2,16 0,8 0,0 Z" fill="#731610"/>
+      <!-- Petal 5 (Bottom Right) -->
+      <path d="M 0,0 C 16,6 14,18 4,18 C -2,16 0,8 0,0 Z" fill="#731610"/>
+
+      <!-- Golden Stamen Tube & Anthers (কেশর ও পরাগধানী) -->
+      <path d="M 0,0 C 2,-8 6,-18 10,-24" stroke="url(#annaGoldGrad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="10" cy="-24" r="2" fill="#EED89B"/>
+      <circle cx="8" cy="-21" r="1.2" fill="#EED89B"/>
+      <circle cx="9" cy="-18" r="1.2" fill="#EED89B"/>
+      <circle cx="0" cy="0" r="3" fill="#65120D"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 6. BOTTOM DIVIDER & BENGALI TYPOGRAPHY                       -->
+  <!-- ============================================================ -->
+  <!-- Architectural Gold Baseline Divider -->
+  <line x1="45" y1="295" x2="435" y2="295" stroke="url(#annaGoldGrad)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="45" cy="295" r="3" fill="#8F241C" stroke="url(#annaGoldGrad)" stroke-width="1"/>
+  <circle cx="435" cy="295" r="3" fill="#8F241C" stroke="url(#annaGoldGrad)" stroke-width="1"/>
+  <circle cx="240" cy="295" r="2.5" fill="#8F241C" stroke="url(#annaGoldGrad)" stroke-width="0.8"/>
+
+  <!-- Primary Bengali Caption Label -->
+  <text
+    x="240"
+    y="318"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="16.5"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    ভক্তিমূলক অন্নদান ও মহাপ্রসাদ সেবা
+  </text>
+
+  <!-- Sub-caption Line -->
+  <text
+    x="240"
+    y="336"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="11"
+    font-weight="600"
+    fill="#C86A12"
+    letter-spacing="0.3"
+    text-rendering="geometricPrecision"
+  >
+    নিত্য অন্নভোগ • অমাবস্যা মহাপ্রসাদ বিতরণ • ভক্ত সেবা
+  </text>
 </svg>
