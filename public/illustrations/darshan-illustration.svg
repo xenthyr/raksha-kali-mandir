@@ -1,29 +1,634 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
-  <title id="title">দর্শন — ভক্তিমূলক অলঙ্করণচিত্র</title>
-  <desc id="desc">Respectful conceptual illustration of a devotee facing a lit sanctum; not the actual deity image or temple interior.</desc>
-  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
-  <path d="M92 414Q360 286 628 414" fill="none" stroke="#E8DDCD" stroke-width="86" stroke-linecap="round"/>
-  <g transform="translate(278 78)">
-    <path d="M82 110 112 44l30 66Z" fill="#8F241C" stroke="#24201D" stroke-width="3"/>
-    <path d="M52 110h120l18 78H34Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
-    <path d="M42 191h140" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M66 112V82h92v30" fill="none" stroke="#B08A3E" stroke-width="3"/>
-    <circle cx="112" cy="122" r="22" fill="#B08A3E"/>
-    <path d="M78 205h68l-14 92H92Z" fill="#FBF4E6" stroke="#24201D" stroke-width="3"/>
-    <path d="M112 205v92" stroke="#756B61" stroke-width="2"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 480 360"
+  width="480"
+  height="360"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>নিত্য দর্শন ও আরতি পরিক্রমা — চিত্রলিপি</title>
+  <desc>Sacred Temple Sanctum Darshan, Evening Mahamangal Aarti, Panchapradeep, and Garbhagriha devotion for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTES, PATTERNS, GRADIENTS & FILTERS         -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background: Luminous Sacred Ivory Parchment Gradient -->
+    <radialGradient id="darshanCanvasBg" cx="50%" cy="42%" r="78%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#FDFBF5"/>
+      <stop offset="78%" stop-color="#FBF4E6"/>
+      <stop offset="100%" stop-color="#EFE0C7"/>
+    </radialGradient>
+
+    <!-- Subtle Traditional Bengali Alpana Lace Texture Overlay -->
+    <pattern id="darshanAlpanaTile" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 30 15 L 15 30 L 0 15 Z" fill="none" stroke="#B08A3E" stroke-width="0.45" stroke-opacity="0.12"/>
+      <circle cx="15" cy="15" r="4.5" fill="none" stroke="#8F241C" stroke-width="0.4" stroke-opacity="0.08"/>
+      <circle cx="15" cy="15" r="1.2" fill="#B08A3E" fill-opacity="0.18"/>
+    </pattern>
+
+    <!-- Deep Sanctum Garbhagriha Amber Glow -->
+    <radialGradient id="sanctumDeepGlow" cx="50%" cy="44%" r="58%">
+      <stop offset="0%" stop-color="#FFDE8A" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#C86A12" stop-opacity="0.38"/>
+      <stop offset="75%" stop-color="#8F241C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Burnished Temple Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="darshanGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9EEC8"/>
+      <stop offset="25%" stop-color="#D9B15B"/>
+      <stop offset="65%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Shading Gradient -->
+    <linearGradient id="darshanCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </linearGradient>
+
+    <!-- Sacred Aarti Flame Multi-Stage Gradient -->
+    <linearGradient id="darshanFlameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="20%" stop-color="#8F241C"/>
+      <stop offset="60%" stop-color="#C86A12"/>
+      <stop offset="85%" stop-color="#F5C042"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Aromatic Dhup Smoke Vapor Shimmer -->
+    <linearGradient id="darshanSmokeGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#B08A3E" stop-opacity="0.4"/>
+      <stop offset="65%" stop-color="#FFFDF7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFDF7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Ornate Temple Corner Filigree Macro -->
+    <g id="darshanCornerFiligree">
+      <path d="M 0,0 L 28,0 C 28,14 14,28 0,28 Z" fill="url(#darshanGoldGrad)" opacity="0.9"/>
+      <path d="M 3,3 L 21,3 C 21,12 12,21 3,21 Z" fill="#FBF4E6"/>
+      <circle cx="8" cy="8" r="2.2" fill="#8F241C"/>
+      <path d="M 0,28 L 28,0" stroke="#8F241C" stroke-width="1.2" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BASE CANVAS & NOTARIAL SECURITY BORDERS                   -->
+  <!-- ============================================================ -->
+  <!-- Ivory Canvas -->
+  <rect width="480" height="360" rx="16" fill="url(#darshanCanvasBg)"/>
+  <rect width="480" height="360" rx="16" fill="url(#darshanAlpanaTile)"/>
+
+  <!-- Outer Deep Crimson Enclosure Frame -->
+  <rect x="12" y="12" width="456" height="336" rx="14" fill="none" stroke="#8F241C" stroke-width="2.6"/>
+
+  <!-- Inner Burnished Brass Guard Rail -->
+  <rect x="18" y="18" width="444" height="324" rx="10" fill="none" stroke="url(#darshanGoldGrad)" stroke-width="1.4"/>
+
+  <!-- Guilloché Beaded Tracking Line -->
+  <rect x="23" y="23" width="434" height="314" rx="7" fill="none" stroke="#8F241C" stroke-width="0.8" stroke-dasharray="2.5 2.5" opacity="0.6"/>
+
+  <!-- Four Ornamental Corner Brackets -->
+  <use xlink:href="#darshanCornerFiligree" x="23" y="23"/>
+  <use xlink:href="#darshanCornerFiligree" x="457" y="23" transform="rotate(90 457 23)"/>
+  <use xlink:href="#darshanCornerFiligree" x="457" y="337" transform="rotate(180 457 337)"/>
+  <use xlink:href="#darshanCornerFiligree" x="23" y="337" transform="rotate(270 23 337)"/>
+
+  <!-- Top Identification Badge -->
+  <g transform="translate(240, 38)">
+    <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#8F241C" stroke="url(#darshanGoldGrad)" stroke-width="1.2"/>
+    <text
+      x="0"
+      y="1"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="11"
+      font-weight="700"
+      fill="#FFFDF7"
+      letter-spacing="0.6"
+      text-rendering="geometricPrecision"
+    >
+      ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
+    </text>
   </g>
-  <g transform="translate(108 142)">
-    <circle cx="74" cy="52" r="25" fill="#E8D6C0" stroke="#24201D" stroke-width="3"/>
-    <path d="M74 80Q28 92 28 146v95h92v-95Q120 92 74 80Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
-    <path d="m30 128-26 40m114-40 26 40" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="m53 240-15 95m57-95 15 95m-72 0-20 56m92-56 20 56" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M49 134q25 24 50 0" fill="none" stroke="#FBF4E6" stroke-width="3"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. GARBHAGRIHA ARCHITECTURE & SANCTUM TORANA                -->
+  <!-- ============================================================ -->
+  <!-- Divine Sanctum Radiance Background -->
+  <circle cx="240" cy="160" r="142" fill="url(#sanctumDeepGlow)"/>
+
+  <!-- Dark Sanctum Wall (মন্দির গর্ভগৃহ দেওয়াল) -->
+  <path d="M 68,66 L 412,66 L 412,246 L 68,246 Z" fill="#24201D" opacity="0.96"/>
+
+  <!-- Left Fluted Temple Pillar (বাম অলঙ্কৃত স্তম্ভ) -->
+  <g id="leftSanctumPillar">
+    <!-- Base Plinth -->
+    <path d="M 66,246 L 108,246 L 102,234 L 72,234 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <rect x="74" y="234" width="26" height="4" fill="#8F241C"/>
+    <!-- Fluted Shaft -->
+    <rect x="76" y="86" width="22" height="148" fill="#1C1815" stroke="url(#darshanGoldGrad)" stroke-width="1.2"/>
+    <!-- Fluting Lines -->
+    <line x1="81" y1="88" x2="81" y2="232" stroke="url(#darshanGoldGrad)" stroke-width="0.9" opacity="0.75"/>
+    <line x1="87" y1="88" x2="87" y2="232" stroke="url(#darshanGoldGrad)" stroke-width="1.1"/>
+    <line x1="93" y1="88" x2="93" y2="232" stroke="url(#darshanGoldGrad)" stroke-width="0.9" opacity="0.75"/>
+    <!-- Capital Bracket (স্তম্ভ শীর্ষ) -->
+    <path d="M 72,86 L 102,86 L 108,74 L 66,74 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <circle cx="87" cy="80" r="3" fill="#8F241C"/>
   </g>
-  <g transform="translate(506 274)">
-    <path d="M0 86q36-27 72 0" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M36 84Q25 68 36 50q11 18 0 34Z" fill="#C86A12"/>
-    <path d="M36 55q-5-10 4-20 9 11 1 20Z" fill="#B08A3E"/>
+
+  <!-- Right Fluted Temple Pillar (ডান অলঙ্কৃত স্তম্ভ) -->
+  <g id="rightSanctumPillar">
+    <!-- Base Plinth -->
+    <path d="M 372,246 L 414,246 L 408,234 L 378,234 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <rect x="380" y="234" width="26" height="4" fill="#8F241C"/>
+    <!-- Fluted Shaft -->
+    <rect x="382" y="86" width="22" height="148" fill="#1C1815" stroke="url(#darshanGoldGrad)" stroke-width="1.2"/>
+    <!-- Fluting Lines -->
+    <line x1="387" y1="88" x2="387" y2="232" stroke="url(#darshanGoldGrad)" stroke-width="0.9" opacity="0.75"/>
+    <line x1="393" y1="88" x2="393" y2="232" stroke="url(#darshanGoldGrad)" stroke-width="1.1"/>
+    <line x1="399" y1="88" x2="399" y2="232" stroke="url(#darshanGoldGrad)" stroke-width="0.9" opacity="0.75"/>
+    <!-- Capital Bracket (স্তম্ভ শীর্ষ) -->
+    <path d="M 378,86 L 408,86 L 414,74 L 372,74 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <circle cx="393" cy="80" r="3" fill="#8F241C"/>
   </g>
-  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">শ্রদ্ধা • দর্শন • প্রার্থনা</text>
+
+  <!-- Traditional Bengal Cusped Torana Arch (অলঙ্কৃত তোরণ খিলান) -->
+  <g id="sanctumToranaArch">
+    <!-- Outer Heavy Molded Arch -->
+    <path
+      d="
+        M 87,74
+        C 87,8 393,8 393,74
+      "
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="5"
+      fill="none"
+      stroke-linecap="round"
+    />
+    <!-- Crimson Inlay Ribbon -->
+    <path
+      d="
+        M 96,76
+        C 96,20 384,20 384,76
+      "
+      stroke="#8F241C"
+      stroke-width="2.4"
+      fill="none"
+    />
+    <!-- Cusped Inward Petal Arches (পদ্ম খিলান ভাঁজ) -->
+    <path
+      d="
+        M 104,78
+        C 104,36 172,36 172,65
+        C 172,30 240,25 240,55
+        C 240,25 308,30 308,65
+        C 308,36 376,36 376,78
+      "
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="1.6"
+      fill="none"
+    />
+
+    <!-- Apex Kirtimukha / Brass Finial Stud -->
+    <circle cx="240" cy="27" r="5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1"/>
+    <circle cx="240" cy="27" r="2.2" fill="#8F241C"/>
+  </g>
+
+  <!-- Suspended Brass Mangal Ghanta (মঙ্গল আরতি ঘণ্টা) -->
+  <g id="hangingTempleBell" transform="translate(240, 27)">
+    <!-- Heavy Brass Hanging Chain Links -->
+    <line x1="0" y1="5" x2="0" y2="42" stroke="url(#darshanGoldGrad)" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="0" cy="14" r="2.5" fill="#8F241C"/>
+    <circle cx="0" cy="26" r="2.5" fill="#8F241C"/>
+    <circle cx="0" cy="38" r="2.5" fill="#8F241C"/>
+
+    <!-- Bell Dome & Lip (ঘণ্টার গাত্র ও কানা) -->
+    <path
+      d="
+        M -18,65
+        C -18,48 18,48 18,65
+        L 22,74
+        C 22,77 -22,77 -22,74
+        Z
+      "
+      fill="url(#darshanGoldGrad)"
+      stroke="#765217"
+      stroke-width="1.2"
+    />
+    <!-- Bell Waist Ring -->
+    <line x1="-19" y1="68" x2="19" y2="68" stroke="#8F241C" stroke-width="1.2"/>
+    <!-- Clapper with Red Sacred Thread (ঘণ্টার লোলক ও মঙ্গল সুতো) -->
+    <line x1="0" y1="74" x2="0" y2="82" stroke="url(#darshanGoldGrad)" stroke-width="2"/>
+    <circle cx="0" cy="83" r="3.2" fill="#8F241C" stroke="url(#darshanGoldGrad)" stroke-width="0.8"/>
+    <!-- Decorative Hanging Silk Tassel -->
+    <path d="M 0,86 L -3,96 L 3,96 Z" fill="#C86A12"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 3. INNER SANCTUM DEITY PRESENCE & ALTAR (মা রক্ষা কালী)      -->
+  <!-- Center: X = 240, Y = 145                                     -->
+  <!-- ============================================================ -->
+  <g id="sanctumDeityJyoti" transform="translate(240, 142)">
+    <!-- Golden Prabhavali Halo Arch Behind Deity (প্রভাবলী মণ্ডল) -->
+    <circle cx="0" cy="0" r="42" fill="#24201D" stroke="url(#darshanGoldGrad)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#8F241C" stroke-width="1" stroke-dasharray="2.5 2"/>
+
+    <!-- Radiating Ray Notches around Prabhavali -->
+    <g stroke="url(#darshanGoldGrad)" stroke-width="1" stroke-linecap="round" opacity="0.85">
+      <line x1="0" y1="-42" x2="0" y2="-47"/>
+      <line x1="30" y1="-30" x2="34" y2="-34"/>
+      <line x1="42" y1="0" x2="47" y2="0"/>
+      <line x1="-30" y1="-30" x2="-34" y2="-34"/>
+      <line x1="-42" y1="0" x2="-47" y2="0"/>
+    </g>
+
+    <!-- Consecrated Raksha Kali Trishula-Jyoti (পবিত্র রক্ষাকালী শিখা) -->
+    <!-- Outer Flame -->
+    <path
+      d="
+        M 0,-34
+        C 9,-22 18,-11 18,3
+        C 18,17 9,25 0,27
+        C -9,25 -18,17 -18,3
+        C -18,-11 -9,-22 0,-34
+        Z
+      "
+      fill="url(#darshanFlameGrad)"
+    />
+
+    <!-- Mid Radiance Layer -->
+    <path
+      d="
+        M 0,-24
+        C 6,-16 11,-8 11,3
+        C 11,13 6,18 0,20
+        C -6,18 -11,13 -11,3
+        C -11,-8 -6,-16 0,-24
+        Z
+      "
+      fill="#F5A623"
+    />
+
+    <!-- Core Sanctum Light -->
+    <path
+      d="
+        M 0,-14
+        C 4,-9 7,-3 7,3
+        C 7,9 4,12 0,13
+        C -4,12 -7,9 -7,3
+        C -7,-3 -4,-9 0,-14
+        Z
+      "
+      fill="#FFFFFF"
+    />
+
+    <!-- Divine Trinetra Vermilion Bindu (ত্রিনয়ন বিন্দু) -->
+    <circle cx="0" cy="-2" r="2.8" fill="#8F241C"/>
+    <circle cx="0" cy="-2" r="1.1" fill="#FFFDF7"/>
+
+    <!-- Consecrated Red Hibiscus Garland Draped Around Niche (জবার মালা) -->
+    <path
+      d="
+        M -38,12
+        C -28,34 28,34 38,12
+      "
+      stroke="#8F241C"
+      stroke-width="4.5"
+      fill="none"
+      stroke-linecap="round"
+      stroke-dasharray="3 4"
+    />
+    <path
+      d="
+        M -38,12
+        C -28,34 28,34 38,12
+      "
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="1.5"
+      fill="none"
+      stroke-dasharray="1 6"
+    />
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 4. THREE-TIERED SANCTUM ALTAR PLINTH (পবিত্র বেদি ও সোপান)   -->
+  <!-- ============================================================ -->
+  <g id="sanctumAltarSteps">
+    <!-- Tier 1 (Top Plinth Step) -->
+    <path
+      d="
+        M 104,188
+        L 376,188
+        L 368,206
+        L 112,206
+        Z
+      "
+      fill="url(#darshanCrimsonGrad)"
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="1.2"
+    />
+
+    <!-- Tier 2 (Middle Pedestal Step) -->
+    <path
+      d="
+        M 94,206
+        L 386,206
+        L 378,226
+        L 102,226
+        Z
+      "
+      fill="#24201D"
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="1.2"
+    />
+
+    <!-- Tier 3 (Main Altar Threshold with Sacred Alpana) -->
+    <path
+      d="
+        M 80,226
+        L 400,226
+        L 392,250
+        L 88,250
+        Z
+      "
+      fill="url(#darshanCrimsonGrad)"
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="1.5"
+    />
+
+    <!-- Traditional Bengali Rice-Paste Alpana Motifs on Altar Edge (বেদির আলপনা) -->
+    <g stroke="#FFFDF7" stroke-width="0.9" fill="none" opacity="0.85">
+      <path d="M 120,238 C 126,230 134,230 140,238 C 134,246 126,246 120,238 Z"/>
+      <circle cx="130" cy="238" r="1.5" fill="#FFFDF7"/>
+      <path d="M 160,238 C 166,230 174,230 180,238 C 174,246 166,246 160,238 Z"/>
+      <circle cx="170" cy="238" r="1.5" fill="#FFFDF7"/>
+      <path d="M 300,238 C 306,230 314,230 320,238 C 314,246 306,246 300,238 Z"/>
+      <circle cx="310" cy="238" r="1.5" fill="#FFFDF7"/>
+      <path d="M 340,238 C 346,230 354,230 360,238 C 354,246 346,246 340,238 Z"/>
+      <circle cx="350" cy="238" r="1.5" fill="#FFFDF7"/>
+      <!-- Linear Wave Trace along Step -->
+      <line x1="96" y1="248" x2="384" y2="248" stroke="url(#darshanGoldGrad)" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. CENTRAL MASTERPIECE: PANCHAPRADEEP AARTI LAMP (পঞ্চপ্রদীপ) -->
+  <!-- Center: X = 240, Y = 175 to Y = 246                          -->
+  <!-- ============================================================ -->
+  <g id="masterPanchapradeep" transform="translate(240, 204)">
+    <!-- Shadow on Plinth -->
+    <ellipse cx="0" cy="38" rx="34" ry="7" fill="#14110F" opacity="0.5"/>
+
+    <!-- Heavy Fluted Base Pedestal (প্রদীপের পিতলের গোল বেদি) -->
+    <ellipse cx="0" cy="36" rx="28" ry="7" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1.2"/>
+    <ellipse cx="0" cy="34" rx="24" ry="5" fill="#F9EEC8" stroke="#B08A3E" stroke-width="0.8"/>
+
+    <!-- Central Sculpted Stem & Kalasa Nodes (কলসমুখী দণ্ড) -->
+    <path d="M -8,34 L 8,34 L 5,14 L -5,14 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1"/>
+    <!-- Node 1 -->
+    <ellipse cx="0" cy="22" rx="9" ry="3.5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Node 2 -->
+    <ellipse cx="0" cy="12" rx="7" ry="2.8" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+
+    <!-- Ergonomic Loop Handle on Left with Mayura/Peacock Head (ময়ূরপুচ্ছ হাতল) -->
+    <path
+      d="
+        M -8,28
+        C -32,28 -32,-2 -8,2
+      "
+      fill="none"
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="3.5"
+      stroke-linecap="round"
+    />
+    <circle cx="-24" cy="15" r="4" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1"/>
+    <circle cx="-24" cy="15" r="1.5" fill="#8F241C"/>
+
+    <!-- Ornate Lotus-Wing Branches Supporting the 5 Lamps (পঞ্চমুখী শাখা) -->
+    <path
+      d="
+        M -42,-4
+        Q -22,12 0,6
+        Q 22,12 42,-4
+      "
+      stroke="url(#darshanGoldGrad)"
+      stroke-width="4"
+      fill="none"
+      stroke-linecap="round"
+    />
+
+    <!-- THE 5 RADIANT SACRED AARTI FLAMES -->
+    <!-- 1. Leftmost Flame (দূর-বাম দীপ) -->
+    <g transform="translate(-42, -8)">
+      <ellipse cx="0" cy="6" rx="9" ry="3.5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+      <ellipse cx="0" cy="5" rx="7" ry="2" fill="#8F241C"/>
+      <path d="M 0,5 C -5,-2 -7,-10 0,-20 C 7,-10 5,-2 0,5 Z" fill="url(#darshanFlameGrad)"/>
+      <circle cx="0" cy="-2" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- 2. Mid-Left Flame (মধ্য-বাম দীপ) -->
+    <g transform="translate(-21, -16)">
+      <ellipse cx="0" cy="6" rx="9" ry="3.5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+      <ellipse cx="0" cy="5" rx="7" ry="2" fill="#8F241C"/>
+      <path d="M 0,5 C -5,-2 -7,-10 0,-22 C 7,-10 5,-2 0,5 Z" fill="url(#darshanFlameGrad)"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- 3. Pinnacle Center Flame (প্রধান মধ্য শিখা) -->
+    <g transform="translate(0, -24)">
+      <ellipse cx="0" cy="6" rx="11" ry="4" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1"/>
+      <ellipse cx="0" cy="5" rx="8" ry="2.2" fill="#8F241C"/>
+      <path d="M 0,5 C -6,-3 -8,-14 0,-28 C 8,-14 6,-3 0,5 Z" fill="url(#darshanFlameGrad)"/>
+      <circle cx="0" cy="-6" r="2" fill="#FFFFFF"/>
+    </g>
+
+    <!-- 4. Mid-Right Flame (মধ্য-ডান দীপ) -->
+    <g transform="translate(21, -16)">
+      <ellipse cx="0" cy="6" rx="9" ry="3.5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+      <ellipse cx="0" cy="5" rx="7" ry="2" fill="#8F241C"/>
+      <path d="M 0,5 C -5,-2 -7,-10 0,-22 C 7,-10 5,-2 0,5 Z" fill="url(#darshanFlameGrad)"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- 5. Rightmost Flame (দূর-ডান দীপ) -->
+    <g transform="translate(42, -8)">
+      <ellipse cx="0" cy="6" rx="9" ry="3.5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+      <ellipse cx="0" cy="5" rx="7" ry="2" fill="#8F241C"/>
+      <path d="M 0,5 C -5,-2 -7,-10 0,-20 C 7,-10 5,-2 0,5 Z" fill="url(#darshanFlameGrad)"/>
+      <circle cx="0" cy="-2" r="1.5" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 6. LEFT LITURGICAL WING: DHOOPDANI & CONCH (ধূপদানি ও শঙ্খ)  -->
+  <!-- Center: X = 138, Y = 236                                     -->
+  <!-- ============================================================ -->
+  <!-- Traditional Brass Incense Burner (ধূপদানি ও অগুরু ধোঁয়া) -->
+  <g id="aromaticDhoopdani" transform="translate(138, 228)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="18" rx="20" ry="5" fill="#14110F" opacity="0.38"/>
+
+    <!-- Brass Pedestal Foot -->
+    <path d="M -12,18 L 12,18 L 8,10 L -8,10 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <!-- Bowl Body with Perforations -->
+    <path d="M -16,10 C -16,0 16,0 16,10 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1.2"/>
+    <ellipse cx="0" cy="2" rx="16" ry="4.5" fill="#24201D"/>
+    <!-- Glowing Resinous Charcoal Embers (ধুনো ও অঙ্গার) -->
+    <circle cx="-5" cy="2" r="2" fill="#FF5722"/>
+    <circle cx="4" cy="1" r="2.2" fill="#C86A12"/>
+    <circle cx="0" cy="3" r="1.5" fill="#FFC107"/>
+
+    <!-- Curling Clouds of Holy Incense Smoke (ধূপের সুবাসিত ধোঁয়া) -->
+    <path
+      d="
+        M -2,0
+        C -16,-22 4,-38 -8,-62
+        C -20,-86 2,-105 -6,-128
+      "
+      stroke="url(#darshanSmokeGrad)"
+      stroke-width="2.6"
+      fill="none"
+      stroke-linecap="round"
+    />
+    <path
+      d="
+        M 3,-2
+        C 14,-24 -6,-42 8,-66
+        C 22,-90 -2,-110 4,-134
+      "
+      stroke="url(#darshanSmokeGrad)"
+      stroke-width="2.2"
+      fill="none"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <!-- Sacred Conch Shell on Tripod Stand (মঙ্গল শঙ্খ ও ত্রিপদী) -->
+  <g id="sacredShankha" transform="translate(94, 235)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="12" rx="16" ry="4" fill="#14110F" opacity="0.35"/>
+    <!-- Brass Tripod Ring Stand -->
+    <path d="M -12,12 L -6,6 L 6,6 L 12,12" stroke="url(#darshanGoldGrad)" stroke-width="1.5" fill="none"/>
+    <ellipse cx="0" cy="6" rx="10" ry="3" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+
+    <!-- Conch Shell Body in Polished Pearl Ivory (শ্বেত শঙ্খ) -->
+    <path
+      d="
+        M -11,4
+        C -15,-4 -4,-12 6,-8
+        C 14,-5 16,3 10,8
+        C 4,11 -6,9 -11,4
+        Z
+      "
+      fill="#FFFDF7"
+      stroke="#D9B15B"
+      stroke-width="1"
+    />
+    <!-- Conch Spiral Spire (শঙ্খের পাক) -->
+    <path d="M -11,4 C -14,2 -13,-2 -9,-3" stroke="#B08A3E" stroke-width="0.8" fill="none"/>
+    <!-- Consecrated Vermilion & Sandalwood Tilak on Shankha -->
+    <circle cx="2" cy="0" r="1.8" fill="#8F241C"/>
+    <circle cx="2" cy="0" r="0.7" fill="#FFFFFF"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 7. RIGHT LITURGICAL WING: PUJA THALI & OFFERINGS (পূজার থালি) -->
+  <!-- Center: X = 345, Y = 236                                     -->
+  <!-- ============================================================ -->
+  <g id="pujaOfferingThali" transform="translate(345, 234)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="14" rx="34" ry="8" fill="#14110F" opacity="0.38"/>
+
+    <!-- Heavy Bell-Metal Thali Rim & Basin (কাঁসার পূজার থালি) -->
+    <ellipse cx="0" cy="6" rx="32" ry="9" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="1.4"/>
+    <ellipse cx="0" cy="4.5" rx="28" ry="7" fill="#F9EEC8" stroke="#B08A3E" stroke-width="0.8"/>
+    <ellipse cx="0" cy="3.5" rx="26" ry="5.5" fill="#FFFDF7" opacity="0.85"/>
+
+    <!-- Red Hibiscus Flowers (রক্তজবা পুষ্পার্ঘ্য) -->
+    <g transform="translate(-10, 2) scale(0.85)">
+      <!-- Petals -->
+      <path d="M 0,0 C -8,-10 -4,-18 0,-20 C 4,-18 8,-10 0,0 Z" fill="#8F241C"/>
+      <path d="M 0,0 C -12,-6 -16,0 -12,6 C -8,8 -3,4 0,0 Z" fill="#A8261C"/>
+      <path d="M 0,0 C 12,-6 16,0 12,6 C 8,8 3,4 0,0 Z" fill="#A8261C"/>
+      <!-- Gold Stamen -->
+      <circle cx="0" cy="-2" r="2" fill="#EED89B"/>
+    </g>
+    <g transform="translate(8, 5) scale(0.75)">
+      <path d="M 0,0 C -8,-10 -4,-18 0,-20 C 4,-18 8,-10 0,0 Z" fill="#731610"/>
+      <path d="M 0,0 C -12,-6 -16,0 -12,6 C -8,8 -3,4 0,0 Z" fill="#8F241C"/>
+      <path d="M 0,0 C 12,-6 16,0 12,6 C 8,8 3,4 0,0 Z" fill="#8F241C"/>
+      <circle cx="0" cy="-2" r="2" fill="#EED89B"/>
+    </g>
+
+    <!-- Bilva Leaf Sprig (ত্রিদল বেলপাতা) -->
+    <g transform="translate(12, -2) scale(0.7)">
+      <path d="M 0,0 C -8,-4 -10,-12 0,-10 Z" fill="#2F5E38"/>
+      <path d="M 0,0 C 8,-4 10,-12 0,-10 Z" fill="#2F5E38"/>
+      <path d="M 0,0 C -5,-10 0,-16 0,-16 C 0,-16 5,-10 0,0 Z" fill="#3D7347"/>
+      <circle cx="0" cy="-8" r="1.2" fill="#FFFDF7"/>
+    </g>
+
+    <!-- Small Brass Katori of Consecrated Raktachandan (রক্তচন্দন বাটি) -->
+    <g transform="translate(-18, -1)">
+      <ellipse cx="0" cy="2" rx="6" ry="2.5" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.6"/>
+      <ellipse cx="0" cy="1.5" rx="4.5" ry="1.8" fill="#8F241C"/>
+    </g>
+
+    <!-- Small Hand-held Brass Ghanti / Bell (পূজার হস্তঘণ্টি) -->
+    <g transform="translate(24, 0)">
+      <path d="M -4,5 L 4,5 L 3,-2 L -3,-2 Z" fill="url(#darshanGoldGrad)" stroke="#765217" stroke-width="0.6"/>
+      <line x1="0" y1="-2" x2="0" y2="-12" stroke="url(#darshanGoldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="0" cy="-13" r="1.5" fill="#8F241C"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 8. BOTTOM DIVIDER & BENGALI TYPOGRAPHY                       -->
+  <!-- ============================================================ -->
+  <!-- Architectural Gold Baseline Divider -->
+  <line x1="45" y1="298" x2="435" y2="298" stroke="url(#darshanGoldGrad)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="45" cy="298" r="3" fill="#8F241C" stroke="url(#darshanGoldGrad)" stroke-width="1"/>
+  <circle cx="435" cy="298" r="3" fill="#8F241C" stroke="url(#darshanGoldGrad)" stroke-width="1"/>
+  <circle cx="240" cy="298" r="2.5" fill="#8F241C" stroke="url(#darshanGoldGrad)" stroke-width="0.8"/>
+
+  <!-- Primary Bengali Caption Label -->
+  <text
+    x="240"
+    y="320"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="16.5"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    নিত্য দর্শন, সান্ধ্য আরতি ও ভক্তিভাব
+  </text>
+
+  <!-- Sub-caption Line: Liturgical Rites & Spiritual Solace -->
+  <text
+    x="240"
+    y="338"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="11"
+    font-weight="600"
+    fill="#C86A12"
+    letter-spacing="0.3"
+    text-rendering="geometricPrecision"
+  >
+    সান্ধ্য মহামঙ্গল আরতি • পঞ্চপ্রদীপ ও ধূপার্ঘ্য • পুণ্য দেবদর্শন ও কৃপাপ্রার্থনা
+  </text>
 </svg>
