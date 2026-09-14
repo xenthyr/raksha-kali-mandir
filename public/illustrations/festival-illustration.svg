@@ -1,29 +1,460 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
-  <title id="title">উৎসব — ভক্তিমূলক অলঙ্করণচিত্র</title>
-  <desc id="desc">Conceptual festive illustration using lamps, flowers, a ceremonial flag, and drum forms; event dates remain runtime-managed canonical data.</desc>
-  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
-  <path d="M82 418h556" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-  <g transform="translate(112 238)">
-    <path d="M0 180 24 82l24 98Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
-    <path d="M12 82q12-16 24 0" fill="none" stroke="#24201D" stroke-width="2"/>
-    <path d="M24 60q-7 12 0 23 7-11 0-23Z" fill="#B08A3E"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 480 360"
+  width="480"
+  height="360"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>উৎসব ও অমাবস্যা মহোৎসব — চিত্রলিপি</title>
+  <desc>Annual Puja, Amavasya festival, traditional Bengali Dhaak, Kasar, and Deepavali lamps illustration for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTES, PATTERNS, GRADIENTS & FILTERS         -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background: Luminous Sacred Ivory Parchment Gradient -->
+    <radialGradient id="festCanvasBg" cx="50%" cy="40%" r="78%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#FDFBF5"/>
+      <stop offset="78%" stop-color="#FBF4E6"/>
+      <stop offset="100%" stop-color="#EFE0C7"/>
+    </radialGradient>
+
+    <!-- Subtle Traditional Bengali Alpana Lace Texture Overlay -->
+    <pattern id="festAlpanaTile" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 30 15 L 15 30 L 0 15 Z" fill="none" stroke="#B08A3E" stroke-width="0.45" stroke-opacity="0.12"/>
+      <circle cx="15" cy="15" r="4.5" fill="none" stroke="#8F241C" stroke-width="0.4" stroke-opacity="0.08"/>
+      <circle cx="15" cy="15" r="1.2" fill="#B08A3E" fill-opacity="0.18"/>
+    </pattern>
+
+    <!-- Festive Celebration Golden Aura -->
+    <radialGradient id="festCelebrationAura" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFDE8A" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#C86A12" stop-opacity="0.28"/>
+      <stop offset="75%" stop-color="#8F241C" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Burnished Temple Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="festGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9EEC8"/>
+      <stop offset="25%" stop-color="#D9B15B"/>
+      <stop offset="65%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Shading Gradient -->
+    <linearGradient id="festCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </linearGradient>
+
+    <!-- Dhaak Lacquered Wood Barrel Gradient -->
+    <linearGradient id="festDhaakWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="25%" stop-color="#A8261C"/>
+      <stop offset="60%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#550E09"/>
+    </linearGradient>
+
+    <!-- Parchment Drumhead Skin Texture (ছামড়া) -->
+    <radialGradient id="drumSkinGrad" cx="45%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="65%" stop-color="#F7EED8"/>
+      <stop offset="100%" stop-color="#D8C39F"/>
+    </radialGradient>
+
+    <!-- Sacred Diya Flame Multi-Stage Gradient -->
+    <linearGradient id="festFlameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="25%" stop-color="#8F241C"/>
+      <stop offset="70%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#F5C042"/>
+    </linearGradient>
+
+    <!-- Ornate Temple Corner Filigree Macro -->
+    <g id="festCornerFiligree">
+      <path d="M 0,0 L 28,0 C 28,14 14,28 0,28 Z" fill="url(#festGoldGrad)" opacity="0.9"/>
+      <path d="M 3,3 L 21,3 C 21,12 12,21 3,21 Z" fill="#FBF4E6"/>
+      <circle cx="8" cy="8" r="2.2" fill="#8F241C"/>
+      <path d="M 0,28 L 28,0" stroke="#8F241C" stroke-width="1.2" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BASE CANVAS & NOTARIAL SECURITY BORDERS                   -->
+  <!-- ============================================================ -->
+  <!-- Ivory Canvas -->
+  <rect width="480" height="360" rx="16" fill="url(#festCanvasBg)"/>
+  <rect width="480" height="360" rx="16" fill="url(#festAlpanaTile)"/>
+
+  <!-- Outer Deep Crimson Enclosure Frame -->
+  <rect x="12" y="12" width="456" height="336" rx="14" fill="none" stroke="#8F241C" stroke-width="2.6"/>
+
+  <!-- Inner Burnished Brass Guard Rail -->
+  <rect x="18" y="18" width="444" height="324" rx="10" fill="none" stroke="url(#festGoldGrad)" stroke-width="1.4"/>
+
+  <!-- Guilloché Beaded Tracking Line -->
+  <rect x="23" y="23" width="434" height="314" rx="7" fill="none" stroke="#8F241C" stroke-width="0.8" stroke-dasharray="2.5 2.5" opacity="0.6"/>
+
+  <!-- Four Ornamental Corner Brackets -->
+  <use xlink:href="#festCornerFiligree" x="23" y="23"/>
+  <use xlink:href="#festCornerFiligree" x="457" y="23" transform="rotate(90 457 23)"/>
+  <use xlink:href="#festCornerFiligree" x="457" y="337" transform="rotate(180 457 337)"/>
+  <use xlink:href="#festCornerFiligree" x="23" y="337" transform="rotate(270 23 337)"/>
+
+  <!-- Top Identification Badge -->
+  <g transform="translate(240, 38)">
+    <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#8F241C" stroke="url(#festGoldGrad)" stroke-width="1.2"/>
+    <text
+      x="0"
+      y="1"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="11"
+      font-weight="700"
+      fill="#FFFDF7"
+      letter-spacing="0.6"
+      text-rendering="geometricPrecision"
+    >
+      ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
+    </text>
   </g>
-  <g transform="translate(272 70)">
-    <path d="M42 18v122" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M42 28 142 56 42 84Z" fill="#8F241C" stroke="#24201D" stroke-width="3"/>
-    <path d="M4 14q36 24 76 6" fill="none" stroke="#47614D" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Celebratory Golden Halo Aura -->
+  <circle cx="240" cy="165" r="145" fill="url(#festCelebrationAura)"/>
+
+  <!-- Festive Sparkle Starlight Accents (উৎসবের আলোক কণা) -->
+  <g fill="url(#festGoldGrad)" opacity="0.75" aria-hidden="true">
+    <path d="M 68,90 L 70,95 L 75,97 L 70,99 L 68,104 L 66,99 L 61,97 L 66,95 Z"/>
+    <path d="M 412,96 L 414,101 L 419,103 L 414,105 L 412,110 L 410,105 L 405,103 L 410,101 Z"/>
+    <path d="M 102,152 L 103.5,155.5 L 107,157 L 103.5,158.5 L 102,162 L 100.5,158.5 L 97,157 L 100.5,155.5 Z"/>
+    <path d="M 378,142 L 379.5,145.5 L 383,147 L 379.5,148.5 L 378,152 L 376.5,148.5 L 373,147 L 376.5,145.5 Z"/>
+    <circle cx="240" cy="98" r="1.8"/>
+    <circle cx="120" cy="188" r="1.5"/>
+    <circle cx="360" cy="178" r="1.5"/>
   </g>
-  <g transform="translate(408 284)">
-    <ellipse cx="74" cy="66" rx="68" ry="31" fill="#47614D" stroke="#24201D" stroke-width="3"/>
-    <path d="M36 58q38-25 76 0" fill="none" stroke="#FBF4E6" stroke-width="3"/>
-    <path d="M8 100q66 40 132 0" fill="none" stroke="#24201D" stroke-width="3"/>
-    <circle cx="55" cy="63" r="7" fill="#B08A3E"/><circle cx="93" cy="63" r="7" fill="#B08A3E"/>
-    <path d="M36 16q-8 13 2 26 10-13 2-26m69 0q-8 13 2 26 10-13 2-26" fill="#C86A12"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. FESTIVE BUNTING, MARIGOLD & MANGO LEAF TORAN (তোরণ মালা) -->
+  <!-- ============================================================ -->
+  <g id="festiveToran">
+    <!-- Golden Swag Suspension Cords -->
+    <path d="M 28,54 Q 130,82 240,56 Q 350,82 452,54" stroke="url(#festGoldGrad)" stroke-width="1.8" fill="none"/>
+    <path d="M 32,58 Q 130,86 240,60 Q 350,86 448,58" stroke="#8F241C" stroke-width="0.8" fill="none" stroke-dasharray="3 3"/>
+
+    <!-- Marigold Garland (গাঁদা ফুলের মালা) - Swag Segment 1 -->
+    <g fill="#F5A623" stroke="#C86A12" stroke-width="0.5">
+      <circle cx="65" cy="62" r="4"/><circle cx="85" cy="67" r="4.2"/><circle cx="106" cy="71" r="4.2"/>
+      <circle cx="128" cy="73" r="4.5"/><circle cx="150" cy="73" r="4.5"/><circle cx="172" cy="71" r="4.2"/>
+      <circle cx="194" cy="67" r="4.2"/><circle cx="215" cy="62" r="4"/>
+      <!-- Swag Segment 2 -->
+      <circle cx="265" cy="62" r="4"/><circle cx="286" cy="67" r="4.2"/><circle cx="308" cy="71" r="4.2"/>
+      <circle cx="330" cy="73" r="4.5"/><circle cx="352" cy="73" r="4.5"/><circle cx="374" cy="71" r="4.2"/>
+      <circle cx="395" cy="67" r="4.2"/><circle cx="415" cy="62" r="4"/>
+    </g>
+
+    <!-- Auspicious Mango Leaves (আম্রপল্লব তোরণ) -->
+    <g fill="#2F5E38" stroke="#1B3E23" stroke-width="0.5">
+      <path d="M 75,65 C 72,76 77,85 75,90 C 73,85 78,76 75,65 Z"/>
+      <path d="M 117,72 C 114,83 119,92 117,97 C 115,92 120,83 117,72 Z"/>
+      <path d="M 161,73 C 158,84 163,93 161,98 C 159,93 164,84 161,73 Z"/>
+      <path d="M 204,65 C 201,76 206,85 204,90 C 202,85 207,76 204,65 Z"/>
+      <path d="M 276,65 C 273,76 278,85 276,90 C 274,85 279,76 276,65 Z"/>
+      <path d="M 319,72 C 316,83 321,92 319,97 C 317,92 322,83 319,72 Z"/>
+      <path d="M 363,73 C 360,84 365,93 363,98 C 361,93 366,84 363,73 Z"/>
+      <path d="M 405,65 C 402,76 407,85 405,90 C 403,85 408,76 405,65 Z"/>
+    </g>
+
+    <!-- Traditional Triangular Festive Pennant Flags (উৎসব পতাকা) -->
+    <g stroke="url(#festGoldGrad)" stroke-width="0.8">
+      <polygon points="46,57 58,82 70,59" fill="url(#festCrimsonGrad)"/>
+      <polygon points="88,68 100,93 112,70" fill="url(#festGoldGrad)"/>
+      <polygon points="132,73 144,98 156,73" fill="url(#festCrimsonGrad)"/>
+      <polygon points="175,70 187,95 199,68" fill="url(#festGoldGrad)"/>
+      <polygon points="228,57 240,82 252,57" fill="url(#festCrimsonGrad)"/>
+      <polygon points="281,68 293,93 305,70" fill="url(#festGoldGrad)"/>
+      <polygon points="324,73 336,98 348,73" fill="url(#festCrimsonGrad)"/>
+      <polygon points="368,70 380,95 392,68" fill="url(#festGoldGrad)"/>
+      <polygon points="410,59 422,84 434,57" fill="url(#festCrimsonGrad)"/>
+    </g>
   </g>
-  <g transform="translate(522 166)">
-    <path d="M0 108Q0 48 56 48t56 60q0 60-56 60T0 108Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
-    <path d="M10 100q46 27 92 0" fill="none" stroke="#FBF4E6" stroke-width="3"/>
+
+  <!-- ============================================================ -->
+  <!-- 3. CENTERPIECE: TRADITIONAL BENGALI DHAAK (ঐতিহাসিক ঢাক)     -->
+  <!-- Center: X = 168, Y = 188 | Rotated -10 degrees               -->
+  <!-- ============================================================ -->
+  <g id="traditionalDhaak" transform="translate(168, 186) rotate(-10)">
+    <!-- Cast Shadow Beneath Dhaak -->
+    <ellipse cx="6" cy="62" rx="60" ry="14" fill="#24201D" opacity="0.32"/>
+
+    <!-- Ceremonial Red & Gold Silk Drape/Sling (পাটুকা / ঢাকের গালবন্ধনী) -->
+    <path
+      d="
+        M -42,-44
+        C -82,-30 -80,48 -32,56
+        C -40,42 -44,12 -34,-26
+        Z
+      "
+      fill="url(#festCrimsonGrad)"
+      stroke="url(#festGoldGrad)"
+      stroke-width="1.2"
+    />
+    <path d="M -48,-36 C -74,-24 -72,38 -36,48" stroke="url(#festGoldGrad)" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+
+    <!-- Main Barrel Body of the Dhaak (ঢাকের কাঠের খোলা / কাঠাম) -->
+    <path
+      d="
+        M -42,-52
+        C 48,-62 52,62 -42,52
+        Z
+      "
+      fill="url(#festDhaakWood)"
+      stroke="#4A0C08"
+      stroke-width="2"
+    />
+
+    <!-- Barrel Brass Hoop Bands (বেড়) -->
+    <path d="M -16,-54 C 18,-56 20,56 -16,54" stroke="url(#festGoldGrad)" stroke-width="2.5" fill="none"/>
+    <path d="M 8,-57 C 32,-58 34,58 8,57" stroke="url(#festGoldGrad)" stroke-width="2.5" fill="none"/>
+
+    <!-- Left Striking Drumhead Membrane & Hoop (ছামড়া ও বেতের কাণি) -->
+    <!-- Tension Ring Rim -->
+    <ellipse cx="-42" cy="0" rx="14" ry="52" fill="#765217" stroke="url(#festGoldGrad)" stroke-width="1.4"/>
+    <!-- Natural Parchment Face -->
+    <ellipse cx="-43" cy="0" rx="12" ry="49" fill="url(#drumSkinGrad)" stroke="#B08A3E" stroke-width="0.8"/>
+    <!-- Subtle Striking Center Tone Ring -->
+    <ellipse cx="-43" cy="0" rx="6.5" ry="26" fill="#E8D5B5" stroke="#C4A87C" stroke-width="0.6"/>
+
+    <!-- Right Base Hoop -->
+    <ellipse cx="46" cy="0" rx="6" ry="34" fill="#765217" stroke="url(#festGoldGrad)" stroke-width="1.2"/>
+
+    <!-- High-Tension Leather Braces & Brass Tuning Rings (বদ্দি ও কড়ি) -->
+    <g stroke="#FBF4E6" stroke-width="1.6" opacity="0.95" fill="none">
+      <line x1="-40" y1="-50" x2="46" y2="-28"/>
+      <line x1="-40" y1="-28" x2="46" y2="-28"/>
+      <line x1="-40" y1="-28" x2="46" y2="0"/>
+      <line x1="-40" y1="0" x2="46" y2="0"/>
+      <line x1="-40" y1="0" x2="46" y2="28"/>
+      <line x1="-40" y1="28" x2="46" y2="28"/>
+      <line x1="-40" y1="50" x2="46" y2="28"/>
+    </g>
+    <!-- Brass Tuning Rings Clamped on Braces (পিতলের কড়ি) -->
+    <g fill="url(#festGoldGrad)" stroke="#765217" stroke-width="0.6">
+      <circle cx="2" cy="-38" r="3"/>
+      <circle cx="16" cy="-14" r="3"/>
+      <circle cx="8" cy="14" r="3"/>
+      <circle cx="-2" cy="38" r="3"/>
+    </g>
+
+    <!-- Traditional Egret Feather / Kash Grass Plumes (ঢাকের বকের পালক ও শনের ঝালর) -->
+    <g id="dhaakFeathers">
+      <!-- Back Shadow Plumes -->
+      <path d="M 44,-42 C 86,-68 112,-48 64,-28" stroke="#D8C8B0" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M 46,-24 C 98,-46 120,-22 66,-10" stroke="#D8C8B0" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      <path d="M 46,-6 C 104,-18 116,12 65,10" stroke="#D8C8B0" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+      <!-- Brilliant White Silken Plumes -->
+      <path d="M 44,-44 C 92,-74 116,-52 68,-32" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M 46,-26 C 105,-50 124,-26 70,-14" stroke="#FFFFFF" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+      <path d="M 46,-8 C 110,-22 122,8 70,8" stroke="#FFFFFF" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+      <path d="M 45,10 C 100,-2 110,32 64,22" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+      <!-- Crimson & Saffron Ribbon Tie at Feather Base -->
+      <rect x="42" y="-36" width="7" height="48" rx="2" fill="#8F241C" stroke="url(#festGoldGrad)" stroke-width="0.8"/>
+      <circle cx="45" cy="-12" r="2" fill="url(#festGoldGrad)"/>
+    </g>
+
+    <!-- Slender Bamboo Drumsticks (ঢাকের কাঠি) -->
+    <!-- Upper Drumstick Striking Rim -->
+    <path d="M -82,-38 L -36,-10" stroke="#FBF4E6" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="-36" cy="-10" r="2.6" fill="url(#festGoldGrad)"/>
+    <path d="M -82,-38 L -74,-32" stroke="#8F241C" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Lower Drumstick in Rest Position -->
+    <path d="M -78,32 L -34,8" stroke="#FBF4E6" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="-34" cy="8" r="2.6" fill="url(#festGoldGrad)"/>
+    <path d="M -78,32 L -70,26" stroke="#8F241C" stroke-width="3.5" stroke-linecap="round"/>
   </g>
-  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">উৎসব • আরতি • আনন্দ</text>
+
+  <!-- ============================================================ -->
+  <!-- 4. RIGHT ENSEMBLE: BRASS KASAR GONG & SHANKHA (কাঁসর ও শঙ্খ) -->
+  <!-- Center: X = 352, Y = 184                                     -->
+  <!-- ============================================================ -->
+  <g id="bellMetalKasar" transform="translate(352, 178)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="52" rx="38" ry="10" fill="#24201D" opacity="0.32"/>
+
+    <!-- Outer Resonating Rim of Kasar (কাঁসরের কানা) -->
+    <circle cx="0" cy="0" r="42" fill="url(#festGoldGrad)" stroke="#765217" stroke-width="2.2"/>
+    <circle cx="0" cy="0" r="37" fill="#EED89B" stroke="#B08A3E" stroke-width="1.2"/>
+
+    <!-- Engraved Floral Mandala & Security Rings (খোদাই করা নকশা) -->
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#8F241C" stroke-width="1" stroke-dasharray="3.5 2.5"/>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="url(#festGoldGrad)" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="16" fill="#D9B15B" stroke="#765217" stroke-width="0.8"/>
+    <!-- Raised Center Boss (কাঁসরের নাভি) -->
+    <circle cx="0" cy="0" r="8" fill="#8F241C" stroke="url(#festGoldGrad)" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFDF7"/>
+
+    <!-- Red Silk Suspension Cord & Brass Hook (ঝোলানোর লাল দড়ি) -->
+    <path d="M -6,-41 C -6,-58 6,-58 6,-41" stroke="#8F241C" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="0" cy="-42" r="3" fill="url(#festGoldGrad)"/>
+
+    <!-- Wooden Kasar Striker / Mallet (কাঁসরের মুগুর / কাঠি) -->
+    <g transform="translate(32, -26) rotate(35)">
+      <!-- Mallet Turned Handle -->
+      <line x1="0" y1="0" x2="0" y2="44" stroke="#4A2E1B" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="0" cy="44" r="3.5" fill="url(#festGoldGrad)"/>
+      <!-- Cloth-Wrapped Striking Head (কাপড় জড়ানো মাথা) -->
+      <ellipse cx="0" cy="0" rx="9" ry="7" fill="url(#festCrimsonGrad)" stroke="url(#festGoldGrad)" stroke-width="1.2"/>
+      <line x1="-7" y1="0" x2="7" y2="0" stroke="url(#festGoldGrad)" stroke-width="0.8"/>
+    </g>
+
+    <!-- Sacred Mangal Conch Shell Beside Kasar (মঙ্গল শঙ্খ) -->
+    <g transform="translate(-42, 34) scale(0.95)">
+      <ellipse cx="0" cy="8" rx="14" ry="4" fill="#24201D" opacity="0.3"/>
+      <!-- Polished Ivory Conch Body -->
+      <path
+        d="
+          M -10,2
+          C -14,-6 -3,-13 6,-9
+          C 14,-6 16,2 10,7
+          C 4,10 -5,8 -10,2
+          Z
+        "
+        fill="#FFFDF7"
+        stroke="url(#festGoldGrad)"
+        stroke-width="1"
+      />
+      <path d="M -10,2 C -13,0 -12,-3 -8,-4" stroke="#B08A3E" stroke-width="0.8" fill="none"/>
+      <!-- Vermilion & Sandalwood Tilak -->
+      <circle cx="2" cy="-2" r="1.6" fill="#8F241C"/>
+      <circle cx="2" cy="-2" r="0.6" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. DEEPAVALI PRADEEPMALA & ALPANA THRESHOLD (দীপাবলী প্রদীপ) -->
+  <!-- Y = 265 to Y = 292                                           -->
+  <!-- ============================================================ -->
+  <!-- Sacred Rice-Paste Alpana Floor Inlay (বেদির আলপনা নকশা) -->
+  <g id="groundAlpana" stroke="#FFFDF7" stroke-width="1" fill="none" opacity="0.9">
+    <!-- Connecting Garland Curve -->
+    <path d="M 45,282 Q 142,292 240,282 Q 338,292 435,282"/>
+
+    <!-- Lotus Petal Flourishes Beneath Diyas -->
+    <g transform="translate(68, 280) scale(0.7)">
+      <path d="M 0,0 C -10,-8 -12,8 0,10 C 12,8 10,-8 0,0 Z" fill="#FFFDF7" opacity="0.4"/>
+      <circle cx="0" cy="5" r="2" fill="#FFFDF7"/>
+    </g>
+    <g transform="translate(154, 283) scale(0.7)">
+      <path d="M 0,0 C -10,-8 -12,8 0,10 C 12,8 10,-8 0,0 Z" fill="#FFFDF7" opacity="0.4"/>
+      <circle cx="0" cy="5" r="2" fill="#FFFDF7"/>
+    </g>
+    <g transform="translate(240, 284) scale(0.8)">
+      <path d="M 0,0 C -12,-10 -14,10 0,12 C 14,10 12,-10 0,0 Z" fill="#FFFDF7" opacity="0.5"/>
+      <circle cx="0" cy="6" r="2.5" fill="#FFFDF7"/>
+    </g>
+    <g transform="translate(326, 283) scale(0.7)">
+      <path d="M 0,0 C -10,-8 -12,8 0,10 C 12,8 10,-8 0,0 Z" fill="#FFFDF7" opacity="0.4"/>
+      <circle cx="0" cy="5" r="2" fill="#FFFDF7"/>
+    </g>
+    <g transform="translate(412, 280) scale(0.7)">
+      <path d="M 0,0 C -10,-8 -12,8 0,10 C 12,8 10,-8 0,0 Z" fill="#FFFDF7" opacity="0.4"/>
+      <circle cx="0" cy="5" r="2" fill="#FFFDF7"/>
+    </g>
+  </g>
+
+  <!-- Array of 5 Consecrated Earthen & Brass Deepavali Diyas (প্রদীপমালা) -->
+  <!-- Diya 1 (Far Left: X = 68) -->
+  <g transform="translate(68, 276)">
+    <ellipse cx="0" cy="8" rx="14" ry="4" fill="#24201D" opacity="0.35"/>
+    <path d="M -14,6 C -10,13 10,13 14,6 Z" fill="url(#festGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <ellipse cx="0" cy="6" rx="14" ry="3.2" fill="#A8261C"/>
+    <path d="M 0,6 C -4,2 -6,-4 0,-12 C 6,-4 4,2 0,6 Z" fill="url(#festFlameGrad)"/>
+    <circle cx="0" cy="0" r="1.4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Diya 2 (Mid-Left: X = 154) -->
+  <g transform="translate(154, 279)">
+    <ellipse cx="0" cy="8" rx="14" ry="4" fill="#24201D" opacity="0.35"/>
+    <path d="M -14,6 C -10,13 10,13 14,6 Z" fill="url(#festGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <ellipse cx="0" cy="6" rx="14" ry="3.2" fill="#A8261C"/>
+    <path d="M 0,6 C -4,2 -6,-4 0,-12 C 6,-4 4,2 0,6 Z" fill="url(#festFlameGrad)"/>
+    <circle cx="0" cy="0" r="1.4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Diya 3 (Grand Center Diya: X = 240) -->
+  <g transform="translate(240, 278) scale(1.15)">
+    <ellipse cx="0" cy="9" rx="16" ry="4.5" fill="#24201D" opacity="0.4"/>
+    <path d="M -16,6 C -12,15 12,15 16,6 Z" fill="url(#festGoldGrad)" stroke="#765217" stroke-width="1"/>
+    <ellipse cx="0" cy="6" rx="16" ry="3.8" fill="#8F241C"/>
+    <path d="M 0,6 C -5,2 -7,-5 0,-16 C 7,-5 5,2 0,6 Z" fill="url(#festFlameGrad)"/>
+    <circle cx="0" cy="-2" r="1.8" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Diya 4 (Mid-Right: X = 326) -->
+  <g transform="translate(326, 279)">
+    <ellipse cx="0" cy="8" rx="14" ry="4" fill="#24201D" opacity="0.35"/>
+    <path d="M -14,6 C -10,13 10,13 14,6 Z" fill="url(#festGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <ellipse cx="0" cy="6" rx="14" ry="3.2" fill="#A8261C"/>
+    <path d="M 0,6 C -4,2 -6,-4 0,-12 C 6,-4 4,2 0,6 Z" fill="url(#festFlameGrad)"/>
+    <circle cx="0" cy="0" r="1.4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Diya 5 (Far Right: X = 412) -->
+  <g transform="translate(412, 276)">
+    <ellipse cx="0" cy="8" rx="14" ry="4" fill="#24201D" opacity="0.35"/>
+    <path d="M -14,6 C -10,13 10,13 14,6 Z" fill="url(#festGoldGrad)" stroke="#765217" stroke-width="0.8"/>
+    <ellipse cx="0" cy="6" rx="14" ry="3.2" fill="#A8261C"/>
+    <path d="M 0,6 C -4,2 -6,-4 0,-12 C 6,-4 4,2 0,6 Z" fill="url(#festFlameGrad)"/>
+    <circle cx="0" cy="0" r="1.4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 6. BOTTOM DIVIDER & CANONICAL BENGALI TYPOGRAPHY            -->
+  <!-- ============================================================ -->
+  <!-- Architectural Gold Baseline Divider -->
+  <line x1="45" y1="304" x2="435" y2="304" stroke="url(#festGoldGrad)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="45" cy="304" r="3" fill="#8F241C" stroke="url(#festGoldGrad)" stroke-width="1"/>
+  <circle cx="435" cy="304" r="3" fill="#8F241C" stroke="url(#festGoldGrad)" stroke-width="1"/>
+  <circle cx="240" cy="304" r="2.5" fill="#8F241C" stroke="url(#festGoldGrad)" stroke-width="0.8"/>
+
+  <!-- Primary Bengali Festival Title -->
+  <text
+    x="240"
+    y="323"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="16.5"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    বাৎসরিক পূজা ও অমাবস্যা মহোৎসব
+  </text>
+
+  <!-- Sub-caption Line: Folk Percussion, Sacred Lamps & Devotional Glory -->
+  <text
+    x="240"
+    y="341"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="11"
+    font-weight="600"
+    fill="#C86A12"
+    letter-spacing="0.3"
+    text-rendering="geometricPrecision"
+  >
+    ঐতিহাসিক ঢাক-কাঁসর বাদ্য • দীপাবলী প্রদীপমালা • আনন্দঘন উৎসব পরিক্রমা
+  </text>
 </svg>
