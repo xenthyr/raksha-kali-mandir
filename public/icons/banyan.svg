@@ -1,6 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
-<title id="title">বটগাছ — Banyan</title>
-<desc id="desc">Flat vector banyan tree icon; symbolic community/location motif, not a surveyed landmark.</desc>
-<path d="M64 103V58M64 71C49 67 35 55 24 38M64 71C79 67 93 55 104 38M64 58C64 44 61 31 54 22M64 58C64 44 67 31 74 22M44 78C42 91 40 101 38 110M84 78C86 91 88 101 90 110" stroke="#24201D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31C25 14 48 9 64 21C80 9 103 14 110 31C98 25 86 26 78 34C70 25 58 25 50 34C42 26 30 25 18 31Z" fill="#47614D" stroke="#B08A3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 37C34 33 43 35 50 41M78 41C85 35 94 33 103 37" stroke="#FBF4E6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  width="48"
+  height="48"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>বটবৃক্ষ প্রতীক (Sacred Banyan Icon)</title>
+  <desc>Sacred Banyan Tree icon representing Sahapur Battala More landmark. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Burnished Temple Brass / Gold Gradient -->
+    <linearGradient id="icBnGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9EEC8"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Deep Ancient Bark Shading -->
+    <linearGradient id="icBnTrunk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A1512"/>
+      <stop offset="35%" stop-color="#3D291D"/>
+      <stop offset="70%" stop-color="#24201D"/>
+      <stop offset="100%" stop-color="#14110F"/>
+    </linearGradient>
+
+    <!-- Deep Shadow Canopy Foil -->
+    <radialGradient id="icBnLeafDeep" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#2F5E38"/>
+      <stop offset="65%" stop-color="#1E4326"/>
+      <stop offset="100%" stop-color="#122B18"/>
+    </radialGradient>
+
+    <!-- Mid Foliage Crown -->
+    <radialGradient id="icBnLeafMid" cx="42%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#4C8556"/>
+      <stop offset="60%" stop-color="#2E5C36"/>
+      <stop offset="100%" stop-color="#18361F"/>
+    </radialGradient>
+
+    <!-- Sunlit Foliage Crest -->
+    <radialGradient id="icBnLeafBright" cx="40%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#6FA879"/>
+      <stop offset="55%" stop-color="#3D7347"/>
+      <stop offset="100%" stop-color="#204526"/>
+    </radialGradient>
+
+    <!-- Deep Terracotta Red Gradient -->
+    <linearGradient id="icBnCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="60%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </linearGradient>
+
+    <!-- Sacred Mauli Thread (লাল-হলুদ বন্ধন) -->
+    <linearGradient id="icBnMauli" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8F241C"/>
+      <stop offset="35%" stop-color="#C86A12"/>
+      <stop offset="70%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#8F241C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BACK CANOPY MASSES (DEEP LAYER SHADOWS)                  -->
+  <!-- ============================================================ -->
+  <!-- Deep Background Foliage Lobes -->
+  <circle cx="14" cy="14" r="8" fill="url(#icBnLeafDeep)"/>
+  <circle cx="34" cy="14" r="8" fill="url(#icBnLeafDeep)"/>
+  <circle cx="24" cy="10" r="9" fill="url(#icBnLeafDeep)"/>
+  <circle cx="7" cy="18" r="5.5" fill="url(#icBnLeafDeep)"/>
+  <circle cx="41" cy="18" r="5.5" fill="url(#icBnLeafDeep)"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. ANCIENT BANYAN BOUGHS & SECONDARY BRANCH NETWORK          -->
+  <!-- ============================================================ -->
+  <g stroke="url(#icBnTrunk)" stroke-linecap="round" fill="none">
+    <!-- Far Reaching Outer Limbs -->
+    <path d="M 20,20 C 14,17 9,18 6,21" stroke-width="2.6"/>
+    <path d="M 28,20 C 34,17 39,18 42,21" stroke-width="2.6"/>
+    <!-- Upper Canopy Forking Limbs -->
+    <path d="M 22,17 C 18,12 14,12 11,14" stroke-width="2"/>
+    <path d="M 26,17 C 30,12 34,12 37,14" stroke-width="2"/>
+    <path d="M 24,16 L 24,10" stroke-width="2.2"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 3. MID & FOREGROUND FOLIAGE CLUSTERS (REALISTIC CONTOURS)    -->
+  <!-- ============================================================ -->
+  <!-- Mid-Layer Natural Overlapping Canopy Tufts -->
+  <path
+    d="
+      M 11,19
+      C 6,15 8,8 15,9
+      C 18,5 24,5 26,8
+      C 30,5 37,6 38,12
+      C 43,13 44,20 39,22
+      C 37,25 31,24 28,21
+      C 25,24 19,24 16,21
+      C 13,23 8,23 11,19
+      Z
+    "
+    fill="url(#icBnLeafMid)"
+  />
+
+  <!-- Top Sunlit Leaf Highlights -->
+  <circle cx="24" cy="9" r="6" fill="url(#icBnLeafBright)"/>
+  <circle cx="16" cy="12" r="5" fill="url(#icBnLeafBright)"/>
+  <circle cx="32" cy="12" r="5" fill="url(#icBnLeafBright)"/>
+  <circle cx="11" cy="16" r="3.5" fill="url(#icBnLeafBright)"/>
+  <circle cx="37" cy="16" r="3.5" fill="url(#icBnLeafBright)"/>
+  <circle cx="24" cy="15" r="4.5" fill="url(#icBnLeafBright)"/>
+
+  <!-- ============================================================ -->
+  <!-- 4. MASSIVE GNARLED TRUNK & AERIAL PROP ROOTS (ঝুড়িমূল)       -->
+  <!-- ============================================================ -->
+  <!-- Massive Central Buttressed Trunk -->
+  <path
+    d="
+      M 19,21
+      C 20.5,26 18,31 16,36
+      L 32,36
+      C 30,31 27.5,26 29,21
+      C 26,22.5 22,22.5 19,21
+      Z
+    "
+    fill="url(#icBnTrunk)"
+  />
+
+  <!-- Trunk Bark Crevices (খোদাই করা প্রাচীন ছাল) -->
+  <g stroke="#120E0B" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.8">
+    <path d="M 21,24 C 22,27 20,32 19,36"/>
+    <path d="M 24,23 C 24.5,27 24,31 23.5,36"/>
+    <path d="M 27,24 C 26,27 27.5,32 28.5,36"/>
+  </g>
+
+  <!-- Hanging & Grounded Aerial Prop Roots (ঐতিহাসিক বটের ঝুড়ি) -->
+  <g fill="none" stroke-linecap="round">
+    <!-- Far-Flung Lateral Roots Anchoring to Plinth -->
+    <path d="M 9,21 C 10.5,25 11,31 11.5,36" stroke="url(#icBnTrunk)" stroke-width="1.4"/>
+    <path d="M 39,21 C 37.5,25 37,31 36.5,36" stroke="url(#icBnTrunk)" stroke-width="1.4"/>
+
+    <!-- Primary Grounded Columnar Roots -->
+    <path d="M 13.5,19 C 14.5,24 14,30 14,36" stroke="url(#icBnTrunk)" stroke-width="1.6"/>
+    <path d="M 34.5,19 C 33.5,24 34,30 34,36" stroke="url(#icBnTrunk)" stroke-width="1.6"/>
+
+    <!-- Mid Inner Roots -->
+    <path d="M 17,21 C 17.5,26 16.5,31 16,36" stroke="url(#icBnGold)" stroke-width="0.9"/>
+    <path d="M 31,21 C 30.5,26 31.5,31 32,36" stroke="url(#icBnGold)" stroke-width="0.9"/>
+
+    <!-- Delicate Slender Aerial Tendrils (বাতাসে দোদুল্যমান ঝুড়ি) -->
+    <path d="M 7,22 C 7.5,26 7,28 6.5,30" stroke="#7A591E" stroke-width="0.75"/>
+    <path d="M 41,22 C 40.5,26 41,28 41.5,30" stroke="#7A591E" stroke-width="0.75"/>
+    <path d="M 21.5,20 C 21,24 21.5,26 21,28" stroke="#8F241C" stroke-width="0.75"/>
+    <path d="M 26.5,20 C 27,24 26.5,26 27,28" stroke="#8F241C" stroke-width="0.75"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. DEVOTIONAL ADORNMENT: MAULI THREAD & VERMILION TILAK     -->
+  <!-- ============================================================ -->
+  <!-- Sacred Thread Tied Around Main Trunk (গাছে বাঁধা লাল-হলুদ সুতো) -->
+  <path d="M 18.5,30 Q 24,31.5 29.5,30" stroke="url(#icBnMauli)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <path d="M 18,32 Q 24,33.5 30,32" stroke="url(#icBnMauli)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Vermilion Tilak on Tree Trunk (সিঁদুর লেপন) -->
+  <circle cx="24" cy="27" r="1.4" fill="#8F241C"/>
+  <circle cx="24" cy="27" r="0.6" fill="#C86A12"/>
+
+  <!-- ============================================================ -->
+  <!-- 6. SACRED ALTAR PLINTH & LITURGICAL OFFERING (বাঁধানো বেদি)  -->
+  <!-- ============================================================ -->
+  <!-- Upper Plinth Terrace / Coping Slab -->
+  <path
+    d="
+      M 7,36
+      L 41,36
+      L 39.5,39
+      L 8.5,39
+      Z
+    "
+    fill="url(#icBnCrimson)"
+    stroke="url(#icBnGold)"
+    stroke-width="0.7"
+  />
+
+  <!-- Lower Base Tier (বটতলার প্রশস্ত বেদি ভিত্তি) -->
+  <path
+    d="
+      M 5,39
+      L 43,39
+      L 41.5,43
+      L 6.5,43
+      Z
+    "
+    fill="#24201D"
+    stroke="url(#icBnGold)"
+    stroke-width="0.9"
+  />
+
+  <!-- Stepped Foundation Baseline -->
+  <line x1="3" y1="43.5" x2="45" y2="43.5" stroke="url(#icBnGold)" stroke-width="1.1" stroke-linecap="round"/>
+
+  <!-- Sacred Folk Diya on Tree Altar Base (বেদির উপর ভক্তিময় প্রদীপ) -->
+  <g transform="translate(24, 38)">
+    <!-- Diya Bowl -->
+    <path d="M -2.5,0 C -2,2 2,2 2.5,0 Z" fill="url(#icBnGold)" stroke="#765217" stroke-width="0.4"/>
+    <!-- Sacred Flame -->
+    <path d="M 0,0 C -0.8,-0.8 -0.8,-2.2 0,-3.2 C 0.8,-2.2 0.8,-0.8 0,0 Z" fill="#C86A12"/>
+    <circle cx="0" cy="-1.2" r="0.4" fill="#FFFDF7"/>
+  </g>
 </svg>
