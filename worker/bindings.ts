@@ -1,10 +1,9 @@
 /**
- * Cloudflare Worker binding contract.
+ * Worker runtime binding interfaces.
  *
- * This module intentionally describes bindings rather than configuring resource
- * identifiers. Resource selection belongs to Wrangler environment configuration.
- * Keeping identifiers out of application code prevents preview from accidentally
- * addressing production resources and keeps secrets outside the client bundle.
+ * Resource selection is owned by Wrangler environment configuration. This
+ * module describes the runtime seam without embedding production/preview
+ * resource identifiers or secret values in application code.
  */
 
 export const BUSINESS_TIMEZONE = "Asia/Kolkata" as const;
@@ -30,10 +29,10 @@ export interface FetcherBinding {
 }
 
 /**
- * Environment values exposed to Worker code.
+ * Runtime values exposed by the Worker.
  *
- * Secrets are represented only by their variable names here. Their values are
- * supplied by Cloudflare runtime configuration and are never committed.
+ * Secret values are typed here only so downstream server-side code can consume
+ * them. They must be supplied by the platform and never committed to source.
  */
 export interface WorkerBindings {
   ASSETS: FetcherBinding;
@@ -41,7 +40,7 @@ export interface WorkerBindings {
   CACHE: KVNamespaceBinding;
   SESSION_STORE: KVNamespaceBinding;
 
-  /** Explicit Wrangler environment marker: production | preview. */
+  /** Explicit environment marker when one is supplied by deployment config. */
   ENVIRONMENT?: DeploymentEnvironment;
 
   NEXT_PUBLIC_SITE_URL?: string;
@@ -72,8 +71,6 @@ export interface WorkerBindings {
   EMAIL_REPLY_TO?: string;
   SUPPORT_PRIMARY_EMAIL?: string;
   SUPPORT_BACKUP_EMAIL?: string;
-
-  [key: string]: unknown;
 }
 
 export interface RuntimeEnvironmentResult {
@@ -83,9 +80,8 @@ export interface RuntimeEnvironmentResult {
 }
 
 /**
- * Resolve the deployment environment without guessing production when the
- * marker is absent. Unknown is intentionally fail-safe for environment-
- * sensitive jobs.
+ * Resolve the deployment environment without guessing when the runtime marker
+ * is missing or invalid. Unknown is fail-safe for environment-sensitive work.
  */
 export function resolveRuntimeEnvironment(
   env: Pick<WorkerBindings, "ENVIRONMENT">,
@@ -93,14 +89,37 @@ export function resolveRuntimeEnvironment(
   const value = env.ENVIRONMENT;
 
   if (value === PRODUCTION_ENVIRONMENT) {
-    return { environment: value, isProduction: true, isPreview: false };
+    return {
+      environment: PRODUCTION_ENVIRONMENT,
+      isProduction: true,
+      isPreview: false,
+    };
   }
 
   if (value === PREVIEW_ENVIRONMENT) {
-    return { environment: value, isProduction: false, isPreview: true };
+    return {
+      environment: PREVIEW_ENVIRONMENT,
+      isProduction: false,
+      isPreview: true,
+    };
   }
 
   return { environment: "unknown", isProduction: false, isPreview: false };
+}
+
+/**
+ * Fail closed for work that explicitly requires a known deployment target.
+ */
+export function requireKnownRuntimeEnvironment(
+  env: Pick<WorkerBindings, "ENVIRONMENT">,
+): RuntimeEnvironmentResult {
+  const runtime = resolveRuntimeEnvironment(env);
+
+  if (runtime.environment === "unknown") {
+    throw new Error("Worker deployment environment is not explicitly configured");
+  }
+
+  return runtime;
 }
 
 /**

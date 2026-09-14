@@ -1,10 +1,13 @@
 import {
   BUSINESS_TIMEZONE,
-  type DeploymentEnvironment,
   resolveRuntimeEnvironment,
   type WorkerBindings,
 } from "./bindings";
 
+/**
+ * Midnight in Asia/Kolkata expressed as the UTC cron minute/hour used by the
+ * locked runtime contract: 00:00 IST = 18:30 UTC on the preceding day.
+ */
 export const MIDNIGHT_IST_CRON = "30 18 * * *" as const;
 export const SCHEDULED_DISPATCH_JOB_ID = "scheduled-dispatch" as const;
 
@@ -17,6 +20,8 @@ export interface ScheduledInvocation {
   startedAt: string;
   finishedAt: string;
   status: ScheduledJobStatus;
+  cron: string;
+  environment: "production" | "preview" | "unknown";
   error?: string;
 }
 
@@ -30,15 +35,16 @@ export interface ExecutionContextLike {
 }
 
 /**
- * Convert a Cloudflare scheduled UTC timestamp into the application's business
- * date. Using Intl rather than manual offsets keeps the calculation explicit and
- * resilient to calendar boundaries while preserving Asia/Kolkata semantics.
+ * Convert Cloudflare's scheduled UTC timestamp into the application's
+ * Asia/Kolkata business date without manual offset arithmetic.
  */
 export function businessDateFromScheduledTime(
   scheduledTime: number,
 ): string {
   if (!Number.isFinite(scheduledTime) || scheduledTime <= 0) {
-    throw new RangeError("scheduledTime must be a positive epoch-millisecond value");
+    throw new RangeError(
+      "scheduledTime must be a positive epoch-millisecond value",
+    );
   }
 
   const formatter = new Intl.DateTimeFormat("en-CA", {
@@ -55,26 +61,37 @@ function nowIso(): string {
   return new Date().toISOString();
 }
 
+function normalizeCron(cron: string): string {
+  const normalized = cron.trim();
+  if (normalized === "") {
+    throw new Error("scheduled controller cron expression is empty");
+  }
+  return normalized;
+}
+
 function logInvocation(invocation: ScheduledInvocation): void {
   const payload = {
     component: "scheduled-worker",
+    event: "scheduled-invocation",
     ...invocation,
   };
 
+  const serialized = JSON.stringify(payload);
   if (invocation.status === "FAILED") {
-    console.error(JSON.stringify(payload));
+    console.error(serialized);
     return;
   }
 
-  console.info(JSON.stringify(payload));
+  console.info(serialized);
 }
 
 /**
- * Current release has no canonical scheduled mutation registered yet. The
- * dispatcher therefore provides a real, deterministic, observable empty-state
- * execution rather than inventing a future domain job or mutating canonical
- * data prematurely. Later job producers can be attached to this dispatcher
- * without changing the Worker entrypoint contract.
+ * Deterministic scheduled dispatcher.
+ *
+ * Batch 005 does not own a mutable canonical scheduled job. The dispatcher
+ * therefore performs a validated no-op and records an observable execution
+ * result. Later batches may register domain jobs without changing the Worker
+ * entrypoint or timezone contract.
  */
 export async function dispatchScheduledJobs(
   controller: ScheduledControllerLike,
@@ -82,13 +99,10 @@ export async function dispatchScheduledJobs(
 ): Promise<ScheduledInvocation> {
   const startedAt = nowIso();
   const runtime = resolveRuntimeEnvironment(env);
+  const cron = normalizeCron(controller.cron);
   const businessDate = businessDateFromScheduledTime(controller.scheduledTime);
 
   try {
-    if (controller.cron.trim() === "") {
-      throw new Error("scheduled controller cron expression is empty");
-    }
-
     const invocation: ScheduledInvocation = {
       jobId: SCHEDULED_DISPATCH_JOB_ID,
       businessDate,
@@ -96,21 +110,11 @@ export async function dispatchScheduledJobs(
       startedAt,
       finishedAt: nowIso(),
       status: "SUCCESS",
+      cron,
+      environment: runtime.environment,
     };
 
-    console.info(
-      JSON.stringify({
-        component: "scheduled-worker",
-        event: "empty-dispatch-state",
-        cron: controller.cron,
-        jobId: SCHEDULED_DISPATCH_JOB_ID,
-        businessDate,
-        timezone: BUSINESS_TIMEZONE,
-        environment: runtime.environment,
-      }),
-    );
     logInvocation(invocation);
-
     return invocation;
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown scheduled error";
@@ -121,6 +125,8 @@ export async function dispatchScheduledJobs(
       startedAt,
       finishedAt: nowIso(),
       status: "FAILED",
+      cron,
+      environment: runtime.environment,
       error: message,
     };
 
@@ -134,23 +140,8 @@ export async function scheduledHandler(
   env: WorkerBindings,
   ctx: ExecutionContextLike,
 ): Promise<void> {
-  // Scheduled work is detached from the request lifecycle through waitUntil;
-  // Cloudflare may safely retry the invocation without a canonical mutation in
-  // this release's empty scheduled-job state.
-  ctx.waitUntil(
-    dispatchScheduledJobs(controller, env).catch((error) => {
-      const environment: DeploymentEnvironment | "unknown" =
-        resolveRuntimeEnvironment(env).environment;
-      console.error(
-        JSON.stringify({
-          component: "scheduled-worker",
-          jobId: SCHEDULED_DISPATCH_JOB_ID,
-          timezone: BUSINESS_TIMEZONE,
-          environment,
-          status: "FAILED",
-          error: error instanceof Error ? error.message : "Unknown scheduled error",
-        }),
-      );
-    }),
-  );
+  // Keep the rejection visible to the platform after the failure has already
+  // been logged by dispatchScheduledJobs. This avoids silently converting a
+  // failed scheduled execution into an apparently successful invocation.
+  ctx.waitUntil(dispatchScheduledJobs(controller, env));
 }
