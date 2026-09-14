@@ -1,0 +1,109 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: "true"
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  unit:
+    name: Unit and type tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies from checked-in lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Run unit tests
+        run: npm run test -- --passWithNoTests
+
+  browser:
+    name: Browser tests when owned suite exists
+    needs: unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies from checked-in lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Detect browser-test readiness
+        id: readiness
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -d app || -d pages ]]; then
+            echo "app_ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "app_ready=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          if find tests/e2e -type f -name '*.spec.ts' -print -quit 2>/dev/null | grep -q .; then
+            echo "e2e_ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "e2e_ready=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build application
+        if: steps.readiness.outputs.app_ready == 'true' && steps.readiness.outputs.e2e_ready == 'true'
+        run: npm run build
+
+      - name: Install Chromium
+        if: steps.readiness.outputs.app_ready == 'true' && steps.readiness.outputs.e2e_ready == 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Run browser test suite
+        if: steps.readiness.outputs.app_ready == 'true' && steps.readiness.outputs.e2e_ready == 'true'
+        run: npm run test:e2e -- tests/e2e --grep-invert "@manual"
+
+      - name: Record staged-reconstruction deferral
+        if: steps.readiness.outputs.app_ready != 'true' || steps.readiness.outputs.e2e_ready != 'true'
+        run: echo "Browser execution is intentionally deferred until the application and owned E2E suite exist."

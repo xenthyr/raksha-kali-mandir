@@ -1,0 +1,123 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_production:
+        description: "Confirm that this manual run is authorized to publish the current main branch to production."
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+env:
+  CI: "true"
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  preflight:
+    name: Production preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies from checked-in lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Verify release authorization
+        shell: bash
+        env:
+          CONFIRM_PRODUCTION: ${{ inputs.confirm_production }}
+        run: |
+          set -euo pipefail
+          if [[ "${GITHUB_REF}" != "refs/heads/main" ]]; then
+            echo "Production deployment is allowed only from main." >&2
+            exit 1
+          fi
+          if [[ "${CONFIRM_PRODUCTION}" != "true" ]]; then
+            echo "Production confirmation was not provided." >&2
+            exit 1
+          fi
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests
+        run: npm run test -- --passWithNoTests
+
+      - name: Verify application is present
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -d app && ! -d pages ]]; then
+            echo "No Next.js app/pages directory exists yet; production publication is blocked."
+            exit 1
+          fi
+
+      - name: Build OpenNext output
+        run: npx opennextjs-cloudflare build
+
+      - name: Validate production Worker bundle without publishing
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy --env production --dry-run
+
+  publish:
+    name: Publish production Worker
+    needs: preflight
+    if: github.ref == 'refs/heads/main' && inputs.confirm_production == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: production
+      url: https://maarakshakali.pages.dev
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies from checked-in lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Build OpenNext output
+        run: npx opennextjs-cloudflare build
+
+      - name: Publish production Worker
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy --env production

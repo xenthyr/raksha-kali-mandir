@@ -1,0 +1,107 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: "true"
+
+jobs:
+  security:
+    name: Dependency and repository security checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies from checked-in lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Verify lockfile is synchronized
+        run: npm ci --dry-run --ignore-scripts --no-audit --no-fund
+
+      - name: Audit dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          npm audit --json > npm-audit.json
+          audit_status=$?
+          set -e
+
+          node <<'NODE'
+          const fs = require("node:fs");
+
+          const report = JSON.parse(fs.readFileSync("npm-audit.json", "utf8"));
+          const metadata = report.metadata ?? {};
+          const vulnerabilities = metadata.vulnerabilities ?? {};
+          const counts = {
+            info: Number(vulnerabilities.info ?? 0),
+            low: Number(vulnerabilities.low ?? 0),
+            moderate: Number(vulnerabilities.moderate ?? 0),
+            high: Number(vulnerabilities.high ?? 0),
+            critical: Number(vulnerabilities.critical ?? 0),
+          };
+
+          console.log(`npm audit vulnerabilities: ${JSON.stringify(counts)}`);
+
+          if (counts.critical > 0) {
+            console.log(`::warning::${counts.critical} critical npm audit vulnerability(ies) are currently present.`);
+          } else if (counts.high > 0) {
+            console.log(`::warning::${counts.high} high npm audit vulnerability(ies) are currently present.`);
+          } else if (counts.moderate > 0 || counts.low > 0 || counts.info > 0) {
+            console.log("::notice::npm audit reported non-critical vulnerabilities; review the generated audit report.");
+          } else {
+            console.log("npm audit reported no known vulnerabilities.");
+          }
+          NODE
+
+          if [[ "$audit_status" -eq 0 ]]; then
+            echo "npm audit completed without vulnerability findings."
+          else
+            echo "npm audit reported findings; the security workflow records them without turning an advisory into an unrelated build failure."
+          fi
+
+      - name: Check repository for committed secret-like material
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -n -I -E \
+            'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|-----BEGIN (RSA|EC|OPENSSH|PRIVATE) KEY-----|CLOUDFLARE_API_TOKEN[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*|RESEND_API_KEY[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*' \
+            -- ':!package-lock.json'; then
+            echo "Secret-like material was found in tracked source." >&2
+            exit 1
+          fi
+
+      - name: Verify sensitive production resource identifiers are not embedded as application credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -n -I -E \
+            'B2_SECRET_ACCESS_KEY[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*|TURNSTILE_SECRET_KEY[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*|AUTH_SECRET[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*|AI_PROVIDER_API_KEY[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*|RESEND_API_KEY[[:space:]]*=[[:space:]]*[^$`{][^[:space:]]*' \
+            -- ':!.env.example'; then
+            echo "A production secret assignment appears to be embedded in tracked source." >&2
+            exit 1
+          fi
