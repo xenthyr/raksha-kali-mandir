@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">জরুরি সহায়তা — নিরাপত্তা অলঙ্করণচিত্র</title>
+  <desc id="desc">Generic emergency-assistance illustration using a phone and protective first-aid motif; operational contacts are not embedded.</desc>
+  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
+  <g transform="translate(170 84)">
+    <rect width="260" height="350" rx="34" fill="#24201D"/>
+    <rect x="18" y="28" width="224" height="248" rx="18" fill="#FBF4E6"/>
+    <circle cx="130" cy="307" r="15" fill="#8F241C"/>
+    <path d="M86 152h88m-44-44v88" stroke="#8F241C" stroke-width="23" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(470 122)">
+    <path d="M72 8 142 36v68q0 65-70 107-70-42-70-107V36Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
+    <path d="M72 48v80m-40-40h80" stroke="#FBF4E6" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">জরুরি পরিস্থিতি • সহায়তার পথ</text>
+</svg>

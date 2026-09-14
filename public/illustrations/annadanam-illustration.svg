@@ -1,1 +1,24 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">অন্নদান সেবা — অলঙ্করণচিত্র</title>
+  <desc id="desc">Conceptual illustration of offering food and community service; not a factual depiction of a specific kitchen or event.</desc>
+  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
+  <path d="M84 418H636" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="344" cy="390" rx="202" ry="25" fill="#E8DDCD"/>
+  <g transform="translate(118 112)">
+    <circle cx="116" cy="74" r="34" fill="#E8D6C0" stroke="#24201D" stroke-width="3"/>
+    <path d="M76 130Q116 105 156 130v108H76Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
+    <path d="M78 142 42 188m114-46 36 46" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 238 84 308m56-70 12 70" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42 260Q116 232 190 260l-12 58q-62 18-124 0Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+    <path d="M60 268q56-22 112 0" fill="none" stroke="#756B61" stroke-width="2"/>
+    <circle cx="82" cy="275" r="7" fill="#B08A3E"/><circle cx="116" cy="270" r="6" fill="#8F241C"/><circle cx="148" cy="276" r="7" fill="#B08A3E"/>
+  </g>
+  <g transform="translate(444 124)">
+    <path d="M34 206q32-44 76-42 44 2 70 42-14 23-56 24H88q-38-1-54-24Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
+    <path d="M48 196q28-22 58-22t58 22" fill="none" stroke="#FBF4E6" stroke-width="3"/>
+    <path d="M98 160q-5-22 9-38m0 38q16-20 38-22" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M146 218q18-30 42-42 24-12 42 2-9 20-30 30-26 12-54 10Z" fill="#E8D6C0" stroke="#24201D" stroke-width="3"/>
+  </g>
+  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">ভক্তি • সেবা • অন্নদান</text>
+</svg>

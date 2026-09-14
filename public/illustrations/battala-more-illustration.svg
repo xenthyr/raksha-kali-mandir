@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">বটতলা মোড় — স্থানচিত্র অলঙ্করণ</title>
+  <desc id="desc">Conceptual rural banyan-tree road-junction illustration associated with the location identity; not a surveyed map.</desc>
+  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
+  <path d="M70 414Q220 344 650 414v106H70Z" fill="#E6D8C4"/>
+  <path d="M312 520q2-91 42-152 48-74 56-134 8-61 70-118" fill="none" stroke="#756B61" stroke-width="78" stroke-linecap="round"/>
+  <path d="M312 520q2-91 42-152 48-74 56-134" fill="none" stroke="#24201D" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(392 54)">
+    <path d="M98 268Q78 208 86 126 92 78 75 16" fill="none" stroke="#47614D" stroke-width="20" stroke-linecap="round"/>
+    <path d="M84 58Q40 30 3 26m86 42q50-36 96-34M82 116q-50-27-101-16m100 47q50-18 107-5" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M8 23q47-24 101-8-48 18-101 8Zm112 24q44-27 89-13-44 24-89 13ZM-2 102q45-22 95-10-47 18-95 10Zm122 32q50-25 101-8-51 21-101 8Z" fill="#47614D"/>
+  </g>
+  <path d="M92 356l102-28 86 28-100 27Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+  <path d="M118 351l76-20 58 18" fill="none" stroke="#FBF4E6" stroke-width="2"/>
+  <circle cx="218" cy="352" r="8" fill="#B08A3E"/>
+  <path d="M540 370l74-22 54 19-62 22Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+  <circle cx="592" cy="370" r="6" fill="#B08A3E"/>
+  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">বটতলা মোড় • ধারণাগত স্থানচিত্র</text>
+</svg>

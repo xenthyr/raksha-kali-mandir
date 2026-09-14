@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">দর্শন — ভক্তিমূলক অলঙ্করণচিত্র</title>
+  <desc id="desc">Respectful conceptual illustration of a devotee facing a lit sanctum; not the actual deity image or temple interior.</desc>
+  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
+  <path d="M92 414Q360 286 628 414" fill="none" stroke="#E8DDCD" stroke-width="86" stroke-linecap="round"/>
+  <g transform="translate(278 78)">
+    <path d="M82 110 112 44l30 66Z" fill="#8F241C" stroke="#24201D" stroke-width="3"/>
+    <path d="M52 110h120l18 78H34Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+    <path d="M42 191h140" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M66 112V82h92v30" fill="none" stroke="#B08A3E" stroke-width="3"/>
+    <circle cx="112" cy="122" r="22" fill="#B08A3E"/>
+    <path d="M78 205h68l-14 92H92Z" fill="#FBF4E6" stroke="#24201D" stroke-width="3"/>
+    <path d="M112 205v92" stroke="#756B61" stroke-width="2"/>
+  </g>
+  <g transform="translate(108 142)">
+    <circle cx="74" cy="52" r="25" fill="#E8D6C0" stroke="#24201D" stroke-width="3"/>
+    <path d="M74 80Q28 92 28 146v95h92v-95Q120 92 74 80Z" fill="#47614D" stroke="#24201D" stroke-width="3"/>
+    <path d="m30 128-26 40m114-40 26 40" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="m53 240-15 95m57-95 15 95m-72 0-20 56m92-56 20 56" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M49 134q25 24 50 0" fill="none" stroke="#FBF4E6" stroke-width="3"/>
+  </g>
+  <g transform="translate(506 274)">
+    <path d="M0 86q36-27 72 0" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M36 84Q25 68 36 50q11 18 0 34Z" fill="#C86A12"/>
+    <path d="M36 55q-5-10 4-20 9 11 1 20Z" fill="#B08A3E"/>
+  </g>
+  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">শ্রদ্ধা • দর্শন • প্রার্থনা</text>
+</svg>

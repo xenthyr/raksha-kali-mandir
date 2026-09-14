@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">মন্দির — ধারণাগত স্থাপত্য অলঙ্করণচিত্র</title>
+  <desc id="desc">Conceptual devotional temple illustration for interface use; not a photograph and not a claim about the actual temple architecture.</desc>
+  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
+  <path d="M104 404h512" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M170 404V236l190-106 190 106v168Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+  <path d="M146 242 360 108l214 134" fill="none" stroke="#B08A3E" stroke-width="4"/>
+  <path d="M258 404V282q102-62 204 0v122" fill="#FBF4E6" stroke="#24201D" stroke-width="3"/>
+  <path d="M306 404V294q54-42 108 0v110" fill="#F0E5D5" stroke="#24201D" stroke-width="3"/>
+  <path d="M360 74V108" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+  <path d="m345 82 15-30 15 30Z" fill="#8F241C" stroke="#24201D" stroke-width="3"/>
+  <g transform="translate(330 322)">
+    <path d="M0 28q30-24 60 0" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M30 22q-12-14 0-30 12 16 0 30Z" fill="#C86A12"/>
+  </g>
+  <circle cx="216" cy="270" r="12" fill="#B08A3E"/><circle cx="504" cy="270" r="12" fill="#B08A3E"/>
+  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">মন্দির • প্রার্থনা • আশ্রয়</text>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">উৎসব — ভক্তিমূলক অলঙ্করণচিত্র</title>
+  <desc id="desc">Conceptual festive illustration using lamps, flowers, a ceremonial flag, and drum forms; event dates remain runtime-managed canonical data.</desc>
+  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
+  <path d="M82 418h556" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+  <g transform="translate(112 238)">
+    <path d="M0 180 24 82l24 98Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+    <path d="M12 82q12-16 24 0" fill="none" stroke="#24201D" stroke-width="2"/>
+    <path d="M24 60q-7 12 0 23 7-11 0-23Z" fill="#B08A3E"/>
+  </g>
+  <g transform="translate(272 70)">
+    <path d="M42 18v122" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42 28 142 56 42 84Z" fill="#8F241C" stroke="#24201D" stroke-width="3"/>
+    <path d="M4 14q36 24 76 6" fill="none" stroke="#47614D" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(408 284)">
+    <ellipse cx="74" cy="66" rx="68" ry="31" fill="#47614D" stroke="#24201D" stroke-width="3"/>
+    <path d="M36 58q38-25 76 0" fill="none" stroke="#FBF4E6" stroke-width="3"/>
+    <path d="M8 100q66 40 132 0" fill="none" stroke="#24201D" stroke-width="3"/>
+    <circle cx="55" cy="63" r="7" fill="#B08A3E"/><circle cx="93" cy="63" r="7" fill="#B08A3E"/>
+    <path d="M36 16q-8 13 2 26 10-13 2-26m69 0q-8 13 2 26 10-13 2-26" fill="#C86A12"/>
+  </g>
+  <g transform="translate(522 166)">
+    <path d="M0 108Q0 48 56 48t56 60q0 60-56 60T0 108Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
+    <path d="M10 100q46 27 92 0" fill="none" stroke="#FBF4E6" stroke-width="3"/>
+  </g>
+  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">উৎসব • আরতি • আনন্দ</text>
+</svg>
