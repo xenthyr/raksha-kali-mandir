@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">নিয়ন্ত্রিত মন্দির ব্র্যান্ড সিল — ডিজাইন-রানটাইম</title>
+  <desc id="desc">নিয়ন্ত্রিত ব্র্যান্ড মার্ক; কোনও সরকারী, আইনি বা ঐতিহাসিক সিলের দাবি করে না।</desc>
+  
+<circle cx="256" cy="256" r="230" fill="none" stroke="#B08A3E" stroke-width="13"/>
+<circle cx="256" cy="256" r="204" fill="#FBF4E6" stroke="#8F241C" stroke-width="6"/>
+<path d="M256 109c-37 38-68 75-68 121 0 59 32 100 68 121 36-21 68-62 68-121 0-46-31-83-68-121Z" fill="#8F241C"/>
+<path d="M221 244h70m-58 34h46" stroke="#FBF4E6" stroke-width="10" stroke-linecap="round"/>
+<path d="M164 378c29-26 59-39 92-39s63 13 92 39" fill="none" stroke="#C86A12" stroke-width="12" stroke-linecap="round"/>
+<text x="256" y="58" text-anchor="middle" font-family="Noto Serif Bengali, serif" font-size="22" font-weight="700" fill="#8F241C">শ্রী শ্রী মা রক্ষা কালী মন্দির</text>
+<text x="256" y="414" text-anchor="middle" font-family="Noto Sans, sans-serif" font-size="12.5" font-weight="600" letter-spacing="1.1" fill="#24201D">CONTROLLED BRAND MARK</text><text x="256" y="437" text-anchor="middle" font-family="Noto Sans, sans-serif" font-size="11" letter-spacing=".7" fill="#24201D">NOT A LEGAL OR GOVERNMENT SEAL</text>
+</svg>

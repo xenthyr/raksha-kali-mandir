@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">মন্দির প্রতীক — ডিজাইন-রানটাইম</title>
+  <desc id="desc">মা রক্ষা কালীর সুরক্ষামূলক প্রতীকী ভাষা; এটি কোনও ঐতিহাসিক সিলের প্রতিলিপি নয়।</desc>
+  
+<circle cx="256" cy="256" r="218" fill="#FBF4E6" stroke="#B08A3E" stroke-width="12"/>
+<circle cx="256" cy="256" r="190" fill="none" stroke="#8F241C" stroke-width="4" stroke-dasharray="4 14"/>
+<path d="M256 95c-34 35-64 66-64 116 0 63 29 105 64 128 35-23 64-65 64-128 0-50-30-81-64-116Z" fill="#8F241C"/>
+<path d="M204 252h104m-90 42h76m-58 40h40" stroke="#FBF4E6" stroke-width="10" stroke-linecap="round"/>
+<path d="M132 397c38-39 77-57 124-57s86 18 124 57" fill="none" stroke="#C86A12" stroke-width="12" stroke-linecap="round"/>
+<path d="M156 420c29 21 63 32 100 32s71-11 100-32" fill="none" stroke="#B08A3E" stroke-width="8"/>
+<text x="256" y="63" text-anchor="middle" font-family="Noto Serif Bengali, serif" font-size="24" font-weight="700" fill="#8F241C">শ্রী শ্রী মা রক্ষা কালী</text>
+<text x="256" y="474" text-anchor="middle" font-family="Noto Sans, sans-serif" font-size="17" letter-spacing="2" fill="#24201D">TEMPLE IDENTITY • DESIGN RUNTIME</text>
+</svg>

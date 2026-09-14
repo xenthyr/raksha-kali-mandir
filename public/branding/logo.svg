@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">শ্রী শ্রী মা রক্ষা কালী মন্দির — ডিজাইন-রানটাইম লোগো</title>
+  <desc id="desc">বেঙ্গলি-ফার্স্ট, উষ্ণ ও সংযত মন্দির ব্র্যান্ড লোগো; অফিসিয়াল অনুমোদনের আগে ডিজাইন-রানটাইম প্রার্থী।</desc>
+  
+<g transform="translate(20 8) scale(.48)">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M256 34C172 34 102 92 83 169c-16 65 11 135 70 177l103 74 103-74c59-42 86-112 70-177C410 92 340 34 256 34Z" fill="#FBF4E6" stroke="#B08A3E" stroke-width="12"/>
+  <path d="M151 196c0-47 35-88 81-96 46 8 81 49 81 96 0 49-37 88-81 88s-81-39-81-88Z" fill="#8F241C" stroke="#8F241C" stroke-width="8"/>
+  <path d="M205 147c-12 18-18 37-18 56m42-65v73m42-64c12 18 18 37 18 56" stroke="#FBF4E6" stroke-width="10"/>
+  <path d="M173 306l-35 25m183-25 35 25M189 292l-36 60m170-60 36 60" stroke="#8F241C" stroke-width="11"/>
+  <path d="M150 370c31-26 68-39 106-39s75 13 106 39" stroke="#B08A3E" stroke-width="10"/>
+  <path d="M104 405c42-7 84 4 118 31 20 16 48 16 68 0 34-27 76-38 118-31-19 33-54 57-92 61-40 5-80-7-111-32-31 25-71 37-111 32-38-4-73-28-92-61Z" fill="#C86A12" stroke="#B08A3E" stroke-width="8"/>
+</g></g>
+<g transform="translate(290 105)">
+  <text x="0" y="76" font-family="Noto Serif Bengali, serif" font-size="54" font-weight="700" fill="#8F241C">শ্রী শ্রী মা রক্ষা কালী মন্দির</text>
+  <text x="1" y="122" font-family="Noto Sans, sans-serif" font-size="25" font-weight="600" letter-spacing="1" fill="#24201D">SRI SRI MAA RAKSHA KALI MANDIR</text>
+  <path d="M0 150H620" stroke="#B08A3E" stroke-width="7" stroke-linecap="round"/>
+  <text x="0" y="190" font-family="Noto Serif Bengali, serif" font-size="23" fill="#47614D">অভয় • শান্তি • সার্বিক সুরক্ষা</text>
+</g>
+</svg>
