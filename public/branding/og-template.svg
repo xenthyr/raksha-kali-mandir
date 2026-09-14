@@ -1,24 +1,557 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
-<title>শ্রী শ্রী মা রক্ষা কালী মন্দির — Open Graph template</title>
-<desc>Bengali-first social sharing template; calm editorial composition. Design state: DESIGN_RUNTIME.</desc>
-<rect width="1200" height="630" fill="#FBF4E6"/>
-<rect x="24" y="24" width="1152" height="582" rx="28" fill="none" stroke="#B08A3E" stroke-width="2"/>
-<path d="M24 102 H1176" stroke="#8F241C" stroke-width="6"/>
-<circle cx="190" cy="324" r="128" fill="#FBF4E6" stroke="#8F241C" stroke-width="3"/>
-<circle cx="190" cy="324" r="112" fill="none" stroke="#B08A3E" stroke-width="1.5"/>
-<g transform="translate(130 264)"><g aria-hidden="true">
-  <path d="M60 11 C51 22 42 31 42 43 C42 56 50 66 60 73 C70 66 78 56 78 43 C78 31 69 22 60 11 Z" fill="#8F241C"/>
-  <path d="M60 23 C55 31 51 36 51 44 C51 51 55 57 60 61 C65 57 69 51 69 44 C69 36 65 31 60 23 Z" fill="#FBF4E6"/>
-  <path d="M60 33 C58 37 56 40 56 44 C56 48 58 51 60 53 C62 51 64 48 64 44 C64 40 62 37 60 33 Z" fill="#8F241C"/>
-  <path d="M25 79 C34 70 44 69 60 79 C76 69 86 70 95 79 C85 78 74 83 60 88 C46 83 35 78 25 79 Z" fill="#B08A3E"/>
-  <path d="M31 81 C39 80 47 83 60 90 C73 83 81 80 89 81 C80 88 71 93 60 97 C49 93 40 88 31 81 Z" fill="none" stroke="#8F241C" stroke-width="2" stroke-linecap="round"/>
-</g></g>
-<text x="386" y="238" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="18" font-weight="700" fill="#C86A12">শ্রী শ্রী মা রক্ষা কালী মন্দির</text>
-<text x="386" y="304" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="46" font-weight="800" fill="#8F241C">শ্রী শ্রী মা রক্ষা কালী</text>
-<text x="386" y="356" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="29" font-weight="700" fill="#24201D">পূজা, দর্শন, সেবা ও পঞ্জিকা</text>
-<rect x="386" y="388" width="330" height="52" rx="14" fill="#8F241C"/>
-<text x="551" y="421" text-anchor="middle" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="18" font-weight="700" fill="#FBF4E6">অভয় • শান্তি • সেবা</text>
-<text x="70" y="566" font-family="sans-serif" font-size="15" font-weight="600" fill="#24201D">maarakshakali.pages.dev</text>
-<text x="1130" y="566" text-anchor="end" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="14" font-weight="600" fill="#47614D">সৌহার্দ্য • ভক্তি • সেবা</text>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1200 630"
+  width="1200"
+  height="630"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>শ্রী শ্রী মা রক্ষা কালী মন্দির — Open Graph Template</title>
+  <desc>
+    Bengali-first social sharing template with calm editorial composition.
+    Canonical 5-Color System: Ivory (#FBF4E6), Deep Crimson (#8F241C),
+    Temple Brass (#B08A3E), Sacred Saffron (#C86A12), and Dark Sanctum (#24201D).
+    Design state: DESIGN_RUNTIME.
+  </desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTES, PATTERNS, EMBLEMS & FILIGREE          -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background: Multi-stage Luminous Sacred Ivory Gradient -->
+    <radialGradient id="ogTemplateIvoryBg" cx="50%" cy="45%" r="78%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="42%" stop-color="#FDFBF5"/>
+      <stop offset="76%" stop-color="#FBF4E6"/>
+      <stop offset="100%" stop-color="#EFE1C9"/>
+    </radialGradient>
+
+    <!-- Traditional Bengali Alpana Geometric Lace Pattern -->
+    <pattern id="ogTemplateAlpana" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 40 20 L 20 40 L 0 20 Z" fill="none" stroke="#B08A3E" stroke-width="0.55" stroke-opacity="0.14"/>
+      <circle cx="20" cy="20" r="6" fill="none" stroke="#8F241C" stroke-width="0.5" stroke-opacity="0.09"/>
+      <circle cx="20" cy="20" r="1.8" fill="#B08A3E" fill-opacity="0.22"/>
+      <path d="M 0 0 L 8 8 M 40 0 L 32 8 M 0 40 L 8 32 M 40 40 L 32 32" stroke="#C86A12" stroke-width="0.4" stroke-opacity="0.12"/>
+    </pattern>
+
+    <!-- Left Medallion Celestial Aura -->
+    <radialGradient id="ogTemplateHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C86A12" stop-opacity="0.26"/>
+      <stop offset="60%" stop-color="#B08A3E" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Medallion Core Polished Ivory Plate -->
+    <radialGradient id="ogTemplatePlate" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="68%" stop-color="#FFFDF8"/>
+      <stop offset="100%" stop-color="#F3E5CD"/>
+    </radialGradient>
+
+    <!-- Burnished Temple Brass / Gold Gradient -->
+    <linearGradient id="ogTemplateGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8ECC4"/>
+      <stop offset="28%" stop-color="#D7AE56"/>
+      <stop offset="65%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Sacred Raksha Kali Flame Gradient -->
+    <linearGradient id="ogTemplateFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="24%" stop-color="#8F241C"/>
+      <stop offset="68%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#E5A642"/>
+    </linearGradient>
+
+    <!-- Inner Flame Core Radiance -->
+    <linearGradient id="ogTemplateInnerJyoti" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12"/>
+      <stop offset="48%" stop-color="#EAA842"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Architectural Stambha Divider Gradient -->
+    <linearGradient id="ogTemplateDivider" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B08A3E" stop-opacity="0.1"/>
+      <stop offset="18%" stop-color="#B08A3E"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="82%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#B08A3E" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Editorial Card Surface Gradient -->
+    <linearGradient id="ogTemplateCardSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="65%" stop-color="#FCF8EF"/>
+      <stop offset="100%" stop-color="#F5EADB"/>
+    </linearGradient>
+
+    <!-- Text Shadow Filter for Crisp Visual Contrast -->
+    <filter id="ogTemplateTextGlow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#8F241C" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Ornate Temple Shikhara Corner Filigree Macro -->
+    <g id="ogTemplateCornerFiligree">
+      <path d="M 0,0 L 36,0 C 36,18 18,36 0,36 Z" fill="url(#ogTemplateGold)" opacity="0.95"/>
+      <path d="M 4,4 L 28,4 C 28,16 16,28 4,28 Z" fill="#FBF4E6"/>
+      <circle cx="11" cy="11" r="3" fill="#8F241C"/>
+      <circle cx="11" cy="11" r="1.2" fill="url(#ogTemplateGold)"/>
+      <path d="M 0,36 L 36,0" stroke="#8F241C" stroke-width="1.4" opacity="0.85"/>
+      <circle cx="26" cy="6" r="1.2" fill="#8F241C"/>
+      <circle cx="6" cy="26" r="1.2" fill="#8F241C"/>
+    </g>
+
+    <!-- Centered Circular Track for Medallion Inscription -->
+    <path id="ogTemplateMedallionArc" d="M 108,305 A 120,120 0 0,1 348,305"/>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BASE IVORY CANVAS & NOTARIAL SECURITY ENCLOSURE           -->
+  <!-- ============================================================ -->
+  <!-- Luminous Sacred Ivory Base -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#ogTemplateIvoryBg)"/>
+
+  <!-- Sacred Alpana Lace Texture -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#ogTemplateAlpana)"/>
+
+  <!-- Outer Deep Crimson Enclosure Frame -->
+  <rect x="18" y="18" width="1164" height="594" rx="18" fill="none" stroke="#8F241C" stroke-width="4.5"/>
+
+  <!-- Inner Burnished Brass Guard Frame -->
+  <rect x="28" y="28" width="1144" height="574" rx="14" fill="none" stroke="url(#ogTemplateGold)" stroke-width="2"/>
+
+  <!-- Guilloché Beaded Tracking Line -->
+  <rect x="36" y="36" width="1128" height="558" rx="10" fill="none" stroke="#8F241C" stroke-width="1.2" stroke-dasharray="3.5 3.5" opacity="0.65"/>
+
+  <!-- Four Ornamental Corner Brackets -->
+  <use xlink:href="#ogTemplateCornerFiligree" x="36" y="36"/>
+  <use xlink:href="#ogTemplateCornerFiligree" x="1164" y="36" transform="rotate(90 1164 36)"/>
+  <use xlink:href="#ogTemplateCornerFiligree" x="1164" y="594" transform="rotate(180 1164 594)"/>
+  <use xlink:href="#ogTemplateCornerFiligree" x="36" y="594" transform="rotate(270 36 594)"/>
+
+  <!-- Perimeter Brass Rosette Studs -->
+  <circle cx="600" cy="28" r="3.5" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+  <circle cx="600" cy="602" r="3.5" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+  <circle cx="28" cy="315" r="3.5" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+  <circle cx="1172" cy="315" r="3.5" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+
+  <!-- ============================================================ -->
+  <!-- 2. LEFT FLANK: SACRED TEMPLE EMBLEM & MEDALLION             -->
+  <!-- Center: X = 228, Y = 305                                     -->
+  <!-- ============================================================ -->
+  <circle cx="228" cy="305" r="190" fill="url(#ogTemplateHalo)"/>
+
+  <!-- Radial Sunburst Fluting (48 Prongs) -->
+  <g stroke="url(#ogTemplateGold)" stroke-width="0.8" opacity="0.6" aria-hidden="true">
+    <line x1="228" y1="155" x2="228" y2="162"/><line x1="228" y1="448" x2="228" y2="455"/>
+    <line x1="78" y1="305" x2="85" y2="305"/><line x1="371" y1="305" x2="378" y2="305"/>
+    <line x1="242.5" y1="156.4" x2="243.8" y2="163.2"/><line x1="213.5" y1="453.6" x2="212.2" y2="446.8"/>
+    <line x1="256.7" y1="160.7" x2="258.3" y2="167.3"/><line x1="199.3" y1="449.3" x2="197.7" y2="442.7"/>
+    <line x1="270.5" y1="167.6" x2="272.3" y2="173.9"/><line x1="185.5" y1="442.4" x2="183.7" y2="436.1"/>
+    <line x1="283.3" y1="177.0" x2="285.5" y2="182.9"/><line x1="172.7" y1="433.0" x2="170.5" y2="427.1"/>
+    <line x1="294.8" y1="188.7" x2="297.3" y2="194.2"/><line x1="161.2" y1="421.3" x2="158.7" y2="415.8"/>
+    <line x1="304.7" y1="202.4" x2="307.4" y2="207.5"/><line x1="151.3" y1="407.6" x2="148.6" y2="402.5"/>
+    <line x1="312.9" y1="217.9" x2="315.8" y2="222.5"/><line x1="143.1" y1="392.1" x2="140.2" y2="387.5"/>
+    <line x1="319.1" y1="234.8" x2="322.2" y2="238.9"/><line x1="136.9" y1="375.2" x2="133.8" y2="371.1"/>
+    <line x1="323.2" y1="252.7" x2="326.3" y2="256.2"/><line x1="132.8" y1="357.3" x2="129.7" y2="353.8"/>
+    <line x1="325.0" y1="271.2" x2="328.2" y2="274.2"/><line x1="131.0" y1="338.8" x2="127.8" y2="335.8"/>
+    <line x1="324.4" y1="290.1" x2="327.7" y2="292.3"/><line x1="131.6" y1="319.9" x2="128.3" y2="317.7"/>
+  </g>
+
+  <!-- Outer Medallion Beaded Ring -->
+  <circle cx="228" cy="305" r="144" fill="none" stroke="url(#ogTemplateGold)" stroke-width="2.2"/>
+  <circle cx="228" cy="305" r="138.5" fill="none" stroke="#8F241C" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- Solid Polished Ivory Plate -->
+  <circle cx="228" cy="305" r="131" fill="url(#ogTemplatePlate)" stroke="#8F241C" stroke-width="3.5"/>
+  <circle cx="228" cy="305" r="120" fill="none" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+
+  <!-- Curved Inscription: Mathematically Centered on Track -->
+  <text
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="11.5"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="1.5"
+    text-rendering="geometricPrecision"
+  >
+    <textPath xlink:href="#ogTemplateMedallionArc" href="#ogTemplateMedallionArc" startOffset="50%" text-anchor="middle">
+      ★ শ্রী শ্রী মা রক্ষা কালী ★
+    </textPath>
+  </text>
+
+  <!-- Cardinal Ray Notches around Plate -->
+  <g stroke="url(#ogTemplateGold)" stroke-width="1.6" stroke-linecap="round" opacity="0.9">
+    <line x1="228" y1="168" x2="228" y2="176"/>
+    <line x1="228" y1="434" x2="228" y2="442"/>
+    <line x1="91" y1="305" x2="99" y2="305"/>
+    <line x1="357" y1="305" x2="365" y2="305"/>
+  </g>
+
+  <!-- Sacred Flame & Lotus Pedestal Emblem (Scaled to 1.75x) -->
+  <g id="og-template-emblem" aria-hidden="true" transform="translate(228, 305) scale(1.75) translate(-60, -60)">
+    <!-- 1. Outer Sacred Flame (Trishula Jyoti) -->
+    <path
+      d="
+        M60 19
+        C69 30 79 42 79 56
+        C79 69 71 77 60 80
+        C49 77 41 69 41 56
+        C41 42 51 30 60 19
+        Z
+      "
+      fill="url(#ogTemplateFlame)"
+    />
+
+    <!-- 2. Mid Radiance Layer -->
+    <path
+      d="
+        M60 30
+        C66 38 72 47 72 56
+        C72 65 66 72 60 74
+        C54 72 48 65 48 56
+        C48 47 54 38 60 30
+        Z
+      "
+      fill="url(#ogTemplateInnerJyoti)"
+    />
+
+    <!-- 3. Core Sanctum Light -->
+    <path
+      d="
+        M60 41
+        C64 47 67 52 67 58
+        C67 64 64 68 60 69
+        C56 68 53 64 53 58
+        C53 52 56 47 60 41
+        Z
+      "
+      fill="#FFFFFF"
+    />
+
+    <!-- 4. Divine Vermilion Trinetra / Bindu -->
+    <circle cx="60" cy="53" r="2.2" fill="#8F241C"/>
+    <circle cx="60" cy="53" r="0.8" fill="#FFFDF7"/>
+
+    <!-- 5. Diya Cup (Flame-to-Pedestal Anchor) -->
+    <path
+      d="
+        M43 75
+        C50 78 70 78 77 75
+        C74 81 67 83 60 83
+        C53 83 46 81 43 75
+        Z
+      "
+      fill="url(#ogTemplateGold)"
+    />
+    <line x1="50" y1="81" x2="70" y2="81" stroke="#8F241C" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- 6. Lotus Pedestal Base (Alpana Petals) -->
+    <path
+      d="
+        M26 84
+        C36 75 46 74 60 84
+        C74 74 84 75 94 84
+        C84 83 74 89 60 94
+        C46 89 36 83 26 84
+        Z
+      "
+      fill="url(#ogTemplateGold)"
+      stroke="#8F241C"
+      stroke-width="0.8"
+    />
+
+    <!-- 7. Altar Foot Foundation -->
+    <path
+      d="
+        M33 89
+        C41 87 50 91 60 96
+        C70 91 79 87 87 89
+        C80 96 71 101 60 101
+        C49 101 40 96 33 89
+        Z
+      "
+      fill="#8F241C"
+    />
+    <path
+      d="
+        M37 91
+        C44 90 52 93 60 97
+        C68 93 76 90 83 91
+      "
+      stroke="url(#ogTemplateGold)"
+      stroke-width="1.2"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <circle cx="60" cy="98" r="1.2" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Consecrated Era Ribbon Box Below Medallion -->
+  <rect x="145" y="460" width="166" height="30" rx="6" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+  <text
+    x="228"
+    y="475"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="12.5"
+    font-weight="700"
+    fill="#FFFDF7"
+    letter-spacing="0.6"
+    text-rendering="geometricPrecision"
+  >
+    ★ স্থাপিত ১৪৩৩ বঙ্গাব্দ ★
+  </text>
+
+  <!-- ============================================================ -->
+  <!-- 3. ARCHITECTURAL STAMBHA (DIVIDER PILLAR)                   -->
+  <!-- ============================================================ -->
+  <line x1="395" y1="70" x2="395" y2="505" stroke="url(#ogTemplateDivider)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Top Stambha Capital -->
+  <circle cx="395" cy="70" r="5" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.4"/>
+  <circle cx="395" cy="70" r="1.8" fill="#FFFFFF"/>
+  <!-- Midpoint Knot Ornament -->
+  <circle cx="395" cy="288" r="3.5" fill="#B08A3E" stroke="#8F241C" stroke-width="1"/>
+  <!-- Bottom Stambha Pedestal -->
+  <circle cx="395" cy="505" r="5" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.4"/>
+  <circle cx="395" cy="505" r="1.8" fill="#FFFFFF"/>
+
+  <!-- ============================================================ -->
+  <!-- 4. RIGHT FLANK: BENGALI-FIRST TYPOGRAPHY & IDENTITY          -->
+  <!-- Left Alignment Bound: X = 430                                -->
+  <!-- ============================================================ -->
+
+  <!-- Top Identification Badge -->
+  <rect x="430" y="70" width="310" height="34" rx="17" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.4"/>
+  <text
+    x="585"
+    y="87"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="14"
+    font-weight="700"
+    fill="#FFFDF7"
+    letter-spacing="0.8"
+    text-rendering="geometricPrecision"
+  >
+    ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
+  </text>
+
+  <!-- Canonical Location Lock Beside Pill -->
+  <text
+    x="755"
+    y="87"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="14"
+    font-weight="700"
+    fill="#C86A12"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    সাহাপুর বটতলা মোড়, রায়গঞ্জ
+  </text>
+
+  <!-- Primary H1 Title: Deep Crimson Calligraphic Weight -->
+  <text
+    x="430"
+    y="152"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="46"
+    font-weight="800"
+    fill="#8F241C"
+    letter-spacing="0.3"
+    filter="url(#ogTemplateTextGlow)"
+    text-rendering="geometricPrecision"
+  >
+    শ্রী শ্রী মা রক্ষা কালী
+  </text>
+
+  <!-- Secondary Line: Subject / Editorial Focus -->
+  <text
+    x="430"
+    y="196"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="24"
+    font-weight="700"
+    fill="#C86A12"
+    letter-spacing="0.2"
+    text-rendering="geometricPrecision"
+  >
+    পূজা, দর্শন, সেবা ও পঞ্জিকা নির্ঘণ্ট
+  </text>
+
+  <!-- ============================================================ -->
+  <!-- 5. EDITORIAL FOCUS CARD (COMMUNITY & RITES SUMMARY)         -->
+  <!-- Width: 730px | Height: 138px                                 -->
+  <!-- ============================================================ -->
+  <g transform="translate(430, 232)">
+    <rect width="730" height="138" rx="12" fill="url(#ogTemplateCardSurface)" stroke="url(#ogTemplateGold)" stroke-width="1.5"/>
+    <rect x="1.5" y="1.5" width="727" height="135" rx="11" fill="none" stroke="#8F241C" stroke-width="0.8" opacity="0.35"/>
+    <!-- Top Crimson/Gold Edge Highlight Strip -->
+    <line x1="20" y1="2" x2="710" y2="2" stroke="#8F241C" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Section Heading -->
+    <text
+      x="28"
+      y="34"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="17"
+      font-weight="700"
+      fill="#8F241C"
+      letter-spacing="0.4"
+      text-rendering="geometricPrecision"
+    >
+      সার্বজনীন তথ্য ও নির্দেশিকা বাতায়ন
+    </text>
+
+    <!-- Context Line 1 -->
+    <text
+      x="28"
+      y="66"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="15"
+      font-weight="600"
+      fill="#24201D"
+      letter-spacing="0.2"
+      text-rendering="geometricPrecision"
+    >
+      • নিত্য পূজা ও অমাবস্যা বিশেষ তিথি নির্ঘণ্ট, ভক্তিমূলক সেবা এবং গ্রাম্য সমন্বয়।
+    </text>
+
+    <!-- Context Line 2 -->
+    <text
+      x="28"
+      y="94"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="15"
+      font-weight="600"
+      fill="#24201D"
+      letter-spacing="0.2"
+      text-rendering="geometricPrecision"
+    >
+      • বিশুদ্ধ সিদ্ধান্ত পঞ্জিকা ১৪৩৩ বঙ্গাব্দ ভিত্তিক আঞ্চলিক মানমন্দির গণনামতে সংরক্ষিত।
+    </text>
+
+    <!-- Attribution Baseline -->
+    <text
+      x="28"
+      y="122"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="13"
+      font-weight="600"
+      fill="#B08A3E"
+      letter-spacing="0.3"
+      text-rendering="geometricPrecision"
+    >
+      পরিচালনায়: শ্রী শ্রী মা রক্ষা কালী পূজা কমিটি ও সকল গ্রামবাসী
+    </text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 6. THREE SACRED BADGES (MOTTO & PILLARS)                     -->
+  <!-- Total Width: 730px | 3 Badges @ 232px Width | Gaps: 17px     -->
+  <!-- ============================================================ -->
+  <!-- Badge 1: Ritual Motto -->
+  <g transform="translate(430, 396)">
+    <rect width="232" height="44" rx="8" fill="#8F241C" stroke="url(#ogTemplateGold)" stroke-width="1.2"/>
+    <text
+      x="116"
+      y="22"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="15"
+      font-weight="700"
+      fill="#FFFDF7"
+      letter-spacing="0.6"
+      text-rendering="geometricPrecision"
+    >
+      অভয় • শান্তি • সেবা
+    </text>
+  </g>
+
+  <!-- Badge 2: Panjika Basis -->
+  <g transform="translate(679, 396)">
+    <rect width="232" height="44" rx="8" fill="#FFFDF7" stroke="url(#ogTemplateGold)" stroke-width="1.4"/>
+    <rect x="1.5" y="1.5" width="229" height="41" rx="7" fill="none" stroke="#8F241C" stroke-width="0.8" opacity="0.35"/>
+    <text
+      x="116"
+      y="22"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="14"
+      font-weight="700"
+      fill="#8F241C"
+      letter-spacing="0.4"
+      text-rendering="geometricPrecision"
+    >
+      ১৪৩৩ বঙ্গাব্দ পঞ্জিকা
+    </text>
+  </g>
+
+  <!-- Badge 3: Pilgrimage & Offerings -->
+  <g transform="translate(928, 396)">
+    <rect width="232" height="44" rx="8" fill="#FFFDF7" stroke="url(#ogTemplateGold)" stroke-width="1.4"/>
+    <rect x="1.5" y="1.5" width="229" height="41" rx="7" fill="none" stroke="#C86A12" stroke-width="0.8" opacity="0.4"/>
+    <text
+      x="116"
+      y="22"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="14"
+      font-weight="700"
+      fill="#C86A12"
+      letter-spacing="0.4"
+      text-rendering="geometricPrecision"
+    >
+      নিত্য দর্শন ও ভোগ আরতি
+    </text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 7. GLOBAL FOOTER STRIP                                       -->
+  <!-- ============================================================ -->
+  <!-- Primary Brass Baseline -->
+  <line x1="48" y1="510" x2="1152" y2="510" stroke="url(#ogTemplateGold)" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Secondary Crimson Dotted Trace -->
+  <line x1="48" y1="514" x2="1152" y2="514" stroke="#8F241C" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.65"/>
+
+  <!-- Left: Official Portal URL (Vertically Centered at Y=554) -->
+  <text
+    x="48"
+    y="554"
+    dominant-baseline="central"
+    font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="16.5"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.4"
+  >
+    🌐 https://maarakshakali.pages.dev
+  </text>
+
+  <!-- Right: Verified Locality (Right Aligned, Vertically Centered at Y=554) -->
+  <text
+    x="1152"
+    y="554"
+    text-anchor="end"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="15"
+    font-weight="700"
+    fill="#24201D"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    সাহাপুর বটতলা মোড় • রায়গঞ্জ • উত্তর দিনাজপুর • পশ্চিমবঙ্গ
+  </text>
 </svg>
