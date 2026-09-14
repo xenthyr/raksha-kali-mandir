@@ -1,70 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" fill="none">
-  <title>মা রক্ষা কালী মন্দির emblem — DESIGN_RUNTIME</title>
-  <desc>Decorative temple identity emblem; not a historical or governmental emblem. Design state: DESIGN_RUNTIME.</desc>
-  
-  <!-- Outer Sacred Shield Base -->
-  <path d="M160 18 L282 72 V174 C282 240 224 286 160 304 C96 286 38 240 38 174 V72 Z" fill="#FBF4E6" stroke="#8F241C" stroke-width="3.5" stroke-linejoin="round"/>
-  
-  <!-- Inner Temple Gold Border -->
-  <path d="M160 34 L266 80 V171 C266 226 216 265 160 283 C104 265 54 226 54 171 V80 Z" fill="none" stroke="#B08A3E" stroke-width="1.5"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 320 320"
+  width="320"
+  height="320"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>শ্রী শ্রী মা রক্ষা কালী মন্দির — প্রাতিষ্ঠানিক প্রতীক</title>
+  <desc>Official institutional temple emblem for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
 
-  <!-- Celestial Corner Accents -->
-  <g fill="#B08A3E" opacity="0.85">
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTE GRADIENTS & ACCENTS                     -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background Shield Ivory Shimmer -->
+    <radialGradient id="emblemShieldBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FDFBF5"/>
+      <stop offset="100%" stop-color="#FBF4E6"/>
+    </radialGradient>
+
+    <!-- Sacred Temple Burnished Brass / Gold Gradient -->
+    <linearGradient id="emblemGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8ECC4"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Sacred Raksha Kali Flame Gradient -->
+    <linearGradient id="emblemFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="25%" stop-color="#8F241C"/>
+      <stop offset="70%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#E5A642"/>
+    </linearGradient>
+
+    <!-- Inner Flame Core Radiance -->
+    <linearGradient id="emblemInnerJyoti" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12"/>
+      <stop offset="50%" stop-color="#EAA842"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Inner Sanctum Doorway Radiance -->
+    <radialGradient id="sanctumGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C86A12" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. SACRED SHIELD FOUNDATION (Centered on X=160)              -->
+  <!-- ============================================================ -->
+  <!-- Outer Sacred Shield Base Frame -->
+  <path
+    d="M160 18 L282 72 V174 C282 240 224 286 160 304 C96 286 38 240 38 174 V72 Z"
+    fill="url(#emblemShieldBg)"
+    stroke="#8F241C"
+    stroke-width="3.5"
+    stroke-linejoin="round"
+  />
+
+  <!-- Inner Temple Brass Guard Line -->
+  <path
+    d="M160 34 L266 80 V171 C266 226 216 265 160 283 C104 265 54 226 54 171 V80 Z"
+    fill="none"
+    stroke="url(#emblemGold)"
+    stroke-width="1.5"
+  />
+
+  <!-- Celestial Flank Accents -->
+  <g fill="url(#emblemGold)" opacity="0.9" aria-hidden="true">
     <circle cx="82" cy="98" r="2.5"/>
-    <circle cx="82" cy="98" r="5" fill="none" stroke="#B08A3E" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
+    <circle cx="82" cy="98" r="5" fill="none" stroke="url(#emblemGold)" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
     <circle cx="238" cy="98" r="2.5"/>
-    <circle cx="238" cy="98" r="5" fill="none" stroke="#B08A3E" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
+    <circle cx="238" cy="98" r="5" fill="none" stroke="url(#emblemGold)" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
   </g>
 
-  <!-- Temple Spire (Mandir Shikhara & Kalasa) -->
-  <!-- Dhvaja (Sacred Pennant) & Finial Staff -->
-  <line x1="160" y1="44" x2="160" y2="62" stroke="#B08A3E" stroke-width="2" stroke-linecap="round"/>
-  <path d="M160 46 L175 52 L160 58 Z" fill="#8F241C"/>
-  <circle cx="160" cy="62" r="3.5" fill="#B08A3E" stroke="#8F241C" stroke-width="0.75"/>
-  
-  <!-- Amalaka & Spire Tiers -->
+  <!-- ============================================================ -->
+  <!-- 2. MANDIR SHIKHARA (TEMPLE SPIRE & SACRED FINIAL)           -->
+  <!-- ============================================================ -->
+  <!-- Finial Staff & Crimson Dhvaja (Temple Pennant) -->
+  <line x1="160" y1="44" x2="160" y2="62" stroke="url(#emblemGold)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M160 46 L176 52 L160 58 Z" fill="#8F241C"/>
+  <circle cx="160" cy="62" r="3.5" fill="url(#emblemGold)" stroke="#8F241C" stroke-width="0.75"/>
+
+  <!-- Spire Tiers (Pidha Shikhara Architecture) -->
   <path d="M148 68 C148 65 172 65 172 68 L176 74 H144 Z" fill="#C86A12"/>
-  <path d="M145 75 H175 L179 88 H141 Z" fill="#8F241C" stroke="#B08A3E" stroke-width="1"/>
-  <path d="M137 89 H183 L188 105 H132 Z" fill="#C86A12" stroke="#B08A3E" stroke-width="1"/>
-  <path d="M127 106 H193 L200 126 H120 Z" fill="#8F241C" stroke="#B08A3E" stroke-width="1"/>
-  
+  <path d="M145 75 H175 L179 88 H141 Z" fill="#8F241C" stroke="url(#emblemGold)" stroke-width="1"/>
+  <path d="M137 89 H183 L188 105 H132 Z" fill="#C86A12" stroke="url(#emblemGold)" stroke-width="1"/>
+  <path d="M127 106 H193 L200 126 H120 Z" fill="#8F241C" stroke="url(#emblemGold)" stroke-width="1"/>
+
   <!-- Chhala Eaves / Cornice -->
-  <path d="M112 127 C136 123 184 123 208 127 L212 135 C186 131 134 131 108 135 Z" fill="#B08A3E"/>
+  <path d="M112 127 C136 123 184 123 208 127 L212 135 C186 131 134 131 108 135 Z" fill="url(#emblemGold)"/>
 
-  <!-- Garbhagriha (Sanctum Body) -->
-  <rect x="118" y="135" width="84" height="80" fill="#24201D" stroke="#B08A3E" stroke-width="1.5"/>
-  
-  <!-- Decorative Sanctum Pilasters -->
-  <rect x="120" y="138" width="7" height="74" fill="#B08A3E" opacity="0.9"/>
-  <rect x="193" y="138" width="7" height="74" fill="#B08A3E" opacity="0.9"/>
+  <!-- ============================================================ -->
+  <!-- 3. GARBHAGRIHA & TORANA (SANCTUM ARCHWAY)                    -->
+  <!-- ============================================================ -->
+  <!-- Outer Sanctum Body in Dark Sanctum Ink -->
+  <rect x="118" y="135" width="84" height="80" fill="#24201D" stroke="url(#emblemGold)" stroke-width="1.5"/>
 
-  <!-- Torana (Sanctum Archway) -->
-  <path d="M132 215 V166 C132 144 188 144 188 166 V215" fill="#FBF4E6" stroke="#B08A3E" stroke-width="2.5"/>
+  <!-- Decorative Brass Pilasters -->
+  <rect x="120" y="138" width="7" height="74" fill="url(#emblemGold)" opacity="0.95"/>
+  <rect x="193" y="138" width="7" height="74" fill="url(#emblemGold)" opacity="0.95"/>
+
+  <!-- Torana (Sanctum Archway Framing) -->
+  <path d="M132 215 V166 C132 144 188 144 188 166 V215" fill="#FBF4E6" stroke="url(#emblemGold)" stroke-width="2.5"/>
   <path d="M138 215 V170 C138 152 182 152 182 170 V215" fill="#24201D"/>
 
-  <!-- Centered Kali Jyoti (Sacred Flame & Altar) -->
-  <g transform="translate(160 190)">
-    <!-- Peetha (Altar Lamp Base) -->
-    <path d="M-18 20 C-10 24 10 24 18 20 C14 22.5 -14 22.5 -18 20 Z" fill="#B08A3E"/>
+  <!-- Doorway Amber Glow -->
+  <circle cx="160" cy="190" r="28" fill="url(#sanctumGlow)" aria-hidden="true"/>
+
+  <!-- ============================================================ -->
+  <!-- 4. KALI JYOTI (SACRED FLAME & BRASS DIYA ALTAR)             -->
+  <!-- Center: X=160, Y=190                                         -->
+  <!-- ============================================================ -->
+  <g transform="translate(160, 190)" aria-hidden="true">
+    <!-- Diya Peetha Base -->
+    <path d="M-18 20 C-10 24 10 24 18 20 C14 22.5 -14 22.5 -18 20 Z" fill="url(#emblemGold)"/>
     <path d="M-14 22 H14 V24 H-14 Z" fill="#C86A12"/>
-    
-    <!-- Outer Sacred Flame -->
-    <path d="M0 -24 C-8 -15 -14 -7 -14 3 C-14 13 -7 19 0 21 C7 19 14 13 14 3 C14 -7 8 -15 0 -24 Z" fill="#8F241C"/>
-    <!-- Mid Flame (Radiance) -->
-    <path d="M0 -17 C-5 -10 -9 -3 -9 4 C-9 11 -4 16 0 17 C4 16 9 11 9 4 C9 -3 5 -10 0 -17 Z" fill="#C86A12"/>
+
+    <!-- Outer Sacred Flame (Trishula Silhouette) -->
+    <path
+      d="
+        M0 -24
+        C-8 -15 -14 -7 -14 3
+        C-14 13 -7 19 0 21
+        C7 19 14 13 14 3
+        C14 -7 8 -15 0 -24
+        Z
+      "
+      fill="url(#emblemFlame)"
+    />
+
+    <!-- Mid Flame Radiance Layer -->
+    <path
+      d="
+        M0 -17
+        C-5 -10 -9 -3 -9 4
+        C-9 11 -4 16 0 17
+        C4 16 9 11 9 4
+        C9 -3 5 -10 0 -17
+        Z
+      "
+      fill="url(#emblemInnerJyoti)"
+    />
+
     <!-- Core Sanctum Light -->
-    <path d="M0 -9 C-3 -4 -5 0 -5 5 C-5 10 -2 13 0 14 C2 13 5 10 5 5 C5 0 3 -4 0 -9 Z" fill="#FBF4E6"/>
-    <!-- Divine Bindu -->
-    <circle cx="0" cy="5" r="1.5" fill="#8F241C"/>
+    <path
+      d="
+        M0 -9
+        C-3 -4 -5 0 -5 5
+        C-5 10 -2 13 0 14
+        C2 13 5 10 5 5
+        C5 0 3 -4 0 -9
+        Z
+      "
+      fill="#FFFFFF"
+    />
+
+    <!-- Divine Vermilion Trinetra / Bindu -->
+    <circle cx="0" cy="5" r="1.6" fill="#8F241C"/>
+    <circle cx="0" cy="5" r="0.6" fill="#FFFDF7"/>
   </g>
 
-  <!-- Lower Identification Cartouche / Ribbon -->
-  <!-- Tapered to follow the natural contour of the shield -->
-  <path d="M78 223 L242 223 C245 223 247 225 246 228 L238 262 C237 265 234 267 231 267 L89 267 C86 267 83 265 82 262 L74 228 C73 225 75 223 78 223 Z" fill="#8F241C" stroke="#B08A3E" stroke-width="1.5"/>
-  <path d="M83 227 L237 227 L231 263 L89 263 Z" fill="none" stroke="#B08A3E" stroke-width="0.75" opacity="0.6"/>
+  <!-- ============================================================ -->
+  <!-- 5. LOWER IDENTIFICATION RIBBON & BENGALI TITLE               -->
+  <!-- Ribbon Bounds: Y=226 to Y=268 | Vertical Center: Y=247       -->
+  <!-- ============================================================ -->
+  <!-- Tapered Shield-Contour Cartouche Ribbon -->
+  <path
+    d="
+      M76 226
+      L244 226
+      C247 226 249 228 248 231
+      L239 263
+      C238 266 235 268 232 268
+      L88 268
+      C85 268 82 266 81 263
+      L72 231
+      C71 228 73 226 76 226
+      Z
+    "
+    fill="#8F241C"
+    stroke="url(#emblemGold)"
+    stroke-width="1.6"
+  />
 
-  <!-- Emblem Text (Centered on X=160) -->
-  <text x="160" y="243" text-anchor="middle" font-family="'Noto Sans Bengali', 'Nirmala UI', sans-serif" font-size="12.5" font-weight="700" fill="#FBF4E6" letter-spacing="0.5">শ্রী শ্রী রক্ষা কালী</text>
-  <text x="160" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="700" fill="#B08A3E" letter-spacing="1.5">TEMPLE IDENTITY</text>
+  <!-- Inner Gold Inlay Wireframe -->
+  <path
+    d="M81 230 L239 230 L232 264 L88 264 Z"
+    fill="none"
+    stroke="url(#emblemGold)"
+    stroke-width="0.8"
+    opacity="0.75"
+  />
+
+  <!-- Flanking Sacred Brass Dots -->
+  <circle cx="92" cy="247" r="1.8" fill="url(#emblemGold)"/>
+  <circle cx="228" cy="247" r="1.8" fill="url(#emblemGold)"/>
+
+  <!-- Exclusively Bengali Inscription: Full Deity Title -->
+  <text
+    x="160"
+    y="247"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="13.5"
+    font-weight="700"
+    fill="#FBF4E6"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    শ্রী শ্রী মা রক্ষা কালী
+  </text>
 </svg>
