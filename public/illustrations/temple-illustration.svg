@@ -8,7 +8,7 @@
   fill="none"
   xml:space="preserve"
 >
-  <title>শ্রী শ্রী মা রক্ষাকালী মন্দির — স্থাপত্য চিত্রলিপি</title>
+  <title>শ্রী শ্রী মা রক্ষা কালী মন্দির — স্থাপত্য চিত্রলিপি</title>
   <desc>Sacred temple architectural elevation (Pidha Shikhara, Torana, Kalasa, Garbhagriha, and Jagati plinth) for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
 
   <!-- ============================================================ -->
@@ -130,7 +130,7 @@
       letter-spacing="0.6"
       text-rendering="geometricPrecision"
     >
-      ★ শ্রী শ্রী মা রক্ষাকালী মন্দির ★
+      ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
     </text>
   </g>
 
@@ -154,7 +154,6 @@
     <line x1="0" y1="0" x2="0" y2="34" stroke="url(#tGoldGrad)" stroke-width="2.5" stroke-linecap="round"/>
 
     <!-- Sacred Consecrated Crimson Dhvaja (মন্দিরের লাল ধ্বজা) -->
-    <!-- Double-curved swallowtail pennant fluttering gracefully rightward -->
     <path
       d="
         M 0,2
@@ -173,19 +172,14 @@
     <circle cx="16" cy="15" r="1.4" fill="#8F241C"/>
 
     <!-- Sacred Brass Kalasa (মহাপবিত্র পূর্ণকলস) -->
-    <!-- Spire Tip Point (সুচিমুখ) -->
     <path d="M 0,20 L 2.5,27 L -2.5,27 Z" fill="url(#tGoldGrad)"/>
-    <!-- Upper Kalasa Urn Bulb -->
     <circle cx="0" cy="30" r="5.5" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <ellipse cx="0" cy="33.5" rx="3.8" ry="1.2" fill="#765217"/>
-    <!-- Lower Kalasa Vessel -->
     <circle cx="0" cy="37" r="7" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.9"/>
     <circle cx="0" cy="37" r="3" fill="#8F241C"/>
 
     <!-- Fluted Stone Amalaka (আমলক শিলা) -->
-    <!-- Convex stone disc with vertical ribs representing solar petals -->
     <ellipse cx="0" cy="45" rx="19" ry="5.5" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="1.2"/>
-    <!-- Rib Segments -->
     <g stroke="#765217" stroke-width="0.8" fill="none">
       <line x1="-15" y1="44" x2="-15" y2="46"/>
       <line x1="-10" y1="43" x2="-10" y2="47"/>
@@ -202,65 +196,48 @@
 
   <!-- ============================================================ -->
   <!-- 3. PIDHA SHIKHARA: 4-TIER PYRAMIDAL SPIRE (মন্দির শিখর)       -->
-  <!-- Width: Tapering 52px at Apex to 228px at Eave Cornice        -->
   <!-- ============================================================ -->
   <g id="pidhaShikharaRoof">
-    <!-- ----------------- TIER 1 (TOPMOST TIER) ----------------- -->
-    <!-- Tier 1 Wall Slant (Y = 98 to Y = 114) -->
+    <!-- Tier 1 (Topmost Tier) -->
     <polygon points="214,98 266,98 276,114 204,114" fill="url(#tShikharaFace)" stroke="url(#tGoldGrad)" stroke-width="1"/>
-    <!-- Central Ornamental Medallion / Chaitya Window Window Motif -->
     <path d="M 240,102 C 235,102 233,107 236,111 L 244,111 C 247,107 245,102 240,102 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.6"/>
     <circle cx="240" cy="107" r="1.6" fill="#8F241C"/>
-    <!-- Tier 1 Projecting Cornice Band (কার্নিশ) -->
     <path d="M 198,114 L 282,114 L 285,120 L 195,120 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.9"/>
     <line x1="196" y1="120" x2="284" y2="120" stroke="#65120D" stroke-width="1"/>
 
-    <!-- ----------------- TIER 2 (MID-UPPER TIER) --------------- -->
-    <!-- Tier 2 Wall Slant (Y = 120 to Y = 138) -->
+    <!-- Tier 2 (Mid-Upper Tier) -->
     <polygon points="196,120 284,120 298,138 182,138" fill="url(#tShikharaFace)" stroke="url(#tGoldGrad)" stroke-width="1"/>
-    <!-- Terracotta Carved Frieze Panels -->
     <g stroke="url(#tGoldGrad)" stroke-width="0.6" fill="none" opacity="0.8">
       <rect x="202" y="123" width="18" height="11" rx="1"/>
       <rect x="231" y="123" width="18" height="11" rx="1"/>
       <rect x="260" y="123" width="18" height="11" rx="1"/>
     </g>
-    <!-- Chaitya Arch Center in Tier 2 -->
     <circle cx="240" cy="128.5" r="3" fill="url(#tGoldGrad)"/>
     <circle cx="240" cy="128.5" r="1.4" fill="#8F241C"/>
     <circle cx="211" cy="128.5" r="2.2" fill="url(#tGoldGrad)"/>
     <circle cx="269" cy="128.5" r="2.2" fill="url(#tGoldGrad)"/>
-    <!-- Tier 2 Projecting Cornice Band -->
     <path d="M 176,138 L 304,138 L 308,144 L 172,144 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="1"/>
     <line x1="174" y1="144" x2="306" y2="144" stroke="#65120D" stroke-width="1"/>
 
-    <!-- ----------------- TIER 3 (MID-LOWER TIER) --------------- -->
-    <!-- Tier 3 Wall Slant (Y = 144 to Y = 164) -->
+    <!-- Tier 3 (Mid-Lower Tier) -->
     <polygon points="174,144 306,144 322,164 158,164" fill="url(#tShikharaFace)" stroke="url(#tGoldGrad)" stroke-width="1"/>
-    <!-- Terracotta Decorative Niches (দেউলের খোপ) -->
     <g fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.6">
-      <!-- Niche 1 -->
       <path d="M 182,158 V 151 C 182,148 192,148 192,151 V 158 Z"/>
       <circle cx="187" cy="153" r="1.5" fill="#8F241C"/>
-      <!-- Niche 2 (Center Left) -->
       <path d="M 210,158 V 150 C 210,147 222,147 222,150 V 158 Z"/>
       <circle cx="216" cy="153" r="1.8" fill="#8F241C"/>
-      <!-- Niche 3 (Center Right) -->
       <path d="M 258,158 V 150 C 258,147 270,147 270,150 V 158 Z"/>
       <circle cx="264" cy="153" r="1.8" fill="#8F241C"/>
-      <!-- Niche 4 -->
       <path d="M 288,158 V 151 C 288,148 298,148 298,151 V 158 Z"/>
       <circle cx="293" cy="153" r="1.5" fill="#8F241C"/>
     </g>
-    <!-- Central Deity Kirtimukha Medallion in Tier 3 -->
     <circle cx="240" cy="153" r="5.2" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="240" cy="153" r="3.2" fill="#8F241C"/>
     <circle cx="240" cy="153" r="1.2" fill="#FFFDF7"/>
-    <!-- Tier 3 Projecting Cornice Band -->
     <path d="M 152,164 L 328,164 L 332,171 L 148,171 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="1"/>
     <line x1="150" y1="171" x2="330" y2="171" stroke="#65120D" stroke-width="1.2"/>
 
-    <!-- ----------------- TIER 4 / MAIN BENGAL CHHALA EAVE ------ -->
-    <!-- Traditional Curving Bengal Roof Cornice (ঐতিহ্যবাহী বাংলা ছাঁচ কার্নিশ) -->
+    <!-- Tier 4 / Main Bengal Chhala Eave -->
     <path
       d="
         M 148,171
@@ -273,7 +250,6 @@
       stroke="#765217"
       stroke-width="1.4"
     />
-    <!-- Deep Recessed Eave Underside Shadow -->
     <path
       d="
         M 136,183
@@ -284,7 +260,6 @@
       "
       fill="url(#tEaveShadow)"
     />
-    <!-- Dentil / Rafter Tooth Moldings along Cornice (দাঁতরি নকশা) -->
     <g fill="#765217" opacity="0.75">
       <rect x="156" y="177" width="4" height="4"/>
       <rect x="174" y="175.5" width="4" height="4"/>
@@ -300,18 +275,14 @@
 
   <!-- ============================================================ -->
   <!-- 4. GARBHAGRIHA FACADE & TORANA ARCHWAY (গর্ভগৃহ ও তোরণদ্বার) -->
-  <!-- Width: X = 142 to X = 338 | Height: Y = 187 to Y = 256       -->
   <!-- ============================================================ -->
   <g id="garbhagrihaFacade">
-    <!-- Deep Sanctum Wall Body in Rich Dark Sanctum Tone -->
     <rect x="142" y="187" width="196" height="69" fill="#1C1815" stroke="url(#tGoldGrad)" stroke-width="1.6"/>
 
-    <!-- Terracotta Bas-Relief Wall Panels (টেরাকোটা দেয়াল ফলক) -->
     <!-- Left Flank Wall Panels -->
     <g stroke="url(#tGoldGrad)" stroke-width="0.8" fill="none">
       <rect x="147" y="192" width="28" height="60" rx="2" fill="#24201D"/>
       <rect x="150" y="195" width="22" height="54" rx="1.5" stroke="#8F241C" stroke-width="0.6"/>
-      <!-- Carved Floral Motifs in Left Panel -->
       <circle cx="161" cy="204" r="3.2" fill="url(#tGoldGrad)"/>
       <circle cx="161" cy="204" r="1.4" fill="#8F241C"/>
       <circle cx="161" cy="222" r="4.2" fill="url(#tGoldGrad)"/>
@@ -324,7 +295,6 @@
     <g stroke="url(#tGoldGrad)" stroke-width="0.8" fill="none">
       <rect x="305" y="192" width="28" height="60" rx="2" fill="#24201D"/>
       <rect x="308" y="195" width="22" height="54" rx="1.5" stroke="#8F241C" stroke-width="0.6"/>
-      <!-- Carved Floral Motifs in Right Panel -->
       <circle cx="319" cy="204" r="3.2" fill="url(#tGoldGrad)"/>
       <circle cx="319" cy="204" r="1.4" fill="#8F241C"/>
       <circle cx="319" cy="222" r="4.2" fill="url(#tGoldGrad)"/>
@@ -333,18 +303,15 @@
       <circle cx="319" cy="240" r="1.4" fill="#8F241C"/>
     </g>
 
-    <!-- Structural Fluted Pilasters Framing the Doorway (দ্বারের স্তম্ভ) -->
-    <!-- Left Door Pilaster -->
+    <!-- Structural Fluted Pilasters -->
     <rect x="180" y="189" width="12" height="67" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <line x1="184" y1="190" x2="184" y2="255" stroke="#765217" stroke-width="0.6"/>
     <line x1="188" y1="190" x2="188" y2="255" stroke="#765217" stroke-width="0.6"/>
-    <!-- Right Door Pilaster -->
     <rect x="288" y="189" width="12" height="67" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <line x1="292" y1="190" x2="292" y2="255" stroke="#765217" stroke-width="0.6"/>
     <line x1="296" y1="190" x2="296" y2="255" stroke="#765217" stroke-width="0.6"/>
 
-    <!-- GRAND TORANA DOORWAY (পবিত্র গর্ভগৃহ তোরণদ্বার) -->
-    <!-- Outer Golden Molding Frame -->
+    <!-- Torana Doorway -->
     <path
       d="
         M 194,256
@@ -357,8 +324,6 @@
       stroke="url(#tGoldGrad)"
       stroke-width="2.6"
     />
-
-    <!-- Cusped Terracotta Arch Inlay (খোদাই করা পদ্ম খিলান) -->
     <path
       d="
         M 200,256
@@ -373,21 +338,18 @@
       stroke-width="1.6"
     />
 
-    <!-- Warm Sanctum Interior Amber Glow -->
+    <!-- Sanctum Interior Amber Glow -->
     <ellipse cx="240" cy="226" rx="34" ry="24" fill="url(#tGarbhaGlow)"/>
 
-    <!-- Suspended Sacred Mangal Ghanta in Torana (তোরণে ঝুলন্ত পিতলের ঘণ্টা) -->
+    <!-- Suspended Sacred Mangal Ghanta -->
     <line x1="240" y1="192" x2="240" y2="204" stroke="url(#tGoldGrad)" stroke-width="1.6"/>
     <path d="M 234,212 C 234,204 246,204 246,212 L 248,216 L 232,216 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="240" cy="218" r="1.8" fill="#8F241C"/>
 
-    <!-- CONSECRATED RAKSHA KALI TRISHULA-JYOTI (গর্ভগৃহে মা রক্ষা কালীর শিখা) -->
+    <!-- Consecrated Raksha Kali Trishula-Jyoti -->
     <g id="sanctumFlamePresence" transform="translate(240, 230)">
-      <!-- Brass Peetha / Lamp Altar Base -->
       <ellipse cx="0" cy="18" rx="16" ry="4.5" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
       <ellipse cx="0" cy="16.5" rx="12" ry="3" fill="#8F241C"/>
-
-      <!-- Outer Consecrated Flame (Trishula Silhouette) -->
       <path
         d="
           M 0,-18
@@ -399,8 +361,6 @@
         "
         fill="url(#tFlameGrad)"
       />
-
-      <!-- Mid Radiance Layer -->
       <path
         d="
           M 0,-11
@@ -412,8 +372,6 @@
         "
         fill="#F5A623"
       />
-
-      <!-- Core Sanctum Light -->
       <path
         d="
           M 0,-5
@@ -425,17 +383,15 @@
         "
         fill="#FFFFFF"
       />
-
-      <!-- Sacred Vermilion Trinetra Bindu (ত্রিনয়ন বিন্দু) -->
       <circle cx="0" cy="1" r="1.8" fill="#8F241C"/>
       <circle cx="0" cy="1" r="0.7" fill="#FFFDF7"/>
     </g>
 
-    <!-- Torana Apex Kirtimukha Medallion -->
+    <!-- Torana Apex Medallion -->
     <circle cx="240" cy="190" r="4" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="240" cy="190" r="1.6" fill="#8F241C"/>
 
-    <!-- Festooned Fresh Marigold & Mango Leaves Garland Draped on Doorway -->
+    <!-- Marigold & Mango Leaves Garland -->
     <path
       d="
         M 188,212
@@ -461,10 +417,9 @@
 
   <!-- ============================================================ -->
   <!-- 5. TEMPLE PLINTH, STEPS & SACRED LAMPS (জগতী বেদি ও সোপান)   -->
-  <!-- Width: X = 78 to X = 402 | Height: Y = 256 to Y = 296        -->
   <!-- ============================================================ -->
   <g id="templeJagatiPlinth">
-    <!-- ----------------- TIER 1 PLINTH (UPPER BASE) ------------ -->
+    <!-- Tier 1 Plinth (Upper Base) -->
     <path
       d="
         M 124,256
@@ -477,7 +432,6 @@
       stroke="url(#tGoldGrad)"
       stroke-width="1.4"
     />
-    <!-- Stone Course Joints -->
     <g stroke="url(#tGoldGrad)" stroke-width="0.8" opacity="0.6">
       <line x1="168" y1="256" x2="169" y2="269"/>
       <line x1="210" y1="256" x2="210.5" y2="269"/>
@@ -485,7 +439,7 @@
       <line x1="311.5" y1="256" x2="312" y2="269"/>
     </g>
 
-    <!-- ----------------- TIER 2 PLINTH (MIDDLE TERRACE) -------- -->
+    <!-- Tier 2 Plinth (Middle Terrace) -->
     <path
       d="
         M 102,269
@@ -498,13 +452,12 @@
       stroke="url(#tGoldGrad)"
       stroke-width="1.4"
     />
-    <!-- Terracotta Lotus Relief Band on Middle Terrace -->
     <g fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.5" opacity="0.9">
       <circle cx="122" cy="276" r="2.5"/><circle cx="138" cy="276" r="2.5"/>
       <circle cx="342" cy="276" r="2.5"/><circle cx="358" cy="276" r="2.5"/>
     </g>
 
-    <!-- ----------------- TIER 3 PLINTH (GROUND JAGATI BASE) ---- -->
+    <!-- Tier 3 Plinth (Ground Jagati Base) -->
     <path
       d="
         M 80,283
@@ -518,67 +471,48 @@
       stroke-width="1.5"
     />
 
-    <!-- ========================================================== -->
-    <!-- CEREMONIAL CENTRAL FLIGHT OF STEPS (সোপান মার্গ)            -->
-    <!-- Center: X = 240 | Width: 88px                             -->
-    <!-- ========================================================== -->
-    <!-- Step 1 (Top) -->
+    <!-- Ceremonial Central Steps (সোপান মার্গ) -->
     <path d="M 198,256 L 282,256 L 280,269 L 200,269 Z" fill="#FBF4E6" stroke="url(#tGoldGrad)" stroke-width="1.1"/>
-    <!-- Step 2 (Middle) -->
     <path d="M 194,269 L 286,269 L 284,283 L 196,283 Z" fill="#FBF4E6" stroke="url(#tGoldGrad)" stroke-width="1.1"/>
-    <!-- Step 3 (Bottom) -->
     <path d="M 190,283 L 290,283 L 288,297 L 192,297 Z" fill="#FBF4E6" stroke="url(#tGoldGrad)" stroke-width="1.1"/>
 
-    <!-- Sacred Rice-Paste Alpana Trail on White Marble Steps (সোপানের আলপনা) -->
+    <!-- Sacred Rice-Paste Alpana Trail on Steps -->
     <g stroke="#8F241C" stroke-width="0.8" fill="none">
-      <!-- Step 1 Motifs -->
       <path d="M 226,262.5 C 230,258 236,258 240,262.5 C 244,258 250,258 254,262.5"/>
       <circle cx="240" cy="262.5" r="1.2" fill="#8F241C"/>
-      <!-- Step 2 Motifs -->
       <path d="M 222,276 C 228,271 234,271 240,276 C 246,271 252,271 258,276"/>
       <circle cx="240" cy="276" r="1.4" fill="#8F241C"/>
-      <!-- Step 3 Motifs -->
       <path d="M 218,290 C 225,284 232,284 240,290 C 248,284 255,284 262,290"/>
       <circle cx="240" cy="290" r="1.6" fill="#8F241C"/>
     </g>
 
-    <!-- Balustrade Newel Pillars with Kalasa Finials (সোপান স্তম্ভ) -->
-    <!-- Left Balustrade Post -->
+    <!-- Balustrade Newel Pillars with Kalasa Finials -->
     <rect x="188" y="254" width="8" height="43" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="192" cy="252" r="3.2" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="192" cy="252" r="1.2" fill="#8F241C"/>
-    <!-- Right Balustrade Post -->
     <rect x="284" y="254" width="8" height="43" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="288" cy="252" r="3.2" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
     <circle cx="288" cy="252" r="1.2" fill="#8F241C"/>
 
-    <!-- ========================================================== -->
-    <!-- FLANKING SACRED BRASS DIYA PRADEEPS (বেদির দুই পাশের প্রদীপ) -->
-    <!-- ========================================================== -->
-    <!-- Left Brass Altar Lamp (X = 110) -->
+    <!-- Flanking Sacred Brass Diya Pradeeps -->
+    <!-- Left Altar Lamp -->
     <g transform="translate(110, 248)">
       <ellipse cx="0" cy="18" rx="14" ry="4.2" fill="#24201D" opacity="0.35"/>
-      <!-- Tiered Stand -->
       <path d="M -10,18 L 10,18 L 7,12 L -7,12 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
       <rect x="-3" y="4" width="6" height="8" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.6"/>
-      <!-- Diya Bowl -->
       <path d="M -14,4 C -10,12 10,12 14,4 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="1"/>
       <ellipse cx="0" cy="4" rx="14" ry="3.2" fill="#8F241C"/>
-      <!-- Radiating Flame -->
       <path d="M 0,4 C -4,0 -5,-7 0,-15 C 5,-7 4,0 0,4 Z" fill="url(#tFlameGrad)"/>
       <circle cx="0" cy="-2" r="1.4" fill="#FFFFFF"/>
     </g>
 
-    <!-- Right Brass Altar Lamp (X = 370) -->
+    <!-- Right Altar Lamp -->
     <g transform="translate(370, 248)">
       <ellipse cx="0" cy="18" rx="14" ry="4.2" fill="#24201D" opacity="0.35"/>
-      <!-- Tiered Stand -->
       <path d="M -10,18 L 10,18 L 7,12 L -7,12 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.8"/>
       <rect x="-3" y="4" width="6" height="8" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="0.6"/>
-      <!-- Diya Bowl -->
       <path d="M -14,4 C -10,12 10,12 14,4 Z" fill="url(#tGoldGrad)" stroke="#765217" stroke-width="1"/>
       <ellipse cx="0" cy="4" rx="14" ry="3.2" fill="#8F241C"/>
-      <!-- Radiating Flame -->
       <path d="M 0,4 C -4,0 -5,-7 0,-15 C 5,-7 4,0 0,4 Z" fill="url(#tFlameGrad)"/>
       <circle cx="0" cy="-2" r="1.4" fill="#FFFFFF"/>
     </g>
@@ -606,10 +540,10 @@
     letter-spacing="0.4"
     text-rendering="geometricPrecision"
   >
-    শ্রী শ্রী মা রক্ষাকালী মন্দির স্থাপত্য
+    শ্রী শ্রী মা রক্ষা কালী মন্দির স্থাপত্য
   </text>
 
-  <!-- Sub-caption Line: Historical Pidha Shikhara, Garbhagriha & Pilgrimage Shrine -->
+  <!-- Sub-caption Line -->
   <text
     x="240"
     y="341"
