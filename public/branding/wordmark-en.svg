@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" width="760" height="180" role="img" aria-labelledby="title desc">
+  <title id="title">Sri Sri Maa Raksha Kali Mandir — English wordmark</title>
+  <desc id="desc">English companion design-runtime wordmark for Sri Sri Maa Raksha Kali Mandir.</desc>
+  <rect width="760" height="180" fill="#FBF4E6"/>
+  <g transform="translate(34 22)">
+    <path d="M58 8C32 8 12 28 12 55c0 22 14 41 46 52 32-11 46-30 46-52C104 28 84 8 58 8Z" fill="none" stroke="#8F241C" stroke-width="4"/>
+    <path d="M58 22C49 33 39 41 39 55c0 13 8 24 19 30 11-6 19-17 19-30 0-14-10-22-19-33Z" fill="#C86A12"/>
+    <path d="M58 35c-4 7-9 12-9 19 0 6 4 11 9 15 5-4 9-9 9-15 0-7-5-12-9-19Z" fill="#FBF4E6"/>
+    <circle cx="58" cy="54" r="3" fill="#8F241C"/>
+    <path d="M35 82q23 12 46 0l-6 10q-17 7-34 0Z" fill="#B08A3E"/>
+  </g>
+  <g transform="translate(168 39)">
+    <text x="0" y="42" font-family="Inter,Arial,sans-serif" font-size="31" font-weight="700" letter-spacing=".2" fill="#24201D">SRI SRI MAA RAKSHA KALI</text>
+    <text x="0" y="82" font-family="Inter,Arial,sans-serif" font-size="29" font-weight="600" letter-spacing=".6" fill="#8F241C">MANDIR</text>
+    <line x1="0" y1="103" x2="480" y2="103" stroke="#B08A3E" stroke-width="2"/>
+  </g>
+</svg>
