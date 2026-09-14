@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" fill="none">
-<title>মা রক্ষা কালী মন্দির emblem — DESIGN_RUNTIME</title>
-<desc>Decorative temple identity emblem; not a historical or governmental emblem. Design state: DESIGN_RUNTIME.</desc>
-<path d="M160 18 L282 72 V174 C282 240 224 286 160 304 C96 286 38 240 38 174 V72 Z" fill="#FBF4E6" stroke="#8F241C" stroke-width="3"/>
-<path d="M160 36 L264 82 V171 C264 225 216 264 160 282 C104 264 56 225 56 171 V82 Z" fill="none" stroke="#B08A3E" stroke-width="1.5"/>
-<path d="M106 148 L160 86 L214 148" stroke="#C86A12" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M121 151 H199 V218 H121 Z" fill="#24201D"/>
-<path d="M138 218 V166 H182 V218" fill="#FBF4E6" stroke="#B08A3E" stroke-width="3"/>
-<g transform="translate(100 145) scale(.5)"><g aria-hidden="true">
-  <path d="M60 11 C51 22 42 31 42 43 C42 56 50 66 60 73 C70 66 78 56 78 43 C78 31 69 22 60 11 Z" fill="#8F241C"/>
-  <path d="M60 23 C55 31 51 36 51 44 C51 51 55 57 60 61 C65 57 69 51 69 44 C69 36 65 31 60 23 Z" fill="#FBF4E6"/>
-  <path d="M60 33 C58 37 56 40 56 44 C56 48 58 51 60 53 C62 51 64 48 64 44 C64 40 62 37 60 33 Z" fill="#8F241C"/>
-  <path d="M25 79 C34 70 44 69 60 79 C76 69 86 70 95 79 C85 78 74 83 60 88 C46 83 35 78 25 79 Z" fill="#B08A3E"/>
-  <path d="M31 81 C39 80 47 83 60 90 C73 83 81 80 89 81 C80 88 71 93 60 97 C49 93 40 88 31 81 Z" fill="none" stroke="#8F241C" stroke-width="2" stroke-linecap="round"/>
-</g></g>
-<rect x="70" y="231" width="180" height="46" rx="10" fill="#8F241C"/>
-<text x="160" y="251" text-anchor="middle" font-family="'Noto Sans Bengali','Nirmala UI',sans-serif" font-size="11.5" font-weight="700" fill="#FBF4E6">শ্রী শ্রী রক্ষা কালী</text>
-<text x="160" y="267" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="600" fill="#FBF4E6" letter-spacing=".8">TEMPLE IDENTITY</text>
+  <title>মা রক্ষা কালী মন্দির emblem — DESIGN_RUNTIME</title>
+  <desc>Decorative temple identity emblem; not a historical or governmental emblem. Design state: DESIGN_RUNTIME.</desc>
+  
+  <!-- Outer Sacred Shield Base -->
+  <path d="M160 18 L282 72 V174 C282 240 224 286 160 304 C96 286 38 240 38 174 V72 Z" fill="#FBF4E6" stroke="#8F241C" stroke-width="3.5" stroke-linejoin="round"/>
+  
+  <!-- Inner Temple Gold Border -->
+  <path d="M160 34 L266 80 V171 C266 226 216 265 160 283 C104 265 54 226 54 171 V80 Z" fill="none" stroke="#B08A3E" stroke-width="1.5"/>
+
+  <!-- Celestial Corner Accents -->
+  <g fill="#B08A3E" opacity="0.85">
+    <circle cx="82" cy="98" r="2.5"/>
+    <circle cx="82" cy="98" r="5" fill="none" stroke="#B08A3E" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
+    <circle cx="238" cy="98" r="2.5"/>
+    <circle cx="238" cy="98" r="5" fill="none" stroke="#B08A3E" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
+  </g>
+
+  <!-- Temple Spire (Mandir Shikhara & Kalasa) -->
+  <!-- Dhvaja (Sacred Pennant) & Finial Staff -->
+  <line x1="160" y1="44" x2="160" y2="62" stroke="#B08A3E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M160 46 L175 52 L160 58 Z" fill="#8F241C"/>
+  <circle cx="160" cy="62" r="3.5" fill="#B08A3E" stroke="#8F241C" stroke-width="0.75"/>
+  
+  <!-- Amalaka & Spire Tiers -->
+  <path d="M148 68 C148 65 172 65 172 68 L176 74 H144 Z" fill="#C86A12"/>
+  <path d="M145 75 H175 L179 88 H141 Z" fill="#8F241C" stroke="#B08A3E" stroke-width="1"/>
+  <path d="M137 89 H183 L188 105 H132 Z" fill="#C86A12" stroke="#B08A3E" stroke-width="1"/>
+  <path d="M127 106 H193 L200 126 H120 Z" fill="#8F241C" stroke="#B08A3E" stroke-width="1"/>
+  
+  <!-- Chhala Eaves / Cornice -->
+  <path d="M112 127 C136 123 184 123 208 127 L212 135 C186 131 134 131 108 135 Z" fill="#B08A3E"/>
+
+  <!-- Garbhagriha (Sanctum Body) -->
+  <rect x="118" y="135" width="84" height="80" fill="#24201D" stroke="#B08A3E" stroke-width="1.5"/>
+  
+  <!-- Decorative Sanctum Pilasters -->
+  <rect x="120" y="138" width="7" height="74" fill="#B08A3E" opacity="0.9"/>
+  <rect x="193" y="138" width="7" height="74" fill="#B08A3E" opacity="0.9"/>
+
+  <!-- Torana (Sanctum Archway) -->
+  <path d="M132 215 V166 C132 144 188 144 188 166 V215" fill="#FBF4E6" stroke="#B08A3E" stroke-width="2.5"/>
+  <path d="M138 215 V170 C138 152 182 152 182 170 V215" fill="#24201D"/>
+
+  <!-- Centered Kali Jyoti (Sacred Flame & Altar) -->
+  <g transform="translate(160 190)">
+    <!-- Peetha (Altar Lamp Base) -->
+    <path d="M-18 20 C-10 24 10 24 18 20 C14 22.5 -14 22.5 -18 20 Z" fill="#B08A3E"/>
+    <path d="M-14 22 H14 V24 H-14 Z" fill="#C86A12"/>
+    
+    <!-- Outer Sacred Flame -->
+    <path d="M0 -24 C-8 -15 -14 -7 -14 3 C-14 13 -7 19 0 21 C7 19 14 13 14 3 C14 -7 8 -15 0 -24 Z" fill="#8F241C"/>
+    <!-- Mid Flame (Radiance) -->
+    <path d="M0 -17 C-5 -10 -9 -3 -9 4 C-9 11 -4 16 0 17 C4 16 9 11 9 4 C9 -3 5 -10 0 -17 Z" fill="#C86A12"/>
+    <!-- Core Sanctum Light -->
+    <path d="M0 -9 C-3 -4 -5 0 -5 5 C-5 10 -2 13 0 14 C2 13 5 10 5 5 C5 0 3 -4 0 -9 Z" fill="#FBF4E6"/>
+    <!-- Divine Bindu -->
+    <circle cx="0" cy="5" r="1.5" fill="#8F241C"/>
+  </g>
+
+  <!-- Lower Identification Cartouche / Ribbon -->
+  <!-- Tapered to follow the natural contour of the shield -->
+  <path d="M78 223 L242 223 C245 223 247 225 246 228 L238 262 C237 265 234 267 231 267 L89 267 C86 267 83 265 82 262 L74 228 C73 225 75 223 78 223 Z" fill="#8F241C" stroke="#B08A3E" stroke-width="1.5"/>
+  <path d="M83 227 L237 227 L231 263 L89 263 Z" fill="none" stroke="#B08A3E" stroke-width="0.75" opacity="0.6"/>
+
+  <!-- Emblem Text (Centered on X=160) -->
+  <text x="160" y="243" text-anchor="middle" font-family="'Noto Sans Bengali', 'Nirmala UI', sans-serif" font-size="12.5" font-weight="700" fill="#FBF4E6" letter-spacing="0.5">শ্রী শ্রী রক্ষা কালী</text>
+  <text x="160" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="700" fill="#B08A3E" letter-spacing="1.5">TEMPLE IDENTITY</text>
 </svg>
