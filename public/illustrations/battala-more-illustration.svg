@@ -1,20 +1,549 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520" role="img" aria-labelledby="title desc">
-  <title id="title">বটতলা মোড় — স্থানচিত্র অলঙ্করণ</title>
-  <desc id="desc">Conceptual rural banyan-tree road-junction illustration associated with the location identity; not a surveyed map.</desc>
-  <rect width="720" height="520" rx="28" fill="#FBF4E6"/>
-  <path d="M70 414Q220 344 650 414v106H70Z" fill="#E6D8C4"/>
-  <path d="M312 520q2-91 42-152 48-74 56-134 8-61 70-118" fill="none" stroke="#756B61" stroke-width="78" stroke-linecap="round"/>
-  <path d="M312 520q2-91 42-152 48-74 56-134" fill="none" stroke="#24201D" stroke-width="4" stroke-linecap="round"/>
-  <g transform="translate(392 54)">
-    <path d="M98 268Q78 208 86 126 92 78 75 16" fill="none" stroke="#47614D" stroke-width="20" stroke-linecap="round"/>
-    <path d="M84 58Q40 30 3 26m86 42q50-36 96-34M82 116q-50-27-101-16m100 47q50-18 107-5" fill="none" stroke="#24201D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M8 23q47-24 101-8-48 18-101 8Zm112 24q44-27 89-13-44 24-89 13ZM-2 102q45-22 95-10-47 18-95 10Zm122 32q50-25 101-8-51 21-101 8Z" fill="#47614D"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 480 360"
+  width="480"
+  height="360"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>সাহাপুর বটতলা মোড় — স্থানিক ল্যান্ডমার্ক চিত্র</title>
+  <desc>Geographical landmark illustration of Sahapur Battala More, Raiganj, Uttar Dinajpur for Sri Sri Maa Raksha Kali Mandir. Canonical 5-Color System with rich rural Bengal environmental detailing. Design state: DESIGN_RUNTIME.</desc>
+
+  <!-- ============================================================ -->
+  <!-- DEFINITIONS: PALETTES, GRADIENTS & PATTERNS                  -->
+  <!-- ============================================================ -->
+  <defs>
+    <!-- Background: Luminous Morning Sky over Rural Bengal -->
+    <radialGradient id="bmSkyGrad" cx="50%" cy="32%" r="78%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="42%" stop-color="#FFFDF7"/>
+      <stop offset="75%" stop-color="#FBF4E6"/>
+      <stop offset="100%" stop-color="#EFE0C7"/>
+    </radialGradient>
+
+    <!-- Traditional Bengali Alpana Lace Texture Overlay -->
+    <pattern id="bmAlpanaTile" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 30 15 L 15 30 L 0 15 Z" fill="none" stroke="#B08A3E" stroke-width="0.45" stroke-opacity="0.12"/>
+      <circle cx="15" cy="15" r="4.5" fill="none" stroke="#8F241C" stroke-width="0.4" stroke-opacity="0.08"/>
+      <circle cx="15" cy="15" r="1.2" fill="#B08A3E" fill-opacity="0.18"/>
+    </pattern>
+
+    <!-- Morning Sun Aura Behind Mandir & Banyan -->
+    <radialGradient id="bmSunAura" cx="72%" cy="40%" r="48%">
+      <stop offset="0%" stop-color="#FFDF94" stop-opacity="0.5"/>
+      <stop offset="45%" stop-color="#F5A623" stop-opacity="0.22"/>
+      <stop offset="85%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Temple Burnished Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="bmGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9EEC8"/>
+      <stop offset="25%" stop-color="#D9B15B"/>
+      <stop offset="65%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Gradient -->
+    <linearGradient id="bmCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </linearGradient>
+
+    <!-- Ancient Gnarled Banyan Tree Bark Texture -->
+    <linearGradient id="bmTrunkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D1F17"/>
+      <stop offset="22%" stop-color="#4A3426"/>
+      <stop offset="50%" stop-color="#624633"/>
+      <stop offset="78%" stop-color="#432F23"/>
+      <stop offset="100%" stop-color="#221711"/>
+    </linearGradient>
+
+    <!-- Dense Foliage Canopy Layer Gradients -->
+    <radialGradient id="bmFoliageDeep" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#34683C"/>
+      <stop offset="60%" stop-color="#214828"/>
+      <stop offset="100%" stop-color="#142F19"/>
+    </radialGradient>
+
+    <radialGradient id="bmFoliageMid" cx="45%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#55915F"/>
+      <stop offset="50%" stop-color="#387042"/>
+      <stop offset="100%" stop-color="#224929"/>
+    </radialGradient>
+
+    <radialGradient id="bmFoliageSunlit" cx="40%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#7BB885"/>
+      <stop offset="45%" stop-color="#4F8C59"/>
+      <stop offset="100%" stop-color="#2A5932"/>
+    </radialGradient>
+
+    <!-- Village Roadway / Path Gradient -->
+    <linearGradient id="bmRoadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2D4BC"/>
+      <stop offset="50%" stop-color="#D4C2A3"/>
+      <stop offset="100%" stop-color="#C2AE8B"/>
+    </linearGradient>
+
+    <!-- Sacred Red & Yellow Rakshasutra Thread Texture -->
+    <linearGradient id="bmMauliThread" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8F241C"/>
+      <stop offset="25%" stop-color="#F5A623"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="75%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#8F241C"/>
+    </linearGradient>
+
+    <!-- Diya Sacred Flame Multi-Stage Gradient -->
+    <linearGradient id="bmDiyaFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="30%" stop-color="#8F241C"/>
+      <stop offset="70%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#FFFDF7"/>
+    </linearGradient>
+
+    <!-- Traditional Ornate Corner Filigree Macro -->
+    <g id="bmCornerFiligree">
+      <path d="M 0,0 L 28,0 C 28,14 14,28 0,28 Z" fill="url(#bmGoldGrad)" opacity="0.9"/>
+      <path d="M 3,3 L 21,3 C 21,12 12,21 3,21 Z" fill="#FBF4E6"/>
+      <circle cx="8" cy="8" r="2.2" fill="#8F241C"/>
+      <path d="M 0,28 L 28,0" stroke="#8F241C" stroke-width="1.2" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 1. BASE CANVAS & NOTARIAL SECURITY BORDERS                   -->
+  <!-- ============================================================ -->
+  <!-- Luminous Sky Ground -->
+  <rect width="480" height="360" rx="16" fill="url(#bmSkyGrad)"/>
+  <rect width="480" height="360" rx="16" fill="url(#bmAlpanaTile)"/>
+
+  <!-- Outer Deep Crimson Enclosure Frame -->
+  <rect x="12" y="12" width="456" height="336" rx="14" fill="none" stroke="#8F241C" stroke-width="2.6"/>
+
+  <!-- Inner Burnished Brass Guard Rail -->
+  <rect x="18" y="18" width="444" height="324" rx="10" fill="none" stroke="url(#bmGoldGrad)" stroke-width="1.4"/>
+
+  <!-- Guilloché Beaded Tracking Line -->
+  <rect x="23" y="23" width="434" height="314" rx="7" fill="none" stroke="#8F241C" stroke-width="0.8" stroke-dasharray="2.5 2.5" opacity="0.6"/>
+
+  <!-- Four Ornamental Corner Brackets -->
+  <use xlink:href="#bmCornerFiligree" x="23" y="23"/>
+  <use xlink:href="#bmCornerFiligree" x="457" y="23" transform="rotate(90 457 23)"/>
+  <use xlink:href="#bmCornerFiligree" x="457" y="337" transform="rotate(180 457 337)"/>
+  <use xlink:href="#bmCornerFiligree" x="23" y="337" transform="rotate(270 23 337)"/>
+
+  <!-- Top Identification Badge -->
+  <g transform="translate(240, 38)">
+    <rect x="-135" y="-12" width="270" height="24" rx="12" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="1.2"/>
+    <text
+      x="0"
+      y="1"
+      text-anchor="middle"
+      dominant-baseline="central"
+      font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+      font-size="11"
+      font-weight="700"
+      fill="#FFFDF7"
+      letter-spacing="0.6"
+      text-rendering="geometricPrecision"
+    >
+      ★ শ্রী শ্রী মা রক্ষা কালী মন্দির ★
+    </text>
   </g>
-  <path d="M92 356l102-28 86 28-100 27Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
-  <path d="M118 351l76-20 58 18" fill="none" stroke="#FBF4E6" stroke-width="2"/>
-  <circle cx="218" cy="352" r="8" fill="#B08A3E"/>
-  <path d="M540 370l74-22 54 19-62 22Z" fill="#C86A12" stroke="#24201D" stroke-width="3"/>
-  <circle cx="592" cy="370" r="6" fill="#B08A3E"/>
-  <text x="360" y="470" text-anchor="middle" font-family="'Noto Sans Bengali',sans-serif" font-size="21" font-weight="600" fill="#8F241C">বটতলা মোড় • ধারণাগত স্থানচিত্র</text>
+
+  <!-- Sun Aura in the East (Toward Temple) -->
+  <circle cx="360" cy="150" r="140" fill="url(#bmSunAura)" aria-hidden="true"/>
+
+  <!-- Distant Village Tree Line / Horizon Silhouette -->
+  <path
+    d="
+      M 24,250
+      C 60,240 100,244 140,242
+      C 180,240 240,244 280,238
+      C 320,232 380,236 456,238
+      L 456,260 L 24,260 Z
+    "
+    fill="#88A88E"
+    opacity="0.3"
+  />
+
+  <!-- ============================================================ -->
+  <!-- 2. DISTANT SACRED MANDIR COMPLEX (RIGHT BACKGROUND)          -->
+  <!-- ============================================================ -->
+  <g id="distantMandir" transform="translate(340, 120)">
+    <!-- Mandir Glow -->
+    <circle cx="50" cy="65" r="48" fill="#F5A623" opacity="0.18"/>
+
+    <!-- Temple Pidha Shikhara Layers -->
+    <!-- Tier 1 (Base of Shikhara) -->
+    <polygon points="20,78 80,78 72,62 28,62" fill="url(#bmCrimsonGrad)" stroke="url(#bmGoldGrad)" stroke-width="0.8"/>
+    <!-- Tier 2 -->
+    <polygon points="26,62 74,62 68,48 32,48" fill="url(#bmCrimsonGrad)" stroke="url(#bmGoldGrad)" stroke-width="0.8"/>
+    <!-- Tier 3 -->
+    <polygon points="30,48 70,48 64,34 36,34" fill="url(#bmCrimsonGrad)" stroke="url(#bmGoldGrad)" stroke-width="0.8"/>
+    <!-- Top Spire Crown -->
+    <polygon points="34,34 66,34 50,14" fill="url(#bmCrimsonGrad)" stroke="url(#bmGoldGrad)" stroke-width="0.8"/>
+
+    <!-- Golden Amalaka & Kalasa -->
+    <ellipse cx="50" cy="14" rx="7" ry="2.5" fill="url(#bmGoldGrad)" stroke="#765217" stroke-width="0.6"/>
+    <circle cx="50" cy="9" r="3.2" fill="url(#bmGoldGrad)" stroke="#765217" stroke-width="0.6"/>
+
+    <!-- Staff & Consecrated Crimson Dhvaja (মন্দিরের লাল ধ্বজা) -->
+    <line x1="50" y1="9" x2="50" y2="-8" stroke="url(#bmGoldGrad)" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M 50,-8 L 74,-2 L 50,4 Z" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="0.5"/>
+
+    <!-- Sanctum Structure & Archway (গর্ভগৃহ তোরণ) -->
+    <rect x="16" y="78" width="68" height="42" fill="#24201D" stroke="url(#bmGoldGrad)" stroke-width="1"/>
+    <rect x="18" y="80" width="6" height="38" fill="url(#bmGoldGrad)" opacity="0.8"/>
+    <rect x="76" y="80" width="6" height="38" fill="url(#bmGoldGrad)" opacity="0.8"/>
+
+    <!-- Open Arch with Warm Sanctuary Light -->
+    <path d="M 36,120 V 96 C 36,86 64,86 64,96 V 120 Z" fill="#FFFDF7" stroke="url(#bmGoldGrad)" stroke-width="1.2"/>
+    <path d="M 40,120 V 98 C 40,90 60,90 60,98 V 120 Z" fill="#F5A623" opacity="0.75"/>
+    <!-- Small Sanctum Jyoti -->
+    <circle cx="50" cy="108" r="2.5" fill="#8F241C"/>
+    <circle cx="50" cy="108" r="1" fill="#FFFFFF"/>
+
+    <!-- Mandir Boundary Wall & Pathway Arch -->
+    <path d="M 6,114 L 16,114 L 16,122 L 6,122 Z" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="0.6"/>
+    <path d="M 84,114 L 96,114 L 96,122 L 84,122 Z" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="0.6"/>
+    <!-- Distant Devotee Approach Pathway -->
+    <path d="M 28,122 L 72,122 L 95,148 L 5,148 Z" fill="#E2D4BC" opacity="0.7"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 3. THE HISTORIC BANYAN TREE (ঐতিহাসিক বটবৃক্ষ — বটতলা)       -->
+  <!-- Center: X = 185 | Canopy spans X=50 to X=320                 -->
+  <!-- ============================================================ -->
+  <!-- BACK FOLIAGE MASSES (Deep Shadow Tone) -->
+  <g id="banyanBackFoliage">
+    <circle cx="120" cy="115" r="55" fill="url(#bmFoliageDeep)"/>
+    <circle cx="185" cy="90" r="68" fill="url(#bmFoliageDeep)"/>
+    <circle cx="255" cy="105" r="58" fill="url(#bmFoliageDeep)"/>
+    <circle cx="75" cy="140" r="42" fill="url(#bmFoliageDeep)"/>
+    <circle cx="295" cy="135" r="46" fill="url(#bmFoliageDeep)"/>
+  </g>
+
+  <!-- MID-LAYER FOLIAGE MASSES (Organic Leaf Tufts) -->
+  <g id="banyanMidFoliage">
+    <path d="M 130,135 C 100,105 130,65 170,80 C 195,55 240,65 245,95 C 275,85 295,115 280,140 C 295,165 265,185 235,175 C 205,190 170,185 155,165 C 125,175 110,150 130,135 Z" fill="url(#bmFoliageMid)"/>
+    <circle cx="105" cy="125" r="32" fill="url(#bmFoliageMid)"/>
+    <circle cx="150" cy="100" r="38" fill="url(#bmFoliageMid)"/>
+    <circle cx="215" cy="85" r="44" fill="url(#bmFoliageMid)"/>
+    <circle cx="265" cy="110" r="36" fill="url(#bmFoliageMid)"/>
+  </g>
+
+  <!-- GNARLED TRUNK & SPREADING BOUGHS (প্রাচীন কাণ্ড ও শাখাপ্রশাখা) -->
+  <g id="banyanWoodwork">
+    <!-- Secondary Back Branches -->
+    <path d="M 140,165 C 105,145 75,150 55,160" stroke="url(#bmTrunkGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M 230,160 C 265,140 295,145 320,158" stroke="url(#bmTrunkGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+    <!-- Massive Central Trunk with Ancient Fissures -->
+    <path
+      d="
+        M 152,168
+        C 158,198 142,228 128,252
+        L 242,252
+        C 228,228 212,198 218,168
+        C 205,174 165,174 152,168
+        Z
+      "
+      fill="url(#bmTrunkGrad)"
+    />
+
+    <!-- Bark Fissures & Grain Highlights -->
+    <g stroke="#1D120C" stroke-width="1.2" stroke-linecap="round" opacity="0.65" fill="none">
+      <path d="M 160,182 C 166,204 154,226 142,248"/>
+      <path d="M 180,175 C 182,200 176,224 172,248"/>
+      <path d="M 195,176 C 194,202 198,225 204,248"/>
+      <path d="M 212,185 C 206,208 216,228 226,248"/>
+    </g>
+
+    <!-- Main Spreading Forked Boughs -->
+    <!-- Left Major Limb -->
+    <path d="M 165,182 C 130,162 95,170 70,180" stroke="url(#bmTrunkGrad)" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M 145,172 C 120,145 88,140 68,145" stroke="url(#bmTrunkGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <!-- Right Major Limb -->
+    <path d="M 205,180 C 240,158 278,165 305,175" stroke="url(#bmTrunkGrad)" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M 225,170 C 255,142 288,138 312,142" stroke="url(#bmTrunkGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+    <!-- SACRED AERIAL PROP ROOTS (বটের ঐতিহ্যবাহী ঝুড়িমূল) -->
+    <!-- Hanging and Rooted Prop Columns -->
+    <g stroke="url(#bmTrunkGrad)" fill="none" stroke-linecap="round">
+      <!-- Root 1 (Far Left, Grounded) -->
+      <path d="M 72,180 C 76,202 82,228 84,252" stroke-width="3"/>
+      <!-- Root 2 (Mid-Left Hanging) -->
+      <path d="M 98,175 C 101,198 99,222 96,242" stroke-width="2.5"/>
+      <!-- Root 3 (Left-Central Pillar Root) -->
+      <path d="M 122,168 C 125,195 116,224 112,252" stroke-width="4.5"/>
+      <path d="M 112,205 C 114,225 116,240 118,252" stroke-width="2"/>
+      <!-- Root 4 (Right-Central Pillar Root) -->
+      <path d="M 248,168 C 244,195 252,224 256,252" stroke-width="4.5"/>
+      <path d="M 256,205 C 254,225 252,240 250,252" stroke-width="2"/>
+      <!-- Root 5 (Mid-Right Hanging) -->
+      <path d="M 275,175 C 272,198 276,222 278,245" stroke-width="2.5"/>
+      <!-- Root 6 (Far Right, Grounded) -->
+      <path d="M 302,175 C 298,202 292,228 288,252" stroke-width="3"/>
+
+      <!-- Slender Young Hanging Tendrils (ঝুলন্ত কোমল শিকড়) -->
+      <path d="M 85,160 C 86,182 84,198 83,212" stroke-width="1.2" stroke="#8A6348"/>
+      <path d="M 138,155 C 137,178 140,195 138,208" stroke-width="1.2" stroke="#8A6348"/>
+      <path d="M 232,155 C 233,178 230,195 232,208" stroke-width="1.2" stroke="#8A6348"/>
+      <path d="M 288,160 C 287,182 289,198 290,212" stroke-width="1.2" stroke="#8A6348"/>
+    </g>
+
+    <!-- SACRED MAULI THREAD TIED AROUND BANYAN (গাছে বাঁধা লাল-হলুদ ভক্তিমূলক সুতো) -->
+    <g transform="translate(0, -3)">
+      <rect x="146" y="222" width="78" height="4" rx="1.5" fill="url(#bmMauliThread)"/>
+      <rect x="144" y="228" width="82" height="4" rx="1.5" fill="url(#bmMauliThread)"/>
+      <rect x="142" y="234" width="86" height="4" rx="1.5" fill="url(#bmMauliThread)"/>
+      <!-- Sacred Sindoor Tilak on Trunk -->
+      <ellipse cx="185" cy="214" rx="6" ry="10" fill="#8F241C"/>
+      <circle cx="185" cy="214" r="2.5" fill="#C86A12"/>
+      <circle cx="185" cy="214" r="1" fill="#FFFDF7"/>
+    </g>
+  </g>
+
+  <!-- FOREGROUND SUNLIT FOLIAGE CANOPY CLUSTERS -->
+  <g id="banyanSunlitLeaves">
+    <circle cx="135" cy="115" r="28" fill="url(#bmFoliageSunlit)"/>
+    <circle cx="170" cy="85" r="32" fill="url(#bmFoliageSunlit)"/>
+    <circle cx="215" cy="90" r="34" fill="url(#bmFoliageSunlit)"/>
+    <circle cx="245" cy="115" r="28" fill="url(#bmFoliageSunlit)"/>
+    <circle cx="95" cy="140" r="24" fill="url(#bmFoliageSunlit)"/>
+    <circle cx="280" cy="138" r="26" fill="url(#bmFoliageSunlit)"/>
+
+    <!-- Delicate Individual Banyan Leaf Sprays -->
+    <g fill="#7BB885" opacity="0.9">
+      <path d="M 120,75 C 114,68 126,62 130,70 Z"/>
+      <path d="M 155,58 C 149,51 161,45 165,53 Z"/>
+      <path d="M 205,55 C 211,48 219,56 215,63 Z"/>
+      <path d="M 255,75 C 261,68 269,76 265,83 Z"/>
+      <path d="M 68,125 C 62,118 74,112 78,120 Z"/>
+      <path d="M 302,122 C 308,115 316,123 312,130 Z"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 4. TRADITIONAL BRICK PLINTH / CHABUTRA (বাঁধানো বটতলা বেদি) -->
+  <!-- Center: X = 185 | Y = 252 to Y = 278                         -->
+  <!-- ============================================================ -->
+  <g id="brickPlinth">
+    <!-- Top Step / Coping Slab -->
+    <path
+      d="
+        M 86,252
+        L 284,252
+        L 276,262
+        L 94,262
+        Z
+      "
+      fill="url(#bmCrimsonGrad)"
+      stroke="url(#bmGoldGrad)"
+      stroke-width="1.2"
+    />
+
+    <!-- Brick Mortar Courses (গাথুনির নকশা) -->
+    <g stroke="url(#bmGoldGrad)" stroke-width="0.7" opacity="0.7">
+      <line x1="120" y1="252" x2="122" y2="262"/>
+      <line x1="150" y1="252" x2="152" y2="262"/>
+      <line x1="185" y1="252" x2="185" y2="262"/>
+      <line x1="220" y1="252" x2="218" y2="262"/>
+      <line x1="250" y1="252" x2="248" y2="262"/>
+    </g>
+
+    <!-- Lower Tier Plinth -->
+    <path
+      d="
+        M 76,262
+        L 294,262
+        L 284,276
+        L 86,276
+        Z
+      "
+      fill="#65120D"
+      stroke="url(#bmGoldGrad)"
+      stroke-width="1.4"
+    />
+
+    <g stroke="url(#bmGoldGrad)" stroke-width="0.7" opacity="0.7">
+      <line x1="105" y1="262" x2="107" y2="276"/>
+      <line x1="135" y1="262" x2="137" y2="276"/>
+      <line x1="168" y1="262" x2="169" y2="276"/>
+      <line x1="202" y1="262" x2="201" y2="276"/>
+      <line x1="235" y1="262" x2="233" y2="276"/>
+      <line x1="265" y1="262" x2="263" y2="276"/>
+    </g>
+
+    <!-- Sacred Folk Offerings on Tree Platform (বেদির উপর ভক্তিময় অর্ঘ্য) -->
+    <!-- Holy Vermilion-Smeared Aniconic Shila (দেবীস্থান শিলা) -->
+    <ellipse cx="185" cy="254" rx="8" ry="5.5" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="0.8"/>
+    <circle cx="185" cy="252" r="2" fill="#C86A12"/>
+
+    <!-- Brass Diya with Radiant Flame on Left -->
+    <g transform="translate(142, 253)">
+      <path d="M -8,5 C -5,9 5,9 8,5 Z" fill="url(#bmGoldGrad)" stroke="#765217" stroke-width="0.6"/>
+      <path d="M 0,5 C -2.5,2 -3,-3 0,-7 C 3,-3 2.5,2 0,5 Z" fill="url(#bmDiyaFlame)"/>
+      <circle cx="0" cy="1" r="0.8" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Consecrated Red Hibiscus Offerings (রক্তজবা নিবেদন) -->
+    <g transform="translate(225, 254) scale(0.7)">
+      <path d="M 0,0 C -8,-10 -5,-18 0,-20 C 5,-18 8,-10 0,0 Z" fill="#8F241C"/>
+      <path d="M 0,0 C -14,-6 -18,0 -14,6 C -10,8 -4,4 0,0 Z" fill="#A8261C"/>
+      <path d="M 0,0 C 14,-6 18,0 14,6 C 10,8 4,4 0,0 Z" fill="#A8261C"/>
+      <circle cx="0" cy="-2" r="2" fill="#EED89B"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 5. CROSSROADS INTERSECTION & DIRECTIONAL SIGNPOST (বটতলা মোড়) -->
+  <!-- ============================================================ -->
+  <!-- Crossroads Pavement (বটতলা মোড় সড়ক সংযোগ) -->
+  <g id="crossroadsSurface">
+    <!-- Main Raiganj-Sahapur Roadway Band -->
+    <path
+      d="
+        M 18,276
+        L 462,276
+        L 462,302
+        L 18,302
+        Z
+      "
+      fill="url(#bmRoadGrad)"
+    />
+
+    <!-- Kerb / Stone Edging -->
+    <line x1="18" y1="276" x2="462" y2="276" stroke="url(#bmGoldGrad)" stroke-width="1.6"/>
+    <line x1="18" y1="302" x2="462" y2="302" stroke="#8F241C" stroke-width="2"/>
+
+    <!-- Connecting Temple Approach Fork (মন্দির অভিমুখী সড়ক শাখা) -->
+    <path
+      d="
+        M 270,276
+        L 345,268
+        L 380,268
+        L 330,276
+        Z
+      "
+      fill="#D4C2A3"
+      opacity="0.9"
+    />
+    <line x1="270" y1="276" x2="345" y2="268" stroke="url(#bmGoldGrad)" stroke-width="1" stroke-dasharray="3 2"/>
+
+    <!-- Road Centerline Dashes -->
+    <line x1="24" y1="289" x2="456" y2="289" stroke="#FFFDF7" stroke-width="1.4" stroke-dasharray="8 6" opacity="0.85"/>
+  </g>
+
+  <!-- Traditional Bengal Milestone & Directional Arrow (মাইলফলক ও দিকনির্দেশক) -->
+  <g id="landmarkMilestone" transform="translate(44, 216)">
+    <!-- Shadow -->
+    <ellipse cx="14" cy="62" rx="18" ry="4" fill="#24201D" opacity="0.35"/>
+
+    <!-- Classical Rounded Concrete Milestone Post -->
+    <path
+      d="
+        M 0,60
+        L 0,22
+        C 0,8 28,8 28,22
+        L 28,60
+        Z
+      "
+      fill="#FFFDF7"
+      stroke="#765217"
+      stroke-width="1.2"
+    />
+
+    <!-- Milestone Yellow / Gold Dome Cap (State Highway Standard) -->
+    <path
+      d="
+        M 0,22
+        C 0,8 28,8 28,22
+        Z
+      "
+      fill="url(#bmGoldGrad)"
+      stroke="#765217"
+      stroke-width="1.2"
+    />
+
+    <!-- Milestone Inscriptions -->
+    <text x="14" y="36" text-anchor="middle" font-family="'Noto Sans Bengali', sans-serif" font-size="6.5" font-weight="700" fill="#8F241C">
+      সাহাপুর
+    </text>
+    <text x="14" y="47" text-anchor="middle" font-family="'Noto Sans Bengali', sans-serif" font-size="7" font-weight="700" fill="#24201D">
+      বটতলা
+    </text>
+    <text x="14" y="56" text-anchor="middle" font-family="'Noto Sans Bengali', sans-serif" font-size="6" font-weight="700" fill="#C86A12">
+      ০ কিমি
+    </text>
+
+    <!-- Directional Temple Signboard Flag (মন্দির দিকনির্দেশক ফলক) -->
+    <g transform="translate(18, -2)">
+      <!-- Iron Post -->
+      <line x1="16" y1="12" x2="16" y2="60" stroke="#24201D" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Signboard Arrow -->
+      <path
+        d="
+          M 16,12
+          L 84,12
+          L 94,22
+          L 84,32
+          L 16,32
+          Z
+        "
+        fill="#8F241C"
+        stroke="url(#bmGoldGrad)"
+        stroke-width="1.2"
+      />
+      <!-- Inscribed Text -->
+      <text x="50" y="24" text-anchor="middle" font-family="'Noto Sans Bengali', 'SolaimanLipi', sans-serif" font-size="9" font-weight="700" fill="#FFFDF7" letter-spacing="0.3">
+        মন্দির পথ ➔
+      </text>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 6. BOTTOM DIVIDER & CANONICAL BENGALI TYPOGRAPHY            -->
+  <!-- ============================================================ -->
+  <!-- Architectural Gold Baseline Divider -->
+  <line x1="45" y1="312" x2="435" y2="312" stroke="url(#bmGoldGrad)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="45" cy="312" r="3" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="1"/>
+  <circle cx="435" cy="312" r="3" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="1"/>
+  <circle cx="240" cy="312" r="2.5" fill="#8F241C" stroke="url(#bmGoldGrad)" stroke-width="0.8"/>
+
+  <!-- Primary Bengali Landmark Title Label -->
+  <text
+    x="240"
+    y="329"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="15.5"
+    font-weight="700"
+    fill="#8F241C"
+    letter-spacing="0.4"
+    text-rendering="geometricPrecision"
+  >
+    সাহাপুর বটতলা মোড় • রায়গঞ্জ (মন্দির প্রবেশপথ)
+  </text>
+
+  <!-- Sub-caption Line: Geographical Coordinates & Sacred Significance -->
+  <text
+    x="240"
+    y="344"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Noto Sans Bengali', 'SolaimanLipi', 'Nirmala UI', sans-serif"
+    font-size="11"
+    font-weight="600"
+    fill="#C86A12"
+    letter-spacing="0.3"
+    text-rendering="geometricPrecision"
+  >
+    ঐতিহাসিক বটবৃক্ষ প্রাঙ্গণ • গ্রামীণ সংযোগ ও পুণ্যতীর্থ পথ
+  </text>
 </svg>
