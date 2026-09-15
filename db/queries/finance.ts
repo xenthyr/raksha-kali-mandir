@@ -1,0 +1,5 @@
+import type { D1Like } from "../../lib/db/client";
+export interface DonationPublicRow { id:string; public_reference:string; purpose_code:string; amount_paise:number; currency:string; method:string; status:string; created_at:string; }
+export async function findDonationPublic(db:D1Like,reference:string):Promise<DonationPublicRow|null>{return db.prepare(`SELECT id,public_reference,purpose_code,amount_paise,currency,method,status,created_at FROM donations WHERE public_reference=? AND deleted_at IS NULL LIMIT 1`).bind(reference).first<DonationPublicRow>();}
+export interface MonthlyReportRow { report_code:string; report_year:number; report_month:number; status:string; income_total_paise:number; expense_total_paise:number; net_total_paise:number; published_at:string|null; }
+export async function listPublishedMonthlyReports(db:D1Like,year:number):Promise<MonthlyReportRow[]>{const r=await db.prepare(`SELECT report_code,report_year,report_month,status,income_total_paise,expense_total_paise,net_total_paise,published_at FROM monthly_reports WHERE report_year=? AND status='PUBLISHED' ORDER BY report_month`).bind(year).all<MonthlyReportRow>();return r.results;}
