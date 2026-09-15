@@ -1,0 +1,4 @@
+import type { D1Like } from "../../lib/db/client";
+export interface DonationVerificationSummary { id:string; publicReference:string; purposeCode:string; amountPaise:number; status:string; }
+export async function getDonationForVerification(db:D1Like,id:string){return db.prepare(`SELECT id,public_reference,purpose_code,amount_paise,status,verified_by,verified_at,revision_id,version FROM donations WHERE id=? AND deleted_at IS NULL LIMIT 1`).bind(id).first<Record<string,unknown>>();}
+export async function getVerificationRecord(db:D1Like,donationId:string){return db.prepare(`SELECT id,donation_id,verification_reference,status,submitted_amount_paise,duplicate_flag,amount_mismatch_flag,submitted_at,reviewed_at,verifier_user_id FROM donation_verifications WHERE donation_id=? ORDER BY submitted_at DESC LIMIT 1`).bind(donationId).first<Record<string,unknown>>();}
