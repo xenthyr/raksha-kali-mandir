@@ -1,42 +1,41 @@
 <svg
 xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 48 48"
-width="280"
-height="280"
+width="48"
+height="48"
 fill="none"
 xml:space="preserve"
-style="max-width: 100%; height: auto; display: block; margin: 0 auto;"
 > 
 <title>পবিত্র পঞ্চমুখী রক্তজবা প্রতীক (Sacred Rakta Jaba Icon)</title>
 <desc>Realistic sacred red hibiscus (Hibiscus rosa-sinensis / Rakta Jaba) icon beloved of Maa Raksha Kali, featuring ruffled layered petals, realistic venation, velvety crimson gradients, protruding staminal column with golden pollen anthers, and five-lobed velvet stigma. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
 <defs>
-<!-- Background Petal Shadow -->
+<!-- Background Petal Shadow (গভীর লাল ছায়া) -->
 <radialGradient id="jabaPetalDark" cx="45%" cy="40%" r="65%">
 <stop offset="0%" stop-color="#8F241C"/>
 <stop offset="60%" stop-color="#65120D"/>
 <stop offset="100%" stop-color="#380705"/>
 </radialGradient>
-<!-- Mid Petal Rich Crimson Gradient -->
+<!-- Mid Petal Rich Crimson Gradient (রক্তিম স্তর) -->
 <radialGradient id="jabaPetalMid" cx="40%" cy="30%" r="70%">
 <stop offset="0%" stop-color="#C23023"/>
 <stop offset="45%" stop-color="#A8261C"/>
 <stop offset="80%" stop-color="#8F241C"/>
 <stop offset="100%" stop-color="#550E09"/>
 </radialGradient>
-<!-- Fore Petal Velvet Highlight Gradient -->
+<!-- Fore Petal Velvet Highlight Gradient (ভেলভেটি আভা) -->
 <linearGradient id="jabaPetalHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
 <stop offset="0%" stop-color="#D93829"/>
 <stop offset="35%" stop-color="#B8281D"/>
 <stop offset="75%" stop-color="#8F241C"/>
 <stop offset="100%" stop-color="#4A0A07"/>
 </linearGradient>
-<!-- Deep Throat/Corolla Heart Shadow -->
+<!-- Deep Throat/Corolla Heart Shadow (পুষ্পগর্ভ) -->
 <radialGradient id="jabaThroatGlow" cx="50%" cy="50%" r="50%">
 <stop offset="0%" stop-color="#1A0302"/>
 <stop offset="65%" stop-color="#4D0C08"/>
 <stop offset="100%" stop-color="#8F241C" stop-opacity="0"/>
 </radialGradient>
-<!-- Staminal Column Gradient -->
+<!-- Staminal Column Gradient (পরাগনালীর বর্ণচ্ছটা) -->
 <linearGradient id="jabaStaminalColumn" x1="0%" y1="100%" x2="0%" y2="0%">
 <stop offset="0%" stop-color="#4D0C08"/>
 <stop offset="25%" stop-color="#8F241C"/>
@@ -44,14 +43,14 @@ style="max-width: 100%; height: auto; display: block; margin: 0 auto;"
 <stop offset="85%" stop-color="#F5A623"/>
 <stop offset="100%" stop-color="#FAF0CE"/>
 </linearGradient>
-<!-- Golden Pollen Grains / Anthers -->
+<!-- Golden Pollen Grains / Anthers (স্বর্ণালী পরাগধানী) -->
 <radialGradient id="jabaPollenGold" cx="35%" cy="35%" r="65%">
 <stop offset="0%" stop-color="#FFFDF7"/>
 <stop offset="40%" stop-color="#F9EEC8"/>
 <stop offset="75%" stop-color="#D9B15B"/>
 <stop offset="100%" stop-color="#765217"/>
 </radialGradient>
-<!-- Velvet Stigma Pad -->
+<!-- Velvet Stigma Pad (পাঁচমুখী গর্ভমুণ্ড) -->
 <radialGradient id="jabaStigmaRed" cx="35%" cy="35%" r="65%">
 <stop offset="0%" stop-color="#C23023"/>
 <stop offset="60%" stop-color="#8F241C"/>
@@ -68,9 +67,10 @@ style="max-width: 100%; height: auto; display: block; margin: 0 auto;"
 <ellipse cx="23.5" cy="27" rx="18.5" ry="15.5" fill="url(#jabaDropShadow)"/>
 <!-- ============================================================ -->
 <!-- 1. FIVE OVERLAPPING RUFFLED HIBISCUS PETALS                 -->
+<!-- Center: X=22, Y=26                                           -->
 <!-- ============================================================ -->
 <g id="hibiscusCorolla">
-<!-- PETAL 1: LOWER-LEFT -->
+<!-- PETAL 1: LOWER-LEFT (নিম্ন-বাম পাপড়ি) -->
 <path
 d="
 M 22,26
@@ -86,7 +86,7 @@ stroke-width="0.5"
 />
 <path d="M 20,29 C 16,33 13,38 10,41" stroke="#8F241C" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.75"/>
 <path d="M 21,31 C 18,35 17,38 16,42" stroke="#8F241C" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.6"/>
-<!-- PETAL 2: LOWER-RIGHT -->
+<!-- PETAL 2: LOWER-RIGHT (নিম্ন-ডান পাপড়ি) -->
 <path
 d="
 M 22,26
@@ -102,7 +102,7 @@ stroke-width="0.5"
 />
 <path d="M 24,27 C 29,30 34,33 38,36" stroke="#8F241C" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.75"/>
 <path d="M 25,29 C 28,33 30,36 33,38" stroke="#8F241C" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.6"/>
-<!-- PETAL 3: MID-LEFT FLANK -->
+<!-- PETAL 3: MID-LEFT FLANK (মধ্য-বাম পাপড়ি) -->
 <path
 d="
 M 22,26
@@ -119,7 +119,7 @@ stroke-width="0.5"
 <path d="M 4.5,17.5 C 5.5,14.5 9,13.8 13,15" stroke="#D93829" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.65"/>
 <path d="M 18,22 C 14,20 9,19 6,18" stroke="#65120D" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.8"/>
 <path d="M 19,24 C 15,24 10,23 6,22" stroke="#65120D" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.7"/>
-<!-- PETAL 4: TOP-LEFT CREST -->
+<!-- PETAL 4: TOP-LEFT CREST (ঊর্ধ্ব-বাম পাপড়ি) -->
 <path
 d="
 M 22,26
@@ -136,7 +136,7 @@ stroke-width="0.5"
 <path d="M 18,7 C 21,5 25,5.5 26.5,8.5" stroke="#FFA399" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.45"/>
 <path d="M 22,21 C 21,16 19,12 18,8" stroke="#65120D" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.8"/>
 <path d="M 23,20 C 23.5,16 24.5,12 25,9" stroke="#65120D" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.7"/>
-<!-- PETAL 5: MID-RIGHT OVERLAPPING -->
+<!-- PETAL 5: MID-RIGHT OVERLAPPING (উন্মুক্ত ডান পাপড়ি) -->
 <path
 d="
 M 22,26
@@ -153,7 +153,7 @@ stroke-width="0.5"
 <path d="M 39,11 C 41,14 39,18 36,20" stroke="#FFA399" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.4"/>
 <path d="M 25,22 C 30,19 35,16 38,13" stroke="#65120D" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.8"/>
 <path d="M 26,24 C 31,23 35,21 38,18" stroke="#65120D" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.7"/>
-<!-- COROLLA THROAT / EYE -->
+<!-- COROLLA THROAT / EYE (পুষ্পকেন্দ্রে গভীর রক্তিম আভা) -->
 <circle cx="22" cy="26" r="6" fill="url(#jabaThroatGlow)"/>
 <circle cx="22" cy="26" r="2.8" fill="#1C0302"/>
 </g>
@@ -170,7 +170,7 @@ stroke-linecap="round"
 opacity="0.3"
 fill="none"
 />
-<!-- Main Staminal Column Tube -->
+<!-- Main Staminal Column Tube (পরাগনালী স্তম্ভ) -->
 <path
 d="M 22,26 C 24,20 28.5,14 34,7"
 stroke="url(#jabaStaminalColumn)"
@@ -187,7 +187,7 @@ stroke-linecap="round"
 opacity="0.75"
 fill="none"
 />
-<!-- Filament Stalks -->
+<!-- Filament Stalks Supporting Anthers (পরাগধানী বৃন্ত) -->
 <g stroke="url(#jabaPollenGold)" stroke-width="0.55" stroke-linecap="round" fill="none">
 <line x1="26.5" y1="18.5" x2="24.2" y2="17.2"/>
 <line x1="27.8" y1="16.5" x2="25.5" y2="14.8"/>
@@ -200,7 +200,7 @@ fill="none"
 <line x1="32.5" y1="11.8" x2="35.2" y2="11.2"/>
 <line x1="33.8" y1="9.8" x2="36.5" y2="8.8"/>
 </g>
-<!-- Golden Pollen Anthers -->
+<!-- Golden Pollen Anthers (রেণুমণ্ডিত পরাগধানী) -->
 <g fill="url(#jabaPollenGold)" stroke="#694611" stroke-width="0.3">
 <ellipse cx="23.8" cy="17" rx="1.1" ry="0.8" transform="rotate(-25 23.8 17)"/>
 <ellipse cx="25.2" cy="14.5" rx="1.15" ry="0.8" transform="rotate(-35 25.2 14.5)"/>
@@ -216,7 +216,7 @@ fill="none"
 <circle cx="30" cy="13.5" r="0.8"/>
 <circle cx="32" cy="11" r="0.75"/>
 </g>
-<!-- Style Branches -->
+<!-- Style Branches (গর্ভদণ্ড শাখা) -->
 <g stroke="#8F241C" stroke-width="0.7" stroke-linecap="round" fill="none">
 <line x1="34" y1="7" x2="32.2" y2="4.5"/>
 <line x1="34" y1="7" x2="33.8" y2="3.5"/>
@@ -224,7 +224,7 @@ fill="none"
 <line x1="34" y1="7" x2="37.2" y2="5.5"/>
 <line x1="34" y1="7" x2="36.5" y2="7.5"/>
 </g>
-<!-- Five Velvet Crimson Stigma Pads -->
+<!-- Five Velvet Crimson Stigma Pads (পঞ্চমুখী রক্তিম গর্ভমুণ্ড) -->
 <g fill="url(#jabaStigmaRed)" stroke="#FAF0CE" stroke-width="0.3">
 <circle cx="32" cy="4.2" r="1.35"/>
 <circle cx="33.8" cy="3.2" r="1.4"/>
