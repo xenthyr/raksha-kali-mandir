@@ -1,15 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" preserveAspectRatio="none" aria-hidden="true">
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M0 60H356M604 60H960" stroke="#B08A3E" stroke-width="1.5" stroke-opacity="0.55"/>
-    <path d="M0 64H310M650 64H960" stroke="#8F241C" stroke-width="1" stroke-opacity="0.28"/>
-    <g transform="translate(480 60)" stroke="#8F241C" stroke-width="2">
-      <path d="M0 0C-14 -6 -24 -18 -24 -31C-10 -29 -2 -18 0 0Z" fill="#FBF4E6"/>
-      <path d="M0 0C14 -6 24 -18 24 -31C10 -29 2 -18 0 0Z" fill="#FBF4E6"/>
-      <path d="M0 0C-24 -2 -39 -12 -45 -26C-27 -27 -9 -17 0 0Z" fill="#C86A12" fill-opacity="0.7"/>
-      <path d="M0 0C24 -2 39 -12 45 -26C27 -27 9 -17 0 0Z" fill="#C86A12" fill-opacity="0.7"/>
-      <path d="M-50 0C-32 -16 -18 -18 0 0C18 -18 32 -16 50 0C32 12 18 16 0 10C-18 16 -32 12 -50 0Z" fill="#FBF4E6"/>
-      <circle cx="0" cy="0" r="4" fill="#B08A3E" stroke="none"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 400 60"
+  width="400"
+  height="60"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>পদ্ম বিভাজক অলঙ্করণ নকশা (Architectural Lotus Divider Pattern)</title>
+  <desc>Seamless horizontal repeating architectural lotus divider pattern for Sri Sri Maa Raksha Kali Mandir. Features fully blooming multi-tiered sacred red lotuses (Nelumbo nucifera) with realistic cupped petals, golden stamen pericarp torus, sepal calyx base, undulating catenary rails, tendril scrolls (Mrinala Lata), and sacred vermilion junction bindus. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <linearGradient id="divGoldRail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="20%" stop-color="#E5C16C"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="80%" stop-color="#E5C16C"/>
+      <stop offset="100%" stop-color="#FAF0CE"/>
+    </linearGradient>
+
+    <linearGradient id="divLotusCrimson" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4A0A07"/>
+      <stop offset="30%" stop-color="#65120D"/>
+      <stop offset="65%" stop-color="#8F241C"/>
+      <stop offset="88%" stop-color="#BA3327"/>
+      <stop offset="100%" stop-color="#E57A3C"/>
+    </linearGradient>
+
+    <linearGradient id="divLotusHighlight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="35%" stop-color="#A8261C"/>
+      <stop offset="70%" stop-color="#D94436"/>
+      <stop offset="90%" stop-color="#FAF0CE"/>
+      <stop offset="100%" stop-color="#FFFDF7"/>
+    </linearGradient>
+
+    <radialGradient id="divLotusTorusGold" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="28%" stop-color="#FAF0CE"/>
+      <stop offset="65%" stop-color="#D9B15B"/>
+      <stop offset="88%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </radialGradient>
+
+    <linearGradient id="divSepalGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#559960"/>
+      <stop offset="50%" stop-color="#2F5E38"/>
+      <stop offset="100%" stop-color="#142B18"/>
+    </linearGradient>
+
+    <radialGradient id="divLotusShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#24201D" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#24201D" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Reusable Realistic Blooming Lotus -->
+    <g id="realisticBloomingLotus">
+      <ellipse cx="0" cy="5.5" rx="16" ry="3.2" fill="url(#divLotusShadow)"/>
+
+      <!-- Sepals -->
+      <path d="M -5,4 C -11,5 -15,9 -13,10.5 C -10,10.5 -7,7 -5,4 Z" fill="url(#divSepalGreen)" stroke="#142B18" stroke-width="0.38"/>
+      <path d="M 5,4 C 11,5 15,9 13,10.5 C 10,10.5 7,7 5,4 Z" fill="url(#divSepalGreen)" stroke="#142B18" stroke-width="0.38"/>
+      <path d="M -4,4 C -2,7 2,7 4,4 L 3,6.5 L -3,6.5 Z" fill="url(#divSepalGreen)" stroke="#142B18" stroke-width="0.4"/>
+      <circle cx="0" cy="5.2" r="0.65" fill="#FAF0CE"/>
+
+      <!-- Tier 1: Outspread Lateral Petals -->
+      <path d="M 0,3.5 C -8,3.5 -15,0 -18,-7 C -16.5,-10 -9.5,-8.5 -3.5,-1.5 Z" fill="url(#divLotusCrimson)" stroke="#550E09" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M -15.5,-7.2 C -12,-5.5 -8,-2.5 -5,0.5" stroke="#FAF0CE" stroke-width="0.4" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+      <path d="M 0,3.5 C 8,3.5 15,0 18,-7 C 16.5,-10 9.5,-8.5 3.5,-1.5 Z" fill="url(#divLotusCrimson)" stroke="#550E09" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M 15.5,-7.2 C 12,-5.5 8,-2.5 5,0.5" stroke="#FAF0CE" stroke-width="0.4" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+      <!-- Tier 2: Rear Radiating Petals -->
+      <path d="M 0,3 C -7,-2 -13,-9.5 -11.5,-17 C -7.5,-15 -3.5,-7 -1.5,0.5 Z" fill="url(#divLotusCrimson)" stroke="#550E09" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M -10.5,-14.8 C -7.5,-11 -4.5,-5 -3,-1" stroke="#FFFDF7" stroke-width="0.38" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+      <path d="M 0,3 C 7,-2 13,-9.5 11.5,-17 C 7.5,-15 3.5,-7 1.5,0.5 Z" fill="url(#divLotusCrimson)" stroke="#550E09" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M 10.5,-14.8 C 7.5,-11 4.5,-5 3,-1" stroke="#FFFDF7" stroke-width="0.38" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+      <!-- Tier 3: Inner Cup Petals & Apex -->
+      <path d="M 0,3 C -5,-3 -8,-12.5 -5,-19.5 C -2,-16.5 -0.5,-8 0,1 Z" fill="url(#divLotusHighlight)" stroke="#65120D" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M 0,3 C 5,-3 8,-12.5 5,-19.5 C 2,-16.5 0.5,-8 0,1 Z" fill="url(#divLotusHighlight)" stroke="#65120D" stroke-width="0.45" stroke-linejoin="round"/>
+
+      <path d="M 0,1.5 C -3,-7 -4.5,-16.5 0,-23.5 C 4.5,-16.5 3,-7 0,1.5 Z" fill="url(#divLotusHighlight)" stroke="#65120D" stroke-width="0.5" stroke-linejoin="round"/>
+      <line x1="0" y1="-21" x2="0" y2="-2" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" opacity="0.85"/>
+
+      <!-- Tier 4: Torus & Stamens -->
+      <ellipse cx="0" cy="-5.5" rx="4.6" ry="2.8" fill="url(#divLotusTorusGold)" stroke="#694611" stroke-width="0.45"/>
+      <ellipse cx="0" cy="-6" rx="3.6" ry="1.6" fill="#FAF0CE" opacity="0.85"/>
+
+      <circle cx="0" cy="-6.2" r="0.35" fill="#694611"/>
+      <circle cx="-1.8" cy="-5.9" r="0.32" fill="#694611"/>
+      <circle cx="1.8" cy="-5.9" r="0.32" fill="#694611"/>
+      <circle cx="-0.9" cy="-5" r="0.32" fill="#694611"/>
+      <circle cx="0.9" cy="-5" r="0.32" fill="#694611"/>
+
+      <g stroke="url(#divLotusTorusGold)" stroke-width="0.5" stroke-linecap="round" fill="none">
+        <line x1="-4.2" y1="-5.5" x2="-5.5" y2="-6.2"/>
+        <line x1="-3.8" y1="-7" x2="-4.8" y2="-8.2"/>
+        <line x1="-2.2" y1="-8" x2="-2.8" y2="-9.5"/>
+        <line x1="2.2" y1="-8" x2="2.8" y2="-9.5"/>
+        <line x1="3.8" y1="-7" x2="4.8" y2="-8.2"/>
+        <line x1="4.2" y1="-5.5" x2="5.5" y2="-6.2"/>
+      </g>
+      <g fill="url(#divLotusTorusGold)" stroke="#694611" stroke-width="0.2">
+        <circle cx="-5.8" cy="-6.5" r="0.55"/>
+        <circle cx="-5" cy="-8.5" r="0.55"/>
+        <circle cx="-3" cy="-9.8" r="0.58"/>
+        <circle cx="3" cy="-9.8" r="0.58"/>
+        <circle cx="5" cy="-8.5" r="0.55"/>
+        <circle cx="5.8" cy="-6.5" r="0.55"/>
+      </g>
+
+      <!-- Tier 5: Foreground Cup Petals -->
+      <path d="M 0,3 C -5.8,1 -9.5,-4 -7.2,-7.5 C -4.2,-7 -1.5,-3 0,2 Z" fill="url(#divLotusHighlight)" stroke="#731610" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M -7.5,-6.2 C -5.5,-5.2 -3,-2.2 -1.5,1.2" stroke="#FFFDF7" stroke-width="0.4" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+      <path d="M 0,3 C 5.8,1 9.5,-4 7.2,-7.5 C 4.2,-7 1.5,-3 0,2 Z" fill="url(#divLotusHighlight)" stroke="#731610" stroke-width="0.45" stroke-linejoin="round"/>
+      <path d="M 7.5,-6.2 C 5.5,-5.2 3,-2.2 1.5,1.2" stroke="#FFFDF7" stroke-width="0.4" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+      <path d="M -3.8,1.2 C -5.5,-2.8 -3.8,-5.8 -0.2,-5.2 C 3.4,-5.8 5.1,-2.8 3.4,1.2 C 1.8,3.2 -1.8,3.2 -3.8,1.2 Z" fill="url(#divLotusHighlight)" stroke="#731610" stroke-width="0.5" stroke-linejoin="round"/>
+      <circle cx="0" cy="-2" r="0.6" fill="#FFFFFF"/>
     </g>
+
+    <!-- Reusable Junction Rosette & Bud Knot -->
+    <g id="dividerJunctionNode">
+      <g transform="translate(0, -6)">
+        <ellipse cx="0" cy="0" rx="1.8" ry="0.75" fill="url(#divSepalGreen)" stroke="#142B18" stroke-width="0.3"/>
+        <path d="M 0,0 C -2.4,-2.5 0,-6.5 0,-6.5 C 0,-6.5 2.4,-2.5 0,0 Z" fill="url(#divLotusCrimson)" stroke="#550E09" stroke-width="0.35"/>
+        <circle cx="0" cy="-6.5" r="0.55" fill="url(#divGoldRail)"/>
+      </g>
+      <circle cx="0" cy="0" r="3.8" fill="url(#divGoldRail)" stroke="#694611" stroke-width="0.55"/>
+      <circle cx="0" cy="0" r="2.2" fill="#8F241C"/>
+      <circle cx="0" cy="0" r="0.8" fill="#FFFDF7"/>
+      <g transform="translate(0, 4)">
+        <line x1="0" y1="0" x2="0" y2="3.2" stroke="url(#divGoldRail)" stroke-width="0.8"/>
+        <ellipse cx="0" cy="4.5" rx="1.3" ry="1.8" fill="url(#divGoldRail)" stroke="#694611" stroke-width="0.3"/>
+        <circle cx="-0.3" cy="4" r="0.4" fill="#FFFFFF"/>
+      </g>
+    </g>
+
+    <!-- Master 100px Lotus Divider Unit -->
+    <g id="lotusDivUnit">
+      <!-- Catenary Rails -->
+      <path
+        d="M 0,30 C 12,30 18,37.2 28,37.2 C 33.5,37.2 36.5,35 40,33 M 60,33 C 63.5,35 66.5,37.2 72,37.2 C 82,37.2 88,30 100,30"
+        fill="none"
+        stroke="url(#divGoldRail)"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      />
+      <path
+        d="M 0,30 C 12,30 18,37.2 28,37.2 C 33.5,37.2 36.5,35 40,33 M 60,33 C 63.5,35 66.5,37.2 72,37.2 C 82,37.2 88,30 100,30"
+        fill="none"
+        stroke="#8F241C"
+        stroke-width="0.65"
+        stroke-dasharray="2.5 2"
+      />
+      <line x1="0" y1="30" x2="36" y2="30" stroke="url(#divGoldRail)" stroke-width="0.75" opacity="0.6"/>
+      <line x1="64" y1="30" x2="100" y2="30" stroke="url(#divGoldRail)" stroke-width="0.75" opacity="0.6"/>
+
+      <!-- Tendrils -->
+      <path d="M 36,33 C 28,36 22,39 16,36 C 13,34.5 15,31.5 18,32.5 C 20,33.2 20,35.5 18,36" stroke="url(#divGoldRail)" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+      <circle cx="18" cy="32.5" r="0.8" fill="#FFFDF7"/>
+      <circle cx="28" cy="37.2" r="1.1" fill="url(#divGoldRail)" stroke="#694611" stroke-width="0.3"/>
+      <circle cx="28" cy="37.2" r="0.45" fill="#8F241C"/>
+
+      <path d="M 64,33 C 72,36 78,39 84,36 C 87,34.5 85,31.5 82,32.5 C 80,33.2 80,35.5 82,36" stroke="url(#divGoldRail)" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+      <circle cx="82" cy="32.5" r="0.8" fill="#FFFDF7"/>
+      <circle cx="72" cy="37.2" r="1.1" fill="url(#divGoldRail)" stroke="#694611" stroke-width="0.3"/>
+      <circle cx="72" cy="37.2" r="0.45" fill="#8F241C"/>
+
+      <g fill="#FAF0CE" stroke="#694611" stroke-width="0.2">
+        <circle cx="12" cy="32.5" r="0.7"/>
+        <circle cx="20" cy="35.8" r="0.75"/>
+        <circle cx="80" cy="35.8" r="0.75"/>
+        <circle cx="88" cy="32.5" r="0.7"/>
+      </g>
+
+      <!-- Lotus Instance Centered at X=50 -->
+      <g transform="translate(50, 30)">
+        <use xlink:href="#realisticBloomingLotus" href="#realisticBloomingLotus"/>
+      </g>
+
+      <!-- Seam Connector Node at X=0 -->
+      <g transform="translate(0, 30)">
+        <use xlink:href="#dividerJunctionNode" href="#dividerJunctionNode"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- 4 Repeats -->
+  <use xlink:href="#lotusDivUnit" href="#lotusDivUnit" x="0" y="0"/>
+  <use xlink:href="#lotusDivUnit" href="#lotusDivUnit" x="100" y="0"/>
+  <use xlink:href="#lotusDivUnit" href="#lotusDivUnit" x="200" y="0"/>
+  <use xlink:href="#lotusDivUnit" href="#lotusDivUnit" x="300" y="0"/>
+
+  <!-- Terminal Right-Edge Junction Node (X=400) -->
+  <g transform="translate(400, 30)">
+    <use xlink:href="#dividerJunctionNode" href="#dividerJunctionNode"/>
   </g>
 </svg>
