@@ -1,12 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Trishul icon</title>
-  <desc id="desc">Flat trident icon with restrained vermilion and antique-gold accents.</desc>
-  <g fill="none" stroke="#8F241C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M32 51V12"/>
-    <path d="M20 19C20 11 26 8 32 17C38 8 44 11 44 19"/>
-    <path d="M22 17V29C22 35 26 39 32 39C38 39 42 35 42 29V17"/>
-    <path d="M26 50H38" stroke="#B08A3E"/>
-    <path d="M29 55H35" stroke="#C86A12"/>
-  </g>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  width="48"
+  height="48"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>পবিত্র মহাশক্তি ত্রিশূল প্রতীক (Sacred Trishula Icon)</title>
+  <desc>Realistic consecrated Trishula icon for Sri Sri Maa Raksha Kali Mandir. Features hand-carved beveled blade facets, symmetrical crescent barbs with medial ridges, consecrated raktachandan bindu, ornate Damaru with strike beads, silk ribbons, and turned brass staff. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Multi-Stage Burnished Temple Brass Lustre -->
+    <linearGradient id="trGoldBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="25%" stop-color="#FAF0CE"/>
+      <stop offset="55%" stop-color="#D9B15B"/>
+      <stop offset="85%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </linearGradient>
+
+    <!-- Blade Sunlit Facet Highlight -->
+    <linearGradient id="trBladeLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="40%" stop-color="#FFFFFF"/>
+      <stop offset="80%" stop-color="#E5C16C"/>
+      <stop offset="100%" stop-color="#B08A3E"/>
+    </linearGradient>
+
+    <!-- Blade Shadowed Facet -->
+    <linearGradient id="trBladeDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#996E24"/>
+      <stop offset="45%" stop-color="#765217"/>
+      <stop offset="80%" stop-color="#4E140F"/>
+      <stop offset="100%" stop-color="#24201D"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Velvet Inlay -->
+    <linearGradient id="trCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA3327"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#550E09"/>
+    </linearGradient>
+
+    <!-- Ambient Floor Contact Shadow -->
+    <radialGradient id="trShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#24201D" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#24201D" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Grounding Ambient Contact Shadow -->
+  <ellipse cx="24" cy="46" rx="6" ry="1.4" fill="url(#trShadow)"/>
+
+  <!-- 1. Turned Brass Staff -->
+  <rect x="22.7" y="25" width="2.6" height="18.5" rx="0.5" fill="url(#trGoldBevel)" stroke="#694611" stroke-width="0.5"/>
+  <line x1="23.4" y1="25.5" x2="23.4" y2="43" stroke="#FFFDF7" stroke-width="0.5" opacity="0.85"/>
+
+  <!-- Turned Grip Collars -->
+  <ellipse cx="24" cy="29.5" rx="2.5" ry="0.85" fill="url(#trGoldBevel)" stroke="#694611" stroke-width="0.4"/>
+  <ellipse cx="24" cy="35" rx="2.5" ry="0.85" fill="url(#trGoldBevel)" stroke="#694611" stroke-width="0.4"/>
+  <ellipse cx="24" cy="40.5" rx="2.5" ry="0.85" fill="url(#trGoldBevel)" stroke="#694611" stroke-width="0.4"/>
+
+  <!-- Conical Butt Spike Finial -->
+  <path
+    d="M 22.4,43.5 L 25.6,43.5 L 24,46.5 Z"
+    fill="url(#trGoldBevel)"
+    stroke="#694611"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+
+  <!-- 2. Sacred Damaru & Crimson Streamers -->
+  <path
+    d="M 21.2,24.2 L 26.8,24.2 L 22,27 L 26,27 Z"
+    fill="url(#trGoldBevel)"
+    stroke="#694611"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <line x1="21.2" y1="24.2" x2="26" y2="27" stroke="#FAF0CE" stroke-width="0.45"/>
+  <line x1="26.8" y1="24.2" x2="22" y2="27" stroke="#FAF0CE" stroke-width="0.45"/>
+  <circle cx="24" cy="25.6" r="1.1" fill="#8F241C" stroke="url(#trGoldBevel)" stroke-width="0.35"/>
+
+  <!-- Striker Cord Beads -->
+  <path d="M 23,25.6 Q 19.5,26.5 19,28" stroke="#765217" stroke-width="0.45" fill="none"/>
+  <circle cx="19" cy="28" r="0.75" fill="url(#trGoldBevel)" stroke="#694611" stroke-width="0.25"/>
+  <path d="M 25,25.6 Q 28.5,26.5 29,28" stroke="#765217" stroke-width="0.45" fill="none"/>
+  <circle cx="29" cy="28" r="0.75" fill="url(#trGoldBevel)" stroke="#694611" stroke-width="0.25"/>
+
+  <!-- Fluttering Crimson Silk Ribbons -->
+  <path
+    d="M 22.5,26.2 C 18.5,28.5 17,32.5 15,35.5 C 16.8,33 19.8,30.8 22.8,28.8 Z"
+    fill="url(#trCrimson)"
+    stroke="url(#trGoldBevel)"
+    stroke-width="0.35"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 25.5,26.2 C 29.5,28.5 31,32.5 33,35.5 C 31.2,33 28.2,30.8 25.2,28.8 Z"
+    fill="url(#trCrimson)"
+    stroke="url(#trGoldBevel)"
+    stroke-width="0.35"
+    stroke-linejoin="round"
+  />
+
+  <!-- 3. Lotus Collar Platform -->
+  <path
+    d="M 19,22.2 C 21.2,23.8 26.8,23.8 29,22.2 L 27.5,24.2 C 25.5,25 22.5,25 20.5,24.2 Z"
+    fill="url(#trGoldBevel)"
+    stroke="#694611"
+    stroke-width="0.55"
+    stroke-linejoin="round"
+  />
+
+  <!-- 4. Chiseled Carved Prongs -->
+  <!-- Left Crescent Fluke -->
+  <path
+    d="M 20.5,21.5 C 14.5,20.2 8,16.5 8,9.2 C 9.2,11.8 12.2,13.8 14.8,14.6 C 17.5,15.5 19.8,17.2 21,18.8 Z"
+    fill="url(#trBladeLight)"
+    stroke="#694611"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 8,9.2 C 10.2,11.8 13.5,14 17.5,15.2 C 19.8,16 21,17.8 21.8,19.8 L 20.5,21.5 C 18.5,19 16,17.2 13.2,15.8 C 10.2,14.2 8.5,11.8 8,9.2 Z"
+    fill="url(#trBladeDark)"
+    stroke="#694611"
+    stroke-width="0.45"
+    stroke-linejoin="round"
+  />
+  <path d="M 8,9.2 C 10.5,12.5 14,14.8 18.5,16.8 L 21,19.8" stroke="#FFFDF7" stroke-width="0.55" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <!-- Right Crescent Fluke -->
+  <path
+    d="M 27.5,21.5 C 33.5,20.2 40,16.5 40,9.2 C 38.8,11.8 35.8,13.8 33.2,14.6 C 30.5,15.5 28.2,17.2 27,18.8 Z"
+    fill="url(#trBladeLight)"
+    stroke="#694611"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 40,9.2 C 37.8,11.8 34.5,14 30.5,15.2 C 28.2,16 27,17.8 26.2,19.8 L 27.5,21.5 C 29.5,19 32,17.2 34.8,15.8 C 37.8,14.2 39.5,11.8 40,9.2 Z"
+    fill="url(#trBladeDark)"
+    stroke="#694611"
+    stroke-width="0.45"
+    stroke-linejoin="round"
+  />
+  <path d="M 40,9.2 C 37.5,12.5 34,14.8 29.5,16.8 L 27,19.8" stroke="#FFFDF7" stroke-width="0.55" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <!-- Central Spear Flame Blade -->
+  <path
+    d="M 24,2.2 C 21.8,6.8 20.8,12.2 21.2,19.2 C 22.4,20.2 23.5,20.6 24,20.8 Z"
+    fill="url(#trBladeLight)"
+    stroke="#694611"
+    stroke-width="0.55"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 24,2.2 C 26.2,6.8 27.2,12.2 26.8,19.2 C 25.6,20.2 24.5,20.6 24,20.8 Z"
+    fill="url(#trBladeDark)"
+    stroke="#694611"
+    stroke-width="0.55"
+    stroke-linejoin="round"
+  />
+  <line x1="24" y1="2.2" x2="24" y2="19.5" stroke="#FFFFFF" stroke-width="0.65" stroke-linecap="round"/>
+
+  <!-- Fuller / Consecrated Raktachandan Blood Groove -->
+  <line x1="24" y1="7.5" x2="24" y2="15.5" stroke="#8F241C" stroke-width="0.85" stroke-linecap="round"/>
+  <line x1="23.6" y1="8" x2="23.6" y2="15" stroke="#FFFDF7" stroke-width="0.35" stroke-linecap="round"/>
+
+  <!-- Sacred Vermilion Trinetra Bindu -->
+  <circle cx="24" cy="18.2" r="1.5" fill="url(#trCrimson)" stroke="url(#trGoldBevel)" stroke-width="0.4"/>
+  <circle cx="24" cy="18.2" r="0.6" fill="#FFFDF7"/>
 </svg>
