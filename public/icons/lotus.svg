@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Lotus icon</title>
+  <desc id="desc">Flat devotional lotus icon in the Raksha Kali Mandir visual system.</desc>
+  <g fill="none" stroke="#8F241C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 48C23 47 15 42 11 34C18 34 25 36 32 42C39 36 46 34 53 34C49 42 41 47 32 48Z" fill="#FBF4E6"/>
+    <path d="M32 42C24 37 21 29 24 20C29 23 32 28 32 36C32 28 35 23 40 20C43 29 40 37 32 42Z" fill="#C86A12"/>
+    <path d="M32 41C26 36 25 29 27 23C30 26 32 30 32 35C32 30 34 26 37 23C39 29 38 36 32 41Z" fill="#FBF4E6"/>
+    <path d="M12 50H52" stroke="#B08A3E"/>
+  </g>
+</svg>
