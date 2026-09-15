@@ -1,22 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" preserveAspectRatio="none" aria-hidden="true">
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M0 28Q120 96 240 28Q360 96 480 28Q600 96 720 28Q840 96 960 28" stroke="#B08A3E" stroke-width="2"/>
-    <path d="M0 34Q120 102 240 34Q360 102 480 34Q600 102 720 34Q840 102 960 34" stroke="#8F241C" stroke-width="1" stroke-opacity="0.45"/>
-    <g fill="#FBF4E6" stroke="#8F241C" stroke-width="1.8">
-      <path d="M120 96C108 82 108 68 120 58C132 68 132 82 120 96Z"/>
-      <path d="M240 28C228 14 228 4 240 -8C252 4 252 14 240 28Z"/>
-      <path d="M360 96C348 82 348 68 360 58C372 68 372 82 360 96Z"/>
-      <path d="M480 28C468 14 468 4 480 -8C492 4 492 14 480 28Z"/>
-      <path d="M600 96C588 82 588 68 600 58C612 68 612 82 600 96Z"/>
-      <path d="M720 28C708 14 708 4 720 -8C732 4 732 14 720 28Z"/>
-      <path d="M840 96C828 82 828 68 840 58C852 68 852 82 840 96Z"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 400 80"
+  width="400"
+  height="80"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>উৎসব তোরণ পুষ্পমালা নকশা (Festive Marigold &amp; Mango Leaf Toran Pattern)</title>
+  <desc>Seamless horizontal repeating sacred temple toran garland for Sri Sri Maa Raksha Kali Mandir. Features multi-layered ruffled marigold blossoms (Genda Phool), naturalistic mango leaves (Amrapallava) with prominent venation, twisted sacred kalava cord, and brass hanging bells. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Golden Yellow Marigold -->
+    <radialGradient id="mrgGoldPetal" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="20%" stop-color="#FFF5D6"/>
+      <stop offset="50%" stop-color="#F5C042"/>
+      <stop offset="82%" stop-color="#D98A1B"/>
+      <stop offset="100%" stop-color="#8F4805"/>
+    </radialGradient>
+
+    <!-- Deep Saffron/Orange Marigold -->
+    <radialGradient id="mrgOrangePetal" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF2D6"/>
+      <stop offset="25%" stop-color="#F5A623"/>
+      <stop offset="60%" stop-color="#C86A12"/>
+      <stop offset="88%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#550E09"/>
+    </radialGradient>
+
+    <!-- Mango Leaf Left -->
+    <linearGradient id="leafGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6FA879"/>
+      <stop offset="45%" stop-color="#3D7347"/>
+      <stop offset="85%" stop-color="#1E4726"/>
+      <stop offset="100%" stop-color="#142B18"/>
+    </linearGradient>
+
+    <!-- Mango Leaf Right -->
+    <linearGradient id="leafGradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#508A59"/>
+      <stop offset="50%" stop-color="#285630"/>
+      <stop offset="90%" stop-color="#15331B"/>
+      <stop offset="100%" stop-color="#0D1F10"/>
+    </linearGradient>
+
+    <!-- Brass Gold -->
+    <linearGradient id="toranGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="25%" stop-color="#FAF0CE"/>
+      <stop offset="60%" stop-color="#D9B15B"/>
+      <stop offset="85%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </linearGradient>
+
+    <!-- Crimson Silk -->
+    <linearGradient id="toranCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA3327"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#550E09"/>
+    </linearGradient>
+
+    <!-- Shadow -->
+    <radialGradient id="blossomShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#24201D" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#24201D" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Reusable Single Mango Leaf -->
+    <g id="mangoLeafSingle">
+      <path d="M 0,0 C -2.6,6 -5.2,14 -5,22 C -4.8,28 -2.8,32 0,36 Z" fill="url(#leafGradLeft)"/>
+      <path d="M 0,0 C 2.6,6 5.2,14 5,22 C 4.8,28 2.8,32 0,36 Z" fill="url(#leafGradRight)"/>
+      <path d="M 0,0 C -2.6,6 -5.2,14 -5,22 C -4.8,28 -2.8,32 0,36 C 2.8,32 4.8,28 5,22 C 5.2,14 2.6,6 0,0 Z" stroke="#142B18" stroke-width="0.4" fill="none"/>
+      <line x1="0" y1="1" x2="0" y2="35" stroke="#FAF0CE" stroke-width="0.65" opacity="0.85"/>
+      <g stroke="#FAF0CE" stroke-width="0.38" stroke-linecap="round" opacity="0.65" fill="none">
+        <line x1="0" y1="7" x2="-3.2" y2="5"/><line x1="0" y1="7" x2="3.2" y2="5"/>
+        <line x1="0" y1="13" x2="-4.2" y2="10.5"/><line x1="0" y1="13" x2="4.2" y2="10.5"/>
+        <line x1="0" y1="19" x2="-4.4" y2="16.5"/><line x1="0" y1="19" x2="4.4" y2="16.5"/>
+        <line x1="0" y1="25" x2="-3.8" y2="22.5"/><line x1="0" y1="25" x2="3.8" y2="22.5"/>
+        <line x1="0" y1="30" x2="-2.2" y2="28.5"/><line x1="0" y1="30" x2="2.2" y2="28.5"/>
+      </g>
     </g>
-    <g fill="#C86A12">
-      <circle cx="120" cy="86" r="3"/>
-      <circle cx="360" cy="86" r="3"/>
-      <circle cx="600" cy="86" r="3"/>
-      <circle cx="840" cy="86" r="3"/>
+
+    <!-- Reusable Golden Marigold -->
+    <g id="blossomGold">
+      <ellipse cx="0" cy="1.2" rx="6.4" ry="5.8" fill="url(#blossomShadow)"/>
+      <path
+        d="M 0,-6.2 C 1.5,-6.2 2.6,-5.5 3.6,-5.2 C 4.6,-4.8 5.6,-3.6 5.8,-2.4 C 6.2,-1.2 6.4,0 6.2,1.2 C 5.9,2.4 5.2,3.6 4.2,4.5 C 3.2,5.2 2,5.8 0.6,6.1 C -0.8,6.1 -2.2,5.7 -3.3,4.9 C -4.4,4.2 -5.4,3 -5.8,1.8 C -6.2,0.6 -6.1,-0.8 -5.6,-2 C -5,-3.2 -4,-4.4 -2.8,-5.1 C -1.8,-5.7 -0.8,-6.2 0,-6.2 Z"
+        fill="url(#mrgGoldPetal)"
+        stroke="#8F4805"
+        stroke-width="0.3"
+      />
+      <path
+        d="M 0,-4.5 C 1.2,-4.5 2,-3.8 2.8,-3.4 C 3.6,-3 4.2,-2 4.2,-1 C 4.5,0.2 4.1,1.4 3.4,2.2 C 2.8,3 1.8,3.8 0.8,4.1 C -0.5,4.1 -1.6,3.6 -2.4,2.8 C -3.2,2.2 -3.8,1 -3.8,0 C -4,-1.2 -3.2,-2.4 -2.4,-3.1 C -1.6,-3.8 -0.8,-4.5 0,-4.5 Z"
+        fill="#F5C042"
+        stroke="#A55A08"
+        stroke-width="0.25"
+      />
+      <circle cx="0" cy="0" r="2.8" fill="url(#mrgGoldPetal)"/>
+      <circle cx="-0.8" cy="-0.6" r="1.1" fill="#FFFDF7" opacity="0.8"/>
+      <circle cx="0.8" cy="0.6" r="0.7" fill="#8F4805" opacity="0.7"/>
+      <circle cx="0" cy="0" r="0.5" fill="#FAF0CE"/>
+    </g>
+
+    <!-- Reusable Saffron Marigold -->
+    <g id="blossomOrange">
+      <ellipse cx="0" cy="1.2" rx="6.4" ry="5.8" fill="url(#blossomShadow)"/>
+      <path
+        d="M 0,-6.2 C 1.5,-6.2 2.6,-5.5 3.6,-5.2 C 4.6,-4.8 5.6,-3.6 5.8,-2.4 C 6.2,-1.2 6.4,0 6.2,1.2 C 5.9,2.4 5.2,3.6 4.2,4.5 C 3.2,5.2 2,5.8 0.6,6.1 C -0.8,6.1 -2.2,5.7 -3.3,4.9 C -4.4,4.2 -5.4,3 -5.8,1.8 C -6.2,0.6 -6.1,-0.8 -5.6,-2 C -5,-3.2 -4,-4.4 -2.8,-5.1 C -1.8,-5.7 -0.8,-6.2 0,-6.2 Z"
+        fill="url(#mrgOrangePetal)"
+        stroke="#550E09"
+        stroke-width="0.3"
+      />
+      <path
+        d="M 0,-4.5 C 1.2,-4.5 2,-3.8 2.8,-3.4 C 3.6,-3 4.2,-2 4.2,-1 C 4.5,0.2 4.1,1.4 3.4,2.2 C 2.8,3 1.8,3.8 0.8,4.1 C -0.5,4.1 -1.6,3.6 -2.4,2.8 C -3.2,2.2 -3.8,1 -3.8,0 C -4,-1.2 -3.2,-2.4 -2.4,-3.1 C -1.6,-3.8 -0.8,-4.5 0,-4.5 Z"
+        fill="#C86A12"
+        stroke="#731610"
+        stroke-width="0.25"
+      />
+      <circle cx="0" cy="0" r="2.8" fill="url(#mrgOrangePetal)"/>
+      <circle cx="-0.8" cy="-0.6" r="1.1" fill="#FFFDF7" opacity="0.75"/>
+      <circle cx="0.8" cy="0.6" r="0.7" fill="#550E09" opacity="0.8"/>
+      <circle cx="0" cy="0" r="0.5" fill="#FAF0CE"/>
+    </g>
+
+    <!-- Master 100px Garland Unit -->
+    <g id="garlandMasterUnit">
+      <!-- Background Quarter-Sprigs -->
+      <g transform="translate(26, 36) rotate(-42) scale(0.65)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+      <g transform="translate(74, 36) rotate(42) scale(0.65)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+
+      <!-- Apex Leaf Cluster -->
+      <g id="apexLeafCluster" transform="translate(50, 42)">
+        <g transform="rotate(-26)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+        <g transform="rotate(26)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+        <g transform="scale(1.1)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+        <rect x="-3" y="1" width="6" height="2" rx="0.8" fill="url(#toranCrimson)" stroke="#550E09" stroke-width="0.3"/>
+        <circle cx="0" cy="2" r="0.8" fill="url(#toranGold)"/>
+      </g>
+
+      <!-- Cords -->
+      <path d="M 0,20 Q 50,60 100,20" stroke="#24201D" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.25"/>
+      <path d="M 0,18 Q 50,58 100,18" stroke="url(#toranGold)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      <path d="M 0,18 Q 50,58 100,18" stroke="url(#toranCrimson)" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3.5 3.5" fill="none"/>
+
+      <!-- 9 Marigolds along the Catenary -->
+      <g transform="translate(6, 23.4)"><use xlink:href="#blossomGold" href="#blossomGold"/></g>
+      <g transform="translate(16, 32.0)"><use xlink:href="#blossomOrange" href="#blossomOrange"/></g>
+      <g transform="translate(27, 38.5)"><use xlink:href="#blossomGold" href="#blossomGold"/></g>
+      <g transform="translate(38, 42.5)"><use xlink:href="#blossomOrange" href="#blossomOrange"/></g>
+      <g transform="translate(50, 44.0) scale(1.12)"><use xlink:href="#blossomGold" href="#blossomGold"/></g>
+      <g transform="translate(62, 42.5)"><use xlink:href="#blossomOrange" href="#blossomOrange"/></g>
+      <g transform="translate(73, 38.5)"><use xlink:href="#blossomGold" href="#blossomGold"/></g>
+      <g transform="translate(84, 32.0)"><use xlink:href="#blossomOrange" href="#blossomOrange"/></g>
+      <g transform="translate(94, 23.4)"><use xlink:href="#blossomGold" href="#blossomGold"/></g>
+
+      <!-- Suspension Knot Assembly (X=0) -->
+      <g transform="translate(0, 18)">
+        <g transform="rotate(-28) scale(1.05)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+        <g transform="rotate(28) scale(1.05)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+        <g transform="scale(1.22)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+
+        <path d="M 0,2 C -6,5 -9,9 -6,11 C -4,11 -1,7 0,3 Z" fill="url(#toranCrimson)"/>
+        <path d="M 0,2 C 6,5 9,9 6,11 C 4,11 1,7 0,3 Z" fill="url(#toranCrimson)"/>
+
+        <circle cx="0" cy="0" r="6" fill="url(#toranGold)" stroke="#694611" stroke-width="0.75"/>
+        <circle cx="0" cy="0" r="4.2" fill="url(#toranCrimson)"/>
+        <circle cx="0" cy="0" r="2.2" fill="url(#toranGold)"/>
+        <circle cx="0" cy="0" r="0.9" fill="#FFFDF7"/>
+
+        <g transform="translate(0, 12)">
+          <line x1="0" y1="-5" x2="0" y2="0" stroke="url(#toranGold)" stroke-width="0.9"/>
+          <path d="M -2.5,2 C -2.5,0 2.5,0 2.5,2 L 3.2,4.5 L -3.2,4.5 Z" fill="url(#toranGold)" stroke="#694611" stroke-width="0.4"/>
+          <circle cx="0" cy="5.2" r="0.8" fill="#8F241C"/>
+        </g>
+      </g>
+    </g>
+  </defs>
+
+  <!-- Top Hanging Rail -->
+  <rect x="0" y="0" width="400" height="8" fill="#24201D" opacity="0.35"/>
+  <line x1="0" y1="5.5" x2="400" y2="5.5" stroke="url(#toranGold)" stroke-width="2"/>
+  <line x1="0" y1="8" x2="400" y2="8" stroke="url(#toranCrimson)" stroke-width="0.8" stroke-dasharray="3 2"/>
+
+  <!-- 4 Repeats -->
+  <use xlink:href="#garlandMasterUnit" href="#garlandMasterUnit" x="0" y="0"/>
+  <use xlink:href="#garlandMasterUnit" href="#garlandMasterUnit" x="100" y="0"/>
+  <use xlink:href="#garlandMasterUnit" href="#garlandMasterUnit" x="200" y="0"/>
+  <use xlink:href="#garlandMasterUnit" href="#garlandMasterUnit" x="300" y="0"/>
+
+  <!-- Terminal Right-Edge Knot Assembly (X=400) -->
+  <g transform="translate(400, 18)">
+    <g transform="rotate(-28) scale(1.05)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+    <g transform="rotate(28) scale(1.05)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+    <g transform="scale(1.22)"><use xlink:href="#mangoLeafSingle" href="#mangoLeafSingle"/></g>
+
+    <path d="M 0,2 C -6,5 -9,9 -6,11 C -4,11 -1,7 0,3 Z" fill="url(#toranCrimson)"/>
+    <path d="M 0,2 C 6,5 9,9 6,11 C 4,11 1,7 0,3 Z" fill="url(#toranCrimson)"/>
+
+    <circle cx="0" cy="0" r="6" fill="url(#toranGold)" stroke="#694611" stroke-width="0.75"/>
+    <circle cx="0" cy="0" r="4.2" fill="url(#toranCrimson)"/>
+    <circle cx="0" cy="0" r="2.2" fill="url(#toranGold)"/>
+    <circle cx="0" cy="0" r="0.9" fill="#FFFDF7"/>
+
+    <g transform="translate(0, 12)">
+      <line x1="0" y1="-5" x2="0" y2="0" stroke="url(#toranGold)" stroke-width="0.9"/>
+      <path d="M -2.5,2 C -2.5,0 2.5,0 2.5,2 L 3.2,4.5 L -3.2,4.5 Z" fill="url(#toranGold)" stroke="#694611" stroke-width="0.4"/>
+      <circle cx="0" cy="5.2" r="0.8" fill="#8F241C"/>
     </g>
   </g>
 </svg>
