@@ -1,8 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Om icon</title>
-  <desc id="desc">A restrained Om symbol for devotional interface decoration.</desc>
-  <circle cx="32" cy="32" r="27" fill="#FBF4E6" stroke="#B08A3E" stroke-width="1.6"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Noto Sans Devanagari, Noto Serif Devanagari, sans-serif" font-size="37" font-weight="700" fill="#8F241C">ॐ</text>
-  <path d="M18 51H46" stroke="#C86A12" stroke-width="1.8" stroke-linecap="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  width="48"
+  height="48"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>পবিত্র প্রণব ওঁ প্রতীক (Sacred Om Icon)</title>
+  <desc>Sacred Vedic and Bengali Pranava Omkara icon for Sri Sri Maa Raksha Kali Mandir. Features authentic devotional calligraphic contours, Chandrabindu, and multi-layered gold-crimson gradient relief. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Burnished Temple Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="omGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="28%" stop-color="#D9B15B"/>
+      <stop offset="70%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </linearGradient>
+
+    <!-- Deep Crimson Velvet Inlay Gradient -->
+    <linearGradient id="omCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8261C"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#550E09"/>
+    </linearGradient>
+
+    <!-- Golden Solar Aura Behind Omkara -->
+    <radialGradient id="omAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFDE8A" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#C86A12" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FBF4E6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop Shadow Filter for Sculpted Depth -->
+    <filter id="omShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#550E09" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Divine Solar Radiance Aura -->
+  <circle cx="24" cy="24" r="22" fill="url(#omAura)"/>
+
+  <!-- Master Pranava Omkara Calligraphy -->
+  <g id="sacredOmkaraBody" filter="url(#omShadow)">
+    <!-- 1. Upper Loop & Waist -->
+    <path
+      d="
+        M 17,14
+        C 17,9.5 24,9 26.5,12.5
+        C 28.5,15.5 27,19.5 23.5,21.5
+        C 21.5,22.8 19.5,23 18,22.8
+        C 16.5,22.5 15,20.8 16,19
+        C 16.8,17.5 19,17.8 19.5,19.2
+        C 19.8,20.2 21,20.8 22.2,20
+        C 24.2,18.8 25,16 23.8,13.8
+        C 22.4,11.5 18.8,11.8 18.8,14.5
+        C 18.8,15.8 17.5,16.5 16.5,15.8
+        C 15.5,15.2 15.8,14 17,14
+        Z
+      "
+      fill="url(#omCrimson)"
+      stroke="url(#omGold)"
+      stroke-width="1.1"
+      stroke-linejoin="round"
+    />
+
+    <!-- 2. Main Sweeping Belly & Base -->
+    <path
+      d="
+        M 21.5,22.5
+        C 26,23.5 30.5,26.5 30.5,32
+        C 30.5,38 24.5,41.5 18,41
+        C 11.5,40.5 8,36 8.5,30.5
+        C 8.8,26.8 11.8,25 14.5,26.5
+        C 16.8,27.8 16,30.8 14.2,31.5
+        C 12.8,32 12,33.5 12.5,35
+        C 13.5,37.8 17.5,38.8 21,38.2
+        C 24.8,37.5 27.5,34.8 27.2,31
+        C 26.8,27.5 23.5,25.2 19.8,24.8
+        C 18.2,24.6 18,23 19.5,22.5
+        L 21.5,22.5
+        Z
+      "
+      fill="url(#omCrimson)"
+      stroke="url(#omGold)"
+      stroke-width="1.1"
+      stroke-linejoin="round"
+    />
+
+    <!-- 3. Right Ascending S-Curve Tail -->
+    <path
+      d="
+        M 24,24.5
+        C 27.5,22 34,21 38,24.5
+        C 41.5,27.5 42,32 40,36
+        C 39,38 36.8,37.2 37.5,35.2
+        C 38.8,32.2 38.2,29 36,27
+        C 33.5,24.8 28.5,25.2 25.5,27.5
+        C 24.2,28.5 23,27.5 23.5,26.2
+        C 23.8,25.2 24,24.8 24,24.5
+        Z
+      "
+      fill="url(#omCrimson)"
+      stroke="url(#omGold)"
+      stroke-width="1.1"
+      stroke-linejoin="round"
+    />
+
+    <!-- Backbone Highlights -->
+    <path d="M 20,13 C 22,11.5 25,12 25.5,14" stroke="#FFFDF7" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M 15,38 C 18,39 23,38.5 25.5,35.5" stroke="#FFFDF7" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M 33,25.5 C 36,25.5 39,28 39,32" stroke="#FFFDF7" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.75"/>
+
+    <!-- 4. Sacred Chandrabindu -->
+    <path
+      d="M 29.5,11 C 33,14 39,14 42.5,11 C 39.5,12.5 32.5,12.5 29.5,11 Z"
+      fill="url(#omGold)"
+      stroke="#694611"
+      stroke-width="0.6"
+      stroke-linejoin="round"
+    />
+
+    <!-- Supreme Bindu Sphere -->
+    <circle cx="36" cy="6.8" r="2.4" fill="url(#omCrimson)" stroke="url(#omGold)" stroke-width="0.8"/>
+    <circle cx="36" cy="6.8" r="1.1" fill="url(#omGold)"/>
+    <circle cx="35.6" cy="6.4" r="0.45" fill="#FFFFFF"/>
+  </g>
 </svg>
