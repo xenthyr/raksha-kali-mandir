@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 28Q120 96 240 28Q360 96 480 28Q600 96 720 28Q840 96 960 28" stroke="#B08A3E" stroke-width="2"/>
+    <path d="M0 34Q120 102 240 34Q360 102 480 34Q600 102 720 34Q840 102 960 34" stroke="#8F241C" stroke-width="1" stroke-opacity="0.45"/>
+    <g fill="#FBF4E6" stroke="#8F241C" stroke-width="1.8">
+      <path d="M120 96C108 82 108 68 120 58C132 68 132 82 120 96Z"/>
+      <path d="M240 28C228 14 228 4 240 -8C252 4 252 14 240 28Z"/>
+      <path d="M360 96C348 82 348 68 360 58C372 68 372 82 360 96Z"/>
+      <path d="M480 28C468 14 468 4 480 -8C492 4 492 14 480 28Z"/>
+      <path d="M600 96C588 82 588 68 600 58C612 68 612 82 600 96Z"/>
+      <path d="M720 28C708 14 708 4 720 -8C732 4 732 14 720 28Z"/>
+      <path d="M840 96C828 82 828 68 840 58C852 68 852 82 840 96Z"/>
+    </g>
+    <g fill="#C86A12">
+      <circle cx="120" cy="86" r="3"/>
+      <circle cx="360" cy="86" r="3"/>
+      <circle cx="600" cy="86" r="3"/>
+      <circle cx="840" cy="86" r="3"/>
+    </g>
+  </g>
+</svg>

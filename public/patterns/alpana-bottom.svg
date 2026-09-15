@@ -1,1 +1,12 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="none" stroke="#8F241C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 102H960" stroke-opacity="0.3"/>
+    <path d="M40 92Q72 64 104 92Q136 120 168 92Q200 64 232 92Q264 120 296 92Q328 64 360 92Q392 120 424 92Q456 64 488 92Q520 120 552 92Q584 64 616 92Q648 120 680 92Q712 64 744 92Q776 120 808 92Q840 64 872 92Q904 120 936 92"/>
+    <g stroke="#B08A3E" stroke-width="1.5">
+      <path d="M40 92L52 80L64 92L52 104Z"/>
+      <path d="M896 92L908 80L920 92L908 104Z"/>
+    </g>
+    <path d="M0 72H960" stroke="#B08A3E" stroke-opacity="0.25"/>
+  </g>
+</svg>
