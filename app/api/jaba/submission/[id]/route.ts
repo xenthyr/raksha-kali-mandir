@@ -1,1 +1,15 @@
+import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { NextResponse } from "next/server";
+import { getJabaSubmission } from "../../../../../db/repositories/jaba";
+import type { D1Like } from "../../../../../lib/db/client";
 
+type Params = { params: Promise<{ id: string }> };
+type Env = { DB?: D1Like };
+type CycleRow = { id: string; cycle_slug: string; state: string; opens_at: string; closes_at: string | null; verified_participant_count: number; capacity: number | null };
+const HEADERS = { "Cache-Control": "no-store, max-age=0", "Content-Type": "application/json; charset=utf-8", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "no-referrer" };
+function trace(request:Request){const v=request.headers.get("x-request-id")?.trim();return v&&v.length<=128?v:crypto.randomUUID();}
+function out(status:number,t:string,data:unknown,error?:{code:string;message:string}){return NextResponse.json(error?{ok:false,error,meta:{traceId:t}}:{ok:true,data,meta:{traceId:t}},{status,headers:HEADERS});}
+function safeState(state:string){if(state==="COMPLETED")return {labelBn:"সম্পন্ন",labelEn:"Completed"}; if(state==="REJECTED")return {labelBn:"গ্রহণ করা হয়নি",labelEn:"Rejected"}; if(state==="CANCELLED")return {labelBn:"বাতিল",labelEn:"Cancelled"}; if(state==="DUPLICATE_REVIEW")return {labelBn:"পর্যালোচনাধীন",labelEn:"Under review"}; if(state==="ROSTERED")return {labelBn:"তালিকাভুক্ত",labelEn:"Rostered"}; if(state==="VERIFIED")return {labelBn:"যাচাইকৃত",labelEn:"Verified"}; return {labelBn:"পরিচয় যাচাইয়ের অপেক্ষায়",labelEn:"Awaiting identity verification"};}
+export const runtime="edge";
+export const dynamic="force-dynamic";
+export async function GET(request:Request,{params}:Params):Promise<NextResponse>{const t=trace(request);const env=getCloudflareContext().env as unknown as Env;if(!env.DB)return out(503,t,null,{code:"DEPENDENCY_FAILURE",message:"Jaba submission ব্যবস্থা এখন প্রস্তুত নয়।"});const {id}=await params;if(!id||id.length>128)return out(400,t,null,{code:"INVALID_ID",message:"Submission ID সঠিক নয়।"});try{const submission=await getJabaSubmission(env.DB,id);if(!submission||submission.mode!=="MONTHLY_AMAVASYA_JABA")return out(404,t,null,{code:"NOT_FOUND",message:"Jaba submission পাওয়া যায়নি।"});const cycle=submission.cycle_id?await env.DB.prepare(`SELECT id,cycle_slug,state,opens_at,closes_at,verified_participant_count,capacity FROM jaba_offering_cycles WHERE id=? LIMIT 1`).bind(submission.cycle_id).first<CycleRow>():null;const labels=safeState(submission.state);return out(200,t,{submissionId:submission.id,submissionReference:submission.submission_reference,mode:submission.mode,state:submission.state,stateLabel:labels,verificationStatus:submission.verification_status,cycle:cycle?{cycleId:cycle.id,cycleSlug:cycle.cycle_slug,state:cycle.state,opensAt:cycle.opens_at,closesAt:cycle.closes_at,verifiedParticipantCount:cycle.verified_participant_count,capacity:cycle.capacity}:null,donationRequired:false,anonymousPublic:submission.anonymous_public===1,version:submission.version});}catch{return out(500,t,null,{code:"INTERNAL_FAILURE",message:"Jaba submission এখন দেখা যাচ্ছে না।"});}}
