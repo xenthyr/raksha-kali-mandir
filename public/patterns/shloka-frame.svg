@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Shloka frame decorative border</title>
+<desc id="desc">A restrained Bengali devotional frame for user-provided or canonical-approved text; this asset contains no scripture or mutable project fact. Design state: DESIGN_RUNTIME.</desc>
+
+<g stroke="#B08A3E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M46 92V58Q46 38 66 38H214"/>
+  <path d="M954 92V58Q954 38 934 38H786"/>
+  <path d="M46 268V302Q46 322 66 322H214"/>
+  <path d="M954 268V302Q954 322 934 322H786"/>
+  <path d="M122 38V76"/><path d="M878 38V76"/><path d="M122 322V284"/><path d="M878 322V284"/>
+  <path d="M214 38Q250 78 286 38"/><path d="M714 38Q750 78 786 38"/>
+  <path d="M214 322Q250 282 286 322"/><path d="M714 322Q750 282 786 322"/>
+</g>
+<g fill="#8F241C"><circle cx="102" cy="58" r="5"/><circle cx="898" cy="58" r="5"/><circle cx="102" cy="302" r="5"/><circle cx="898" cy="302" r="5"/></g>
+<g stroke="#C86A12" stroke-width="2" opacity="0.9">
+  <path d="M300 38l-12 18 12 18 12-18z"/><path d="M700 38l-12 18 12 18 12-18z"/>
+  <path d="M300 294l-12 18 12 18 12-18z"/><path d="M700 294l-12 18 12 18 12-18z"/>
+</g>
+</svg>

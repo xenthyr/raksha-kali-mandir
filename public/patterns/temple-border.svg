@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Temple border decorative pattern</title>
+<desc id="desc">A conceptual devotional border inspired by Indian temple geometry; it is not a surveyed or documentary representation of the physical temple. Design state: DESIGN_RUNTIME.</desc>
+
+<path d="M24 154H976" stroke="#B08A3E" stroke-width="3"/>
+<path d="M58 140V86L92 62L126 86V140M874 140V86L908 62L942 86V140" stroke="#8F241C" stroke-width="4" stroke-linejoin="round"/>
+<g stroke="#C86A12" stroke-width="3" stroke-linejoin="round">
+  <path d="M92 62V40L100 34L108 40V62"/><path d="M908 62V40L916 34L924 40V62"/>
+</g>
+<g fill="#B08A3E">
+  <path d="M64 140h56l-8-12H72z"/><path d="M880 140h56l-8-12h-40z"/>
+  <path d="M466 154l34-34 34 34z"/>
+</g>
+<path d="M482 146l18-18 18 18" stroke="#FBF4E6" stroke-width="4"/>
+<g fill="#8F241C">
+  <circle cx="152" cy="132" r="5"/><circle cx="848" cy="132" r="5"/><circle cx="440" cy="154" r="4"/><circle cx="560" cy="154" r="4"/>
+</g>
+</svg>
