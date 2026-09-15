@@ -1,18 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" preserveAspectRatio="none" aria-hidden="true">
-  <g fill="none" stroke="#B08A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M0 18H960" stroke-opacity="0.35"/>
-    <path d="M0 72H960" stroke-opacity="0.25"/>
-    <g transform="translate(40 18)">
-      <path d="M0 0L12 12L0 24L-12 12Z"/>
-      <path d="M-20 12H20M0-8V32" stroke-width="1.4"/>
-      <circle cx="0" cy="12" r="3" fill="#C86A12" stroke="none"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 400 60"
+  width="400"
+  height="60"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>ঐতিহ্যবাহী শীর্ষ তোরণ আলপনা নকশা (Mandir Alpana Top Border Pattern)</title>
+  <desc>Seamless horizontal repeating Bengali temple terracotta top frieze for Sri Sri Maa Raksha Kali Mandir. Features Kharikata Jaal lattice lozenges, cusped Bengal Torana arches, Purnadal Padma, Dantika teeth mouldings, and Muktamala pearl rails. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Deep Bengal Terracotta Frieze Gradient -->
+    <linearGradient id="patTopRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6B130D"/>
+      <stop offset="28%" stop-color="#8F241C"/>
+      <stop offset="72%" stop-color="#7A1C15"/>
+      <stop offset="100%" stop-color="#4E0C08"/>
+    </linearGradient>
+
+    <!-- Burnished Temple Brass / Gold Multi-Stop Gradient -->
+    <linearGradient id="patTopGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="25%" stop-color="#E5C16C"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="75%" stop-color="#E5C16C"/>
+      <stop offset="100%" stop-color="#FAF0CE"/>
+    </linearGradient>
+
+    <!-- Saffron Amber Inlay Gradient -->
+    <linearGradient id="patTopAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5C042"/>
+      <stop offset="50%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#8F241C"/>
+    </linearGradient>
+
+    <!-- 100px Seamless Repeating Pattern Master Unit -->
+    <g id="alpanaTopUnit">
+
+      <!-- ============================================================ -->
+      <!-- 1. BENGAL TEMPLE PILASTERS / DIVIDERS (খোদাইকৃত স্তম্ভ)        -->
+      <!-- ============================================================ -->
+      <!-- Center Divider Pilaster (X=50) -->
+      <g transform="translate(50, 0)">
+        <rect x="-2" y="8" width="4" height="44" fill="#24201D" opacity="0.45"/>
+        <rect x="-1.5" y="8" width="3" height="44" fill="url(#patTopGold)" stroke="#694611" stroke-width="0.3"/>
+        <line x1="0" y1="9" x2="0" y2="51" stroke="#FFFDF7" stroke-width="0.6" opacity="0.85"/>
+        <!-- Capital & Base Rosettes -->
+        <circle cx="0" cy="11" r="1.4" fill="#8F241C"/>
+        <circle cx="0" cy="30" r="1.8" fill="url(#patTopGold)" stroke="#694611" stroke-width="0.3"/>
+        <circle cx="0" cy="30" r="0.8" fill="#8F241C"/>
+        <circle cx="0" cy="49" r="1.4" fill="#8F241C"/>
+      </g>
+
+      <!-- Seam Boundary Half-Pilasters (X=0 & X=100) -->
+      <rect x="0" y="8" width="1.5" height="44" fill="url(#patTopGold)" stroke="#694611" stroke-width="0.3"/>
+      <line x1="0.5" y1="9" x2="0.5" y2="51" stroke="#FFFDF7" stroke-width="0.5" opacity="0.7"/>
+      <circle cx="0" cy="30" r="1.8" fill="url(#patTopGold)"/>
+      <circle cx="0" cy="30" r="0.8" fill="#8F241C"/>
+
+      <rect x="98.5" y="8" width="1.5" height="44" fill="url(#patTopGold)" stroke="#694611" stroke-width="0.3"/>
+      <line x1="99.5" y1="9" x2="99.5" y2="51" stroke="#FFFDF7" stroke-width="0.5" opacity="0.7"/>
+      <circle cx="100" cy="30" r="1.8" fill="url(#patTopGold)"/>
+      <circle cx="100" cy="30" r="0.8" fill="#8F241C"/>
+
+      <!-- ============================================================ -->
+      <!-- 2. PANEL A: KHARIKATA JAAL & CHAMPA MEDALLION (X=0 to X=50)  -->
+      <!-- ============================================================ -->
+      <g transform="translate(0, 0)">
+        <!-- A1. Fine Diagonal Rice-Paste Lattice (খড়িকাটা জাল) -->
+        <g stroke="#FAF0CE" stroke-width="0.6" opacity="0.35">
+          <!-- Down-Right Diagonals -->
+          <line x1="4" y1="12" x2="22" y2="30"/>
+          <line x1="4" y1="21" x2="31" y2="48"/>
+          <line x1="4" y1="30" x2="22" y2="48"/>
+          <line x1="4" y1="39" x2="13" y2="48"/>
+          <line x1="13" y1="12" x2="46" y2="45"/>
+          <line x1="22" y1="12" x2="46" y2="36"/>
+          <line x1="31" y1="12" x2="46" y2="27"/>
+          <line x1="40" y1="12" x2="46" y2="18"/>
+          <!-- Down-Left Diagonals -->
+          <line x1="46" y1="12" x2="28" y2="30"/>
+          <line x1="46" y1="21" x2="19" y2="48"/>
+          <line x1="46" y1="30" x2="28" y2="48"/>
+          <line x1="46" y1="39" x2="37" y2="48"/>
+          <line x1="37" y1="12" x2="4" y2="45"/>
+          <line x1="28" y1="12" x2="4" y2="36"/>
+          <line x1="19" y1="12" x2="4" y2="27"/>
+          <line x1="10" y1="12" x2="4" y2="18"/>
+        </g>
+
+        <!-- A2. Corner Paisley Kalka Flourishes (কোণের কলকা) -->
+        <!-- Top-Left Corner -->
+        <path d="M 6,14 C 11,15 13,18 11,21 C 9.5,23 7,20 8.5,17" stroke="#FFFDF7" stroke-width="0.75" fill="none"/>
+        <circle cx="12" cy="15" r="0.8" fill="url(#patTopGold)"/>
+        <!-- Top-Right Corner -->
+        <path d="M 44,14 C 39,15 37,18 39,21 C 40.5,23 43,20 41.5,17" stroke="#FFFDF7" stroke-width="0.75" fill="none"/>
+        <circle cx="38" cy="15" r="0.8" fill="url(#patTopGold)"/>
+        <!-- Bottom-Left Corner -->
+        <path d="M 6,46 C 11,45 13,42 11,39 C 9.5,37 7,40 8.5,43" stroke="#FFFDF7" stroke-width="0.75" fill="none"/>
+        <circle cx="12" cy="45" r="0.8" fill="url(#patTopGold)"/>
+        <!-- Bottom-Right Corner -->
+        <path d="M 44,46 C 39,45 37,42 39,39 C 40.5,37 43,40 41.5,43" stroke="#FFFDF7" stroke-width="0.75" fill="none"/>
+        <circle cx="38" cy="45" r="0.8" fill="url(#patTopGold)"/>
+
+        <!-- A3. Terracotta Nested Champa Medallion (চাঁপাফুল খোদাই নকশা) -->
+        <!-- Outer Rice-Paste Stepped Diamond -->
+        <polygon points="25,12 43,30 25,48 7,30" fill="none" stroke="#FFFDF7" stroke-width="1.4" stroke-linejoin="round"/>
+        <!-- Beaded Tracking Outline -->
+        <polygon points="25,14.5 40.5,30 25,45.5 9.5,30" fill="none" stroke="url(#patTopGold)" stroke-width="0.7" stroke-dasharray="1.2 1.2"/>
+        <!-- Inner Terracotta Diamond Body -->
+        <polygon points="25,17 38,30 25,43 12,30" fill="#6B130D" stroke="#FFFDF7" stroke-width="0.8"/>
+
+        <!-- Eight-Petaled Sacred Champa Flower (অষ্টদল চাঁপা) -->
+        <g fill="#FFFDF7">
+          <path d="M 25,20 C 24,24 24,26 25,27 C 26,26 26,24 25,20 Z"/>
+          <path d="M 25,40 C 24,36 24,34 25,33 C 26,34 26,36 25,40 Z"/>
+          <path d="M 15,30 C 19,29 21,29 22,30 C 21,31 19,31 15,30 Z"/>
+          <path d="M 35,30 C 31,29 29,29 28,30 C 29,31 31,31 35,30 Z"/>
+          <path d="M 18,23 C 21,24.5 22.5,26 23,27.5 C 22,27 20,25.5 18,23 Z"/>
+          <path d="M 32,37 C 29,35.5 27.5,34 27,32.5 C 28,33 30,34.5 32,37 Z"/>
+          <path d="M 32,23 C 30,25.5 28,27 27,27.5 C 27.5,26 29,24.5 32,23 Z"/>
+          <path d="M 18,37 C 20,34.5 22,33 23,32.5 C 22.5,34 21,35.5 18,37 Z"/>
+        </g>
+
+        <!-- Medallion Consecrated Core -->
+        <circle cx="25" cy="30" r="3" fill="url(#patTopAmber)" stroke="url(#patTopGold)" stroke-width="0.6"/>
+        <circle cx="25" cy="30" r="1.4" fill="#8F241C"/>
+        <circle cx="25" cy="30" r="0.5" fill="#FFFFFF"/>
+      </g>
+
+      <!-- ============================================================ -->
+      <!-- 3. PANEL B: CUSPED BENGAL TORANA & LOTUS (X=50 to X=100)     -->
+      <!-- ============================================================ -->
+      <g transform="translate(50, 0)">
+        <!-- B1. Multi-Cusped Terracotta Gateway Arch (পঞ্চখাঁজ তোরণ) -->
+        <!-- Outer Ivory Cusped Arch -->
+        <path
+          d="
+            M 54,48
+            C 54,39 57,36 60,34
+            C 60,28 65,24 68,22
+            C 69,18 72,15 75,15
+            C 78,15 81,18 82,22
+            C 85,24 90,28 90,34
+            C 93,36 96,39 96,48
+          "
+          fill="none"
+          stroke="#FFFDF7"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <!-- Inner Gilded Guard Arch -->
+        <path
+          d="
+            M 56.5,48
+            C 56.5,41 59,38 62,36
+            C 62,31 66,27 69.5,25
+            C 71,21 73,18 75,18
+            C 77,18 79,21 80.5,25
+            C 84,27 88,31 88,36
+            C 91,38 93.5,41 93.5,48
+          "
+          fill="none"
+          stroke="url(#patTopGold)"
+          stroke-width="0.8"
+          stroke-linecap="round"
+        />
+
+        <!-- Apex Kalasa Finial & Trinetra (তোরণ চূড়া) -->
+        <path d="M 75,15 L 75,10.5" stroke="url(#patTopGold)" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="75" cy="9.5" r="1.8" fill="url(#patTopAmber)" stroke="#694611" stroke-width="0.4"/>
+        <circle cx="75" cy="9.5" r="0.7" fill="#FFFDF7"/>
+
+        <!-- B2. Auspicious Spandrel Vine Curls (তোরণের বহিঃস্থ লতা) -->
+        <path d="M 57,26 C 60,20 66,17 68,19 C 69.5,20.5 68,23 66,22" stroke="#FFFDF7" stroke-width="0.7" fill="none"/>
+        <circle cx="61" cy="18" r="0.8" fill="url(#patTopGold)"/>
+        <path d="M 93,26 C 90,20 84,17 82,19 C 80.5,20.5 82,23 84,22" stroke="#FFFDF7" stroke-width="0.7" fill="none"/>
+        <circle cx="89" cy="18" r="0.8" fill="url(#patTopGold)"/>
+
+        <!-- B3. Fanned Sacred Purnadal Padma (পূর্ণদল পদ্ম ছটা) -->
+        <!-- Crescent Peetha Base -->
+        <path d="M 64,48 C 68,44 82,44 86,48 Z" fill="url(#patTopGold)" stroke="#694611" stroke-width="0.4"/>
+        <circle cx="75" cy="45.5" r="1.3" fill="#8F241C"/>
+
+        <!-- 7 Layered Radiating Lotus Petals -->
+        <!-- Center Vertical Sceptre Petal -->
+        <path d="M 75,21 C 73.2,27 73.2,38 75,44 C 76.8,38 76.8,27 75,21 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+        <line x1="75" y1="24" x2="75" y2="42" stroke="url(#patTopGold)" stroke-width="0.5"/>
+
+        <!-- Left Oblique Petal 1 -->
+        <path d="M 75,44 C 70,36 65,30 63,28 C 67,27 72,33 75,44 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+        <!-- Right Oblique Petal 1 -->
+        <path d="M 75,44 C 80,36 85,30 87,28 C 83,27 78,33 75,44 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+
+        <!-- Left Mid Petal 2 -->
+        <path d="M 75,44 C 72,34 67,26 67,24 C 71,25 73.8,32 75,44 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+        <!-- Right Mid Petal 2 -->
+        <path d="M 75,44 C 78,34 83,26 83,24 C 79,25 76.2,32 75,44 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+
+        <!-- Left High Petal 3 -->
+        <path d="M 75,44 C 73.5,33 70.5,23 71,22 C 73.5,24 74.5,31 75,44 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+        <!-- Right High Petal 3 -->
+        <path d="M 75,44 C 76.5,33 79.5,23 79,22 C 76.5,24 75.5,31 75,44 Z" fill="#FFFDF7" stroke="#8F241C" stroke-width="0.35"/>
+
+        <!-- Gold Grain Radiance on Petals -->
+        <circle cx="75" cy="27" r="0.75" fill="url(#patTopGold)"/>
+        <circle cx="70.5" cy="29" r="0.65" fill="url(#patTopGold)"/>
+        <circle cx="79.5" cy="29" r="0.65" fill="url(#patTopGold)"/>
+        <circle cx="67" cy="33" r="0.6" fill="url(#patTopGold)"/>
+        <circle cx="83" cy="33" r="0.6" fill="url(#patTopGold)"/>
+      </g>
     </g>
-    <path d="M88 30Q120 6 152 30Q184 54 216 30Q248 6 280 30Q312 54 344 30Q376 6 408 30Q440 54 472 30Q504 6 536 30Q568 54 600 30Q632 6 664 30Q696 54 728 30Q760 6 792 30Q824 54 856 30Q888 6 920 30"/>
-    <g transform="translate(920 18)">
-      <path d="M0 0L12 12L0 24L-12 12Z"/>
-      <path d="M-20 12H20M0-8V32" stroke-width="1.4"/>
-      <circle cx="0" cy="12" r="3" fill="#C86A12" stroke="none"/>
-    </g>
-  </g>
+
+    <!-- Master Dantika (Temple Cornice Sawtooth Fringe) Macro for 100px -->
+    <!-- 25 teeth per 100px (Tooth pitch = 4px, height = 3px) -->
+    <path
+      id="dantikaTopFringe"
+      d="
+        M 0,2
+        L 2,5.2 L 4,2 L 6,5.2 L 8,2 L 10,5.2 L 12,2 L 14,5.2 L 16,2 L 18,5.2 L 20,2
+        L 22,5.2 L 24,2 L 26,5.2 L 28,2 L 30,5.2 L 32,2 L 34,5.2 L 36,2 L 38,5.2 L 40,2
+        L 42,5.2 L 44,2 L 46,5.2 L 48,2 L 50,5.2 L 52,2 L 54,5.2 L 56,2 L 58,5.2 L 60,2
+        L 62,5.2 L 64,2 L 66,5.2 L 68,2 L 70,5.2 L 72,2 L 74,5.2 L 76,2 L 78,5.2 L 80,2
+        L 82,5.2 L 84,2 L 86,5.2 L 88,2 L 90,5.2 L 92,2 L 94,5.2 L 96,2 L 98,5.2 L 100,2
+      "
+      stroke="#FFFDF7"
+      stroke-width="0.8"
+      stroke-linejoin="round"
+      fill="none"
+    />
+
+    <path
+      id="dantikaBtmFringe"
+      d="
+        M 0,58
+        L 2,54.8 L 4,58 L 6,54.8 L 8,58 L 10,54.8 L 12,58 L 14,54.8 L 16,58 L 18,54.8 L 20,58
+        L 22,54.8 L 24,58 L 26,54.8 L 28,58 L 30,54.8 L 32,58 L 34,54.8 L 36,58 L 38,54.8 L 40,58
+        L 42,54.8 L 44,58 L 46,54.8 L 48,58 L 50,54.8 L 52,58 L 54,54.8 L 56,58 L 58,54.8 L 60,58
+        L 62,54.8 L 64,58 L 66,54.8 L 68,58 L 70,54.8 L 72,58 L 74,54.8 L 76,58 L 78,54.8 L 80,58
+        L 82,54.8 L 84,58 L 86,54.8 L 88,58 L 90,54.8 L 92,58 L 94,54.8 L 96,58 L 98,54.8 L 100,58
+      "
+      stroke="#FFFDF7"
+      stroke-width="0.8"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- SOLID TERRACOTTA BACKGROUND RIBBON                           -->
+  <!-- ============================================================ -->
+  <rect width="400" height="60" fill="url(#patTopRed)"/>
+
+  <!-- ============================================================ -->
+  <!-- UPPER ARCHITECTURAL CORNICE MOULDINGS (Y=0 to Y=8)           -->
+  <!-- ============================================================ -->
+  <!-- Gold Primary Guard Rail -->
+  <line x1="0" y1="1.6" x2="400" y2="1.6" stroke="url(#patTopGold)" stroke-width="1.8"/>
+  <!-- Traditional Terracotta Sawtooth Dantika Teeth -->
+  <use xlink:href="#dantikaTopFringe" x="0" y="0"/>
+  <use xlink:href="#dantikaTopFringe" x="100" y="0"/>
+  <use xlink:href="#dantikaTopFringe" x="200" y="0"/>
+  <use xlink:href="#dantikaTopFringe" x="300" y="0"/>
+  <!-- Rice-Paste Muktamala Beaded Tracking Line -->
+  <line x1="0" y1="7.2" x2="400" y2="7.2" stroke="url(#patTopGold)" stroke-width="0.9"/>
+  <line x1="0" y1="7.2" x2="400" y2="7.2" stroke="#FFFDF7" stroke-width="0.9" stroke-dasharray="1.8 2.2"/>
+
+  <!-- ============================================================ -->
+  <!-- 4 SEAMLESS REPEATS OF 100px MASTER ALPANA UNIT               -->
+  <!-- ============================================================ -->
+  <use xlink:href="#alpanaTopUnit" x="0" y="0"/>
+  <use xlink:href="#alpanaTopUnit" x="100" y="0"/>
+  <use xlink:href="#alpanaTopUnit" x="200" y="0"/>
+  <use xlink:href="#alpanaTopUnit" x="300" y="0"/>
+
+  <!-- ============================================================ -->
+  <!-- LOWER ARCHITECTURAL CORNICE MOULDINGS (Y=52 to Y=60)         -->
+  <!-- ============================================================ -->
+  <!-- Rice-Paste Muktamala Beaded Tracking Line -->
+  <line x1="0" y1="52.8" x2="400" y2="52.8" stroke="url(#patTopGold)" stroke-width="0.9"/>
+  <line x1="0" y1="52.8" x2="400" y2="52.8" stroke="#FFFDF7" stroke-width="0.9" stroke-dasharray="1.8 2.2"/>
+  <!-- Inverted Terracotta Dantika Teeth -->
+  <use xlink:href="#dantikaBtmFringe" x="0" y="0"/>
+  <use xlink:href="#dantikaBtmFringe" x="100" y="0"/>
+  <use xlink:href="#dantikaBtmFringe" x="200" y="0"/>
+  <use xlink:href="#dantikaBtmFringe" x="300" y="0"/>
+  <!-- Gold Primary Guard Rail -->
+  <line x1="0" y1="58.4" x2="400" y2="58.4" stroke="url(#patTopGold)" stroke-width="1.8"/>
 </svg>
