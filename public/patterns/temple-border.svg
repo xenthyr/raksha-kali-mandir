@@ -1,19 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" fill="none" role="img" aria-labelledby="title desc">
-<title id="title">Temple border decorative pattern</title>
-<desc id="desc">A conceptual devotional border inspired by Indian temple geometry; it is not a surveyed or documentary representation of the physical temple. Design state: DESIGN_RUNTIME.</desc>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 400 60"
+  width="400"
+  height="60"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>ঐতিহ্যবাহী পোড়ামাটির মন্দির কার্নিশ নকশা (Terracotta Temple Cornice Frieze)</title>
+  <desc>Seamless horizontal repeating architectural terracotta temple cornice border pattern for Sri Sri Maa Raksha Kali Mandir. Features stepped roof mouldings, Dantika sawtooth teeth, Bengal cusped niches (Koshtha), sacred Kalasa finials, Trishula emblems, and Purnadal lotus plinth. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
 
-<path d="M24 154H976" stroke="#B08A3E" stroke-width="3"/>
-<path d="M58 140V86L92 62L126 86V140M874 140V86L908 62L942 86V140" stroke="#8F241C" stroke-width="4" stroke-linejoin="round"/>
-<g stroke="#C86A12" stroke-width="3" stroke-linejoin="round">
-  <path d="M92 62V40L100 34L108 40V62"/><path d="M908 62V40L916 34L924 40V62"/>
-</g>
-<g fill="#B08A3E">
-  <path d="M64 140h56l-8-12H72z"/><path d="M880 140h56l-8-12h-40z"/>
-  <path d="M466 154l34-34 34 34z"/>
-</g>
-<path d="M482 146l18-18 18 18" stroke="#FBF4E6" stroke-width="4"/>
-<g fill="#8F241C">
-  <circle cx="152" cy="132" r="5"/><circle cx="848" cy="132" r="5"/><circle cx="440" cy="154" r="4"/><circle cx="560" cy="154" r="4"/>
-</g>
+  <defs>
+    <!-- Deep Terracotta Red Gradient -->
+    <linearGradient id="tmbRedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4E0C08"/>
+      <stop offset="25%" stop-color="#731610"/>
+      <stop offset="65%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#550E09"/>
+    </linearGradient>
+
+    <!-- Multi-Stop Temple Gold Gradient -->
+    <linearGradient id="tmbGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="25%" stop-color="#E5C16C"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="75%" stop-color="#E5C16C"/>
+      <stop offset="100%" stop-color="#FAF0CE"/>
+    </linearGradient>
+
+    <!-- 100px Seamless Repeating Master Cornice Unit -->
+    <g id="templeCorniceUnit">
+      <!-- 1. Architectural Terracotta Pilasters (স্তম্ভ বিভাজক) -->
+      <!-- Center Pilaster (X=50) -->
+      <g transform="translate(50, 0)">
+        <rect x="-2" y="8" width="4" height="44" fill="#24201D" opacity="0.45"/>
+        <rect x="-1.5" y="8" width="3" height="44" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.3"/>
+        <line x1="0" y1="9" x2="0" y2="51" stroke="#FFFDF7" stroke-width="0.6" opacity="0.8"/>
+        <!-- Capital & Base Rosettes -->
+        <circle cx="0" cy="11" r="1.4" fill="#8F241C"/>
+        <circle cx="0" cy="30" r="1.8" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.3"/>
+        <circle cx="0" cy="30" r="0.8" fill="#8F241C"/>
+        <circle cx="0" cy="49" r="1.4" fill="#8F241C"/>
+      </g>
+
+      <!-- Boundary Half-Pilasters (X=0 & X=100) -->
+      <rect x="0" y="8" width="1.5" height="44" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.3"/>
+      <line x1="0.5" y1="9" x2="0.5" y2="51" stroke="#FFFDF7" stroke-width="0.5" opacity="0.7"/>
+      <circle cx="0" cy="30" r="1.8" fill="url(#tmbGoldGrad)"/>
+      <circle cx="0" cy="30" r="0.8" fill="#8F241C"/>
+
+      <rect x="98.5" y="8" width="1.5" height="44" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.3"/>
+      <line x1="99.5" y1="9" x2="99.5" y2="51" stroke="#FFFDF7" stroke-width="0.5" opacity="0.7"/>
+      <circle cx="100" cy="30" r="1.8" fill="url(#tmbGoldGrad)"/>
+      <circle cx="100" cy="30" r="0.8" fill="#8F241C"/>
+
+      <!-- ======================================================== -->
+      <!-- 2. NICHE A: SACRED PURNA KALASA ALCOVE (X=0 to X=50)     -->
+      <!-- ======================================================== -->
+      <g transform="translate(0, 0)">
+        <!-- Cusped Bengal Torana Arch -->
+        <path
+          d="
+            M 6,48
+            C 6,36 10,30 14,26
+            C 14,20 19,16 25,14
+            C 31,16 36,20 36,26
+            C 40,30 44,36 44,48
+          "
+          fill="#3D0805"
+          stroke="url(#tmbGoldGrad)"
+          stroke-width="1.2"
+        />
+        <path
+          d="
+            M 8.5,48
+            C 8.5,38 12,32 15.5,28
+            C 16,22 20,18.5 25,16.5
+            C 30,18.5 34,22 34.5,28
+            C 38,32 41.5,38 41.5,48
+          "
+          fill="none"
+          stroke="#FAF0CE"
+          stroke-width="0.6"
+          opacity="0.85"
+        />
+
+        <!-- Apex Kalasa Finial Above Arch -->
+        <circle cx="25" cy="11.5" r="1.6" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+        <circle cx="25" cy="11.5" r="0.6" fill="#8F241C"/>
+
+        <!-- Sacred Purna Kalasa Inside Niche (পূজিত পূর্ণকুম্ভ) -->
+        <g transform="translate(25, 33)">
+          <!-- Pedestal Base -->
+          <ellipse cx="0" cy="12" rx="9" ry="2.2" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+          <!-- Spherical Urn Belly -->
+          <circle cx="0" cy="5" r="6.5" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.6"/>
+          <path d="M -6,5 Q 0,8 6,5" stroke="#8F241C" stroke-width="1" fill="none"/>
+          <circle cx="0" cy="5" r="1.2" fill="#8F241C"/>
+          <!-- Flared Rim -->
+          <ellipse cx="0" cy="-1" rx="4.8" ry="1.4" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+          <!-- Auspicious Mango Leaves -->
+          <path d="M 0,-1 C -4,-4 -7,-8 -6,-11 C -4,-11 -2,-7 0,-1 Z" fill="#2F5E38" stroke="#142B18" stroke-width="0.3"/>
+          <path d="M 0,-1 C 4,-4 7,-8 6,-11 C 4,-11 2,-7 0,-1 Z" fill="#2F5E38" stroke="#142B18" stroke-width="0.3"/>
+          <path d="M 0,-1 C -2,-5 -2,-11 0,-14 C 2,-11 2,-5 0,-1 Z" fill="#2F5E38" stroke="#142B18" stroke-width="0.3"/>
+          <!-- Coconut on Top -->
+          <circle cx="0" cy="-4" r="2.2" fill="#8F241C" stroke="url(#tmbGoldGrad)" stroke-width="0.4"/>
+          <circle cx="0" cy="-4" r="0.7" fill="#FAF0CE"/>
+        </g>
+      </g>
+
+      <!-- ======================================================== -->
+      <!-- 3. NICHE B: SACRED TRISHULA BLADE ALCOVE (X=50 to X=100) -->
+      <!-- ======================================================== -->
+      <g transform="translate(50, 0)">
+        <!-- Cusped Bengal Torana Arch -->
+        <path
+          d="
+            M 56,48
+            C 56,36 60,30 64,26
+            C 64,20 69,16 75,14
+            C 81,16 86,20 86,26
+            C 90,30 94,36 94,48
+          "
+          fill="#3D0805"
+          stroke="url(#tmbGoldGrad)"
+          stroke-width="1.2"
+        />
+        <path
+          d="
+            M 58.5,48
+            C 58.5,38 62,32 65.5,28
+            C 66,22 70,18.5 75,16.5
+            C 80,18.5 84,22 84.5,28
+            C 88,32 91.5,38 91.5,48
+          "
+          fill="none"
+          stroke="#FAF0CE"
+          stroke-width="0.6"
+          opacity="0.85"
+        />
+
+        <!-- Apex Finial Above Arch -->
+        <circle cx="75" cy="11.5" r="1.6" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+        <circle cx="75" cy="11.5" r="0.6" fill="#8F241C"/>
+
+        <!-- Consecrated Trishula Inside Niche (মহাশক্তি ত্রিশূল) -->
+        <g transform="translate(75, 33)">
+          <!-- Base Pedestal Mount -->
+          <ellipse cx="0" cy="12" rx="8" ry="2.2" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+          <!-- Staff Shaft -->
+          <line x1="0" y1="12" x2="0" y2="-4" stroke="url(#tmbGoldGrad)" stroke-width="1.4" stroke-linecap="round"/>
+          <ellipse cx="0" cy="4" rx="1.6" ry="0.6" fill="url(#tmbGoldGrad)"/>
+          <ellipse cx="0" cy="8" rx="1.6" ry="0.6" fill="url(#tmbGoldGrad)"/>
+          <!-- Damaru at Throat -->
+          <path d="M -2,0 L 2,0 L -2,3 L 2,3 Z" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.3"/>
+          <circle cx="0" cy="1.5" r="0.6" fill="#8F241C"/>
+          <!-- Flanking Trident Barbs -->
+          <path d="M -1.5,-2 C -4.5,-4 -7,-7 -7,-11 C -5,-10 -2.5,-8 0,-6 Z" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+          <path d="M 1.5,-2 C 4.5,-4 7,-7 7,-11 C 5,-10 2.5,-8 0,-6 Z" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.4"/>
+          <!-- Central Spear Blade -->
+          <path d="M 0,-15 C -1.8,-11 -1.8,-7 0,-4 C 1.8,-7 1.8,-11 0,-15 Z" fill="url(#tmbGoldGrad)" stroke="#694611" stroke-width="0.5"/>
+          <line x1="0" y1="-14" x2="0" y2="-5" stroke="#8F241C" stroke-width="0.5"/>
+          <!-- Trinetra Bindu -->
+          <circle cx="0" cy="-4" r="0.9" fill="#8F241C"/>
+          <circle cx="0" cy="-4" r="0.4" fill="#FFFDF7"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Master Dantika (Temple Cornice Sawtooth Fringe) Macros for 100px -->
+    <path
+      id="tmbDantikaTop"
+      d="
+        M 0,2
+        L 2,5 L 4,2 L 6,5 L 8,2 L 10,5 L 12,2 L 14,5 L 16,2 L 18,5 L 20,2
+        L 22,5 L 24,2 L 26,5 L 28,2 L 30,5 L 32,2 L 34,5 L 36,2 L 38,5 L 40,2
+        L 42,5 L 44,2 L 46,5 L 48,2 L 50,5 L 52,2 L 54,5 L 56,2 L 58,5 L 60,2
+        L 62,5 L 64,2 L 66,5 L 68,2 L 70,5 L 72,2 L 74,5 L 76,2 L 78,5 L 80,2
+        L 82,5 L 84,2 L 86,5 L 88,2 L 90,5 L 92,2 L 94,5 L 96,2 L 98,5 L 100,2
+      "
+      stroke="#FFFDF7"
+      stroke-width="0.8"
+      stroke-linejoin="round"
+      fill="none"
+    />
+
+    <path
+      id="tmbDantikaBtm"
+      d="
+        M 0,58
+        L 2,55 L 4,58 L 6,55 L 8,58 L 10,55 L 12,58 L 14,55 L 16,58 L 18,55 L 20,58
+        L 22,55 L 24,58 L 26,55 L 28,58 L 30,55 L 32,58 L 34,55 L 36,58 L 38,55 L 40,58
+        L 42,55 L 44,58 L 46,55 L 48,58 L 50,55 L 52,58 L 54,55 L 56,58 L 58,55 L 60,58
+        L 62,55 L 64,58 L 66,55 L 68,58 L 70,55 L 72,58 L 74,55 L 76,58 L 78,55 L 80,58
+        L 82,55 L 84,58 L 86,55 L 88,58 L 90,55 L 92,58 L 94,55 L 96,58 L 98,55 L 100,58
+      "
+      stroke="#FFFDF7"
+      stroke-width="0.8"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </defs>
+
+  <!-- Solid Terracotta Background -->
+  <rect width="400" height="60" fill="url(#tmbRedGrad)"/>
+
+  <!-- Upper Cornice Mouldings -->
+  <line x1="0" y1="1.6" x2="400" y2="1.6" stroke="url(#tmbGoldGrad)" stroke-width="1.8"/>
+  <use xlink:href="#tmbDantikaTop" href="#tmbDantikaTop" x="0" y="0"/>
+  <use xlink:href="#tmbDantikaTop" href="#tmbDantikaTop" x="100" y="0"/>
+  <use xlink:href="#tmbDantikaTop" href="#tmbDantikaTop" x="200" y="0"/>
+  <use xlink:href="#tmbDantikaTop" href="#tmbDantikaTop" x="300" y="0"/>
+  <line x1="0" y1="7.2" x2="400" y2="7.2" stroke="url(#tmbGoldGrad)" stroke-width="0.9"/>
+  <line x1="0" y1="7.2" x2="400" y2="7.2" stroke="#FFFDF7" stroke-width="0.9" stroke-dasharray="1.8 2.2"/>
+
+  <!-- 4 Seamless Repeats of Master Unit -->
+  <use xlink:href="#templeCorniceUnit" href="#templeCorniceUnit" x="0" y="0"/>
+  <use xlink:href="#templeCorniceUnit" href="#templeCorniceUnit" x="100" y="0"/>
+  <use xlink:href="#templeCorniceUnit" href="#templeCorniceUnit" x="200" y="0"/>
+  <use xlink:href="#templeCorniceUnit" href="#templeCorniceUnit" x="300" y="0"/>
+
+  <!-- Lower Base Mouldings -->
+  <line x1="0" y1="52.8" x2="400" y2="52.8" stroke="url(#tmbGoldGrad)" stroke-width="0.9"/>
+  <line x1="0" y1="52.8" x2="400" y2="52.8" stroke="#FFFDF7" stroke-width="0.9" stroke-dasharray="1.8 2.2"/>
+  <use xlink:href="#tmbDantikaBtm" href="#tmbDantikaBtm" x="0" y="0"/>
+  <use xlink:href="#tmbDantikaBtm" href="#tmbDantikaBtm" x="100" y="0"/>
+  <use xlink:href="#tmbDantikaBtm" href="#tmbDantikaBtm" x="200" y="0"/>
+  <use xlink:href="#tmbDantikaBtm" href="#tmbDantikaBtm" x="300" y="0"/>
+  <line x1="0" y1="58.4" x2="400" y2="58.4" stroke="url(#tmbGoldGrad)" stroke-width="1.8"/>
 </svg>
