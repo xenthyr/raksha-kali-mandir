@@ -1,11 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Lotus icon</title>
-  <desc id="desc">Flat devotional lotus icon in the Raksha Kali Mandir visual system.</desc>
-  <g fill="none" stroke="#8F241C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M32 48C23 47 15 42 11 34C18 34 25 36 32 42C39 36 46 34 53 34C49 42 41 47 32 48Z" fill="#FBF4E6"/>
-    <path d="M32 42C24 37 21 29 24 20C29 23 32 28 32 36C32 28 35 23 40 20C43 29 40 37 32 42Z" fill="#C86A12"/>
-    <path d="M32 41C26 36 25 29 27 23C30 26 32 30 32 35C32 30 34 26 37 23C39 29 38 36 32 41Z" fill="#FBF4E6"/>
-    <path d="M12 50H52" stroke="#B08A3E"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  width="48"
+  height="48"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>পবিত্র সহস্রদল পদ্ম প্রতীক (Sacred Lotus Icon)</title>
+  <desc>Realistic sacred blooming lotus (Nelumbo nucifera) icon for Sri Sri Maa Raksha Kali Mandir. Features multi-tiered natural overlapping petals, realistic venation, golden stamen crown, central pericarp seed torus, and sepal calyx base. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- Background Petal Shadow & Rich Velvet Shading -->
+    <linearGradient id="ltPetalBack" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4A0A07"/>
+      <stop offset="35%" stop-color="#731610"/>
+      <stop offset="70%" stop-color="#A8261C"/>
+      <stop offset="90%" stop-color="#C86A12"/>
+      <stop offset="100%" stop-color="#FAF0CE"/>
+    </linearGradient>
+
+    <!-- Intermediate Layer Petals Gradient -->
+    <linearGradient id="ltPetalMid" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#65120D"/>
+      <stop offset="30%" stop-color="#8F241C"/>
+      <stop offset="65%" stop-color="#BA3327"/>
+      <stop offset="88%" stop-color="#E57A3C"/>
+      <stop offset="100%" stop-color="#FFFDF7"/>
+    </linearGradient>
+
+    <!-- Foreground Flared Petals Gradient -->
+    <linearGradient id="ltPetalFore" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#731610"/>
+      <stop offset="35%" stop-color="#A8261C"/>
+      <stop offset="75%" stop-color="#D94436"/>
+      <stop offset="92%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#FFFDF7"/>
+    </linearGradient>
+
+    <!-- Inner Cupping Petal Soft Lustre -->
+    <radialGradient id="ltPetalInner" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FFF5D6"/>
+      <stop offset="65%" stop-color="#E27558"/>
+      <stop offset="85%" stop-color="#BA3327"/>
+      <stop offset="100%" stop-color="#65120D"/>
+    </radialGradient>
+
+    <!-- Central Pericarp Torus Gold Gradient -->
+    <radialGradient id="ltTorusGold" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#FAF0CE"/>
+      <stop offset="60%" stop-color="#D9B15B"/>
+      <stop offset="85%" stop-color="#B08A3E"/>
+      <stop offset="100%" stop-color="#694611"/>
+    </radialGradient>
+
+    <!-- Golden Filament & Anther Lustre -->
+    <linearGradient id="ltAntherGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="40%" stop-color="#F9EEC8"/>
+      <stop offset="80%" stop-color="#D9B15B"/>
+      <stop offset="100%" stop-color="#765217"/>
+    </linearGradient>
+
+    <!-- Sepal / Calyx Leaf Gradient -->
+    <linearGradient id="ltSepal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#559960"/>
+      <stop offset="50%" stop-color="#2F5E38"/>
+      <stop offset="100%" stop-color="#142B18"/>
+    </linearGradient>
+
+    <!-- Floor Cast Shadow -->
+    <radialGradient id="ltShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#24201D" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#24201D" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#24201D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Under-Flower Floor Shadow -->
+  <ellipse cx="24" cy="42" rx="16.5" ry="2.8" fill="url(#ltShadow)"/>
+
+  <!-- TIER 1: Outermost Lateral Petals -->
+  <path
+    d="M 24,36 C 16,36 8,32 3.5,23.5 C 5.2,19.8 12.8,21.5 20.2,29.5 Z"
+    fill="url(#ltPetalBack)"
+    stroke="#550E09"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 6.5,22.8 C 10.5,24 15,27.5 18.5,31" stroke="#FAF0CE" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <path
+    d="M 24,36 C 32,36 40,32 44.5,23.5 C 42.8,19.8 35.2,21.5 27.8,29.5 Z"
+    fill="url(#ltPetalBack)"
+    stroke="#550E09"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 41.5,22.8 C 37.5,24 33,27.5 29.5,31" stroke="#FAF0CE" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <path
+    d="M 24,36 C 16.5,33 9.5,25 6.8,16.2 C 11.8,16.5 17.2,23 22,31 Z"
+    fill="url(#ltPetalBack)"
+    stroke="#550E09"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 10.5,17.5 C 14,20 18,25 20.5,29.5" stroke="#FAF0CE" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <path
+    d="M 24,36 C 31.5,33 38.5,25 41.2,16.2 C 36.2,16.5 30.8,23 26,31 Z"
+    fill="url(#ltPetalBack)"
+    stroke="#550E09"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 37.5,17.5 C 34,20 30,25 27.5,29.5" stroke="#FAF0CE" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <!-- TIER 2: High Rear Radiating Petals -->
+  <path
+    d="M 24,35 C 18,29 12,18.5 13.5,10.2 C 18,12 21.2,21 23.5,31 Z"
+    fill="url(#ltPetalMid)"
+    stroke="#65120D"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 14.8,12.5 C 17.5,16 20,22 21.8,27.5" stroke="#FFFDF7" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+  <path
+    d="M 24,35 C 30,29 36,18.5 34.5,10.2 C 30,12 26.8,21 24.5,31 Z"
+    fill="url(#ltPetalMid)"
+    stroke="#65120D"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 33.2,12.5 C 30.5,16 28,22 26.2,27.5" stroke="#FFFDF7" stroke-width="0.45" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+  <!-- Sovereign Center Apex Petal -->
+  <path
+    d="M 24,34 C 20.2,24 18.5,13.5 24,5.2 C 29.5,13.5 27.8,24 24,34 Z"
+    fill="url(#ltPetalMid)"
+    stroke="#65120D"
+    stroke-width="0.55"
+    stroke-linejoin="round"
+  />
+  <path d="M 24,7.5 L 24,29" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" opacity="0.75"/>
+  <path d="M 22.8,11 C 21.5,17 22,23 23,28" stroke="#BA3327" stroke-width="0.4" fill="none" opacity="0.5"/>
+  <path d="M 25.2,11 C 26.5,17 26,23 25,28" stroke="#BA3327" stroke-width="0.4" fill="none" opacity="0.5"/>
+
+  <!-- TIER 3: Intermediate Cupping Petals -->
+  <path
+    d="M 24,36 C 17,31 11.8,23 13.8,14.2 C 18.2,16.5 22,25 24,35 Z"
+    fill="url(#ltPetalFore)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 15.2,16.2 C 18,20 20.5,26 22.2,30.5" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+  <path
+    d="M 24,36 C 31,31 36.2,23 34.2,14.2 C 29.8,16.5 26,25 24,35 Z"
+    fill="url(#ltPetalFore)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 32.8,16.2 C 30,20 27.5,26 25.8,30.5" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+  <path
+    d="M 24,36 C 18.8,28 15.5,18 18.8,9.5 C 22.2,13 23.8,23 24,35 Z"
+    fill="url(#ltPetalInner)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 24,36 C 29.2,28 32.5,18 29.2,9.5 C 25.8,13 24.2,23 24,35 Z"
+    fill="url(#ltPetalInner)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M 24,35 C 21.2,25 20.2,15 24,8.2 C 27.8,15 26.8,25 24,35 Z"
+    fill="url(#ltPetalInner)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <line x1="24" y1="10" x2="24" y2="28" stroke="#FFFDF7" stroke-width="0.45" opacity="0.8"/>
+
+  <!-- TIER 4: Golden Torus Pericarp & Stamen Crown -->
+  <ellipse cx="24" cy="26" rx="5.2" ry="3.4" fill="url(#ltTorusGold)" stroke="#694611" stroke-width="0.55"/>
+  <ellipse cx="24" cy="25.4" rx="4.2" ry="2.4" fill="#FAF0CE" opacity="0.85"/>
+
+  <g fill="#694611">
+    <circle cx="24" cy="24.8" r="0.45"/>
+    <circle cx="22" cy="25.2" r="0.4"/>
+    <circle cx="26" cy="25.2" r="0.4"/>
+    <circle cx="23" cy="26.1" r="0.4"/>
+    <circle cx="25" cy="26.1" r="0.4"/>
+    <circle cx="24" cy="26.8" r="0.38"/>
   </g>
+
+  <g stroke="url(#ltAntherGold)" stroke-width="0.6" stroke-linecap="round" fill="none">
+    <line x1="18.8" y1="26" x2="17.5" y2="25.2"/>
+    <line x1="19.5" y1="24.5" x2="18.5" y2="23.2"/>
+    <line x1="21" y1="23.5" x2="20.5" y2="22"/>
+    <line x1="22.8" y1="23" x2="22.5" y2="21.2"/>
+    <line x1="24.5" y1="23" x2="25" y2="21.2"/>
+    <line x1="26.2" y1="23.5" x2="27" y2="22"/>
+    <line x1="27.8" y1="24.5" x2="29" y2="23.2"/>
+    <line x1="28.8" y1="26" x2="30.2" y2="25.2"/>
+  </g>
+  <g fill="url(#ltTorusGold)" stroke="#765217" stroke-width="0.25">
+    <circle cx="17.2" cy="25" r="0.65"/>
+    <circle cx="18.2" cy="23" r="0.65"/>
+    <circle cx="20.2" cy="21.8" r="0.7"/>
+    <circle cx="22.4" cy="21" r="0.75"/>
+    <circle cx="25.2" cy="21" r="0.75"/>
+    <circle cx="27.2" cy="21.8" r="0.7"/>
+    <circle cx="29.2" cy="23" r="0.65"/>
+    <circle cx="30.5" cy="25" r="0.65"/>
+  </g>
+
+  <!-- TIER 5: Foreground Cup Petals -->
+  <path
+    d="M 24,36 C 17.5,34 13.8,29 16.2,25.2 C 19.5,25.8 22.5,30 24,34.8 Z"
+    fill="url(#ltPetalFore)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 15.8,26.5 C 18,27.5 21,30.5 22.5,34" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <path
+    d="M 24,36 C 30.5,34 34.2,29 31.8,25.2 C 28.5,25.8 25.5,30 24,34.8 Z"
+    fill="url(#ltPetalFore)"
+    stroke="#731610"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+  <path d="M 32.2,26.5 C 30,27.5 27,30.5 25.5,34" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <path
+    d="M 19.8,34.5 C 17.8,30.2 19.5,27 24,27.5 C 28.5,27 30.2,30.2 28.2,34.5 C 26.2,37 21.8,37 19.8,34.5 Z"
+    fill="url(#ltPetalFore)"
+    stroke="#731610"
+    stroke-width="0.55"
+    stroke-linejoin="round"
+  />
+  <path d="M 24,28.5 L 24,36" stroke="#FFFDF7" stroke-width="0.5" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="24" cy="31" r="0.7" fill="#FFFFFF"/>
+
+  <!-- TIER 6: Sepals & Pedicel -->
+  <path d="M 15,36 C 11.5,38 9.5,41 11.5,42.2 C 14.2,41.8 17,39 18.8,37 Z" fill="url(#ltSepal)" stroke="#142B18" stroke-width="0.5"/>
+  <path d="M 33,36 C 36.5,38 38.5,41 36.5,42.2 C 33.8,41.8 31,39 29.2,37 Z" fill="url(#ltSepal)" stroke="#142B18" stroke-width="0.5"/>
+  <path d="M 20.8,37 C 21.8,41.2 26.2,41.2 27.2,37 C 25.2,39.2 22.8,39.2 20.8,37 Z" fill="url(#ltSepal)" stroke="#142B18" stroke-width="0.5"/>
+
+  <rect x="22.8" y="39.2" width="2.4" height="3.2" rx="0.6" fill="url(#ltSepal)" stroke="#142B18" stroke-width="0.5"/>
+  <circle cx="24" cy="40.8" r="0.6" fill="#FAF0CE"/>
 </svg>
