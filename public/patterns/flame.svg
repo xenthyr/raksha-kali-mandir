@@ -1,22 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 160" preserveAspectRatio="none" aria-hidden="true">
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M0 130H960" stroke="#B08A3E" stroke-width="1.5" stroke-opacity="0.45"/>
-    <g stroke="#C86A12" stroke-width="2">
-      <path d="M24 130C18 118 18 102 28 88C38 102 38 118 32 130Z" fill="#C86A12" fill-opacity="0.18"/>
-      <path d="M86 130C78 114 80 92 94 74C108 92 110 114 102 130Z" fill="#C86A12" fill-opacity="0.18"/>
-      <path d="M148 130C140 114 142 94 156 80C170 94 172 114 164 130Z" fill="#C86A12" fill-opacity="0.18"/>
-      <path d="M210 130C202 112 206 90 220 68C234 90 238 112 230 130Z" fill="#C86A12" fill-opacity="0.18"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 400 80"
+  width="400"
+  height="80"
+  fill="none"
+  xml:space="preserve"
+>
+  <title>পবিত্র অগ্নিশিখা তরঙ্গ নকশা (Sacred Flame Frieze Pattern)</title>
+  <desc>Seamless horizontal repeating sacred sacrificial fire frieze (Yajna Agni) for Sri Sri Maa Raksha Kali Mandir. Features dancing licking tongues of consecrated flame, organic s-curved wisps, glowing charcoal ember bed, incandescent white-gold cores, rising sparks (Sphulinga), and an architectural brass-and-terracotta hearth plinth. Canonical 5-Color System. Design state: DESIGN_RUNTIME.</desc>
+
+  <defs>
+    <!-- 1. Deep Crimson to Saffron Multi-Stop Outer Flame Gradient -->
+    <linearGradient id="flmDeepOuter" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3D0604"/>
+      <stop offset="22%" stop-color="#65120D"/>
+      <stop offset="50%" stop-color="#8F241C"/>
+      <stop offset="76%" stop-color="#C86A12"/>
+      <stop offset="92%" stop-color="#E88A1A"/>
+      <stop offset="100%" stop-color="#F9D057"/>
+    </linearGradient>
+
+    <!-- 2. Mid Saffron-Amber Radiance Gradient -->
+    <linearGradient id="flmMidAmber" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8F241C"/>
+      <stop offset="28%" stop-color="#C86A12"/>
+      <stop offset="65%" stop-color="#F5A623"/>
+      <stop offset="90%" stop-color="#FBD96D"/>
+      <stop offset="100%" stop-color="#FFFDF7"/>
+    </linearGradient>
+
+    <!-- 3. High-Temperature Incandescent Core Gradient -->
+    <linearGradient id="flmCoreWhite" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#C86A12"/>
+      <stop offset="30%" stop-color="#F5A623"/>
+      <stop offset="68%" stop-color="#FAF0CE"/>
+      <stop offset="90%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- 4. Glowing Red-Hot Charcoal Coal Bed Gradient -->
+    <radialGradient id="flmCoalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="35%" stop-color="#C86A12"/>
+      <stop offset="70%" stop-color="#8F241C"/>
+      <stop offset="100%" stop-color="#3D0604"/>
+    </radialGradient>
+
+    <!-- 5. Architectural Burnished Brass Hearth Plinth Gradient -->
+    <linearGradient id="flmHearthGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FAF0CE"/>
+      <stop offset="25%" stop-color="#D9B15B"/>
+      <stop offset="50%" stop-color="#B08A3E"/>
+      <stop offset="75%" stop-color="#D9B15B"/>
+      <stop offset="100%" stop-color="#FAF0CE"/>
+    </linearGradient>
+
+    <!-- ============================================================ -->
+    <!-- 40px SEAMLESS REPEATING FLAME CLUSTER MASTER UNIT             -->
+    <!-- Width = 40px (10 Units across 400px viewBox)                 -->
+    <!-- ============================================================ -->
+    <g id="realisticFlameUnit">
+
+      <!-- A. Base Combustion Coal Glow (অঙ্গার গর্ভ) -->
+      <ellipse cx="20" cy="67" rx="14" ry="4" fill="url(#flmCoalGlow)" opacity="0.6"/>
+
+      <!-- B. Background Auxiliary Left Curling Tongue (বাম পার্শ্বশিখা) -->
+      <path
+        d="
+          M 9,67
+          C 3,58 3,46 7.5,39
+          C 9.2,36 12,38 12.5,42
+          C 13.2,48 10.5,56 12.5,61
+          C 13.5,63.5 15,65.5 16,67
+          Z
+        "
+        fill="url(#flmDeepOuter)"
+        opacity="0.88"
+      />
+      <!-- Secondary Inner Glow of Left Tongue -->
+      <path
+        d="
+          M 10,66
+          C 6,58 6,48 8.8,42
+          C 10,39.5 11.5,41 11.8,44
+          C 12.2,49 10.2,56 12.5,63
+          Z
+        "
+        fill="url(#flmMidAmber)"
+        opacity="0.8"
+      />
+
+      <!-- C. Background Auxiliary Right S-Curve Tongue (ডান পার্শ্বশিখা) -->
+      <path
+        d="
+          M 31,67
+          C 37,58 37,46 32.5,39
+          C 30.8,36 28,38 27.5,42
+          C 26.8,48 29.5,56 27.5,61
+          C 26.5,63.5 25,65.5 24,67
+          Z
+        "
+        fill="url(#flmDeepOuter)"
+        opacity="0.88"
+      />
+      <!-- Secondary Inner Glow of Right Tongue -->
+      <path
+        d="
+          M 30,66
+          C 34,58 34,48 31.2,42
+          C 30,39.5 28.5,41 28.2,44
+          C 27.8,49 29.8,56 27.5,63
+          Z
+        "
+        fill="url(#flmMidAmber)"
+        opacity="0.8"
+      />
+
+      <!-- D. Sovereign Major Flame Body (প্রধান যজ্ঞাগ্নিশিখা) -->
+      <!-- Dynamic asymmetrical lick curving gracefully with realistic natural draft -->
+      <path
+        d="
+          M 15,67
+          C 10,54 8,41 14.5,27
+          C 17.5,20.5 19,13 18.5,5
+          C 21.5,10.5 24,17 22.8,24
+          C 27.5,19 30.5,24 28,32
+          C 26.2,37.5 28.5,44 27.5,51
+          C 26.8,56.5 25.5,62 25,67
+          Z
+        "
+        fill="url(#flmDeepOuter)"
+      />
+
+      <!-- E. Mid-Layer Saffron Radiance Body (মধ্যশিখার স্বর্ণাভ আভা) -->
+      <path
+        d="
+          M 16.5,66
+          C 12.5,55 11,44 16,32
+          C 18.2,26.5 19.5,19 19,11
+          C 21.5,16 23.5,22 22.2,28
+          C 25.8,24 27.8,28.5 26,35
+          C 24.5,40.5 26.5,47 25.5,54
+          C 24.8,59 23.8,63 23.5,66
+          Z
+        "
+        fill="url(#flmMidAmber)"
+      />
+
+      <!-- F. Detached Dancing Micro-Flamelet / Wisp (বিচ্ছিন্ন লঘুপক্ষ শিখা) -->
+      <path
+        d="
+          M 19,4
+          C 18.2,2 19,0.5 20,1.2
+          C 20.8,1.8 20.5,3.2 19.8,4.5
+          C 19.5,5 19.2,4.6 19,4
+          Z
+        "
+        fill="url(#flmCoreWhite)"
+      />
+
+      <!-- G. High-Temperature Intense Combustion Core (পরম জ্যোতির্গর্ভ) -->
+      <path
+        d="
+          M 17.5,64
+          C 14.5,54 14,46 17.5,36
+          C 19,31.5 20,24 19.5,17
+          C 21,21 22.2,26 21.2,31
+          C 23.5,28.5 24.8,32 23.5,37
+          C 22.2,42 23.5,49 22.8,55
+          C 22.2,60 21.5,62.5 21,64
+          Z
+        "
+        fill="url(#flmCoreWhite)"
+      />
+
+      <!-- H. Incandescent White-Hot Nucleus Tear (শ্বেতশুভ্র অগ্নিকণা) -->
+      <path
+        d="
+          M 18.5,61
+          C 16.5,53 16.2,46 18.5,39
+          C 19.5,35.5 20,30 19.8,24
+          C 20.8,27.5 21.5,31 20.8,35
+          C 22,33.5 22.8,36 22,40
+          C 21.2,44 21.8,50 21.2,55
+          C 20.8,58.5 20.2,60 19.8,61
+          Z
+        "
+        fill="#FFFFFF"
+      />
+      <circle cx="20" cy="46" r="1.2" fill="#FFFFFF"/>
+
+      <!-- I. Ascending Fiery Embers & Sparks (উত্তপ্ত স্ফুলিঙ্গ কণা) -->
+      <circle cx="20" cy="8.5" r="0.75" fill="url(#flmCoreWhite)"/>
+      <circle cx="23" cy="14" r="0.6" fill="url(#flmMidAmber)"/>
+      <circle cx="15.5" cy="19" r="0.55" fill="url(#flmCoreWhite)"/>
+      <circle cx="28.5" cy="22" r="0.5" fill="url(#flmMidAmber)"/>
+      <circle cx="8" cy="32" r="0.5" fill="url(#flmDeepOuter)"/>
+      <circle cx="34" cy="34" r="0.5" fill="url(#flmDeepOuter)"/>
     </g>
-    <g stroke="#8F241C" stroke-width="2.2">
-      <path d="M286 130C278 110 282 84 298 58C314 84 318 110 310 130Z"/>
-      <path d="M376 130C368 110 372 84 388 62C404 84 408 110 400 130Z"/>
-      <path d="M466 130C458 110 462 84 478 58C494 84 498 110 490 130Z"/>
-      <path d="M556 130C548 110 552 84 568 62C584 84 588 110 580 130Z"/>
-      <path d="M646 130C638 110 642 84 658 58C674 84 678 110 670 130Z"/>
-      <path d="M736 130C728 110 732 84 748 62C764 84 768 110 760 130Z"/>
-      <path d="M826 130C818 110 822 84 838 58C854 84 858 110 850 130Z"/>
-      <path d="M916 130C908 110 912 86 928 66C944 86 948 110 940 130Z"/>
-    </g>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- 10 SEAMLESS REPEATS ACROSS 400px VIEWBOX                     -->
+  <!-- ============================================================ -->
+  <use xlink:href="#realisticFlameUnit" x="0" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="40" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="80" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="120" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="160" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="200" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="240" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="280" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="320" y="0"/>
+  <use xlink:href="#realisticFlameUnit" x="360" y="0"/>
+
+  <!-- ============================================================ -->
+  <!-- CONSECRATED HEARTH PLINTH & EMBERS (যজ্ঞবেদির ভিত্তিফলক)       -->
+  <!-- Y=67 to Y=80                                                 -->
+  <!-- ============================================================ -->
+  <!-- 1. Deep Charcoal Plinth Base (কৃষ্ণপ্রস্তর বেদি) -->
+  <rect x="0" y="67" width="400" height="13" fill="#24201D"/>
+
+  <!-- 2. Continuous Glowing Coal Hearth Strip (ধূমায়িত অঙ্গার রেখা) -->
+  <rect x="0" y="67" width="400" height="2.2" fill="#8F241C" opacity="0.9"/>
+  <line x1="0" y1="67.5" x2="400" y2="67.5" stroke="#C86A12" stroke-width="0.8"/>
+
+  <!-- 3. Primary Burnished Brass Moulding Rail -->
+  <line x1="0" y1="69.2" x2="400" y2="69.2" stroke="url(#flmHearthGold)" stroke-width="1.8"/>
+
+  <!-- 4. Temple Cornice Dentil Relief / Sacred Rivets (যজ্ঞবেদির মুক্তাদানা) -->
+  <g fill="url(#flmHearthGold)" stroke="#694611" stroke-width="0.3">
+    <!-- Rivet studs placed symmetrically every 20px -->
+    <circle cx="10" cy="74.5" r="1.6"/>
+    <circle cx="30" cy="74.5" r="1.6"/>
+    <circle cx="50" cy="74.5" r="1.6"/>
+    <circle cx="70" cy="74.5" r="1.6"/>
+    <circle cx="90" cy="74.5" r="1.6"/>
+    <circle cx="110" cy="74.5" r="1.6"/>
+    <circle cx="130" cy="74.5" r="1.6"/>
+    <circle cx="150" cy="74.5" r="1.6"/>
+    <circle cx="170" cy="74.5" r="1.6"/>
+    <circle cx="190" cy="74.5" r="1.6"/>
+    <circle cx="210" cy="74.5" r="1.6"/>
+    <circle cx="230" cy="74.5" r="1.6"/>
+    <circle cx="250" cy="74.5" r="1.6"/>
+    <circle cx="270" cy="74.5" r="1.6"/>
+    <circle cx="290" cy="74.5" r="1.6"/>
+    <circle cx="310" cy="74.5" r="1.6"/>
+    <circle cx="330" cy="74.5" r="1.6"/>
+    <circle cx="350" cy="74.5" r="1.6"/>
+    <circle cx="370" cy="74.5" r="1.6"/>
+    <circle cx="390" cy="74.5" r="1.6"/>
   </g>
+
+  <!-- Rivet Consecrated Inlay Dots -->
+  <g fill="#8F241C">
+    <circle cx="10" cy="74.5" r="0.6"/>
+    <circle cx="30" cy="74.5" r="0.6"/>
+    <circle cx="50" cy="74.5" r="0.6"/>
+    <circle cx="70" cy="74.5" r="0.6"/>
+    <circle cx="90" cy="74.5" r="0.6"/>
+    <circle cx="110" cy="74.5" r="0.6"/>
+    <circle cx="130" cy="74.5" r="0.6"/>
+    <circle cx="150" cy="74.5" r="0.6"/>
+    <circle cx="170" cy="74.5" r="0.6"/>
+    <circle cx="190" cy="74.5" r="0.6"/>
+    <circle cx="210" cy="74.5" r="0.6"/>
+    <circle cx="230" cy="74.5" r="0.6"/>
+    <circle cx="250" cy="74.5" r="0.6"/>
+    <circle cx="270" cy="74.5" r="0.6"/>
+    <circle cx="290" cy="74.5" r="0.6"/>
+    <circle cx="310" cy="74.5" r="0.6"/>
+    <circle cx="330" cy="74.5" r="0.6"/>
+    <circle cx="350" cy="74.5" r="0.6"/>
+    <circle cx="370" cy="74.5" r="0.6"/>
+    <circle cx="390" cy="74.5" r="0.6"/>
+  </g>
+
+  <!-- 5. Bottom Architectural Baseline Guard Rail -->
+  <line x1="0" y1="78.8" x2="400" y2="78.8" stroke="url(#flmHearthGold)" stroke-width="1.2"/>
 </svg>
